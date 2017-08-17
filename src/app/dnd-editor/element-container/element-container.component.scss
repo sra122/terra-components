@@ -1,0 +1,50 @@
+.element-container {
+  position: relative;
+
+  .element-controls {
+    position: absolute;
+    right: -2px;
+    top: -28px;
+    display: none;
+
+    .element-control-btn {
+      display: inline-block;
+      padding: 6px 8px;
+      line-height: 1;
+      background-color: $brand-primary;
+      color: #fff;
+      cursor: pointer;
+
+      &.drag-handle {
+        cursor: move;
+      }
+
+      &:hover,
+      &:focus,
+      &.focus
+      {
+        background-color: $brand-primary-darker;
+        &:active,
+        &.active
+        {
+          background-color: $brand-primary-light;
+        }
+      }
+    }
+  }
+
+  .element-content {
+    &.selectable {
+      box-shadow: 0 0 0 2px transparentize( $brand-primary, 0.5 );
+    }
+  }
+
+  &.selected {
+    & > .element-controls {
+      display: block;
+    }
+    & > .element-content {
+      box-shadow: 0 0 0 2px $brand-primary;
+    }
+  }
+}

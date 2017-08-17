@@ -1,0 +1,76 @@
+.property-list-input {
+
+  .property-list-placeholder {
+    position: relative;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    height: 36px;
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    .label {
+      font-size: .8em;
+      line-height: 1em !important;
+      text-transform: uppercase;
+      letter-spacing: .1px;
+      font-weight: 600;
+      width: 100%;
+      padding: 2px 5px 0;
+      margin-bottom: 0;
+      color: #777777;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .placeholder {
+      font-style: italic;
+      color: $gray-light;
+      padding: 16px 12px 2px 12px;
+      display: block;
+      line-height: 1.2rem
+    ;
+    }
+  }
+
+  .property-list-entry {
+    display: flex;
+    flex-direction: row;
+
+    & > dnd-editor-property-input {
+      flex: 1
+    }
+
+    .btn {
+      line-height: 0px;
+      height: 36px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+
+      [class^="icon-"] {
+        line-height: 0px;
+        position: relative;
+        top: 50%;
+      }
+    }
+
+    /deep/
+    .input-unit-v1 {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-right: none;
+      margin-bottom: 4px;
+    }
+  }
+
+  & > .btn {
+    [class^="icon-"] {
+      line-height: 0px;
+      position: relative;
+      top: 50%;
+    }
+  }
+}

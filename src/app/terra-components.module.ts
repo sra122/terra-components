@@ -65,6 +65,10 @@ import { TerraMultiSplitViewComponent } from './split-view/multi/terra-multi-spl
 import { TerraSplitViewComponent } from './split-view/terra-split-view.component';
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
+import { NgInteractModule } from "./ng2-interact/interact.module";
+import { DndEditorModule } from "./dnd-editor/dnd-editor.module";
+import { DndEditorCompontent } from "./dnd-editor/dnd-editor.component";
+import { ElementDropzoneComponent } from "./dnd-editor/element-dropzone/element-dropzone.component";
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -253,7 +257,9 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  DndEditorCompontent,
+                  ElementDropzoneComponent,
               ],
               imports:         [
                   CommonModule,
@@ -266,7 +272,9 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   ButtonsModule.forRoot(),
                   TranslationModule.forRoot(),
                   MyDatePickerModule,
-                  AceEditorModule
+                  AceEditorModule,
+                  NgInteractModule,
+                  DndEditorModule,
               ],
               providers:       [
                   COMPILER_PROVIDERS,

@@ -15,7 +15,9 @@
       "dom"
     ],
     "types": [
-      "node"
+      "node",
+      "interact.js",
+      "reflect-metadata"
     ]
   },
   "exclude": [

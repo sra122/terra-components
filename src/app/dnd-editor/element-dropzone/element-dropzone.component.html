@@ -1,0 +1,14 @@
+<div class="editor-dropzone"
+     [class.drag-over]="isDragOver"
+     [class.drag-active]="isDragActive"
+     ia-dropzone
+     [ia-dropzone-accept]="acceptDrop.bind(this)"
+     (ia-dropzone-onDropActivate)="onDragActivate()"
+     (ia-dropzone-onDragEnter)="onDragEnter($event)"
+     (ia-dropzone-onDropMove)="onDragMove($event)"
+     (ia-dropzone-onDragLeave)="onDragLeave()"
+     (ia-dropzone-onDropDeactivate)="onDragDeactivate()"
+     (ia-dropzone-onDrop)="onDrop($event)">
+    <div #dropTarget></div>
+    <ng-content *ngIf="!isDragOver && childComponents.length <= 0"></ng-content>
+</div>

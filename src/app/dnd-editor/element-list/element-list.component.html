@@ -1,0 +1,20 @@
+<div class="element-list">
+    <div class="element-list-group" *ngFor="let group of elementGroups; let i = index">
+        <div class="element-list-group-header" (click)="toggleGroupState(i)">
+            <span>{{ group.name }}</span>
+            <span class="icon-collapse_down" [class.flipped]="groupStates[i] === 'collapsed'"></span>
+        </div>
+        <div class="element-list-group-content" [@groupState]="groupStates[i]">
+            <div class="element-list-entry"
+                 *ngFor="let element of group.elements"
+                 [ia-draggable]
+                 [ia-draggable-data]="{element: element}"
+                 (ia-draggable-onStart)="startDrag($event)"
+                 (ia-draggable-onMove)="handleMove($event)"
+                 (ia-draggable-onEnd)="stopDrag($event)">
+                <span [class]="element.iconClass || 'icon-item'"></span>
+                <span>{{ element.name }}</span>
+            </div>
+        </div>
+    </div>
+</div>

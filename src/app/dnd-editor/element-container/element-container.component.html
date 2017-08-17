@@ -1,0 +1,21 @@
+<div class="element-container"
+     [class.selected]="selected"
+     [ia-draggable]="{allowFrom: '.drag-handle'}"
+     [ia-draggable-data]="{element: editorElement}"
+     (ia-draggable-onStart)="startDrag($event)"
+     (ia-draggable-onMove)="handleMove($event)"
+     (ia-draggable-onEnd)="stopDrag($event)">
+    <div class="element-controls">
+
+        <span class="element-control-btn" (click)="destroy()">
+            <span class="icon-trash"></span>
+        </span><!--
+        --><span class="element-control-btn drag-handle">
+            <span class="icon-more"></span>
+        </span>
+
+    </div>
+    <div class="element-content" [class.selectable]="isSelectable" (click)="selectComponent( $event )" (mousemove)="setSelectable(true, $event)" (mouseleave)="setSelectable(false, $event)">
+        <div #container></div>
+    </div>
+</div>

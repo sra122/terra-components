@@ -1,0 +1,10 @@
+.property-list {
+  .property-list-title {
+    font-size: 1.25rem;
+  }
+
+  /deep/
+  .input-unit-v1 {
+    margin-bottom: 0px;
+  }
+}
