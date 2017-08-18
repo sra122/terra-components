@@ -157,10 +157,10 @@ export class ElementDropzoneComponent implements OnInit
 
     public onDrop( event: DropEvent )
     {
+        this.addEditorElement( event.dropData.element );
+
         // trigger "dragLeave" manually because it's not triggered by interact
         this.onDragLeave();
-
-        this.addEditorElement( event.dropData.element );
     }
 
     public acceptDrop( args: any )
