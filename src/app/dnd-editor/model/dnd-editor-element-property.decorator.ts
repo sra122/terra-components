@@ -33,5 +33,6 @@ export function ElementProperty( propertyDescription: DndEditorElementProperty )
 export interface DndEditorElementProperty
 {
     label: string,
-    type: Type<PropertyInputComponent<any>>
+    type: Type<PropertyInputComponent<any>>,
+    values?: {[key: string]: string };
 }

@@ -1,4 +1,5 @@
 import {
+    ChangeDetectorRef,
     Component,
     ElementRef,
     EventEmitter,
@@ -76,7 +77,7 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
      *
      * @param elementRef
      */
-    constructor(private elementRef:ElementRef)
+    constructor(private elementRef:ElementRef, private changeDetector: ChangeDetectorRef )
     {
         this.clickListener = (event) =>
         {
@@ -213,6 +214,7 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     {
         evt.stopPropagation(); // prevents the click listener on the document to be fired right after
         this.toggleOpen = !this.toggleOpen;
+        this.changeDetector.detectChanges();
     }
 
     /**

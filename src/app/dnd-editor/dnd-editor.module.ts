@@ -8,6 +8,7 @@ import { ElementPropertyInputListComponent } from "./property-list/property-inpu
 import { TextPropertyInputComponent } from "./property-list/property-input/property-input-components/text-property-input/text-property-input.component";
 import { ColorPropertyInputComponent } from "./property-list/property-input/property-input-components/color-property-input/color-property-input.component";
 import { CheckboxPropertyInputComponent } from "./property-list/property-input/property-input-components/checkbox-property-input/checkbox-property-input.component";
+import { SelectPropertyInputComponent } from "./property-list/property-input/property-input-components/select-property-input/select-property-input.component";
 
 
 export const DND_EDITOR_DECLARATIONS = [
@@ -21,6 +22,7 @@ export const DND_EDITOR_DECLARATIONS = [
     TextPropertyInputComponent,
     ColorPropertyInputComponent,
     CheckboxPropertyInputComponent,
+    SelectPropertyInputComponent,
 ];
 
 export const DND_EDITOR_ENTRY_COMPONENTS = [
@@ -28,6 +30,7 @@ export const DND_EDITOR_ENTRY_COMPONENTS = [
     TextPropertyInputComponent,
     ColorPropertyInputComponent,
     CheckboxPropertyInputComponent,
+    SelectPropertyInputComponent,
 ];
 
 export const DND_EDITOR_EXPORTS = [
