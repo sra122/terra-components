@@ -67,7 +67,7 @@ gulp.task('build-local', function (callback)
         'copy-fonts',
         'copy-images',
         'copy-lang',
-        'copy-to',
+        'copy-to-target',
         callback
     );
 });
@@ -208,7 +208,7 @@ gulp.task('copy-lang', function ()
 });
 
 //copy files from dist to defined directory
-gulp.task('copy-to', function ()
+gulp.task('copy-to-target', function ()
 {
     var target = argv.target || '/workspace/terra';
     return gulp.src('dist/**/*.*')

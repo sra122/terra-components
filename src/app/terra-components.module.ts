@@ -69,6 +69,7 @@ import { NgInteractModule } from "./ng2-interact/interact.module";
 import { DndEditorModule } from "./dnd-editor/dnd-editor.module";
 import { DndEditorCompontent } from "./dnd-editor/dnd-editor.component";
 import { ElementDropzoneComponent } from "./dnd-editor/element-dropzone/element-dropzone.component";
+import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -141,6 +142,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraComponentsComponent,
                   TerraAlertPanelComponent,
                   TerraTextInputComponent,
+                  TerraColorPickerComponent,
                   TerraNumberInputComponent,
                   TerraButtonComponent,
                   TerraTreeComponent,
@@ -182,6 +184,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
               ],
               entryComponents: [
                   TerraTextInputComponent,
+                  TerraColorPickerComponent,
                   TerraNumberInputComponent,
                   TerraButtonComponent,
                   TerraTreeComponent,
@@ -221,6 +224,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
               exports:         [
                   TerraAlertPanelComponent,
                   TerraTextInputComponent,
+                  TerraColorPickerComponent,
                   TerraNumberInputComponent,
                   TerraButtonComponent,
                   TerraTreeComponent,
