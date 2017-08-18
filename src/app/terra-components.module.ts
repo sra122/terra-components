@@ -8,6 +8,7 @@ import {
     ReactiveFormsModule
 } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
     AlertModule,
     ButtonsModule,
@@ -66,9 +67,9 @@ import { TerraSplitViewComponent } from './split-view/terra-split-view.component
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
 import { NgInteractModule } from "./ng2-interact/interact.module";
-import { DndEditorModule } from "./dnd-editor/dnd-editor.module";
-import { DndEditorCompontent } from "./dnd-editor/dnd-editor.component";
-import { ElementDropzoneComponent } from "./dnd-editor/element-dropzone/element-dropzone.component";
+import {
+    DND_EDITOR_DECLARATIONS, DND_EDITOR_ENTRY_COMPONENTS, DND_EDITOR_EXPORTS,
+} from "./dnd-editor/dnd-editor.module";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -180,7 +181,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraNavigatorComponent,
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
-                  TerraMultiSplitViewComponent
+                  TerraMultiSplitViewComponent,
+                  ...DND_EDITOR_DECLARATIONS
               ],
               entryComponents: [
                   TerraTextInputComponent,
@@ -219,7 +221,8 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraCardComponent,
                   TerraNavigatorComponent,
                   TerraToggleComponent,
-                  TerraSyntaxEditorComponent
+                  TerraSyntaxEditorComponent,
+                  ...DND_EDITOR_ENTRY_COMPONENTS
               ],
               exports:         [
                   TerraAlertPanelComponent,
@@ -262,10 +265,10 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraNavigatorComponent,
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
-                  DndEditorCompontent,
-                  ElementDropzoneComponent,
+                  ...DND_EDITOR_EXPORTS
               ],
               imports:         [
+                  BrowserAnimationsModule,
                   CommonModule,
                   FormsModule,
                   ReactiveFormsModule,
@@ -278,7 +281,6 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   MyDatePickerModule,
                   AceEditorModule,
                   NgInteractModule,
-                  DndEditorModule,
               ],
               providers:       [
                   COMPILER_PROVIDERS,
