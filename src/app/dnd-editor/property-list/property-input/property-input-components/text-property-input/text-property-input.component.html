@@ -1,4 +1,1 @@
-<div class="input-unit-v1">
-    <label>{{ property.label }}</label>
-    <input type="text" autocomplete="off" [ngModel]="value" (ngModelChange)="setValue($event)">
-</div>
+<terra-text-input [inputName]="property.label" [ngModel]="value" (ngModelChange)="setValue($event)"></terra-text-input>

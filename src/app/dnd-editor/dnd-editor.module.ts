@@ -6,6 +6,8 @@ import { PropertyListComponent } from "./property-list/property-list.component";
 import { ElementPropertyInputComponent } from "./property-list/property-input/property-input.component";
 import { ElementPropertyInputListComponent } from "./property-list/property-input-list/property-input-list.component";
 import { TextPropertyInputComponent } from "./property-list/property-input/property-input-components/text-property-input/text-property-input.component";
+import { ColorPropertyInputComponent } from "./property-list/property-input/property-input-components/color-property-input/color-property-input.component";
+import { CheckboxPropertyInputComponent } from "./property-list/property-input/property-input-components/checkbox-property-input/checkbox-property-input.component";
 
 
 export const DND_EDITOR_DECLARATIONS = [
@@ -16,17 +18,20 @@ export const DND_EDITOR_DECLARATIONS = [
     PropertyListComponent,
     ElementPropertyInputComponent,
     ElementPropertyInputListComponent,
-    TextPropertyInputComponent
+    TextPropertyInputComponent,
+    ColorPropertyInputComponent,
+    CheckboxPropertyInputComponent,
 ];
 
 export const DND_EDITOR_ENTRY_COMPONENTS = [
     ElementContainerComponent,
-    TextPropertyInputComponent
+    TextPropertyInputComponent,
+    ColorPropertyInputComponent,
+    CheckboxPropertyInputComponent,
 ];
 
 export const DND_EDITOR_EXPORTS = [
     DndEditorCompontent,
     ElementDropzoneComponent,
-    ElementContainerComponent,
-    TextPropertyInputComponent
+    ElementContainerComponent
 ];
