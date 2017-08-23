@@ -165,6 +165,11 @@ export class ElementDropzoneComponent implements OnInit
 
     public acceptDrop( args: any )
     {
+        if ( !args.dragData || !args.dragData.element )
+        {
+            return false;
+        }
+
         if ( !this.allowedElements )
         {
             return true;
@@ -181,7 +186,7 @@ export class ElementDropzoneComponent implements OnInit
         );
     }
 
-    private addEditorElement( element: DndEditorElement, documentItem?: DndEditorDocumentItem ): void
+    private addEditorElement( element: DndEditorElement, documentItem?: DndEditorDocumentItem ): ComponentRef<ElementContainerComponent>
     {
         let container: ComponentRef<ElementContainerComponent> = this.dropTarget.createComponent(
             this.componentFactory.resolveComponentFactory( ElementContainerComponent ),
@@ -206,6 +211,7 @@ export class ElementDropzoneComponent implements OnInit
 
         this.onDocumentChange.emit();
 
+        return container;
     }
 
     public getDocumentItems(): DndEditorDocumentItem[]

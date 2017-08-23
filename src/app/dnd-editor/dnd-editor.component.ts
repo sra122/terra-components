@@ -35,6 +35,9 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
     @ViewChild('propertyList', { read: ElementRef })
     private propertyListElement: ElementRef;
 
+    @ViewChild('placeholderList', { read: ElementRef })
+    private placeholderListElement: ElementRef;
+
     @ContentChildren(ElementDropzoneComponent)
     private dropzones: QueryList<ElementDropzoneComponent>;
 
@@ -100,8 +103,10 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
     public unselectComponent( event )
     {
         if ( document.body.contains( event.target )
-            && !this.editorContent.nativeElement.contains( event.target )
-            && !this.propertyListElement.nativeElement.contains( event.target ) )
+            && this.selectedComponent
+            && !this.selectedComponent.location.nativeElement.contains( event.target )
+            && !this.propertyListElement.nativeElement.contains( event.target )
+            && !this.placeholderListElement.nativeElement.contains( event.target ) )
         {
             this.editorService.selectComponent( null );
         }

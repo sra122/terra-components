@@ -1,0 +1,22 @@
+<div>
+    <p class="sidebar-title">Verfügbare Platzhalter</p>
+    <div class="placeholder-list">
+        <div class="placeholder-list-entry"
+             *ngFor="let placeholder of placeholderList"
+             [ia-draggable]
+             [ia-draggable-data]="{placeholder: placeholder[0]}"
+             (ia-draggable-onStart)="onStart( $event )"
+             (ia-draggable-onMove)="onMove( $event )"
+             (ia-draggable-onEnd)="onEnd( $event )">
+            {{ placeholder[1] }}
+        </div>
+    </div>
+
+    <div class="placeholder-caret"
+         *ngIf="caretPos"
+         [style.height.px]="caretPos.height"
+         [style.top.px]="caretPos.y"
+         [style.left.px]="caretPos.x"></div>
+</div>
+
+

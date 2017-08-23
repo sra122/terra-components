@@ -1,6 +1,7 @@
 import { DndEditorConfig } from "../model/dnd-editor-config.interface";
 import { DndEditorElement } from "../model/dnd-editor-element.interface";
 import { DndEditorElementGroup } from "../model/dnd-editor-element-group.interface";
+
 export class EditorHelper
 {
     constructor( private config: DndEditorConfig )

@@ -113,6 +113,10 @@ export class ElementContainerComponent implements OnInit, OnDestroy
             }
 
         });
+
+        this.editorService.selectComponent( this.componentRef );
+        this.selected = true;
+        this.changeDetector.detectChanges();
     }
 
     public ngOnDestroy(): void

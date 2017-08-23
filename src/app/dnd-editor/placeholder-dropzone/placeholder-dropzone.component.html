@@ -1,0 +1,15 @@
+<div ia-dropzone
+     [ia-dropzone-accept]="acceptDrop.bind(this)"
+     (ia-dropzone-onDrop)="dropPlaceholder( $event )"
+     (ia-dropzone-onDropActivate)="updateParsedContent()"
+     contenteditable="true"
+     (keydown)="onCursorChanged($event)"
+     (click)="onCursorChanged($event)"
+     (blur)="onBlur()"
+     #container>
+
+    <span *ngFor="let partial of parsedContent, let i = index" [class.selected]="selectedIndex === i" [attr.data-output]="partial.output">
+        <span *ngIf="partial.type === 'text'" contenteditable="true">{{ partial.content }}</span>
+        <span *ngIf="partial.type !== 'text'" contenteditable="false" class="placeholder">{{ partial.content }}</span>
+    </span>
+</div>

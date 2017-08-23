@@ -6,4 +6,5 @@ export interface DndEditorElement
     name: string;
     component: Type<any>;
     iconClass?: string;
+    scope?: string;
 }

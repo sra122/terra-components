@@ -9,6 +9,8 @@ import { TextPropertyInputComponent } from "./property-list/property-input/prope
 import { ColorPropertyInputComponent } from "./property-list/property-input/property-input-components/color-property-input/color-property-input.component";
 import { CheckboxPropertyInputComponent } from "./property-list/property-input/property-input-components/checkbox-property-input/checkbox-property-input.component";
 import { SelectPropertyInputComponent } from "./property-list/property-input/property-input-components/select-property-input/select-property-input.component";
+import { PlaceholderListComponent } from "./placeholder-list/placeholder-list.component";
+import { PlaceholderDropzoneComponent } from "./placeholder-dropzone/placeholder-dropzone.component";
 
 
 export const DND_EDITOR_DECLARATIONS = [
@@ -17,6 +19,8 @@ export const DND_EDITOR_DECLARATIONS = [
     ElementDropzoneComponent,
     ElementContainerComponent,
     PropertyListComponent,
+    PlaceholderListComponent,
+    PlaceholderDropzoneComponent,
     ElementPropertyInputComponent,
     ElementPropertyInputListComponent,
     TextPropertyInputComponent,
@@ -36,5 +40,6 @@ export const DND_EDITOR_ENTRY_COMPONENTS = [
 export const DND_EDITOR_EXPORTS = [
     DndEditorCompontent,
     ElementDropzoneComponent,
-    ElementContainerComponent
+    ElementContainerComponent,
+    PlaceholderDropzoneComponent,
 ];

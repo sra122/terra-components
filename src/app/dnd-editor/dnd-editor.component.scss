@@ -35,10 +35,37 @@
   }
 
   .editor-sidebar {
-    border-right: 1px solid #C7C7C7;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    bottom: 0px;
+
+    &.sidebar-left {
+      border-right: 1px solid #C7C7C7;
+      left: 0;
+
+      &.out {
+        transform: translateX( -100% );
+      }
+    }
+
+    &.sidebar-right {
+      border-left: 1px solid #C7C7C7;
+      right: 0;
+
+      &.out {
+        transform: translateX( 100% );
+      }
+    }
+
+    /deep/
+    .sidebar-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
   }
 
   dnd-editor-element-list {
