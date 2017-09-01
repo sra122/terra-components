@@ -1,8 +1,8 @@
 <div *ngFor="let group of elementGroups">
     <terra-portlet
             [inputPortletHeader]="group.name"
-            [isCollapsable]="true"
-            [collapsed]="false">
+            [inputIsCollapsable]="true"
+            [inputCollapsed]="false">
 
         <div class="element-list-entry"
              *ngFor="let element of group.elements"
