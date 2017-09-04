@@ -96,4 +96,23 @@ export class DndEditorService
 
         return placeholderMap;
     }
+
+    public isPlaceholder( placeholder: string ): boolean
+    {
+        let query = placeholder.split(".");
+        if ( query[0] === "root" )
+        {
+            query.shift();
+        }
+
+        let key = query.shift();
+        let placeholderMap = this.editorConfig.placeholder;
+        while( key && placeholderMap && placeholderMap[key] )
+        {
+            placeholderMap = <PlaceholderMap>placeholderMap[key];
+            key = query.shift();
+        }
+
+        return typeof placeholderMap === "string";
+    }
 }

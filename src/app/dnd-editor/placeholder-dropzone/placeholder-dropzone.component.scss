@@ -1,13 +1,17 @@
-.placeholder {
-  background-color: $gray-light-3;
-  border-radius: 3px;
-  font-family: monospace;
-  padding: .1em .5em;
-  font-size: .9em;
-}
+.placeholder-dropzone {
 
-.selected > .placeholder {
-  box-shadow: 0 0 1px 1px $brand-primary;
+  /deep/
+  span {
+    background-color: #cccccc;
+    border-radius: $border-radius;
+    font-family: monospace;
+    padding: 1px 3px;
+    font-size: .85em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 1px;
+    letter-spacing: 0.05em;
+  }
 }
 
 [contenteditable] {
