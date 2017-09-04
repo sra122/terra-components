@@ -86,55 +86,69 @@ export class ElementDropzoneComponent implements OnInit
 
     public onDragMove( event: DropEvent )
     {
-       let insertIndex = this.childComponents.findIndex(
-           (component: ComponentRef<any>) => {
-               let rect: ClientRect = component.location.nativeElement.getBoundingClientRect();
-               return rect.left <= event.dragEvent.clientX
-                   && rect.right >= event.dragEvent.clientX
-                   && rect.top <= event.dragEvent.clientY
-                   && rect.bottom >= event.dragEvent.clientY;
-           }
-       );
+        let prevSibling = this.childComponents
+                              .reduce( (value: ComponentRef<any>, current: ComponentRef<any>) => {
+                                  let isBeforeCursor: boolean = this.isBeforePosition(
+                                      <HTMLElement>current.location.nativeElement,
+                                      event.dragEvent.clientX,
+                                      event.dragEvent.clientY
+                                  );
+                                  let isBeforeCurrent: boolean = !value || this.isBeforePosition(
+                                      <HTMLElement>current.location.nativeElement,
+                                      value.location.nativeElement.getBoundingClientRect().right,
+                                      value.location.nativeElement.getBoundingClientRect().bottom
+                                  );
 
-       if ( insertIndex >= 0 )
-       {
-           let insertRect: ClientRect = this.childComponents[insertIndex].location.nativeElement.getBoundingClientRect();
-           let elementGradient = ( insertRect.right - insertRect.left ) / ( insertRect.bottom - insertRect.top );
-           let cursorGradient = ( event.dragEvent.clientX - insertRect.left ) / ( event.dragEvent.clientY - insertRect.top );
-           if ( elementGradient >= cursorGradient )
-           {
-               insertIndex++;
-           }
+                                  if ( isBeforeCursor && isBeforeCurrent )
+                                  {
+                                      return current;
+                                  }
 
-           if ( insertIndex != this.insertIndex )
-           {
-               this.insertIndex = insertIndex;
-               if ( this.shadowComponent )
-               {
-                   this.dropTarget.move( this.shadowComponent.hostView, this.insertIndex );
-               }
-               else
-               {
-                   this.editorService.currentElementContainer = null;
-                   this.shadowComponent = this.createComponent(
-                       event.dropData.element.component,
-                       this.insertIndex,
-                   );
-                   this.shadowComponent.location.nativeElement.classList.add('shadow-clone');
-               }
-               this.changeDetector.detectChanges();
-           }
-       }
-       else
-       {
-           if ( !this.shadowComponent )
-           {
-               this.editorService.currentElementContainer = null;
-               this.shadowComponent = this.createComponent( event.dropData.element.component );
-               this.shadowComponent.location.nativeElement.classList.add('shadow-clone');
-               this.changeDetector.detectChanges();
-           }
-       }
+                                  return value;
+                              }, null);
+
+
+        let insertIndex: number = this.childComponents.indexOf( prevSibling ) + 1;
+
+        if ( insertIndex > 0 )
+        {
+            if ( insertIndex != this.insertIndex )
+            {
+                this.insertIndex = insertIndex;
+                if ( this.shadowComponent )
+                {
+                    this.dropTarget.move( this.shadowComponent.hostView, this.insertIndex );
+                }
+                else
+                {
+                    this.editorService.currentElementContainer = null;
+                    this.shadowComponent = this.createComponent(
+                        event.dropData.element.component,
+                        this.insertIndex,
+                    );
+                    this.shadowComponent.location.nativeElement.classList.add('shadow-clone');
+                }
+                    this.changeDetector.detectChanges();
+            }
+        }
+        else
+        {
+            if ( !this.shadowComponent )
+            {
+                this.editorService.currentElementContainer = null;
+                this.shadowComponent = this.createComponent( event.dropData.element.component );
+                this.shadowComponent.location.nativeElement.classList.add('shadow-clone');
+                this.changeDetector.detectChanges();
+            }
+        }
+    }
+
+    private isBeforePosition( element: HTMLElement, x: number, y: number ): boolean
+    {
+        let rect: ClientRect = element.getBoundingClientRect();
+        let elementGradient = ( rect.left - rect.right ) / ( rect.bottom - rect.top );
+        let positionGradient = ( rect.left - x ) / ( rect.bottom - y );
+        return rect.bottom <= y && rect.right >= x && positionGradient > elementGradient;
     }
 
     public onDragLeave()
