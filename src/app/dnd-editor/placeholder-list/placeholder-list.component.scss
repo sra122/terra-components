@@ -1,32 +1,34 @@
 .placeholder-list-entry
 {
-  padding: 2px 8px;
-  background-color: $gray-light-4;
-  border: 1px solid $gray-light-3;
-  margin: 4px;
-  border-radius: 4px;
-  font-family: monospace;
-  display: inline-block;
-  cursor: move;
-
-  &.draggable-clone
-  {
-    position: fixed;
-    z-index: 9999;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4 );
-    transform: rotate(-4deg) scale(1);
-    transition: opacity 300ms, transform 300ms;
-
-    &.hidden {
-      opacity: 0;
-     transform: rotate(-4deg) scale(0);
+    padding: 2px 8px;
+    background-color: $gray-light-4;
+    border: 1px solid $gray-light-3;
+    margin: 4px;
+    border-radius: 4px;
+    font-family: monospace;
+    display: inline-block;
+    cursor: move;
+    
+    &.draggable-clone
+    {
+        position: fixed;
+        z-index: 9999;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        transform: rotate(-4deg) scale(1);
+        transition: opacity 300ms, transform 300ms;
+        
+        &.hidden
+        {
+            opacity: 0;
+            transform: rotate(-4deg) scale(0);
+        }
     }
-  }
 }
 
-.placeholder-caret {
-  position: fixed;
-  width: 2px;
-  background-color: $gray-light;
-  z-index: 9999;
+.placeholder-caret
+{
+    position: fixed;
+    width: 2px;
+    background-color: $gray-light;
+    z-index: 9999;
 }

@@ -1,27 +1,28 @@
 .element-list-entry
 {
-  padding: 6px 9px;
-  background-color: $gray-light-4;
-  display: flex;
-  flex-direction: row;
-  cursor: move;
-
-  [class^="icon-"]
-  {
-    padding-right: 12px;
-    font-size: 20px;
-  }
-
-  &.draggable-clone
-  {
-    position: fixed;
-    z-index: 9999;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4 );
-    transform: rotate(-4deg);
-  }
-
-  & + .element-list-entry {
-    border-top: 1px solid $gray-light-3;
-  }
+    padding: 6px 9px;
+    background-color: $gray-light-4;
+    display: flex;
+    flex-direction: row;
+    cursor: move;
+    
+    [class^="icon-"]
+    {
+        padding-right: 12px;
+        font-size: 20px;
+    }
+    
+    &.draggable-clone
+    {
+        position: fixed;
+        z-index: 9999;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        transform: rotate(-4deg);
+    }
+    
+    & + .element-list-entry
+    {
+        border-top: 1px solid $gray-light-3;
+    }
 }
 

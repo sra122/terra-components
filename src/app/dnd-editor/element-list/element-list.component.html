@@ -6,11 +6,11 @@
 
         <div class="element-list-entry"
              *ngFor="let element of group.elements"
-             [ia-draggable]
-             [ia-draggable-data]="{element: element}"
-             (ia-draggable-onStart)="startDrag($event)"
-             (ia-draggable-onMove)="handleMove($event)"
-             (ia-draggable-onEnd)="stopDrag($event)">
+             [terra-draggable]
+             [terra-draggable-data]="{element: element}"
+             (terra-draggable-onStart)="startDrag($event)"
+             (terra-draggable-onMove)="handleMove($event)"
+             (terra-draggable-onEnd)="stopDrag($event)">
             <span [class]="element.iconClass || 'icon-item'"></span>
             <span>{{ element.name }}</span>
         </div>

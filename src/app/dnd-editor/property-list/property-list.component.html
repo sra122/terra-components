@@ -5,16 +5,16 @@
     <div>
         <div class="clearfix m-b-1" *ngFor="let property of elementPropertyKeys">
             <dnd-editor-property-input
-                    [property]="elementProperties[property]"
-                    [value]="component.instance[property]"
-                    (valueChange)="setPropertyValue( property, $event )"
-                    *ngIf="!isList( property )">
+                [property]="elementProperties[property]"
+                [value]="component.instance[property]"
+                (valueChange)="setPropertyValue( property, $event )"
+                *ngIf="!isList( property )">
             </dnd-editor-property-input>
             <dnd-editor-property-input-list
-                    [property]="elementProperties[property]"
-                    [value]="component.instance[property]"
-                    (valueChange)="setPropertyValue( property, $event )"
-                    *ngIf="isList( property )">
+                [property]="elementProperties[property]"
+                [value]="component.instance[property]"
+                (valueChange)="setPropertyValue( property, $event )"
+                *ngIf="isList( property )">
             </dnd-editor-property-input-list>
         </div>
     </div>

@@ -1,19 +1,22 @@
-.placeholder-dropzone {
-
-  /deep/
-  span {
-    background-color: #cccccc;
-    border-radius: $border-radius;
-    font-family: monospace;
-    padding: 1px 3px;
-    font-size: .85em;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 1px;
-    letter-spacing: 0.05em;
-  }
+.placeholder-dropzone
+{
+    
+    /deep/
+    span
+    {
+        background-color: #CCCCCC;
+        border-radius: $border-radius;
+        font-family: monospace;
+        padding: 1px 3px;
+        font-size: .85em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 1px;
+        letter-spacing: 0.05em;
+    }
 }
 
-[contenteditable] {
-  outline: none !important;
+[contenteditable]
+{
+    outline: none !important;
 }

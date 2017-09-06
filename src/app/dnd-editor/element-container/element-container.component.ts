@@ -1,110 +1,117 @@
 import {
     ChangeDetectorRef,
-    Component, ComponentFactoryResolver, ComponentRef, ContentChildren, ElementRef, EventEmitter, forwardRef, Input,
-    OnChanges,
+    Component,
+    ComponentFactoryResolver,
+    ComponentRef,
+    ElementRef,
+    EventEmitter,
     OnDestroy,
-    OnInit, Output,
-    QueryList, SimpleChanges, Type,
+    OnInit,
     ViewChild,
     ViewContainerRef
-} from "@angular/core";
-import { DndEditorService } from "../dnd-editor.service";
-import { Subscription } from "rxjs/Subscription";
-import { DndEditorElement } from "../model/dnd-editor-element.interface";
+} from '@angular/core';
+import { DndEditorService } from '../dnd-editor.service';
+import { Subscription } from 'rxjs/Subscription';
+import { DndEditorElement } from '../model/dnd-editor-element.interface';
 import {
     DND_EDITOR_PROPERTY_METADATA_KEY,
     DndEditorElementProperty
-} from "../model/dnd-editor-element-property.decorator";
-import { ElementDropzoneComponent } from "../element-dropzone/element-dropzone.component";
-import { DndEditorDocument, DndEditorDocumentItem } from "../model/dnd-editor-document.interface";
+} from '../model/dnd-editor-element-property.decorator';
+import { ElementDropzoneComponent } from '../element-dropzone/element-dropzone.component';
+import {
+    DndEditorDocument,
+    DndEditorDocumentItem
+} from '../model/dnd-editor-document.interface';
 
 @Component({
     selector: 'dnd-editor-element-container',
     template: require('./element-container.component.html'),
-    styles: [require('./element-container.component.scss')]
+    styles:   [require('./element-container.component.scss')]
 })
 export class ElementContainerComponent implements OnInit, OnDestroy
 {
-    public documentItem: DndEditorDocumentItem;
+    public documentItem:DndEditorDocumentItem;
 
-    public editorElement: DndEditorElement;
+    public editorElement:DndEditorElement;
 
-    public destroy: () => void;
+    public destroy:() => void;
 
-    public documentItemChange: EventEmitter<void> = new EventEmitter<void>();
+    public documentItemChange:EventEmitter<void> = new EventEmitter<void>();
 
-    private dropzones: ElementDropzoneComponent[] = [];
+    private dropzones:ElementDropzoneComponent[] = [];
 
-    @ViewChild('container', { read: ViewContainerRef })
-    private container: ViewContainerRef;
+    @ViewChild('container', {read: ViewContainerRef})
+    private container:ViewContainerRef;
 
-    private componentRef: ComponentRef<any>;
-    private selected: boolean = false;
+    private componentRef:ComponentRef<any>;
+    private selected:boolean = false;
 
-    private selectedComponentSubscription: Subscription;
+    private selectedComponentSubscription:Subscription;
 
-    private draggedElement: HTMLElement;
-    private draggedElementPos: {x: number, y: number};
+    private draggedElement:HTMLElement;
+    private draggedElementPos:{ x:number, y:number };
 
-    private get isSelectable(): boolean
+    private get isSelectable():boolean
     {
         return this.editorService && this.editorService.hoveredElementContainer === this;
     }
 
-    constructor(
-        private element: ElementRef,
-        private editorService: DndEditorService,
-        private changeDetector: ChangeDetectorRef,
-        private componentFactoryResolver: ComponentFactoryResolver
-    )
+    constructor(private element:ElementRef,
+                private editorService:DndEditorService,
+                private changeDetector:ChangeDetectorRef,
+                private componentFactoryResolver:ComponentFactoryResolver)
     {
     }
 
-    public ngOnInit(): void
+    public ngOnInit():void
     {
         this.selectedComponentSubscription =
-            this.editorService.selectedComponent.subscribe( (componentRef: ComponentRef<any>) => {
+            this.editorService.selectedComponent.subscribe((componentRef:ComponentRef<any>) =>
+            {
                 this.selected = componentRef === this.componentRef;
                 this.changeDetector.detectChanges();
             });
     }
 
-    public initEditorElement( editorElement: DndEditorElement, documentItem?: DndEditorDocumentItem ): void
+    public initEditorElement(editorElement:DndEditorElement, documentItem?:DndEditorDocumentItem):void
     {
         this.editorElement = editorElement;
         this.documentItem = documentItem;
         this.componentRef = this.container.createComponent(
-            this.componentFactoryResolver.resolveComponentFactory( editorElement.component )
+            this.componentFactoryResolver.resolveComponentFactory(editorElement.component)
         );
 
-        Object.keys( this.componentRef.instance ).forEach( (property: string) => {
+        Object.keys(this.componentRef.instance).forEach((property:string) =>
+        {
 
-            if ( this.componentRef.instance[property] instanceof EventEmitter )
+            if(this.componentRef.instance[property] instanceof EventEmitter)
             {
                 // subscribe to @Output() properties
-                this.componentRef.instance[property].subscribe( () => {
+                this.componentRef.instance[property].subscribe(() =>
+                {
                     this.documentItemChange.emit();
                 });
             }
             else
             {
                 // set initial data if defined
-                if ( documentItem && documentItem.properties )
+                if(documentItem && documentItem.properties)
                 {
-                    if ( documentItem.name !== editorElement.component.name )
+                    if(documentItem.name !== editorElement.component.name)
                     {
-                        console.error( "DocumentItem does not match to component of EditorElement");
+                        console.error("DocumentItem does not match to component of EditorElement");
                     }
                     else
                     {
-                        Object.keys( documentItem.properties ).forEach( (property: string) => {
-                            if ( this.componentRef.instance.hasOwnProperty( property ) )
+                        Object.keys(documentItem.properties).forEach((property:string) =>
+                        {
+                            if(this.componentRef.instance.hasOwnProperty(property))
                             {
                                 this.componentRef.instance[property] = documentItem.properties[property];
                             }
                             else
                             {
-                                console.warn( "Data defined for property '" + property + "' cannot be assigned to component " + documentItem.name );
+                                console.warn("Data defined for property '" + property + "' cannot be assigned to component " + documentItem.name);
                             }
                         });
                     }
@@ -114,24 +121,24 @@ export class ElementContainerComponent implements OnInit, OnDestroy
 
         });
 
-        this.editorService.selectComponent( this.componentRef );
+        this.editorService.selectComponent(this.componentRef);
         this.selected = true;
         this.changeDetector.detectChanges();
     }
 
-    public ngOnDestroy(): void
+    public ngOnDestroy():void
     {
-        if ( this.selectedComponentSubscription )
+        if(this.selectedComponentSubscription)
         {
             this.selectedComponentSubscription.unsubscribe();
         }
     }
 
-    public setSelectable( value: boolean, event?: Event )
+    public setSelectable(value:boolean, event?:Event)
     {
-        if( value )
+        if(value)
         {
-            this.editorService.hoverElementContainer( this, event );
+            this.editorService.hoverElementContainer(this, event);
         }
         else
         {
@@ -141,51 +148,54 @@ export class ElementContainerComponent implements OnInit, OnDestroy
 
     }
 
-    public selectComponent( event: Event )
+    public selectComponent(event:Event)
     {
         event.stopPropagation();
-        this.editorService.selectComponent( this.componentRef );
+        this.editorService.selectComponent(this.componentRef);
     }
 
-    public registerDropzone( dropzone: ElementDropzoneComponent )
+    public registerDropzone(dropzone:ElementDropzoneComponent)
     {
-        this.dropzones.push( dropzone );
+        this.dropzones.push(dropzone);
 
-        if ( this.documentItem && this.documentItem.children )
+        if(this.documentItem && this.documentItem.children)
         {
-            Object.keys( this.documentItem.children ).forEach( (dropzoneId: string) => {
-                let dropzone: ElementDropzoneComponent = this.dropzones.find( (d: ElementDropzoneComponent) => {
+            Object.keys(this.documentItem.children).forEach((dropzoneId:string) =>
+            {
+                let dropzone:ElementDropzoneComponent = this.dropzones.find((d:ElementDropzoneComponent) =>
+                {
                     return d.dropzoneId === dropzoneId;
                 });
 
-                if ( !dropzone )
+                if(!dropzone)
                 {
-                    console.error("Cannot find dropzone with id: " + dropzoneId );
+                    console.error("Cannot find dropzone with id: " + dropzoneId);
                 }
                 else
                 {
-                    dropzone.initDropzone( this.documentItem.children[dropzoneId] );
+                    dropzone.initDropzone(this.documentItem.children[dropzoneId]);
                 }
 
             });
         }
 
-        dropzone.onDocumentChange.subscribe( () => {
+        dropzone.onDocumentChange.subscribe(() =>
+        {
             this.documentItemChange.emit();
         });
     }
 
-    public startDrag( event: Interact.InteractEvent )
+    public startDrag(event:Interact.InteractEvent)
     {
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             console.error("Drag already in progress.");
         }
 
         this.draggedElement = event.target.cloneNode(true);
-        document.body.appendChild( this.draggedElement );
+        document.body.appendChild(this.draggedElement);
 
-        let clientRect: ClientRect = event.target.getBoundingClientRect();
+        let clientRect:ClientRect = event.target.getBoundingClientRect();
         this.draggedElement.style.width = clientRect.width + 'px';
         this.draggedElement.style.height = clientRect.height + 'px';
         this.draggedElement.classList.add("draggable-clone");
@@ -198,9 +208,9 @@ export class ElementContainerComponent implements OnInit, OnDestroy
         this.element.nativeElement.style.display = 'none';
     }
 
-    public handleMove( event: Interact.InteractEvent )
+    public handleMove(event:Interact.InteractEvent)
     {
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             this.draggedElementPos.x += event.dx;
             this.draggedElementPos.y += event.dy;
@@ -209,9 +219,9 @@ export class ElementContainerComponent implements OnInit, OnDestroy
         }
     }
 
-    public stopDrag( event: Interact.InteractEvent )
+    public stopDrag(event:Interact.InteractEvent)
     {
-        if ( (<any>event).dropzone )
+        if((<any>event).dropzone)
         {
             this.destroy();
         }
@@ -220,46 +230,49 @@ export class ElementContainerComponent implements OnInit, OnDestroy
             this.element.nativeElement.style.display = '';
         }
 
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             this.draggedElement.remove();
             this.draggedElement = null;
         }
     }
 
-    public getDocumentItem(): DndEditorDocumentItem
+    public getDocumentItem():DndEditorDocumentItem
     {
-        if ( this.componentRef )
+        if(this.componentRef)
         {
-            let properties: { [key: string]: DndEditorElementProperty } = Reflect.getMetadata( DND_EDITOR_PROPERTY_METADATA_KEY, this.componentRef.componentType ) || {};
-            let annotations: { [key: string]: any }                     = Reflect.getMetadata( "annotations", this.componentRef.componentType ) || {};
-            let propMetadata: any[]                                     = Reflect.getMetadata( "propMetadata", this.componentRef.componentType ) || {};
-            let values: { [key: string]: any }                          = {};
+            let properties:{ [key:string]:DndEditorElementProperty } = Reflect.getMetadata(DND_EDITOR_PROPERTY_METADATA_KEY,
+                    this.componentRef.componentType) || {};
+            let annotations:{ [key:string]:any } = Reflect.getMetadata("annotations", this.componentRef.componentType) || {};
+            let propMetadata:any[] = Reflect.getMetadata("propMetadata", this.componentRef.componentType) || {};
+            let values:{ [key:string]:any } = {};
 
-            Object.keys( properties ).forEach( key =>
+            Object.keys(properties).forEach(key =>
             {
                 values[key] = this.componentRef.instance[key];
-            } );
+            });
 
-            Object.keys( propMetadata ).forEach( prop => {
-                if ( !(this.componentRef.instance[prop] instanceof EventEmitter) )
+            Object.keys(propMetadata).forEach(prop =>
+            {
+                if(!(this.componentRef.instance[prop] instanceof EventEmitter))
                 {
                     values[prop] = this.componentRef.instance[prop];
                 }
             });
 
-            let children: DndEditorDocument = {};
+            let children:DndEditorDocument = {};
 
-            this.dropzones.forEach( (dropzone: ElementDropzoneComponent, index: number) => {
+            this.dropzones.forEach((dropzone:ElementDropzoneComponent, index:number) =>
+            {
                 let key = dropzone.dropzoneId || index + '';
                 children[key] = dropzone.getDocumentItems();
             });
 
             return {
-                name: this.componentRef.componentType.name,
-                selector: annotations[0].selector,
+                name:       this.componentRef.componentType.name,
+                selector:   annotations[0].selector,
                 properties: values,
-                children: children
+                children:   children
             };
         }
 

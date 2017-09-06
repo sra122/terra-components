@@ -1,10 +1,10 @@
 <div class="element-container"
      [class.selected]="selected"
-     [ia-draggable]="{allowFrom: '.drag-handle'}"
-     [ia-draggable-data]="{element: editorElement}"
-     (ia-draggable-onStart)="startDrag($event)"
-     (ia-draggable-onMove)="handleMove($event)"
-     (ia-draggable-onEnd)="stopDrag($event)">
+     [terra-draggable]="{allowFrom: '.drag-handle'}"
+     [terra-draggable-data]="{element: editorElement}"
+     (terra-draggable-onStart)="startDrag($event)"
+     (terra-draggable-onMove)="handleMove($event)"
+     (terra-draggable-onEnd)="stopDrag($event)">
     <div class="element-controls">
 
         <span class="element-control-btn" (click)="destroy()">

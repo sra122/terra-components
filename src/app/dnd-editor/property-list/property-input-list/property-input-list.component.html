@@ -3,19 +3,19 @@
         <span class="label">{{ property.label }}</span>
         <span class="placeholder">Keine Einträge</span>
     </span>
-
+    
     <div *ngFor="let v of value, let i = index; trackBy:trackByFn" class="property-list-entry">
         <dnd-editor-property-input
-                [property]="cloneProperty( i )"
-                [value]="v"
-                (valueChange)="setPropertyValue( i, $event )">
+            [property]="cloneProperty( i )"
+            [value]="v"
+            (valueChange)="setPropertyValue( i, $event )">
         </dnd-editor-property-input>
-
+        
         <span class="btn btn-primary btn-sm" (click)="removeEntry(i)">
             <span class="icon-listing_remove"></span>
         </span>
     </div>
-
+    
     <span class="btn btn-primary btn-sm pull-xs-right" (click)="addEntry()">
         hinzufügen <span class="icon-listing_create"></span>
     </span>

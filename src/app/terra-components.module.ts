@@ -66,7 +66,6 @@ import { TerraMultiSplitViewComponent } from './split-view/multi/terra-multi-spl
 import { TerraSplitViewComponent } from './split-view/terra-split-view.component';
 import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
-import { NgInteractModule } from "./ng2-interact/interact.module";
 import {
     DND_EDITOR_DECLARATIONS,
     DND_EDITOR_ENTRY_COMPONENTS,
@@ -191,6 +190,7 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraSyntaxEditorComponent,
                   TerraMultiSplitViewComponent,
                   ...DND_EDITOR_DECLARATIONS,
+                  TerraSliderComponent,
                   TerraFileBrowserComponent,
                   TerraFileInputComponent,
               ],

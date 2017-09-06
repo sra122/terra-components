@@ -1,16 +1,26 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { DndEditorElementGroup } from "../model/dnd-editor-element-group.interface";
-import { animate, state, style, transition, trigger } from "@angular/animations";
+import {
+    Component,
+    Input,
+    OnInit
+} from '@angular/core';
+import { DndEditorElementGroup } from '../model/dnd-editor-element-group.interface';
+import {
+    animate,
+    state,
+    style,
+    transition,
+    trigger
+} from '@angular/animations';
 
 @Component({
-    selector: 'dnd-editor-element-list',
-    template: require('./element-list.component.html'),
-    styles: [require('./element-list.component.scss')],
+    selector:   'dnd-editor-element-list',
+    template:   require('./element-list.component.html'),
+    styles:     [require('./element-list.component.scss')],
     animations: [
         trigger('groupState', [
             state('collapsed', style({
-                height: 0,
-                'padding-top': 0,
+                height:           0,
+                'padding-top':    0,
                 'padding-bottom': 0
             })),
             state('expanded', style({
@@ -25,21 +35,21 @@ import { animate, state, style, transition, trigger } from "@angular/animations"
 export class ElementListComponent implements OnInit
 {
     @Input()
-    public elementGroups: DndEditorElementGroup[] = [];
+    public elementGroups:DndEditorElementGroup[] = [];
 
-    private draggedElement: HTMLElement;
-    private draggedElementPos: {x: number, y: number};
+    private draggedElement:HTMLElement;
+    private draggedElementPos:{ x:number, y:number };
 
-    private groupStates: string[];
+    private groupStates:string[];
 
-    public ngOnInit(): void
+    public ngOnInit():void
     {
-        this.groupStates = this.elementGroups.map( (group: DndEditorElementGroup) => 'collapsed' );
+        this.groupStates = this.elementGroups.map((group:DndEditorElementGroup) => 'collapsed');
     }
 
-    public toggleGroupState( index: number )
+    public toggleGroupState(index:number)
     {
-        if ( this.groupStates[index] === 'collapsed' )
+        if(this.groupStates[index] === 'collapsed')
         {
             this.groupStates[index] = 'expanded';
         }
@@ -49,17 +59,17 @@ export class ElementListComponent implements OnInit
         }
     }
 
-    public startDrag( event: Interact.InteractEvent )
+    public startDrag(event:Interact.InteractEvent)
     {
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             console.error("Drag already in progress.");
         }
 
         this.draggedElement = event.target.cloneNode(true);
-        document.body.appendChild( this.draggedElement );
+        document.body.appendChild(this.draggedElement);
 
-        let clientRect: ClientRect = event.target.getBoundingClientRect();
+        let clientRect:ClientRect = event.target.getBoundingClientRect();
         this.draggedElement.style.width = clientRect.width + 'px';
         this.draggedElement.style.height = clientRect.height + 'px';
         this.draggedElement.classList.add("draggable-clone");
@@ -71,9 +81,9 @@ export class ElementListComponent implements OnInit
         };
     }
 
-    public handleMove( event: Interact.InteractEvent )
+    public handleMove(event:Interact.InteractEvent)
     {
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             this.draggedElementPos.x += event.dx;
             this.draggedElementPos.y += event.dy;
@@ -82,9 +92,9 @@ export class ElementListComponent implements OnInit
         }
     }
 
-    public stopDrag( event: Interact.InteractEvent )
+    public stopDrag(event:Interact.InteractEvent)
     {
-        if ( this.draggedElement )
+        if(this.draggedElement)
         {
             this.draggedElement.remove();
             this.draggedElement = null;

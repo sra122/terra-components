@@ -1,8 +1,8 @@
-import { DndEditorElement } from "./dnd-editor-element.interface";
+import { DndEditorElement } from './dnd-editor-element.interface';
 
 export interface DndEditorElementGroup
 {
-    id?: string;
-    name: string;
-    elements: DndEditorElement[];
+    id?:string;
+    name:string;
+    elements:DndEditorElement[];
 }

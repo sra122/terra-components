@@ -1,15 +1,16 @@
-import { PropertyInputComponent } from "../property-list/property-input/property-input-components/property-input-component.interface";
-import { Type } from "@angular/core";
+import { PropertyInputComponent } from '../property-list/property-input/property-input-components/property-input-component.interface';
+import { Type } from '@angular/core';
 export const DND_EDITOR_PROPERTY_METADATA_KEY = "DND_EDITOR_PROPERTY_METADATA_KEY";
 
-export function ElementProperty( propertyDescription: DndEditorElementProperty ): PropertyDecorator
+export function ElementProperty(propertyDescription:DndEditorElementProperty):PropertyDecorator
 {
-    return ( target: Object, propertyKey: string | symbol ) => {
+    return (target:Object, propertyKey:string | symbol) =>
+    {
 
-        let elementProperties: {[key: string]: DndEditorElementProperty} = Reflect.getMetadata(
-            DND_EDITOR_PROPERTY_METADATA_KEY,
-            target.constructor
-        ) || {};
+        let elementProperties:{ [key:string]:DndEditorElementProperty } = Reflect.getMetadata(
+                DND_EDITOR_PROPERTY_METADATA_KEY,
+                target.constructor
+            ) || {};
 
         elementProperties[propertyKey] = propertyDescription;
 
@@ -21,7 +22,7 @@ export function ElementProperty( propertyDescription: DndEditorElementProperty )
 
         Reflect.defineMetadata(
             "design:type",
-            Reflect.getMetadata( "design:type", target, propertyKey ),
+            Reflect.getMetadata("design:type", target, propertyKey),
             target.constructor,
             propertyKey
         );
@@ -32,7 +33,7 @@ export function ElementProperty( propertyDescription: DndEditorElementProperty )
 
 export interface DndEditorElementProperty
 {
-    label: string,
-    type: Type<PropertyInputComponent<any>>,
-    values?: {[key: string]: string };
+    label:string,
+    type:Type<PropertyInputComponent<any>>,
+    values?:{ [key:string]:string };
 }

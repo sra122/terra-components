@@ -1,50 +1,53 @@
-import { DndEditorService } from "../dnd-editor.service";
-import { Observable } from "rxjs/Observable";
-import { Observer } from "rxjs/Observer";
-import { Key } from "readline";
+import { DndEditorService } from '../dnd-editor.service';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
-type ContentPart = { type: "text" | "placeholder", content: string, output: string };
+type ContentPart = { type:"text" | "placeholder", content:string, output:string };
 
 export type EditableElementOptions = {
-    delimiter: [string, string]
+    delimiter:[string, string]
 };
 
 export class EditableElement
 {
-    public contentChange: Observable<string>;
-    private contentListeners: Array<Observer<string>> = [];
-    private options: EditableElementOptions;
+    public contentChange:Observable<string>;
+    private contentListeners:Array<Observer<string>> = [];
+    private options:EditableElementOptions;
 
-    constructor(
-        private container: HTMLElement,
-        private editorService: DndEditorService,
-        options?: EditableElementOptions )
+    constructor(private container:HTMLElement,
+                private editorService:DndEditorService,
+                options?:EditableElementOptions)
     {
-        this.contentChange = new Observable( (observer: Observer<string>) => {
-            observer.next( this.content );
-            this.contentListeners.push( observer );
+        this.contentChange = new Observable((observer:Observer<string>) =>
+        {
+            observer.next(this.content);
+            this.contentListeners.push(observer);
 
-            return () => {
-                let idx: number = this.contentListeners.indexOf( observer );
-                this.contentListeners.splice( idx, 1 );
+            return () =>
+            {
+                let idx:number = this.contentListeners.indexOf(observer);
+                this.contentListeners.splice(idx, 1);
             };
         });
 
         this.container.contentEditable = "true";
 
-        this.container.onkeydown = (event: KeyboardEvent) => {
-            if ( event.which === 13 )
+        this.container.onkeydown = (event:KeyboardEvent) =>
+        {
+            if(event.which === 13)
             {
                 event.preventDefault();
             }
         };
 
-        this.container.onkeyup = (event: KeyboardEvent) => {
+        this.container.onkeyup = (event:KeyboardEvent) =>
+        {
             this.onContentChange();
             this.notifyObservers();
         };
 
-        this.container.onpaste = (event: ClipboardEvent) => {
+        this.container.onpaste = (event:ClipboardEvent) =>
+        {
             event.preventDefault();
             document.execCommand(
                 "insertHTML",
@@ -55,44 +58,45 @@ export class EditableElement
             this.notifyObservers();
         };
 
-        this.container.oncut = (event: ClipboardEvent) => {
+        this.container.oncut = (event:ClipboardEvent) =>
+        {
             this.onContentChange();
             this.notifyObservers();
         };
 
         this.options = {
-            delimiter:      options.delimiter
+            delimiter: options.delimiter
         };
     }
 
-    public get content(): string
+    public get content():string
     {
-        let content: string = "";
-        let childNodes: NodeList = this.container.childNodes;
-        let child: Node;
-        let childElement: HTMLElement;
+        let content:string = "";
+        let childNodes:NodeList = this.container.childNodes;
+        let child:Node;
+        let childElement:HTMLElement;
 
-        for ( let i = 0; i < childNodes.length; i++ )
+        for(let i = 0; i < childNodes.length; i++)
         {
             child = childNodes.item(i);
-            if ( child.nodeType === Node.TEXT_NODE )
+            if(child.nodeType === Node.TEXT_NODE)
             {
                 content += child.textContent;
             }
-            else if ( child.nodeType === Node.ELEMENT_NODE )
+            else if(child.nodeType === Node.ELEMENT_NODE)
             {
                 childElement = <HTMLElement> child;
                 content += childElement.getAttribute("data-output") || childElement.textContent;
             }
             else
             {
-                console.log( "Ignoring child node while concatenating content.", child );
+                console.log("Ignoring child node while concatenating content.", child);
             }
         }
         return content;
     }
 
-    public set content( value: string )
+    public set content(value:string)
     {
         // let caretOffset: number = -1;
         // let caretAnchor: Node = null;
@@ -104,9 +108,10 @@ export class EditableElement
         //     caretOffset = selection.anchorOffset;
         // }
 
-        let contentHTML = this.parseText( value ).map( (contentPart: ContentPart) => {
+        let contentHTML = this.parseText(value).map((contentPart:ContentPart) =>
+        {
 
-            if ( contentPart.type === "text" )
+            if(contentPart.type === "text")
             {
                 return contentPart.content;
             }
@@ -122,14 +127,14 @@ export class EditableElement
         this.container.innerHTML = contentHTML;
     }
 
-    public insertPlaceholderAt( placeholderKey: string, positionX: number, positionY: number )
+    public insertPlaceholderAt(placeholderKey:string, positionX:number, positionY:number)
     {
         // get selected range by position
-        let range: Range = document.caretRangeFromPoint( positionX, positionY );
+        let range:Range = document.caretRangeFromPoint(positionX, positionY);
 
         // get direct child node of container element in range
-        let targetContainer: Node = range.startContainer;
-        while( targetContainer && targetContainer.parentElement !== this.container )
+        let targetContainer:Node = range.startContainer;
+        while(targetContainer && targetContainer.parentElement !== this.container)
         {
             targetContainer = targetContainer.parentElement;
         }
@@ -141,55 +146,55 @@ export class EditableElement
             "data-output",
             this.options.delimiter[0] + " " + placeholderKey + " " + this.options.delimiter[1]
         );
-        placeholderNode.innerText = this.editorService.getPlaceholderName( placeholderKey );
+        placeholderNode.innerText = this.editorService.getPlaceholderName(placeholderKey);
 
-        if ( !targetContainer || targetContainer.nodeType === Node.TEXT_NODE )
+        if(!targetContainer || targetContainer.nodeType === Node.TEXT_NODE)
         {
             // target is root container or a text node => insert at cursor position
-            range.insertNode( placeholderNode );
+            range.insertNode(placeholderNode);
         }
-        else if ( targetContainer.nodeType === Node.ELEMENT_NODE )
+        else if(targetContainer.nodeType === Node.ELEMENT_NODE)
         {
             // target is a placeholder element => insert after element
-            let sibling: Node = targetContainer.nextSibling;
-            this.container.insertBefore( placeholderNode, sibling );
+            let sibling:Node = targetContainer.nextSibling;
+            this.container.insertBefore(placeholderNode, sibling);
         }
 
         this.notifyObservers();
     }
 
-    private parseText( input: string ): ContentPart[]
+    private parseText(input:string):ContentPart[]
     {
-        let contentParts: ContentPart[] = [];
-        let placeholderName: string;
-        let start: number;
-        let end: number;
+        let contentParts:ContentPart[] = [];
+        let placeholderName:string;
+        let start:number;
+        let end:number;
 
-        while( input.length > 0 )
+        while(input.length > 0)
         {
-            start = input.indexOf( this.options.delimiter[0] );
-            if ( start > 0 )
+            start = input.indexOf(this.options.delimiter[0]);
+            if(start > 0)
             {
                 contentParts.push({
-                    type: "text",
+                    type:    "text",
                     content: input.substr(0, start),
-                    output: input.substr(0, start)
+                    output:  input.substr(0, start)
                 });
-                input = input.substr( start );
+                input = input.substr(start);
             }
-            else if ( start < 0 )
+            else if(start < 0)
             {
                 contentParts.push({
-                    type: "text",
+                    type:    "text",
                     content: input,
-                    output: input
+                    output:  input
                 });
                 input = "";
             }
             else
             {
-                end = input.indexOf( this.options.delimiter[1] );
-                if ( end > 0 )
+                end = input.indexOf(this.options.delimiter[1]);
+                if(end > 0)
                 {
                     placeholderName = input.substr(
                         this.options.delimiter[0].length,
@@ -197,18 +202,18 @@ export class EditableElement
                     ).trim();
 
                     contentParts.push({
-                        type: "placeholder",
-                        content: this.editorService.getPlaceholderName( placeholderName ),
-                        output: this.options.delimiter[0] + " " + placeholderName + " " + this.options.delimiter[1]
+                        type:    "placeholder",
+                        content: this.editorService.getPlaceholderName(placeholderName),
+                        output:  this.options.delimiter[0] + " " + placeholderName + " " + this.options.delimiter[1]
                     });
-                    input = input.substr( end + this.options.delimiter[1].length );
+                    input = input.substr(end + this.options.delimiter[1].length);
                 }
                 else
                 {
                     contentParts.push({
-                        type: "text",
+                        type:    "text",
                         content: input,
-                        output: input
+                        output:  input
                     });
                     input = "";
                 }
@@ -221,34 +226,34 @@ export class EditableElement
     private onContentChange()
     {
         // check for manually typed placeholders
-        let children: NodeList = this.container.childNodes;
-        let child: Node;
-        for ( let i = 0; i < children.length; i++ )
+        let children:NodeList = this.container.childNodes;
+        let child:Node;
+        for(let i = 0; i < children.length; i++)
         {
-            child = children.item( i );
+            child = children.item(i);
 
-            if ( child.nodeType === Node.TEXT_NODE && this.containsPlaceholder( child ) )
+            if(child.nodeType === Node.TEXT_NODE && this.containsPlaceholder(child))
             {
                 this.content = this.content;
 
-                let caretOffset = i + this.parseText( child.textContent ).length;
-                if ( caretOffset >= this.container.childNodes.length )
+                let caretOffset = i + this.parseText(child.textContent).length;
+                if(caretOffset >= this.container.childNodes.length)
                 {
                     caretOffset = this.container.childNodes.length - 1;
                 }
-                let selection: Selection = window.getSelection();
-                let range: Range = document.createRange();
-                range.setStart( this.container.childNodes.item( caretOffset ), 0);
-                range.collapse( true );
+                let selection:Selection = window.getSelection();
+                let range:Range = document.createRange();
+                range.setStart(this.container.childNodes.item(caretOffset), 0);
+                range.collapse(true);
                 selection.removeAllRanges();
-                selection.addRange( range );
+                selection.addRange(range);
             }
 
             // replace HTMLElements
-            if ( child.nodeType === Node.ELEMENT_NODE && !(<HTMLElement>child).getAttribute("data-output") )
+            if(child.nodeType === Node.ELEMENT_NODE && !(<HTMLElement>child).getAttribute("data-output"))
             {
                 this.container.replaceChild(
-                    document.createTextNode( child.textContent ),
+                    document.createTextNode(child.textContent),
                     child
                 );
             }
@@ -256,26 +261,27 @@ export class EditableElement
 
     }
 
-    private containsPlaceholder( node: Node ): boolean
+    private containsPlaceholder(node:Node):boolean
     {
-        let start: number = node.textContent.indexOf( this.options.delimiter[0] );
-        let end: number   = node.textContent.indexOf( this.options.delimiter[1] );
+        let start:number = node.textContent.indexOf(this.options.delimiter[0]);
+        let end:number = node.textContent.indexOf(this.options.delimiter[1]);
 
-        if ( start < 0 || end < 0 )
+        if(start < 0 || end < 0)
         {
             return false;
         }
 
         return this.editorService.isPlaceholder(
-            node.textContent.substring( start + this.options.delimiter[0].length, end ).trim()
+            node.textContent.substring(start + this.options.delimiter[0].length, end).trim()
         )
     }
 
     private notifyObservers()
     {
-        let content: string = this.content;
-        this.contentListeners.forEach( (listener: Observer<string>) => {
-            listener.next( content );
+        let content:string = this.content;
+        this.contentListeners.forEach((listener:Observer<string>) =>
+        {
+            listener.next(content);
         });
     }
 
