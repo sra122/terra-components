@@ -1,5 +1,26 @@
-<a name="#"></a>
-# Unreleased 
+<a name="1.4.2"></a>
+# 1.5.0 (05.09.2017)
+### Feature
+<<<<<<< HEAD
+* **terra-multi-split-view** added new interface property _inputs_ to be able to pass a list of input variables to the component, that is added to the split view. This now allows data-binding as usual and will replace interface property _parameter_.
+* **terra-file-input** and **terra-file-browser** Added new components to manage files on S3-Bucket and display file-inputs as form control.
+* **interactables** Added directives to use [interact.js](http://interactjs.io/) inside terra-components
+* **terra-slider** Added new component to display sliders as form inputs
+
+=======
+* ***terra-multi-split-view** added new interface property _inputs_ to be able to pass a list of input variables to the component, that is added to the split view. This now allows data-binding as usual and will replace interface property _parameter_.
+* ***terra-file-browser** add new file -browser component
+>>>>>>> stable7
+
+<a name="1.4.1"></a>
+# 1.4.1 (04.09.2017)
+
+### Feature
+
+* **terra-base-service** Generally catch exceptions that are returned from a rest call and show corresponding alert. The programmer is also still able to specify a custom exception handling function.
+
+<a name="1.4.0"></a>
+# 1.4.0 (04.09.2017) 
 
 ### Feature
 * **terra-multi-split-view** 
@@ -7,17 +28,23 @@
 	- added new inputs _inputRouter_ and _inputComponentRoute_ to catch routing events and to access the routing config
 	- added _skipAnimation_ option to _updateViewport_ method to disable animation when changing the selected view
 * **terra-base-toolbar** Added input 'inputIsSticky' to set the toolbar sticky at top of containing container
-	
+* **terra-color-picker** Added new component for selecting colors based on HTML5 color picker.  
+* **terra-portlet** Added input-property `inputIsCollapsable` to make portlets collapsable and properties 
+`inputIsCollapsed` and `inputIsCollapsedChange` to bind collapsed state from parent component.
+
 ### Bug Fixes
-* **terra-multi-split-view** 
- 	- fixed bug when removing a view that is not selected (vertically)
+* **terra-multi-split-view**
+	- fixed bug when removing a view that is not selected (vertically)
+	- removed vertical animations for right positioning in plugins
  	- fixed problems with updating the viewport after resizing
 
-<a name="1.3.1"></a>
-# 1.3.1 (03.08.2017)
+<a name="1.3.2"></a>
+# 1.3.2 (03.08.2017)
 ### Feature
 * **terra-checkbox** added isValid property for Validation purposes
 * **terra-multi-split-view** 
+	- adjusted sliding animations; 
+	- fixed rendering of multiple views; 
 	- partially rebuild breadcrumbs on vertical selection changes; 
 	- added possibility to resize a view manually, after it has already been added to the split-view;
 	- added new interface property 'focusedWidth' to be able to automatically resize a view when it's focused.

@@ -68,9 +68,17 @@ import { CommonModule } from '@angular/common';
 import { TerraDynamicComponentLoaderComponent } from './dynamic-component-loader/terra-dynamic-component-loader.component';
 import { NgInteractModule } from "./ng2-interact/interact.module";
 import {
-    DND_EDITOR_DECLARATIONS, DND_EDITOR_ENTRY_COMPONENTS, DND_EDITOR_EXPORTS,
+    DND_EDITOR_DECLARATIONS,
+    DND_EDITOR_ENTRY_COMPONENTS,
+    DND_EDITOR_EXPORTS
 } from "./dnd-editor/dnd-editor.module";
+import { BrowserModule } from '@angular/platform-browser';
+import { TerraFileBrowserComponent } from "./file-browser/terra-file-browser.component";
+import { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
+import { TerraFrontendStorageService } from "./file-browser/terra-frontend-storage.service";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
+import { TerraInteractModule } from "./interactables/interact.module";
+import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -182,49 +190,11 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
                   TerraMultiSplitViewComponent,
-                  ...DND_EDITOR_DECLARATIONS
+                  ...DND_EDITOR_DECLARATIONS,
+                  TerraFileBrowserComponent,
+                  TerraFileInputComponent,
               ],
               entryComponents: [
-                  TerraTextInputComponent,
-                  TerraColorPickerComponent,
-                  TerraNumberInputComponent,
-                  TerraButtonComponent,
-                  TerraTreeComponent,
-                  TerraCheckboxTreeComponent,
-                  TerraCheckboxComponent,
-                  TerraRadioButtonComponent,
-                  TerraSelectBoxComponent,
-                  TerraBaseToolbarComponent,
-                  TerraIndicatorComponent,
-                  TerraPagerComponent,
-                  TerraIndicatorComponent,
-                  TerraInfoBoxComponent,
-                  TerraTaglistComponent,
-                  TerraTagComponent,
-                  TerraLoadingBarComponent,
-                  TerraLoadingSpinnerComponent,
-                  TerraOverlayComponent,
-                  TerraDataTableComponent,
-                  TerraDataTableContextMenuComponent,
-                  TerraSimpleTableComponent,
-                  TerraDoubleInputComponent,
-                  TerraPortletComponent,
-                  TerraSplitViewComponent,
-                  TerraMultiSplitViewComponent,
-                  TerraFilterComponent,
-                  TerraMultiSelectBoxComponent,
-                  TerraTileBoxComponent,
-                  TerraTileBoxPanelComponent,
-                  TerraSuggestionBoxComponent,
-                  TerraDatePickerComponent,
-                  TerraTextAreaInputComponent,
-                  TerraCardComponent,
-                  TerraNavigatorComponent,
-                  TerraToggleComponent,
-                  TerraSyntaxEditorComponent,
-                  ...DND_EDITOR_ENTRY_COMPONENTS
-              ],
-              exports:         [
                   TerraAlertPanelComponent,
                   TerraTextInputComponent,
                   TerraColorPickerComponent,
@@ -251,7 +221,51 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraDoubleInputComponent,
                   TerraPortletComponent,
                   TerraSplitViewComponent,
+                  TerraFilterComponent,
+                  TerraMultiSelectBoxComponent,
+                  TerraTileBoxComponent,
+                  TerraTileBoxPanelComponent,
+                  TerraSuggestionBoxComponent,
+                  TerraDatePickerComponent,
+                  TerraTextAreaInputComponent,
+                  TerraCardComponent,
+                  TerraNavigatorComponent,
+                  TerraToggleComponent,
+                  TerraSyntaxEditorComponent,
+                  ...DND_EDITOR_ENTRY_COMPONENTS,
                   TerraMultiSplitViewComponent,
+                  TerraSliderComponent,
+                  TerraFileBrowserComponent,
+                  TerraFileInputComponent
+              ],
+              exports:         [
+                  TerraAlertPanelComponent,
+                  TerraTextInputComponent,
+                  TerraColorPickerComponent,
+                  TerraNumberInputComponent,
+                  TerraButtonComponent,
+                  TerraTreeComponent,
+                  TerraCheckboxTreeComponent,
+                  TerraCheckboxComponent,
+                  TerraRadioButtonComponent,
+                  TerraSelectBoxComponent,
+                  TerraBaseToolbarComponent,
+                  TerraIndicatorComponent,
+                  TerraPagerComponent,
+                  TerraIndicatorComponent,
+                  TerraInfoBoxComponent,
+                  TerraTaglistComponent,
+                  TerraTagComponent,
+                  TerraLoadingBarComponent,
+                  TerraLoadingSpinnerComponent,
+                  TerraOverlayComponent,
+                  TerraDataTableComponent,
+                  TerraDataTableContextMenuComponent,
+                  TerraDataTableContextMenuDirective,
+                  TerraSimpleTableComponent,
+                  TerraDoubleInputComponent,
+                  TerraPortletComponent,
+                  TerraSplitViewComponent,
                   TerraFilterComponent,
                   TerraMultiSelectBoxComponent,
                   TerraDynamicComponentLoaderComponent,
@@ -265,9 +279,14 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TerraNavigatorComponent,
                   TerraToggleComponent,
                   TerraSyntaxEditorComponent,
-                  ...DND_EDITOR_EXPORTS
+                  ...DND_EDITOR_EXPORTS,
+                  TerraMultiSplitViewComponent,
+                  TerraSliderComponent,
+                  TerraFileBrowserComponent,
+                  TerraFileInputComponent,
               ],
               imports:         [
+                  BrowserModule,
                   BrowserAnimationsModule,
                   CommonModule,
                   FormsModule,
@@ -280,11 +299,12 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
                   TranslationModule.forRoot(),
                   MyDatePickerModule,
                   AceEditorModule,
-                  NgInteractModule,
+                  TerraInteractModule
               ],
               providers:       [
                   COMPILER_PROVIDERS,
-                  TerraNavigatorSplitViewConfig
+                  TerraNavigatorSplitViewConfig,
+                  TerraFrontendStorageService,
               ],
               bootstrap:       [
                   TerraComponentsComponent
