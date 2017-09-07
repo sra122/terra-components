@@ -13,12 +13,12 @@ export class TextPropertyInputComponent implements PropertyInputComponent<string
 {
     public property:DndEditorElementProperty;
     public value:string;
-    public valueChanged:EventEmitter<string> = new EventEmitter<string>();
+    public valueChange:EventEmitter<string> = new EventEmitter<string>();
 
     public setValue(value:string)
     {
         this.value = value;
-        this.valueChanged.emit(value);
+        this.valueChange.emit(value);
     }
 
 }

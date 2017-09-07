@@ -43,7 +43,7 @@ export class ElementContainerComponent implements OnInit, OnDestroy
     @ViewChild('container', {read: ViewContainerRef})
     private container:ViewContainerRef;
 
-    private componentRef:ComponentRef<any>;
+    public componentRef:ComponentRef<any>;
     private selected:boolean = false;
 
     private selectedComponentSubscription:Subscription;
@@ -105,14 +105,7 @@ export class ElementContainerComponent implements OnInit, OnDestroy
                     {
                         Object.keys(documentItem.properties).forEach((property:string) =>
                         {
-                            if(this.componentRef.instance.hasOwnProperty(property))
-                            {
-                                this.componentRef.instance[property] = documentItem.properties[property];
-                            }
-                            else
-                            {
-                                console.warn("Data defined for property '" + property + "' cannot be assigned to component " + documentItem.name);
-                            }
+                            this.componentRef.instance[property] = documentItem.properties[property];
                         });
                     }
                     this.componentRef.changeDetectorRef.detectChanges();

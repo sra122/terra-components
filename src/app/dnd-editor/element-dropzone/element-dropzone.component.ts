@@ -65,13 +65,15 @@ export class ElementDropzoneComponent implements OnInit
 
     public initDropzone(documentItems:DndEditorDocumentItem[]):void
     {
-        documentItems.forEach((docItem:DndEditorDocumentItem) =>
+        documentItems.forEach((docItem:DndEditorDocumentItem, index: number) =>
         {
+            this.insertIndex = index;
             this.addEditorElement(
                 this.editorService.getEditorElement(docItem.name),
                 docItem
             );
         });
+        this.insertIndex = 0;
     }
 
     public onDragActivate()
@@ -88,9 +90,11 @@ export class ElementDropzoneComponent implements OnInit
 
     public onDragMove(event:DropEvent)
     {
+        /*
         let prevSibling = this.childComponents
                               .reduce((value:ComponentRef<any>, current:ComponentRef<any>) =>
                               {
+
                                   let isBeforeCursor:boolean = this.isBeforePosition(
                                       <HTMLElement>current.location.nativeElement,
                                       event.dragEvent.clientX,
@@ -102,6 +106,25 @@ export class ElementDropzoneComponent implements OnInit
                                           value.location.nativeElement.getBoundingClientRect().bottom
                                       );
 
+
+
+                                  if ( value )
+                                  {
+                                      console.log( "value", value.instance.componentRef.instance );
+                                  }
+                                  else
+                                  {
+                                      console.log( null )
+                                  }
+                                  if ( current )
+                                  {
+                                      console.log( "current", current.instance.componentRef.instance, isBeforeCurrent  );
+                                  }
+                                  else
+                                  {
+                                      console.log( null )
+                                  }
+
                                   if(isBeforeCursor && isBeforeCurrent)
                                   {
                                       return current;
@@ -109,7 +132,87 @@ export class ElementDropzoneComponent implements OnInit
 
                                   return value;
                               }, null);
+                              */
+        let hoveredChild = this.childComponents.find( (child: ComponentRef<any>) => {
+            let rect: ClientRect = child.location.nativeElement.getBoundingClientRect();
+            let x: number = event.dragEvent.clientX;
+            let y: number = event.dragEvent.clientY;
+            return x >= rect.left && x <= rect.right && y >= rect.left && y <= rect.top;
+        });
 
+        if ( !hoveredChild )
+        {
+            let firstElement = this.childComponents.reduce( (first: ComponentRef<any>, current: ComponentRef<any>) => {
+                if ( !first )
+                {
+                    return current;
+                }
+
+                let firstRect: ClientRect = first.location.nativeElement.getBoundingClientRect();
+                let isBefore = this.isBeforePosition(
+                    <HTMLElement>current.location.nativeElement,
+                    firstRect.left,
+                    firstRect.top
+                );
+
+                if ( isBefore )
+                {
+                    return current;
+                }
+
+                return first;
+            }, null);
+
+            if ( firstElement )
+            {
+                //let firstElementRect: ClientRect = firstElement.location.nativeElement.getBoundingClientRect();
+                //let isBeforeFirst = this.isBeforePosition(
+                //    <HTMLElement>
+                //)
+            }
+        }
+
+        let prevSibling = this.childComponents
+                              //.filter( (child: ComponentRef<any>) => {
+                              //    return this.isBeforePosition(
+                              //        <HTMLElement>child.location.nativeElement,
+                              //        event.dragEvent.clientX,
+                              //        event.dragEvent.clientY
+                              //    );
+                              //})
+                              .reduce((value:ComponentRef<any>, current:ComponentRef<any>) => {
+
+                                    let isBeforeCursor:boolean = this.isBeforePosition(
+                                        <HTMLElement>current.location.nativeElement,
+                                        event.dragEvent.clientX,
+                                        event.dragEvent.clientY
+                                    );
+
+                                    if ( !isBeforeCursor )
+                                    {
+                                        // current element is behind cursor position => skip element;
+                                        return value;
+                                    }
+
+                                    let rect: ClientRect = (<HTMLElement>current.location.nativeElement).getBoundingClientRect();
+                                    let isBefore = !value || this.isBeforePosition(
+                                        <HTMLElement>value.location.nativeElement,
+                                        rect.left,
+                                        rect.top
+                                    );
+
+                                    if ( isBefore )
+                                    {
+                                        return current;
+                                    }
+
+                                    return value;
+                              }, null);
+
+        if ( prevSibling )
+        {
+            console.log( "sibling", prevSibling.instance.componentRef.instance );
+        }
 
         let insertIndex:number = this.childComponents.indexOf(prevSibling) + 1;
 

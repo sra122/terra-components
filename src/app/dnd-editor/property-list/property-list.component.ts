@@ -43,7 +43,10 @@ export class PropertyListComponent implements OnChanges
                 this.editorElement.component
             );
 
-            this.elementPropertyKeys = Object.keys(this.elementProperties || {});
+            this.elementPropertyKeys = Object.keys(this.elementProperties || {})
+                                             .filter( (property: string) => {
+                                                 return !!this.elementProperties[property];
+                                             });
         }
     }
 

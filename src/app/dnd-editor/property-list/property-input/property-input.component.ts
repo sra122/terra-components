@@ -53,7 +53,7 @@ export class ElementPropertyInputComponent implements OnInit, OnChanges
 
         this.inputComponent.instance.property = this.property;
         this.inputComponent.instance.value = this.value;
-        this.inputComponent.instance.valueChanged.subscribe(newValue =>
+        this.inputComponent.instance.valueChange.subscribe(newValue =>
         {
             this.value = newValue;
             this.valueChange.emit(newValue);

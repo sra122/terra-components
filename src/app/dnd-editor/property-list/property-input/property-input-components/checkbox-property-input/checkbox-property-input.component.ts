@@ -13,12 +13,12 @@ export class CheckboxPropertyInputComponent implements PropertyInputComponent<bo
 {
     public property:DndEditorElementProperty;
     public value:boolean;
-    public valueChanged:EventEmitter<boolean> = new EventEmitter<boolean>();
+    public valueChange:EventEmitter<boolean> = new EventEmitter<boolean>();
 
     public setValue(value:boolean)
     {
         this.value = value;
-        this.valueChanged.emit(value);
+        this.valueChange.emit(value);
     }
 
 }

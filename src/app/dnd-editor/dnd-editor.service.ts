@@ -15,6 +15,8 @@ import { EditorHelper } from './helper/editor.helper';
 @Injectable()
 export class DndEditorService
 {
+    public static propertyChange: Observable<void>;
+    public static propertyChangeListeners: Array<Observer<void>> = [];
     public selectedComponent:Observable<ComponentRef<any>>;
     private selectedComponentValue:ComponentRef<any>;
     private selectedComponentListeners:Observer<ComponentRef<any>>[] = [];
@@ -38,6 +40,21 @@ export class DndEditorService
                 this.selectedComponentListeners.splice(idx, 1);
             };
         });
+
+        DndEditorService.propertyChange = new Observable( (observer: Observer<void>) => {
+            DndEditorService.propertyChangeListeners.push( observer );
+            return () => {
+                let idx: number = DndEditorService.propertyChangeListeners.indexOf( observer );
+                DndEditorService.propertyChangeListeners.splice( idx, 1 );
+            }
+        })
+    }
+
+    public static onPropertyChange( target: Object, property: string, oldValue: any, newValue: any )
+    {
+        DndEditorService.propertyChangeListeners.forEach( (listener: Observer<void>) => {
+            listener.next(null);
+        });
     }
 
     public selectComponent(component?:ComponentRef<any>)
@@ -54,7 +71,7 @@ export class DndEditorService
     {
         for(let i = 0; i < this.editorConfig.elementGroups.length; i++)
         {
-            for(let j = 0; j < this.editorConfig.elementGroups[i].elements.length; i++)
+            for(let j = 0; j < this.editorConfig.elementGroups[i].elements.length; j++)
             {
                 if(this.editorConfig.elementGroups[i].elements[j].component.name === elementName)
                 {

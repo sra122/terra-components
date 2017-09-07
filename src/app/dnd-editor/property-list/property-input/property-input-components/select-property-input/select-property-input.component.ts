@@ -16,7 +16,7 @@ export class SelectPropertyInputComponent implements PropertyInputComponent<any>
 
     public property:DndEditorElementProperty;
     public value:any;
-    public valueChanged:EventEmitter<any> = new EventEmitter<any>();
+    public valueChange:EventEmitter<any> = new EventEmitter<any>();
 
     public selectValues:TerraSelectBoxValueInterface[] = [];
 
@@ -42,7 +42,7 @@ export class SelectPropertyInputComponent implements PropertyInputComponent<any>
     public setValue(value:any)
     {
         this.value = value;
-        this.valueChanged.emit(value);
+        this.valueChange.emit(value);
     }
 
 }

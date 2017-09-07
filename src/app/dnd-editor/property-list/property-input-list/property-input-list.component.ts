@@ -55,9 +55,18 @@ export class ElementPropertyInputListComponent
 
     private cloneProperty(index:number):DndEditorElementProperty
     {
-        return {
+        let clone:DndEditorElementProperty = {
             label: this.property.label + " (" + index + ")",
             type:  this.property.type
         };
+
+        Object.keys( this.property ).forEach( (propertyKey:string) => {
+            if ( propertyKey !== "label" )
+            {
+                clone[propertyKey] = this.property[propertyKey];
+            }
+        });
+
+        return clone;
     }
 }

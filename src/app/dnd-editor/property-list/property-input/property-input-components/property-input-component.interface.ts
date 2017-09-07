@@ -5,5 +5,5 @@ export interface PropertyInputComponent<T>
 {
     property:DndEditorElementProperty;
     value:T;
-    valueChanged:EventEmitter<T>;
+    valueChange:EventEmitter<T>;
 }

@@ -88,6 +88,12 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
             this.selectedComponent = component;
             this.changeDetector.detectChanges();
         });
+
+        DndEditorService.propertyChange.subscribe( () => {
+            setTimeout( () => {
+                this.updateDocument();
+            });
+        });
     }
 
     public ngAfterContentInit():void
@@ -135,5 +141,14 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
         });
 
         this.documentChange.emit(document);
+    }
+
+    public hasPlaceholder( component: ComponentRef<any> ): boolean
+    {
+        if ( !component )
+        {
+            return false;
+        }
+        return component.location.nativeElement.querySelectorAll('dnd-editor-placeholder-dropzone').length > 0
     }
 }

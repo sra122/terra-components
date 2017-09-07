@@ -2,6 +2,8 @@ import { TextPropertyInputComponent } from './property-input/property-input-comp
 import { ColorPropertyInputComponent } from './property-input/property-input-components/color-property-input/color-property-input.component';
 import { CheckboxPropertyInputComponent } from './property-input/property-input-components/checkbox-property-input/checkbox-property-input.component';
 import { SelectPropertyInputComponent } from './property-input/property-input-components/select-property-input/select-property-input.component';
+import { SliderPropertyInputComponent } from './property-input/property-input-components/slider-property-input/slider-property-input.component';
+import { FilePropertyInputComponent } from './property-input/property-input-components/file-property-input/file-property-input.component';
 
 export class ElementPropertyType
 {
@@ -9,4 +11,6 @@ export class ElementPropertyType
     public static readonly COLOR = ColorPropertyInputComponent;
     public static readonly CHECKBOX = CheckboxPropertyInputComponent;
     public static readonly SELECT = SelectPropertyInputComponent;
+    public static readonly SLIDER = SliderPropertyInputComponent;
+    public static readonly FILE = FilePropertyInputComponent;
 }

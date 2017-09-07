@@ -163,7 +163,7 @@ export class EditableElement
         this.notifyObservers();
     }
 
-    private parseText(input:string):ContentPart[]
+    private parseText(input:string = ""):ContentPart[]
     {
         let contentParts:ContentPart[] = [];
         let placeholderName:string;
