@@ -10,17 +10,18 @@ export class TerraMultiSplitViewConfig
     private _addViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
     private _deleteViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
     private _resizeViewEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
+    private _selectBreadcrumbEventEmitter:EventEmitter<TerraMultiSplitViewInterface> = new EventEmitter<TerraMultiSplitViewInterface>();
 
     public addView(view:TerraMultiSplitViewInterface, parent?:TerraMultiSplitViewInterface):void
     {
-        if (view.parameter)
+        if(view.parameter)
         {
-            console.warn('Property \'parameter\' is deprecated. It will be removed in one of the upcoming releases. Please use \'inputs\' instead.')
+            console.warn(
+                'Property \'parameter\' is deprecated. It will be removed in one of the upcoming releases. Please use \'inputs\' instead.')
         }
 
         // TODO: setTimeout can be removed, if it is guaranteed that change detection is fired when adding a new view
-        setTimeout(
-            () =>
+        setTimeout(() =>
             {
                 if(isNullOrUndefined(parent))
                 {
@@ -100,13 +101,16 @@ export class TerraMultiSplitViewConfig
 
     public reset():void
     {
-        this._views = null;
+        this._views = [];
+        this._currentSelectedView = null;
         this._addViewEventEmitter.unsubscribe();
         this._addViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
         this._deleteViewEventEmitter.unsubscribe();
         this._deleteViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
         this._resizeViewEventEmitter.unsubscribe();
         this._resizeViewEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
+        this._selectBreadcrumbEventEmitter.unsubscribe();
+        this._selectBreadcrumbEventEmitter = new EventEmitter<TerraMultiSplitViewInterface>();
     }
 
     public get deleteViewEventEmitter():EventEmitter<TerraMultiSplitViewInterface>
@@ -147,5 +151,10 @@ export class TerraMultiSplitViewConfig
     public set resizeViewEventEmitter(value:EventEmitter<TerraMultiSplitViewInterface>)
     {
         this._resizeViewEventEmitter = value;
+    }
+
+    public get selectBreadcrumbEventEmitter():EventEmitter<TerraMultiSplitViewInterface>
+    {
+        return this._selectBreadcrumbEventEmitter;
     }
 }

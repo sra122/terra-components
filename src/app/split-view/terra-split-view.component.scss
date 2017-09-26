@@ -17,7 +17,7 @@
 .terra-breadcrumbs li div
 {
     text-decoration: none;
-    padding: 6px 0 6px 28px;
+    padding: 8px 0 6px 28px;
     background: $gray-light-3;
     position: relative;
     display: block;
@@ -167,7 +167,8 @@
 }
 
 ///// Fixed Columns for Terra-Navigator ///////
-@media (min-width: 768px) {
+@media (min-width: 768px)
+{
     .col-md-300px
     {
         float: left;

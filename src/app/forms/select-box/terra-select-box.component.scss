@@ -45,7 +45,8 @@
     z-index: 99999;
     top: $terra-btn-md-height;
     left: 0;
-    width: 100%;
+    min-width: 100%;
+    width: auto;
     max-height: 12rem;
     border: 1px solid $gray-light-2;
     border-radius: $border-radius;
@@ -58,12 +59,27 @@
         width: 100%;
         padding: .25em 1em;
         line-height: 18px;
+        min-height: 24px;
         &:hover,
+        &.selected
+        {
+            background: $grey-3;
+            cursor: pointer;
+        }
         &.active
         {
             background: $brand-primary;
             color: white;
             cursor: pointer;
+        }
+    }
+    .select-box-dropdown-heading
+    {
+        &:hover
+        {
+            background-color: white;
+            color: inherit;
+            cursor: default;
         }
     }
 }

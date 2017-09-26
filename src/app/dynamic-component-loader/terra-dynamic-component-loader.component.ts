@@ -14,9 +14,9 @@ import {
 import { isNullOrUndefined } from 'util';
 
 @Component({
-               selector: 'terra-dynamic-component-loader',
-               template: require('./terra-dynamic-component-loader.component.html'),
-           })
+    selector: 'terra-dynamic-component-loader',
+    template: require('./terra-dynamic-component-loader.component.html'),
+})
 export class TerraDynamicComponentLoaderComponent implements AfterViewInit, OnDestroy, OnChanges
 {
     @ViewChild('viewChildTarget', {read: ViewContainerRef}) viewChildTarget;
@@ -58,7 +58,7 @@ export class TerraDynamicComponentLoaderComponent implements AfterViewInit, OnDe
             let viewContainerRef = this.viewChildTarget;
             viewContainerRef.clear();
 
-            let componentRef = viewContainerRef.createComponent(componentFactory);
+            this._cmpRef = viewContainerRef.createComponent(componentFactory);
         }
     }
 }

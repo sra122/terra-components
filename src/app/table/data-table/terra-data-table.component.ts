@@ -19,13 +19,14 @@ import { TerraAlertComponent } from '../../alert/terra-alert.component';
 import { TerraDataTableContextMenuService } from './context-menu/service/terra-data-table-context-menu.service';
 import { TerraDataTableContextMenuEntryInterface } from './context-menu/data/terra-data-table-context-menu-entry.interface';
 import { TerraDataTableCellInterface } from './cell/terra-data-table-cell.interface';
+import { isNullOrUndefined } from 'util';
 
 @Component({
-               selector:  'terra-data-table',
-               providers: [TerraDataTableContextMenuService],
-               styles:    [require('./terra-data-table.component.scss')],
-               template:  require('./terra-data-table.component.html')
-           })
+    selector:  'terra-data-table',
+    providers: [TerraDataTableContextMenuService],
+    styles:    [require('./terra-data-table.component.scss')],
+    template:  require('./terra-data-table.component.html')
+})
 export class TerraDataTableComponent<S extends TerraBaseService, D extends TerraBaseData, I extends TerraPagerInterface> implements OnChanges
 {
     @ViewChild('viewChildHeaderCheckbox') viewChildHeaderCheckbox:TerraCheckboxComponent;
@@ -33,9 +34,11 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     @Input() inputService:S;
     @Input() inputDataType:string;
     @Input() inputHasCheckboxes:boolean;
+    @Input() inputHasPager:boolean;
     @Input() inputHasInitialLoading:boolean;
 
     @Output() outputDoPagingEvent = new EventEmitter<TerraPagerInterface>();
+    @Output() outputRowCheckBoxChanged:EventEmitter<TerraDataTableRowInterface<D>> = new EventEmitter();
 
     private _headerList:Array<TerraDataTableHeaderCellInterface>;
     private _rowList:Array<TerraDataTableRowInterface<D>>;
@@ -55,18 +58,12 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     @Input()
     private _hasCheckboxes:boolean;
 
-    // Overlay
-    //@ViewChild('viewChildOverlayDataTableSettings') viewChildOverlayDataTableSettings:TerraOverlayComponent;
-    //private _overlayRowList:Array<TerraDataTableRowInterface<D>>;
-    //private _selectedOverlayRowList:Array<TerraDataTableRowInterface<D>> = [];
-    //private _saveButtonTooltip:string = 'Speichern';
-    //private _cancelButtonTooltip:string = 'Abbrechen';
-
     constructor()
     {
         this._hasCheckboxes = true;
         this.inputHasCheckboxes = true;
         this.inputHasInitialLoading = false;
+        this.inputHasPager = true;
     }
 
 
@@ -84,17 +81,16 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     {
         this._isHeaderCheckboxChecked = isChecked;
 
-        this.rowList.forEach(
-            (row) =>
-            {
-                this.changeRowState(isChecked, row);
-            });
+        this.rowList.forEach((row) =>
+        {
+            this.changeRowState(isChecked, row);
+        });
     }
 
-    private onRowCheckboxChange(isChecked:boolean,
-                                row:TerraDataTableRowInterface<D>):void
+    private onRowCheckboxChange(isChecked:boolean, row:TerraDataTableRowInterface<D>):void
     {
         this.changeRowState(isChecked, row);
+        this.outputRowCheckBoxChanged.emit(row);
 
         if(this.selectedRowList.length == 0)
         {
@@ -112,7 +108,7 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
     private checkTooltipPlacement(placement:string):string
     {
-        if(placement != null && placement != '')
+        if(!isNullOrUndefined(placement) && placement !== '')
         {
             return placement;
         }
@@ -120,21 +116,19 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
         return 'top';
     }
 
-    private changeRowState(isChecked:boolean,
-                           rowToChange:TerraDataTableRowInterface<D>):void
+    private changeRowState(isChecked:boolean, rowToChange:TerraDataTableRowInterface<D>):void
     {
         rowToChange.selected = isChecked;
 
         let rowFound:boolean = false;
 
-        this.selectedRowList.forEach(
-            (row) =>
+        this.selectedRowList.forEach((row) =>
+        {
+            if(row == rowToChange)
             {
-                if(row == rowToChange)
-                {
-                    rowFound = true;
-                }
-            });
+                rowFound = true;
+            }
+        });
 
         if(rowToChange.selected)
         {
@@ -155,11 +149,10 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     {
         if(!cell.buttonList)
         {
-            this._rowList
-                .forEach((row) =>
-                         {
-                             row.isActive = false;
-                         });
+            this._rowList.forEach((row) =>
+            {
+                row.isActive = false;
+            });
 
             row.isActive = true;
             row.clickFunction();
@@ -185,21 +178,19 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     {
         this._rowList = value;
 
-        this.rowList
-            .forEach((row:TerraDataTableRowInterface<D>) =>
-                     {
-                         if(row.contextMenuLinkList)
-                         {
-                             row.contextMenuLinkList.forEach((link:TerraDataTableContextMenuEntryInterface<D>) =>
-                                                             {
-                                                                 link.subject
-                                                                     .subscribe((valueToClick:TerraDataTableContextMenuEntryInterface<D>) =>
-                                                                                {
-                                                                                    valueToClick.clickFunction(valueToClick)
-                                                                                })
-                                                             })
-                         }
-                     });
+        this.rowList.forEach((row:TerraDataTableRowInterface<D>) =>
+        {
+            if(row.contextMenuLinkList)
+            {
+                row.contextMenuLinkList.forEach((link:TerraDataTableContextMenuEntryInterface<D>) =>
+                {
+                    link.subject.subscribe((valueToClick:TerraDataTableContextMenuEntryInterface<D>) =>
+                    {
+                        valueToClick.clickFunction(valueToClick)
+                    })
+                })
+            }
+        });
     }
 
     public deleteRow(rowToDelete:TerraDataTableRowInterface<D>):void
@@ -238,13 +229,12 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
         this._isHeaderCheckboxChecked = false;
 
-        if(this.rowList != null)
+        if(!isNullOrUndefined(this.rowList))
         {
-            this.rowList.forEach(
-                (row:TerraDataTableRowInterface<D>) =>
-                {
-                    this.changeRowState(false, row);
-                });
+            this.rowList.forEach((row:TerraDataTableRowInterface<D>) =>
+            {
+                this.changeRowState(false, row);
+            });
         }
     }
 
@@ -281,12 +271,9 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     public doSearch(restCall:Observable<I>):void
     {
         //TODO check
-        restCall.subscribe(
-            this.onSuccessFunction,
-            error =>
+        restCall.subscribe(this.onSuccessFunction, error =>
             {
-                if(error.status == 401 ||
-                   error.status == 500)
+                if(error.status == 401 || error.status == 500)
                 {
                     //TODO
                     alert(error.status);
@@ -297,7 +284,7 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
     public getTextAlign(item:TerraDataTableHeaderCellInterface):any
     {
-        if(item.textAlign !== undefined && item.textAlign != null)
+        if(!isNullOrUndefined(item.textAlign))
         {
             return {'text-align': item.textAlign};
         }
@@ -306,154 +293,4 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
             return {'text-align': "left"};
         }
     }
-
-    // ------------------------------------------------------
-    // viewChildOverlay and column hiding functionality
-
-    //private openOverlayDataTableSettings():void
-    //{
-    //    this.viewChildOverlayDataTableSettings.showOverlay();
-    //}
-
-    //private primaryClicked(viewChildOverlay:TerraOverlayComponent):void
-    //{
-    //    this.overlayRowList.forEach(
-    //        (row) => row.cellList.forEach(
-    //            (cell) =>
-    //            {
-    //                this.changeColumnVisibility(cell.identifier, row.selected);
-    //            }
-    //        )
-    //    )
-    //
-    //    viewChildOverlay.hideOverlay();
-    //}
-    //
-    //private secondaryClicked(viewChildOverlay:TerraOverlayComponent):void
-    //{
-    //    viewChildOverlay.hideOverlay();
-    //}
-    //
-    //private onOverlayCheckboxChange(isChecked:boolean,
-    //                                row:TerraDataTableRowInterface<D>):void
-    //{
-    //    this.changeOverlayCheckboxState(isChecked, row);
-    //}
-
-    //public changeOverlayCheckboxState(isChecked:boolean,
-    //                                  rowToChange:TerraDataTableRowInterface<D>):void
-    //{
-    //    rowToChange.selected = isChecked;
-    //
-    //    let rowFound:boolean = false;
-    //
-    //    this._selectedOverlayRowList.forEach(
-    //        (row)=>
-    //        {
-    //            if(row == rowToChange)
-    //            {
-    //                rowFound = true;
-    //            }
-    //        });
-    //
-    //    if(rowToChange.selected)
-    //    {
-    //        if(!rowFound)
-    //        {
-    //            this._selectedOverlayRowList.push(rowToChange);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        let index = this._selectedOverlayRowList.indexOf(rowToChange);
-    //
-    //        this._selectedOverlayRowList.splice(index, 1);
-    //    }
-    //}
-
-    //public get overlayRowList():Array<TerraDataTableRowInterface<D>>
-    //{
-    //    return this._overlayRowList;
-    //}
-
-    //public set overlayRowList(value:Array<TerraDataTableRowInterface<D>>)
-    //{
-    //    this._overlayRowList = value;
-    //}
-
-    //private changeColumnVisibility(id:string,
-    //                               isChecked:boolean):void
-    //{
-    //    let hide:boolean;
-    //
-    //    if(isChecked)
-    //    {
-    //        hide = false;
-    //    }
-    //    else
-    //    {
-    //        hide = true;
-    //    }
-    //    this._headerList.forEach(
-    //        (cell)=>
-    //        {
-    //            if(cell.identifier == id)
-    //            {
-    //                cell.isHidden = hide;
-    //            }
-    //        }
-    //    )
-    //
-    //    this.rowList.forEach(
-    //        (row)=>
-    //        {
-    //            this.changeCellVisibility(row, id, hide);
-    //        });
-    //}
-    //
-    //private changeCellVisibility(rowToChange:TerraDataTableRowInterface<D>,
-    //                             id:string,
-    //                             hide:boolean):void
-    //{
-    //    rowToChange.cellList.forEach(
-    //        (i) =>
-    //        {
-    //            if(i.identifier == id)
-    //            {
-    //                i.isHidden = hide;
-    //            }
-    //        });
-    //}
-    //
-    //public showAllColumns():void
-    //{
-    //    this._headerList.forEach(
-    //        (cell)=>
-    //        {
-    //            if(cell.isHidden == true)
-    //            {
-    //                cell.isHidden = false;
-    //            }
-    //        });
-    //
-    //    this.rowList.forEach(
-    //        (row)=>
-    //        {
-    //            row.cellList.forEach(
-    //                (i) =>
-    //                {
-    //                    if(i.isHidden == true)
-    //                    {
-    //                        i.isHidden = false;
-    //                    }
-    //                })
-    //        });
-    //
-    //    this.overlayRowList.forEach(
-    //        (row) =>
-    //        {
-    //            row.selected = true;
-    //        }
-    //    )
-    //}
 }
