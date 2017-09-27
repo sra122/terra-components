@@ -1,4 +1,5 @@
 import {
+    AfterViewInit,
     ChangeDetectorRef,
     Component,
     ComponentFactoryResolver,
@@ -22,13 +23,15 @@ import {
     DndEditorDocument,
     DndEditorDocumentItem
 } from '../model/dnd-editor-document.interface';
+import { TerraDraggableDirective } from '../../interactables/draggable.directive';
+import { DraggableFactory } from '../../interactables/draggable.factory';
 
 @Component({
     selector: 'dnd-editor-element-container',
     template: require('./element-container.component.html'),
     styles:   [require('./element-container.component.scss')]
 })
-export class ElementContainerComponent implements OnInit, OnDestroy
+export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestroy
 {
     public documentItem:DndEditorDocumentItem;
 
@@ -43,13 +46,13 @@ export class ElementContainerComponent implements OnInit, OnDestroy
     @ViewChild('container', {read: ViewContainerRef})
     private container:ViewContainerRef;
 
+    @ViewChild( TerraDraggableDirective )
+    private draggableElement: TerraDraggableDirective;
+
     public componentRef:ComponentRef<any>;
     private selected:boolean = false;
 
     private selectedComponentSubscription:Subscription;
-
-    private draggedElement:HTMLElement;
-    private draggedElementPos:{ x:number, y:number };
 
     private get isSelectable():boolean
     {
@@ -71,6 +74,21 @@ export class ElementContainerComponent implements OnInit, OnDestroy
                 this.selected = componentRef === this.componentRef;
                 this.changeDetector.detectChanges();
             });
+    }
+
+    public ngAfterViewInit():void
+    {
+        new DraggableFactory(
+            this.draggableElement
+        );
+    }
+
+    public get dragData()
+    {
+        return {
+            element: this.editorElement,
+            documentItem: this.getDocumentItem()
+        }
     }
 
     public initEditorElement(editorElement:DndEditorElement, documentItem?:DndEditorDocumentItem):void
@@ -176,58 +194,6 @@ export class ElementContainerComponent implements OnInit, OnDestroy
         {
             this.documentItemChange.emit();
         });
-    }
-
-    public startDrag(event:Interact.InteractEvent)
-    {
-        if(this.draggedElement)
-        {
-            console.error("Drag already in progress.");
-        }
-
-        this.draggedElement = event.target.cloneNode(true);
-        document.body.appendChild(this.draggedElement);
-
-        let clientRect:ClientRect = event.target.getBoundingClientRect();
-        this.draggedElement.style.width = clientRect.width + 'px';
-        this.draggedElement.style.height = clientRect.height + 'px';
-        this.draggedElement.classList.add("draggable-clone");
-
-
-        this.draggedElementPos = {
-            x: clientRect.left,
-            y: clientRect.top
-        };
-        this.element.nativeElement.style.display = 'none';
-    }
-
-    public handleMove(event:Interact.InteractEvent)
-    {
-        if(this.draggedElement)
-        {
-            this.draggedElementPos.x += event.dx;
-            this.draggedElementPos.y += event.dy;
-            this.draggedElement.style.left = this.draggedElementPos.x + 'px';
-            this.draggedElement.style.top = this.draggedElementPos.y + 'px';
-        }
-    }
-
-    public stopDrag(event:Interact.InteractEvent)
-    {
-        if((<any>event).dropzone)
-        {
-            this.destroy();
-        }
-        else
-        {
-            this.element.nativeElement.style.display = '';
-        }
-
-        if(this.draggedElement)
-        {
-            this.draggedElement.remove();
-            this.draggedElement = null;
-        }
     }
 
     public getDocumentItem():DndEditorDocumentItem

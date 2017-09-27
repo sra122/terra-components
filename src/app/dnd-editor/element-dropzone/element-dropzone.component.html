@@ -1,14 +1,14 @@
 <div class="editor-dropzone"
-     [class.drag-over]="isDragOver"
-     [class.drag-active]="isDragActive"
+     [class.drag-over]="dragFactory?.isDragOver"
+     [class.drag-active]="dragFactory?.isDragActive"
      terra-dropzone
-     [terra-dropzone-accept]="acceptDrop.bind(this)"
-     (terra-dropzone-onDropActivate)="onDragActivate()"
-     (terra-dropzone-onDragEnter)="onDragEnter($event)"
-     (terra-dropzone-onDropMove)="onDragMove($event)"
-     (terra-dropzone-onDragLeave)="onDragLeave()"
-     (terra-dropzone-onDropDeactivate)="onDragDeactivate()"
-     (terra-dropzone-onDrop)="onDrop($event)">
+     [terra-dropzone-accept]="acceptDrop.bind(this)">
+     <!--(terra-dropzone-onDropActivate)="onDragActivate()"-->
+     <!--(terra-dropzone-onDragEnter)="onDragEnter($event)"-->
+     <!--(terra-dropzone-onDropMove)="onDragMove($event)"-->
+     <!--(terra-dropzone-onDragLeave)="onDragLeave()"-->
+     <!--(terra-dropzone-onDropDeactivate)="onDragDeactivate()"-->
+     <!--(terra-dropzone-onDrop)="onDrop($event)">-->
     <div #dropTarget></div>
     <ng-content *ngIf="!isDragOver && childComponents.length <= 0"></ng-content>
 </div>

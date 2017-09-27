@@ -19,12 +19,13 @@ import { DndEditorService } from './dnd-editor.service';
 import { ElementDropzoneComponent } from './element-dropzone/element-dropzone.component';
 import { DndEditorDocument } from './model/dnd-editor-document.interface';
 
-
 @Component({
     selector:  'terra-dnd-editor',
     template:  require('./dnd-editor.component.html'),
     styles:    [require('./dnd-editor.component.scss')],
-    providers: [DndEditorService]
+    providers: [
+        DndEditorService
+    ]
 })
 export class DndEditorCompontent implements OnInit, AfterContentInit
 {
