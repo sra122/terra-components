@@ -13,18 +13,15 @@ import {
 } from '@angular/core';
 import { DndEditorService } from '../dnd-editor.service';
 import { Subscription } from 'rxjs/Subscription';
-import { DndEditorElement } from '../model/dnd-editor-element.interface';
-import {
-    DND_EDITOR_PROPERTY_METADATA_KEY,
-    DndEditorElementProperty
-} from '../model/dnd-editor-element-property.decorator';
+import { EditorComponent } from '../model/dnd-editor-component.interface';
 import { ElementDropzoneComponent } from '../element-dropzone/element-dropzone.component';
-import {
-    DndEditorDocument,
-    DndEditorDocumentItem
-} from '../model/dnd-editor-document.interface';
 import { TerraDraggableDirective } from '../../interactables/draggable.directive';
 import { DraggableFactory } from '../../interactables/draggable.factory';
+import { EditorItem } from '../model/dnd-editor-item.model';
+import InteractEvent = Interact.InteractEvent;
+import { DND_EDITOR_PROPERTY_METADATA_KEY } from "../index";
+import { EditorItemList } from '../model/dnd-editor-item-list.model';
+import { OnEditorPropertyChange } from '../model/dnd-editor-property.decorator';
 
 @Component({
     selector: 'dnd-editor-element-container',
@@ -33,33 +30,35 @@ import { DraggableFactory } from '../../interactables/draggable.factory';
 })
 export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestroy
 {
-    public documentItem:DndEditorDocumentItem;
+    // editor component assigned to this container
+    public editorComponent:EditorComponent;
 
-    public editorElement:DndEditorElement;
+    // angular component assigned to this container via the editor component
+    public editorComponentRef: ComponentRef<any>;
 
+    // editor item containing values of editor properties of the assigend editor component
+    public editorItem: EditorItem;
+
+    // emits on every change to the editor item
+    public editorItemChange:EventEmitter<EditorItem> = new EventEmitter<EditorItem>();
+
+    // Destroy component by itself. Will be set by parent component after initializing.
     public destroy:() => void;
 
-    public documentItemChange:EventEmitter<void> = new EventEmitter<void>();
-
-    private dropzones:ElementDropzoneComponent[] = [];
-
+    // references the element to create instance of assigned editor elements in
     @ViewChild('container', {read: ViewContainerRef})
     private container:ViewContainerRef;
 
+    // Element to add draggable behavior to via DraggableFactory
     @ViewChild( TerraDraggableDirective )
     private draggableElement: TerraDraggableDirective;
 
-    public componentRef:ComponentRef<any>;
     private selected:boolean = false;
 
     private selectedComponentSubscription:Subscription;
 
-    private get isSelectable():boolean
-    {
-        return this.editorService && this.editorService.hoveredElementContainer === this;
-    }
 
-    constructor(private element:ElementRef,
+    constructor(public element:ElementRef,
                 private editorService:DndEditorService,
                 private changeDetector:ChangeDetectorRef,
                 private componentFactoryResolver:ComponentFactoryResolver)
@@ -69,71 +68,95 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
     public ngOnInit():void
     {
         this.selectedComponentSubscription =
-            this.editorService.selectedComponent.subscribe((componentRef:ComponentRef<any>) =>
+            this.editorService.selectedComponent.subscribe((container: ElementContainerComponent) =>
             {
-                this.selected = componentRef === this.componentRef;
+                this.selected = container === this;
                 this.changeDetector.detectChanges();
             });
     }
 
     public ngAfterViewInit():void
     {
-        new DraggableFactory(
-            this.draggableElement
-        );
-    }
-
-    public get dragData()
-    {
-        return {
-            element: this.editorElement,
-            documentItem: this.getDocumentItem()
-        }
-    }
-
-    public initEditorElement(editorElement:DndEditorElement, documentItem?:DndEditorDocumentItem):void
-    {
-        this.editorElement = editorElement;
-        this.documentItem = documentItem;
-        this.componentRef = this.container.createComponent(
-            this.componentFactoryResolver.resolveComponentFactory(editorElement.component)
-        );
-
-        Object.keys(this.componentRef.instance).forEach((property:string) =>
-        {
-
-            if(this.componentRef.instance[property] instanceof EventEmitter)
-            {
-                // subscribe to @Output() properties
-                this.componentRef.instance[property].subscribe(() =>
+        // setup draggable behavior
+        new DraggableFactory( this.draggableElement )
+            .on( "end", (event: InteractEvent) => {
+                if((<any>event).dropzone)
                 {
-                    this.documentItemChange.emit();
-                });
-            }
-            else
-            {
-                // set initial data if defined
-                if(documentItem && documentItem.properties)
-                {
-                    if(documentItem.name !== editorElement.component.name)
-                    {
-                        console.error("DocumentItem does not match to component of EditorElement");
-                    }
-                    else
-                    {
-                        Object.keys(documentItem.properties).forEach((property:string) =>
-                        {
-                            this.componentRef.instance[property] = documentItem.properties[property];
-                        });
-                    }
-                    this.componentRef.changeDetectorRef.detectChanges();
+                    // destroy component if it has been moved
+                    this.destroy();
                 }
+            });
+    }
+
+    /**
+     * Create instance of assigned editor component and assign initial values if defined.
+     * @param editorComponent   EditorComponent The editor component assign to the container
+     * @param editorItem        EditorItem      The item containing the initial values for this instance
+     */
+    public initEditorElement( editorComponent:EditorComponent, editorItem?:EditorItem ): void
+    {
+        if( editorItem && editorItem.name !== editorComponent.component.name )
+        {
+            console.error("EditorItem does not match to EditorComponent");
+            return;
+        }
+
+        this.editorComponent = editorComponent;
+        this.editorItem = editorItem || new EditorItem();
+
+        // create instance of editor component
+        this.editorComponentRef = this.container.createComponent(
+            this.componentFactoryResolver.resolveComponentFactory( editorComponent.component )
+        );
+
+        OnEditorPropertyChange(
+            this.editorComponentRef.instance,
+            (key: string, value: any) => {
+                this.editorItem.properties[key] = value;
+                this.editorItemChange.emit( this.editorItem );
+            }
+        );
+
+        // subscribe to event emitters
+        Object.keys( this.editorComponentRef.instance )
+              .forEach( ( property: string ) => {
+                  if ( this.editorComponentRef.instance[property] instanceof EventEmitter )
+                  {
+                      this.editorComponentRef.instance[property].substribe( () => {
+                          this.editorItemChange.emit( this.editorItem );
+                      });
+                  }
+              });
+
+
+        if ( editorItem )
+        {
+            // set initial data if defined
+            if( editorItem.properties )
+            {
+                Object.keys(editorItem.properties)
+                      .forEach((property:string) => {
+                          this.editorComponentRef.instance[property] = editorItem.properties[property];
+                      });
             }
 
-        });
+            // render editor component
+            this.editorComponentRef.changeDetectorRef.detectChanges();
+        }
+        else
+        {
+            // initialize new editor item
+            this.editorItem.name = editorComponent.component.name;
 
-        this.editorService.selectComponent(this.componentRef);
-        this.selected = true;
+            let editorProperties:{[key:string]:any}   = Reflect.getMetadata( DND_EDITOR_PROPERTY_METADATA_KEY, editorComponent.component ) || {};
+
+            Object.keys( editorProperties ).forEach( (property: string) => {
+                this.editorItem.properties[property] = this.editorComponentRef.instance[property];
+            });
+        }
+
+        // select created component
+        this.editorService.selectComponent(this);
         this.changeDetector.detectChanges();
     }
 
@@ -145,96 +168,28 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
         }
     }
 
-    public setSelectable(value:boolean, event?:Event)
-    {
-        if(value)
-        {
-            this.editorService.hoverElementContainer(this, event);
-        }
-        else
-        {
-            this.editorService.hoveredElementContainer = null;
-        }
-        this.changeDetector.detectChanges();
-
-    }
-
     public selectComponent(event:Event)
     {
         event.stopPropagation();
-        this.editorService.selectComponent(this.componentRef);
+        this.editorService.selectComponent( this );
     }
 
     public registerDropzone(dropzone:ElementDropzoneComponent)
     {
-        this.dropzones.push(dropzone);
-
-        if(this.documentItem && this.documentItem.children)
+        if(this.editorItem && this.editorItem.children.has(dropzone.dropzoneId))
         {
-            Object.keys(this.documentItem.children).forEach((dropzoneId:string) =>
-            {
-                let dropzone:ElementDropzoneComponent = this.dropzones.find((d:ElementDropzoneComponent) =>
-                {
-                    return d.dropzoneId === dropzoneId;
-                });
-
-                if(!dropzone)
-                {
-                    console.error("Cannot find dropzone with id: " + dropzoneId);
-                }
-                else
-                {
-                    dropzone.initDropzone(this.documentItem.children[dropzoneId]);
-                }
-
-            });
+            dropzone.initDropzone(
+                this.editorItem.children.get(dropzone.dropzoneId)
+            );
         }
 
-        dropzone.onDocumentChange.subscribe(() =>
+        dropzone.itemListChange.subscribe((itemList:EditorItemList) =>
         {
-            this.documentItemChange.emit();
+            this.editorItem.children.set(
+                dropzone.dropzoneId,
+                itemList
+            );
+            this.editorItemChange.emit(this.editorItem);
         });
-    }
-
-    public getDocumentItem():DndEditorDocumentItem
-    {
-        if(this.componentRef)
-        {
-            let properties:{ [key:string]:DndEditorElementProperty } = Reflect.getMetadata(DND_EDITOR_PROPERTY_METADATA_KEY,
-                    this.componentRef.componentType) || {};
-            let annotations:{ [key:string]:any } = Reflect.getMetadata("annotations", this.componentRef.componentType) || {};
-            let propMetadata:any[] = Reflect.getMetadata("propMetadata", this.componentRef.componentType) || {};
-            let values:{ [key:string]:any } = {};
-
-            Object.keys(properties).forEach(key =>
-            {
-                values[key] = this.componentRef.instance[key];
-            });
-
-            Object.keys(propMetadata).forEach(prop =>
-            {
-                if(!(this.componentRef.instance[prop] instanceof EventEmitter))
-                {
-                    values[prop] = this.componentRef.instance[prop];
-                }
-            });
-
-            let children:DndEditorDocument = {};
-
-            this.dropzones.forEach((dropzone:ElementDropzoneComponent, index:number) =>
-            {
-                let key = dropzone.dropzoneId || index + '';
-                children[key] = dropzone.getDocumentItems();
-            });
-
-            return {
-                name:       this.componentRef.componentType.name,
-                selector:   annotations[0].selector,
-                properties: values,
-                children:   children
-            };
-        }
-
-        return null;
     }
 }

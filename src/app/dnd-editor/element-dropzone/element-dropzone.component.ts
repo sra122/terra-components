@@ -14,11 +14,12 @@ import {
 } from '@angular/core';
 import { DndEditorService } from '../dnd-editor.service';
 import { ElementContainerComponent } from '../element-container/element-container.component';
-import { DndEditorElement } from '../model/dnd-editor-element.interface';
-import { DndEditorDocumentItem } from '../model/dnd-editor-document.interface';
+import { EditorComponent } from '../model/dnd-editor-component.interface';
 import { DropEvent } from '../../interactables/dropEvent.interface';
 import { TerraDropzoneDirective } from '../../interactables/dropzone.directive';
 import { DropzoneFactory } from '../../interactables/dropzone.factory';
+import { EditorItemList } from '../model/dnd-editor-item-list.model';
+import { EditorItem } from '../model/dnd-editor-item.model';
 
 @Component({
     selector: 'dnd-editor-element-dropzone',
@@ -33,16 +34,16 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
     @Input('dnd-editor-dropzoneAllow')
     public allowedElements:string;
 
+    public itemList: EditorItemList = new EditorItemList();
+
     @Output()
-    public onDocumentChange:EventEmitter<void> = new EventEmitter<void>();
+    public itemListChange:EventEmitter<EditorItemList> = new EventEmitter<EditorItemList>();
 
     @ViewChild(TerraDropzoneDirective)
     private dropzoneElement: TerraDropzoneDirective;
 
     @ViewChild('dropTarget', {read: ViewContainerRef})
     private dropTarget:ViewContainerRef;
-
-    private childComponents:ComponentRef<ElementContainerComponent>[] = [];
 
     private dragFactory: DropzoneFactory;
 
@@ -66,18 +67,23 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
 
     public ngAfterViewInit():void
     {
+        // store reference to generated preview component to destroy on drag end
         let shadowComponent: ComponentRef<any>;
+
+        // setup dropzone behavior
         this.dragFactory = new DropzoneFactory(
             this.dropzoneElement,
             {
                 getPreviewElement: (event: DropEvent) => {
-                    if ( event.dropData.documentItem )
+                    if ( event.dropData.editorItem )
                     {
+                        // element is moved in document => use rendered component instead of creating new instance
                         return event.relatedTarget;
                     }
 
+                    // create instance of dragged editor component to display as previw element
                     shadowComponent = this.createComponent(
-                        event.dropData.element.component,
+                        event.dropData.editorComponent.component,
                         0
                     );
 
@@ -88,34 +94,39 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
 
         this.dragFactory
             .on("*", () => {
+                // update view on changes
                 this.changeDetector.detectChanges();
             })
             .on("reset", () => {
                 if ( shadowComponent )
                 {
+                    // destroy component created for displaying drop preview
                     shadowComponent.destroy();
                     shadowComponent = null;
                 }
             })
             .on("drop", (event: DropEvent, index: number) => {
+                // place new element
                 this.addEditorElement(
-                    event.dropData.element,
-                    event.dropData.documentItem,
+                    event.dropData.editorComponent,
+                    event.dropData.editorItem,
                     index
                 );
             });
     }
 
-    public initDropzone(documentItems:DndEditorDocumentItem[]):void
+    public initDropzone( itemList: EditorItemList ):void
     {
-        documentItems.forEach((docItem:DndEditorDocumentItem, index: number) =>
-        {
-            this.addEditorElement(
-                this.editorService.getEditorElement(docItem.name),
-                docItem,
-                index
-            );
-        });
+        this.itemList = itemList;
+        this.itemList.items.forEach(
+            (item: EditorItem, index: number) => {
+                this.addEditorElement(
+                    this.editorService.getEditorElement( item.name ),
+                    item,
+                    index
+                );
+            }
+        );
     }
 
     public acceptDrop(args:any)
@@ -142,45 +153,38 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         );
     }
 
-    private addEditorElement(element:DndEditorElement, documentItem?:DndEditorDocumentItem, index: number = -1):ComponentRef<ElementContainerComponent>
+    private addEditorElement(editorComponent:EditorComponent, editorItem?:EditorItem, index: number = -1):ComponentRef<ElementContainerComponent>
     {
-        let container:ComponentRef<ElementContainerComponent> = this.dropTarget.createComponent(
+        // create container to wrap editor component
+        let container: ComponentRef<ElementContainerComponent> = this.dropTarget.createComponent(
             this.componentFactory.resolveComponentFactory(ElementContainerComponent),
             index
         );
 
-        this.editorService.currentElementContainer = container.instance;
-        container.instance.initEditorElement(element, documentItem);
-
-        container.instance.documentItemChange.subscribe(() =>
+        // subscribe to changes on editor properties
+        container.instance.editorItemChange.subscribe((editorItem: EditorItem) =>
         {
-            this.onDocumentChange.emit();
+            this.itemList.set( editorItem, index );
+            this.itemListChange.emit( this.itemList );
         });
 
-        let self = this;
+        // set function to destroy container
         container.instance.destroy = () =>
         {
-            let idx = self.childComponents.indexOf(container);
-            self.childComponents.splice(idx, 1);
             container.destroy();
         };
 
-        this.childComponents.push(container);
+        // store created container instance
+        // dropzone inside the assigned editor component will be registered on this container
+        this.editorService.currentElementContainer = container.instance;
 
-        this.onDocumentChange.emit();
+        // render editor component in created container and optionally set initial values
+        container.instance.initEditorElement(editorComponent, editorItem);
+
+
+        this.itemList.add( container.instance.editorItem, index );
+        this.itemListChange.emit( this.itemList );
 
         return container;
-    }
-
-    public getDocumentItems():DndEditorDocumentItem[]
-    {
-        return this.childComponents.sort(
-            (cmpA:ComponentRef<ElementContainerComponent>, cmpB:ComponentRef<ElementContainerComponent>) =>
-            {
-                return this.dropTarget.indexOf(cmpA.hostView) - this.dropTarget.indexOf(cmpB.hostView);
-            }).map((cmp:ComponentRef<ElementContainerComponent>) =>
-        {
-            return cmp.instance.getDocumentItem();
-        });
     }
 }

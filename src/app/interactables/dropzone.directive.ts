@@ -4,6 +4,7 @@ import {
     EventEmitter,
     Input,
     OnChanges,
+    OnDestroy,
     Output,
     SimpleChanges
 } from '@angular/core';
@@ -24,7 +25,7 @@ export type AcceptFn = (args:{
 @Directive({
     selector: '[terra-dropzone]'
 })
-export class TerraDropzoneDirective implements OnChanges
+export class TerraDropzoneDirective implements OnChanges, OnDestroy
 {
     @Input('terra-dropzone-accept')
     public accept:AcceptFn | string = "";
@@ -63,6 +64,17 @@ export class TerraDropzoneDirective implements OnChanges
     public ngOnChanges(changes:SimpleChanges):void
     {
         this.init();
+    }
+
+    public ngOnDestroy():void
+    {
+        this.onDropActivate.complete();
+        this.onDropDeactivate.complete();
+        this.onDragEnter.complete();
+        this.onDragLeave.complete();
+        this.onDropMove.complete();
+        this.onDrop.complete();
+        this.interactable.unset();
     }
 
     private init():void

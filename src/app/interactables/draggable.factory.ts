@@ -13,6 +13,7 @@ export class DraggableFactory
 {
     private _dragClone: HTMLElement;
     private _dragPosition: {x: number, y: number} = { x: 0, y: 0 };
+    private _sourceDisplayProperty: string = "";
 
     private _callbacks: {[eventName: string]: Array<DraggableFactoryCallback>} = {
         "*": [],
@@ -62,6 +63,7 @@ export class DraggableFactory
         }
 
         this.initClone( event.target );
+
         this.emit( "start", event );
     }
 
@@ -74,6 +76,7 @@ export class DraggableFactory
     private onEnd( event: InteractEvent )
     {
         this.destoryClone();
+
         this.emit( "end", event );
     }
 

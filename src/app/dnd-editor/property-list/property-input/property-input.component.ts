@@ -13,7 +13,7 @@ import {
     ViewChild,
     ViewContainerRef
 } from '@angular/core';
-import { DndEditorElementProperty } from '../../model/dnd-editor-element-property.decorator';
+import { EditorPropertyInterface } from '../../model/dnd-editor-property.decorator';
 import { PropertyInputComponent } from './property-input-components/property-input-component.interface';
 
 
@@ -25,7 +25,7 @@ export class ElementPropertyInputComponent implements OnInit, OnChanges
 {
 
     @Input()
-    public property:DndEditorElementProperty;
+    public property:EditorPropertyInterface;
 
     @Input()
     public value:any;

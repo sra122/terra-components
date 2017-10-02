@@ -1,5 +1,5 @@
 import { DndEditorCompontent } from './dnd-editor.component';
-import { ElementListComponent } from './element-list/element-list.component';
+import { EditorComponentListComponent } from './component-list/component-list.component';
 import { ElementDropzoneComponent } from './element-dropzone/element-dropzone.component';
 import { ElementContainerComponent } from './element-container/element-container.component';
 import { PropertyListComponent } from './property-list/property-list.component';
@@ -13,11 +13,12 @@ import { PlaceholderListComponent } from './placeholder-list/placeholder-list.co
 import { PlaceholderDropzoneComponent } from './placeholder-dropzone/placeholder-dropzone.component';
 import { SliderPropertyInputComponent } from './property-list/property-input/property-input-components/slider-property-input/slider-property-input.component';
 import { FilePropertyInputComponent } from './property-list/property-input/property-input-components/file-property-input/file-property-input.component';
+import { ExclusiveHoverDirective } from './helper/exclusive-hover.directive';
 
 
 export const DND_EDITOR_DECLARATIONS = [
     DndEditorCompontent,
-    ElementListComponent,
+    EditorComponentListComponent,
     ElementDropzoneComponent,
     ElementContainerComponent,
     PropertyListComponent,
@@ -31,6 +32,7 @@ export const DND_EDITOR_DECLARATIONS = [
     SelectPropertyInputComponent,
     SliderPropertyInputComponent,
     FilePropertyInputComponent,
+    ExclusiveHoverDirective
 ];
 
 export const DND_EDITOR_ENTRY_COMPONENTS = [

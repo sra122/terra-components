@@ -1,16 +1,21 @@
 <div class="terra-view dnd-editor">
     <div class="col-xs-12 col-md-3 col-lg-2 editor-sidebar sidebar-left">
-        <dnd-editor-element-list [elementGroups]="config.elementGroups"></dnd-editor-element-list>
+        <dnd-editor-component-list [componentGroups]="config.componentGroups"></dnd-editor-component-list>
     </div>
     
-    <div class="col-xs-12 col-md-3 col-lg-2 editor-sidebar sidebar-left out" [class.out]="!selectedComponent || !hasPlaceholder(selectedComponent)" #placeholderList>
-        <dnd-editor-placeholder-list *ngIf="selectedComponent" [placeholderMap]="config.placeholder"
-                                     [scope]="selectedElement.scope"></dnd-editor-placeholder-list>
+    <div class="col-xs-12 col-md-3 col-lg-2 editor-sidebar sidebar-left out"
+         [class.out]="!selectedComponent || !hasPlaceholder(selectedComponent)"
+         #placeholderList>
+        <dnd-editor-placeholder-list
+            *ngIf="selectedComponent"
+            [placeholderMap]="config.placeholder"
+            [scope]="selectedComponent?.editorComponent.scope"></dnd-editor-placeholder-list>
     </div>
     
     <div class="col-xs-12 col-md-6 push-md-3 col-lg-8 push-lg-2 editor-content">
-        <div class="editor-element" [style.width.px]="config.width?.getValue()" [style.height.px]="config.height?.getValue()"
-             #editorContent>
+        <div class="editor-element"
+             [style.width.px]="config.width?.getValue()"
+             [style.height.px]="config.height?.getValue()">
             <ng-content></ng-content>
         </div>
     </div>
@@ -19,12 +24,11 @@
         <p class="sidebar-title">Globale Einstellungen</p>
     </div>
     
-    <div class="col-xs-12 col-md-3 col-lg-2 editor-sidebar sidebar-right out" [class.out]="!selectedComponent" #propertyList>
+    <div class="col-xs-12 col-md-3 col-lg-2 editor-sidebar sidebar-right out"
+         [class.out]="!selectedComponent" #propertyList>
         <dnd-editor-property-list
             *ngIf="selectedComponent"
-            [component]="selectedComponent"
-            (componentChange)="updateDocument()"
-            [editorElement]="selectedElement">
+            [elementContainer]="selectedComponent">
         </dnd-editor-property-list>
     
     </div>

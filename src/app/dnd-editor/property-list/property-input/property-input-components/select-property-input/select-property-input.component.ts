@@ -4,7 +4,7 @@ import {
     OnInit
 } from '@angular/core';
 import { PropertyInputComponent } from '../property-input-component.interface';
-import { DndEditorElementProperty } from '../../../../model/dnd-editor-element-property.decorator';
+import { EditorPropertyInterface } from '../../../../model/dnd-editor-property.decorator';
 import { TerraSelectBoxValueInterface } from '../../../../../forms/select-box/data/terra-select-box.interface';
 
 @Component({
@@ -14,7 +14,7 @@ import { TerraSelectBoxValueInterface } from '../../../../../forms/select-box/da
 export class SelectPropertyInputComponent implements PropertyInputComponent<any>, OnInit
 {
 
-    public property:DndEditorElementProperty;
+    public property:EditorPropertyInterface;
     public value:any;
     public valueChange:EventEmitter<any> = new EventEmitter<any>();
 

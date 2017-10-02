@@ -42,6 +42,7 @@ export class DropzoneFactory
         _dropzoneElement.onDragLeave.subscribe( this.onDragLeave.bind(this) );
         _dropzoneElement.onDropDeactivate.subscribe( this.onDragDeactivate.bind(this) );
         _dropzoneElement.onDrop.subscribe( this.onDrop.bind(this) );
+
     }
 
     public on(event: DropzoneFactoryEvent, callback: DropzoneFactoryCallback ): DropzoneFactory

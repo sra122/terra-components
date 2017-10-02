@@ -1,7 +1,7 @@
 <div class="element-container"
      [class.selected]="selected"
      [terra-draggable]="{allowFrom: '.drag-handle'}"
-     [terra-draggable-data]="dragData">
+     [terra-draggable-data]="{ editorComponent: editorComponent, editorItem: editorItem }">
     <div class="element-controls">
 
         <span class="element-control-btn" (click)="destroy()">
@@ -12,7 +12,8 @@
         </span>
 
     </div>
-    <div class="element-content" [class.selectable]="isSelectable" (click)="selectComponent( $event )" (mousemove)="setSelectable(true, $event)" (mouseleave)="setSelectable(false, $event)">
+    <div class="element-content" exclusive-hover="selectable"
+         (click)="selectComponent( $event )">
         <div #container></div>
     </div>
 </div>

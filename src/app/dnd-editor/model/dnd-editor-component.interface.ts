@@ -1,6 +1,6 @@
 import { Type } from '@angular/core';
 
-export interface DndEditorElement
+export interface EditorComponent
 {
     id?:string;
     name:string;

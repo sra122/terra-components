@@ -5,7 +5,8 @@ import {
     Input,
     OnChanges,
     Output,
-    SimpleChanges
+    SimpleChanges,
+    OnDestroy
 } from '@angular/core';
 import * as Interact from 'interactjs';
 import { GridOptions } from './gridOptions.interface';
@@ -16,7 +17,7 @@ import { InertiaOptions } from './inertiaOptions.interface';
 @Directive({
     selector: '[terra-draggable]'
 })
-export class TerraDraggableDirective implements OnChanges
+export class TerraDraggableDirective implements OnChanges, OnDestroy
 {
     private interactable:Interact.Interactable;
 
@@ -63,6 +64,14 @@ export class TerraDraggableDirective implements OnChanges
         });
 
         this.init();
+    }
+
+    public ngOnDestroy():void
+    {
+        this.onStart.complete();
+        this.onMove.complete();
+        this.onEnd.complete();
+        this.interactable.unset();
     }
 
     private prepareImmutableInput(input:string)

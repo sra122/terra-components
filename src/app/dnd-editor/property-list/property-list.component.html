@@ -1,18 +1,18 @@
 <div class="property-list">
     <p class="sidebar-title">
-        {{ editorElement.name }} bearbeiten
+        {{ elementContainer.editorComponent.name }} bearbeiten
     </p>
     <div>
         <div class="clearfix m-b-1" *ngFor="let property of elementPropertyKeys">
             <dnd-editor-property-input
                 [property]="elementProperties[property]"
-                [value]="component.instance[property]"
+                [value]="getPropertyValue(property)"
                 (valueChange)="setPropertyValue( property, $event )"
                 *ngIf="!isList( property )">
             </dnd-editor-property-input>
             <dnd-editor-property-input-list
                 [property]="elementProperties[property]"
-                [value]="component.instance[property]"
+                [value]="getPropertyValue(property)"
                 (valueChange)="setPropertyValue( property, $event )"
                 *ngIf="isList( property )">
             </dnd-editor-property-input-list>

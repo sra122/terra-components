@@ -5,7 +5,7 @@ import { SelectPropertyInputComponent } from './property-input/property-input-co
 import { SliderPropertyInputComponent } from './property-input/property-input-components/slider-property-input/slider-property-input.component';
 import { FilePropertyInputComponent } from './property-input/property-input-components/file-property-input/file-property-input.component';
 
-export class ElementPropertyType
+export class EditorPropertyType
 {
     public static readonly TEXT = TextPropertyInputComponent;
     public static readonly COLOR = ColorPropertyInputComponent;

@@ -3,7 +3,7 @@ import {
     EventEmitter
 } from '@angular/core';
 import { PropertyInputComponent } from '../property-input-component.interface';
-import { DndEditorElementProperty } from '../../../../model/dnd-editor-element-property.decorator';
+import { EditorPropertyInterface } from '../../../../model/dnd-editor-property.decorator';
 
 @Component({
     selector: 'dnd-editor-slider-property-input',
@@ -11,7 +11,7 @@ import { DndEditorElementProperty } from '../../../../model/dnd-editor-element-p
 })
 export class SliderPropertyInputComponent implements PropertyInputComponent<number>
 {
-    public property:DndEditorElementProperty;
+    public property:EditorPropertyInterface;
     public value:number;
     public valueChange:EventEmitter<number> = new EventEmitter<number>();
 

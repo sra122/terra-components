@@ -1,17 +1,16 @@
 import {
     Component,
-    ComponentRef,
     EventEmitter,
     Input,
     OnChanges,
     Output,
     SimpleChanges
 } from '@angular/core';
-import { DndEditorElement } from '../model/dnd-editor-element.interface';
 import {
     DND_EDITOR_PROPERTY_METADATA_KEY,
-    DndEditorElementProperty
-} from '../model/dnd-editor-element-property.decorator';
+    EditorPropertyInterface
+} from '../model/dnd-editor-property.decorator';
+import { ElementContainerComponent } from '../element-container/element-container.component';
 
 @Component({
     selector: 'dnd-editor-property-list',
@@ -22,25 +21,19 @@ export class PropertyListComponent implements OnChanges
 {
 
     @Input()
-    public component:ComponentRef<any>;
+    public elementContainer:ElementContainerComponent;
 
-    @Input()
-    public editorElement:DndEditorElement;
-
-    @Output()
-    public componentChange:EventEmitter<ComponentRef<any>> = new EventEmitter<ComponentRef<any>>();
-
-    private elementProperties:{ [key:string]:DndEditorElementProperty };
+    private elementProperties:{ [key:string]:EditorPropertyInterface };
 
     private elementPropertyKeys:string[];
 
     public ngOnChanges(changes:SimpleChanges):void
     {
-        if(changes.hasOwnProperty("editorElement"))
+        if(changes.hasOwnProperty("elementContainer"))
         {
             this.elementProperties = Reflect.getMetadata(
                 DND_EDITOR_PROPERTY_METADATA_KEY,
-                this.editorElement.component
+                this.elementContainer.editorComponent.component
             );
 
             this.elementPropertyKeys = Object.keys(this.elementProperties || {})
@@ -52,13 +45,16 @@ export class PropertyListComponent implements OnChanges
 
     private isList(propertyKey:string)
     {
-        return Reflect.getMetadata("design:type", this.editorElement.component, propertyKey) === Array;
+        return Reflect.getMetadata("design:type", this.elementContainer.editorComponent.component, propertyKey) === Array;
+    }
+
+    private getPropertyValue( propertyKey: string ): any
+    {
+        return this.elementContainer.editorItem.properties[propertyKey];
     }
 
     private setPropertyValue(propertyKey:string, propertyValue:any)
     {
-        this.component.instance[propertyKey] = propertyValue;
-        this.component.changeDetectorRef.detectChanges();
-        this.componentChange.emit(this.component);
+        this.elementContainer.editorComponentRef.instance[propertyKey] = propertyValue;
     }
 }

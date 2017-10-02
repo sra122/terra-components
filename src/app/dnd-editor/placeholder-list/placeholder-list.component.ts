@@ -11,6 +11,7 @@ import {
 import { PlaceholderMap } from '../model/dnd-editor-config.interface';
 import { DndEditorService } from '../dnd-editor.service';
 import { Subscription } from 'rxjs/Subscription';
+import { ElementContainerComponent } from '../element-container/element-container.component';
 
 @Component({
     selector: 'dnd-editor-placeholder-list',
@@ -31,7 +32,7 @@ export class PlaceholderListComponent implements OnInit, OnChanges, OnDestroy
     private draggedElement:HTMLElement;
     private draggedElementPos:{ x:number, y:number };
 
-    private selectedComponent:ComponentRef<any>;
+    private selectedComponent:ElementContainerComponent;
     private selectedComponentSubscription:Subscription;
 
     constructor(private editorService:DndEditorService, private changeDetector:ChangeDetectorRef)
@@ -129,7 +130,7 @@ export class PlaceholderListComponent implements OnInit, OnChanges, OnDestroy
     public onMove(event:Interact.InteractEvent)
     {
         let dropzone = (<any>event).dropzone;
-        if(this.selectedComponent && dropzone && this.selectedComponent.location.nativeElement.contains(dropzone._element))
+        if(this.selectedComponent && dropzone && this.selectedComponent.element.nativeElement.contains(dropzone._element))
         {
             let range:Range = document.caretRangeFromPoint(event.clientX, event.clientY);
             this.caretPos = {

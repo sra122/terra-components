@@ -1,20 +1,27 @@
 import { PropertyInputComponent } from '../property-list/property-input/property-input-components/property-input-component.interface';
 import { Type } from '@angular/core';
-import { ElementPropertyType } from '../property-list/element-property-type.const';
+import { EditorPropertyType } from '../property-list/editor-property-type.const';
 import { isNullOrUndefined } from 'util';
 import { DndEditorService } from '../dnd-editor.service';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
+import { Subject } from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Subscription';
 export const DND_EDITOR_PROPERTY_METADATA_KEY = "DND_EDITOR_PROPERTY_METADATA_KEY";
+declare type KeyValue = {key: string, value: any};
 
-export function ElementProperty(propertyDescription?:DndEditorElementProperty):PropertyDecorator
+const ElementPropertyChange: Subject<{instance: any, key: string, value: any}> = new Subject();
+
+export function EditorProperty(propertyDescription?:EditorPropertyInterface):PropertyDecorator
 {
     if ( propertyDescription )
     {
-        if ( propertyDescription.type === ElementPropertyType.SELECT
+        if ( propertyDescription.type === EditorPropertyType.SELECT
              && (isNullOrUndefined(propertyDescription.values) || Object.keys(propertyDescription.values).length <= 0) )
         {
             console.error("'values' are required for ElementPropertyType.SELECT");
         }
-        if ( propertyDescription.type === ElementPropertyType.SLIDER
+        if ( propertyDescription.type === EditorPropertyType.SLIDER
              && (isNullOrUndefined(propertyDescription.min) || isNullOrUndefined(propertyDescription.max)) )
         {
             console.error( "'min' and 'max' are required for ElementPropertyType.SLIDER");
@@ -23,7 +30,8 @@ export function ElementProperty(propertyDescription?:DndEditorElementProperty):P
 
     return (target:Object, propertyKey:string) =>
     {
-        let elementProperties:{ [key:string]:DndEditorElementProperty } = Reflect.getMetadata(
+        // Store property description in "global" metadata of object's constructor
+        let elementProperties:{ [key:string]:EditorPropertyInterface } = Reflect.getMetadata(
                 DND_EDITOR_PROPERTY_METADATA_KEY,
                 target.constructor
             ) || {};
@@ -65,18 +73,30 @@ export function ElementProperty(propertyDescription?:DndEditorElementProperty):P
                 set: function(value) {
                     if ( value !== this["$_" + propertyKey] )
                     {
-                        DndEditorService.onPropertyChange( this, propertyKey, this["$_" + propertyKey], value );
+                        ElementPropertyChange.next({
+                            instance: this,
+                            key: propertyKey,
+                            value: value
+                        });
                         this["$_" + propertyKey] = value;
                     }
                 }
             }
-        )
-
-        // console.log( Reflect.getMetadata( "design:type", target, propertyKey ) );
+        );
     }
 }
 
-export interface DndEditorElementProperty
+export function OnEditorPropertyChange( component: any, callback: (key: string, value: any) => void ): Subscription
+{
+    return ElementPropertyChange.subscribe( (arg: { instance: string, key: string, value: any} ) => {
+        if ( arg.instance === component )
+        {
+            callback( arg.key, arg.value );
+        }
+    });
+}
+
+export interface EditorPropertyInterface
 {
     label:string,
     type:Type<PropertyInputComponent<any>>,

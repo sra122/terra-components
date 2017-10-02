@@ -4,5 +4,5 @@
      terra-dropzone
      [terra-dropzone-accept]="acceptDrop.bind(this)">
     <div #dropTarget></div>
-    <ng-content *ngIf="!isDragOver && childComponents.length <= 0"></ng-content>
+    <ng-content *ngIf="!isDragOver && itemList.length <= 0"></ng-content>
 </div>

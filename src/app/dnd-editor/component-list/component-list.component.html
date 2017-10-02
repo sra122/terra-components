@@ -1,0 +1,16 @@
+<div *ngFor="let group of componentGroups">
+    <terra-portlet
+            [inputPortletHeader]="group.name"
+            [inputIsCollapsable]="true"
+            [inputCollapsed]="false">
+
+        <div class="element-list-entry"
+             *ngFor="let editorComponent of group.components"
+             [terra-draggable]
+             [terra-draggable-data]="{editorComponent: editorComponent}">
+            <span [class]="editorComponent.iconClass || 'icon-item'"></span>
+            <span>{{ editorComponent.name }}</span>
+        </div>
+
+    </terra-portlet>
+</div>

@@ -1,6 +1,6 @@
 import { DndEditorConfig } from '../model/dnd-editor-config.interface';
-import { DndEditorElement } from '../model/dnd-editor-element.interface';
-import { DndEditorElementGroup } from '../model/dnd-editor-element-group.interface';
+import { EditorComponent } from '../model/dnd-editor-component.interface';
+import { EditorComponentGroup } from '../model/dnd-editor-component-group.interface';
 
 export class EditorHelper
 {
@@ -8,9 +8,9 @@ export class EditorHelper
     {
     }
 
-    public matchesQuery(query:string, element:DndEditorElement):boolean
+    public matchesQuery(query:string, element:EditorComponent):boolean
     {
-        let group:DndEditorElementGroup = this.getElementGroup(element);
+        let group:EditorComponentGroup = this.getElementGroup(element);
         if(!group)
         {
             return false;
@@ -47,11 +47,11 @@ export class EditorHelper
         return false;
     }
 
-    private getElementGroup(element:DndEditorElement):DndEditorElementGroup
+    private getElementGroup(element:EditorComponent):EditorComponentGroup
     {
-        let group = this.config.elementGroups.find((group:DndEditorElementGroup) =>
+        let group = this.config.componentGroups.find((group:EditorComponentGroup) =>
         {
-            return group.elements.some((e:DndEditorElement) =>
+            return group.components.some((e:EditorComponent) =>
             {
                 return this.getElementId(element) === this.getElementId(e);
             });
@@ -66,7 +66,7 @@ export class EditorHelper
         return group;
     }
 
-    private getElementId(element:DndEditorElement):string
+    private getElementId(element:EditorComponent):string
     {
         if(!element.id)
         {
@@ -77,7 +77,7 @@ export class EditorHelper
         return element.id;
     }
 
-    private getGroupId(group:DndEditorElementGroup):string
+    private getGroupId(group:EditorComponentGroup):string
     {
         if(!group.id)
         {

@@ -5,7 +5,7 @@ import {
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 import { ElementContainerComponent } from './element-container/element-container.component';
-import { DndEditorElement } from './model/dnd-editor-element.interface';
+import { EditorComponent } from './model/dnd-editor-component.interface';
 import {
     DndEditorConfig,
     PlaceholderMap
@@ -15,22 +15,17 @@ import { EditorHelper } from './helper/editor.helper';
 @Injectable()
 export class DndEditorService
 {
-    public static propertyChange: Observable<void>;
-    public static propertyChangeListeners: Array<Observer<void>> = [];
-    public selectedComponent:Observable<ComponentRef<any>>;
-    private selectedComponentValue:ComponentRef<any>;
-    private selectedComponentListeners:Observer<ComponentRef<any>>[] = [];
+    public selectedComponent:Observable<ElementContainerComponent>;
+    private selectedComponentValue:ElementContainerComponent;
+    private selectedComponentListeners:Observer<ElementContainerComponent>[] = [];
 
     public currentElementContainer:ElementContainerComponent;
 
     public editorConfig:DndEditorConfig;
 
-    public hoveredElementContainer:ElementContainerComponent;
-    private lastHoverEvent:Event;
-
     constructor()
     {
-        this.selectedComponent = new Observable((observer:Observer<ComponentRef<any>>) =>
+        this.selectedComponent = new Observable((observer:Observer<ElementContainerComponent>) =>
         {
             this.selectedComponentListeners.push(observer);
             observer.next(this.selectedComponentValue);
@@ -40,42 +35,27 @@ export class DndEditorService
                 this.selectedComponentListeners.splice(idx, 1);
             };
         });
-
-        DndEditorService.propertyChange = new Observable( (observer: Observer<void>) => {
-            DndEditorService.propertyChangeListeners.push( observer );
-            return () => {
-                let idx: number = DndEditorService.propertyChangeListeners.indexOf( observer );
-                DndEditorService.propertyChangeListeners.splice( idx, 1 );
-            }
-        })
     }
 
-    public static onPropertyChange( target: Object, property: string, oldValue: any, newValue: any )
+    public selectComponent(componentContainer?:ElementContainerComponent)
     {
-        DndEditorService.propertyChangeListeners.forEach( (listener: Observer<void>) => {
-            listener.next(null);
-        });
-    }
-
-    public selectComponent(component?:ComponentRef<any>)
-    {
-        this.selectedComponentValue = component;
+        this.selectedComponentValue = componentContainer;
         this.selectedComponentListeners
-            .forEach((listener:Observer<ComponentRef<any>>) =>
+            .forEach((listener:Observer<ElementContainerComponent>) =>
             {
-                listener.next(component);
+                listener.next(componentContainer);
             });
     }
 
-    public getEditorElement(elementName:string):DndEditorElement
+    public getEditorElement(elementName:string):EditorComponent
     {
-        for(let i = 0; i < this.editorConfig.elementGroups.length; i++)
+        for(let i = 0; i < this.editorConfig.componentGroups.length; i++)
         {
-            for(let j = 0; j < this.editorConfig.elementGroups[i].elements.length; j++)
+            for(let j = 0; j < this.editorConfig.componentGroups[i].components.length; j++)
             {
-                if(this.editorConfig.elementGroups[i].elements[j].component.name === elementName)
+                if(this.editorConfig.componentGroups[i].components[j].component.name === elementName)
                 {
-                    return this.editorConfig.elementGroups[i].elements[j];
+                    return this.editorConfig.componentGroups[i].components[j];
                 }
             }
         }
@@ -83,16 +63,7 @@ export class DndEditorService
         return null;
     }
 
-    public hoverElementContainer(container:ElementContainerComponent, event:Event)
-    {
-        if(event !== this.lastHoverEvent)
-        {
-            this.hoveredElementContainer = container;
-            this.lastHoverEvent = event;
-        }
-    }
-
-    public matchesElementQuery(query:string, element:DndEditorElement):boolean
+    public matchesElementQuery(query:string, element:EditorComponent):boolean
     {
         let helper = new EditorHelper(this.editorConfig);
         return helper.matchesQuery(query, element);
