@@ -20,20 +20,23 @@ export type PlaceholderContent = { type:"text" | "placeholder", content:string, 
 })
 export class PlaceholderDropzoneComponent implements OnInit
 {
-
+    // the text-content of this dropzone. Placeholders are resoled by using the defined delimiters
     @Input()
     public content:string;
 
+    // delimiters to resolve/ parse placeholders in content
     @Input()
-    public delimiter:[string, string] = ["{{",
-                                         "}}"];
+    public delimiter:[string, string] = ["{{", "}}"];
 
+    // emits changes to text content
     @Output()
     public contentChange:EventEmitter<string> = new EventEmitter<string>();
 
+    // references the element to make editable
     @ViewChild('container', {read: ElementRef})
     private containerElement:ElementRef;
 
+    // the editable element
     private editableElement:EditableElement;
 
     constructor(private editorService:DndEditorService)
@@ -43,6 +46,7 @@ export class PlaceholderDropzoneComponent implements OnInit
 
     public ngOnInit():void
     {
+        // apply helper class to make containerElement editable
         this.editableElement = new EditableElement(
             this.containerElement.nativeElement,
             this.editorService,
@@ -51,8 +55,10 @@ export class PlaceholderDropzoneComponent implements OnInit
             }
         );
 
+        // assign content to be parsed.
         this.editableElement.content = this.content;
 
+        // subscribe to changes on text-content pass to parent component
         this.editableElement.contentChange.subscribe(content =>
         {
             this.content = content;
@@ -60,11 +66,20 @@ export class PlaceholderDropzoneComponent implements OnInit
         });
     }
 
+    /**
+     * Only allow dropping placeholders
+     * @param args
+     * @returns {any}
+     */
     public acceptDrop(args:any)
     {
         return args.dragData && args.dragData.placeholder;
     }
 
+    /**
+     * Handle drop of placeholders
+     * @param event
+     */
     public dropPlaceholder(event:DropEvent)
     {
         let placeholderKey:string = event.dropData.placeholder;

@@ -23,6 +23,9 @@ import { DND_EDITOR_PROPERTY_METADATA_KEY } from "../index";
 import { EditorItemList } from '../model/dnd-editor-item-list.model';
 import { OnEditorPropertyChange } from '../model/dnd-editor-property.decorator';
 
+/**
+ * Wraps a single editor component placed in editor document.
+ */
 @Component({
     selector: 'dnd-editor-element-container',
     template: require('./element-container.component.html'),
@@ -53,8 +56,10 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
     @ViewChild( TerraDraggableDirective )
     private draggableElement: TerraDraggableDirective;
 
+    // indicates if the container is currently selected by user
     private selected:boolean = false;
 
+    // subscription to currently selected editor component. Should be unsubscribed on destroy
     private selectedComponentSubscription:Subscription;
 
 
@@ -67,6 +72,8 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
 
     public ngOnInit():void
     {
+        // subscribe to changes to the currently selected editor component.
+        // on changes check if this container is currently selected
         this.selectedComponentSubscription =
             this.editorService.selectedComponent.subscribe((container: ElementContainerComponent) =>
             {
@@ -162,20 +169,32 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
 
     public ngOnDestroy():void
     {
+        // unsubscribe to avoid calling detectChanges() on destroyed component
         if(this.selectedComponentSubscription)
         {
             this.selectedComponentSubscription.unsubscribe();
         }
     }
 
+    /**
+     * Selects the editor component assigned to this container
+     * @param event Event   The event which has triggered this function. Event will be stopped.
+     */
     public selectComponent(event:Event)
     {
+        // stop event propagation to avoid selecting the parent element
         event.stopPropagation();
         this.editorService.selectComponent( this );
     }
 
+    /**
+     * Initialize a new dropzone as a child of this component.
+     * If the component assigned to this container gets initialized, all dropzones contained by this component will call this function at ngOnInit().
+     * @param dropzone ElementDropzoneComponent     The dropzone which is initialized as a child of the assigned component.
+     */
     public registerDropzone(dropzone:ElementDropzoneComponent)
     {
+        // set initial values if defined
         if(this.editorItem && this.editorItem.children.has(dropzone.dropzoneId))
         {
             dropzone.initDropzone(
@@ -183,12 +202,15 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
             );
         }
 
+        // subscribe to changes on child components.
         dropzone.itemListChange.subscribe((itemList:EditorItemList) =>
         {
             this.editorItem.children.set(
                 dropzone.dropzoneId,
                 itemList
             );
+
+            // passthrough changes to parent
             this.editorItemChange.emit(this.editorItem);
         });
     }

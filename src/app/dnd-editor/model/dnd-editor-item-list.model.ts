@@ -3,17 +3,28 @@ import {
     EditorItem
 } from './dnd-editor-item.model';
 
+/**
+ * Linked list of editor items.
+ */
 export class EditorItemList
 {
+    // The items in this list. Not ordered
     private _items: Array<EditorItemListEntry> = [];
 
+    // The first item in the list
     private _head: EditorItemListEntry = null;
 
+    // The last item in the list
     private get _tail(): EditorItemListEntry
     {
         return this._entry( this.length - 1 );
     }
 
+    /**
+     * Create a new instance from plain data
+     * @param dataList  Array<EditorItemInterface>
+     * @returns {EditorItemList}
+     */
     public static create( dataList: Array<EditorItemInterface> ): EditorItemList
     {
         let itemList: EditorItemList = new EditorItemList();
@@ -26,11 +37,18 @@ export class EditorItemList
         return itemList;
     }
 
+    /**
+     * Get the length of the list.
+     */
     public get length(): number
     {
         return this._items.length;
     }
 
+    /**
+     * Get the ordered items of the list.
+     * @returns {Array<EditorItem>}
+     */
     public get items(): Array<EditorItem>
     {
         let items: Array<EditorItem> = [];
@@ -45,12 +63,23 @@ export class EditorItemList
         return items;
     }
 
+    /**
+     * Get the item at a given position.
+     * @param position
+     * @returns {EditorItem}
+     */
     public item( position: number ): EditorItem
     {
         let entry = this._entry( position );
         return entry ? entry.item : null;
     }
 
+    /**
+     * Get the entry at the given position.
+     * @param position
+     * @returns {any}
+     * @private
+     */
     private _entry( position ): EditorItemListEntry
     {
         if ( position < 0 || position >= this.length )
@@ -69,6 +98,13 @@ export class EditorItemList
         return current;
     }
 
+    /**
+     * Set an item at a given position.
+     * If entry at given position does not exist, item will be appended to list.
+     * IMPORTANT: The item at the given position will be replaced. Use add() to insert new item in list.
+     * @param item      EditorItem
+     * @param position  number
+     */
     public set( item: EditorItem, position: number )
     {
         let entry: EditorItemListEntry = this._entry( position );
@@ -78,6 +114,12 @@ export class EditorItemList
         }
     }
 
+    /**
+     * Insert a new item in the list at given position.
+     * If position is not defined, the item will be appended to the list.
+     * @param item      EditorItem
+     * @param position  number
+     */
     public add( item: EditorItem, position: number = -1 )
     {
         let listEntry = new EditorItemListEntry( item );
@@ -89,6 +131,12 @@ export class EditorItemList
         this._insertListEntry( listEntry, position );
     }
 
+    /**
+     * Insert list entry at given position
+     * @param listEntry EditorItemListEntry
+     * @param position  number
+     * @private
+     */
     private _insertListEntry( listEntry: EditorItemListEntry, position: number )
     {
         if ( position === 0 )
@@ -117,11 +165,21 @@ export class EditorItemList
         this._items.push( listEntry );
     }
 
+    /**
+     * Check if item is in the list
+     * @param item  EditorItem
+     * @returns {boolean}
+     */
     public contains( item: EditorItem )
     {
         return this.positionOf( item ) >= 0;
     }
 
+    /**
+     * Get the position of a given item
+     * @param item  EditorItem
+     * @returns {number}
+     */
     public positionOf( item: EditorItem ): number
     {
         let position: number = -1;
@@ -140,6 +198,11 @@ export class EditorItemList
         return position;
     }
 
+    /**
+     * Remove an item from list.
+     * Accepts either the item to remove or the position of the item to remove
+     * @param itemOrPosition
+     */
     public remove( itemOrPosition: EditorItem | number )
     {
         let position: number;
@@ -166,6 +229,10 @@ export class EditorItemList
         }
     }
 
+    /**
+     * Serialize to plain javascript object.
+     * @returns Array<EditorItemInterface>
+     */
     public serialize(): Array<EditorItemInterface>
     {
         return this.items.map(
@@ -176,6 +243,9 @@ export class EditorItemList
     }
 }
 
+/**
+ * Single list entry. Wraps the assigned editor item and stores references to previous and next entries in the list.
+ */
 export class EditorItemListEntry
 {
     private _next: EditorItemListEntry;
@@ -185,7 +255,7 @@ export class EditorItemListEntry
     {
         return this._next;
     }
-
+    
     public set next( entry: EditorItemListEntry )
     {
         if ( this._next !== entry )

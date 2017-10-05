@@ -9,6 +9,9 @@ import { EditorComponentGroup } from '../model/dnd-editor-component-group.interf
 import { TerraDraggableDirective } from '../../interactables/draggable.directive';
 import { DraggableFactory } from '../../interactables/draggable.factory';
 
+/**
+ * Prints a list of available editor components grouped in terra-portlets
+ */
 @Component({
     selector:   'dnd-editor-component-list',
     template:   require('./component-list.component.html'),
@@ -24,6 +27,7 @@ export class EditorComponentListComponent implements AfterViewInit
 
     public ngAfterViewInit():void
     {
+        // initialize default drag behavior for each editor component
         this.draggables.forEach(
             ( draggable: TerraDraggableDirective ) => {
                 new DraggableFactory( draggable );

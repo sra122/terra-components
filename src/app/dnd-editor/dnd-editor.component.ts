@@ -32,17 +32,20 @@ import { EditorItemList } from './model/dnd-editor-item-list.model';
 })
 export class DndEditorCompontent implements OnInit, AfterContentInit
 {
+    // The document edited by this component
     private _document: EditorDocument;
 
     @Input('dnd-editor-config')
     public config:DndEditorConfig;
 
+    // set plain data of the editor document
     @Input('dnd-editor-document')
     public set document( data: EditorDocumentInterface )
     {
         this._document = EditorDocument.create( data );
     }
 
+    // get plain data of the editor document
     public get document(): EditorDocumentInterface
     {
         if ( this._document )
@@ -53,6 +56,7 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
         return {};
     }
 
+    // emit changes on the document
     @Output('dnd-editor-documentChange')
     public documentChange:EventEmitter<EditorDocumentInterface> = new EventEmitter<EditorDocumentInterface>();
 
@@ -62,6 +66,7 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
     @ViewChild('placeholderList', {read: ElementRef})
     private placeholderListElement:ElementRef;
 
+    // root dropzones in the editor
     @ContentChildren(ElementDropzoneComponent)
     private dropzones:QueryList<ElementDropzoneComponent>;
 

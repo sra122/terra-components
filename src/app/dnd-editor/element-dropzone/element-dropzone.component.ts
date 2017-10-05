@@ -28,24 +28,31 @@ import { EditorItem } from '../model/dnd-editor-item.model';
 })
 export class ElementDropzoneComponent implements OnInit, AfterViewInit
 {
+    // id of this dropzone. Will be used as key when generating editor document
     @Input('dnd-editor-dropzoneId')
     public dropzoneId:string;
 
+    // TODO: add description
     @Input('dnd-editor-dropzoneAllow')
     public allowedElements:string;
 
+    // ordered list of child editor components assigned to this dropzone
     public itemList: EditorItemList = new EditorItemList();
 
+    // emitted on changes to any child component
     @Output()
     public itemListChange:EventEmitter<EditorItemList> = new EventEmitter<EditorItemList>();
 
+    // references the dropzone element to assign dropzone behavior to
     @ViewChild(TerraDropzoneDirective)
     private dropzoneElement: TerraDropzoneDirective;
 
+    // references the element to add dropped components into.
     @ViewChild('dropTarget', {read: ViewContainerRef})
     private dropTarget:ViewContainerRef;
 
-    private dragFactory: DropzoneFactory;
+    // factory for handling default dropzone behavior
+    private dropzoneFactory: DropzoneFactory;
 
     constructor(private editorService:DndEditorService,
                 private changeDetector:ChangeDetectorRef,
@@ -59,6 +66,9 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         {
             console.error("Property 'dnd-editor-dropzoneId' is mandatory!");
         }
+
+        // register dropzone on current element container.
+        // currentElementContainer will be set by addEditorElement() when instantiating new ElementContainerComponents on drop.
         if(this.editorService.currentElementContainer)
         {
             this.editorService.currentElementContainer.registerDropzone(this);
@@ -71,7 +81,7 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         let shadowComponent: ComponentRef<any>;
 
         // setup dropzone behavior
-        this.dragFactory = new DropzoneFactory(
+        this.dropzoneFactory = new DropzoneFactory(
             this.dropzoneElement,
             {
                 getPreviewElement: (event: DropEvent) => {
@@ -92,7 +102,7 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
             }
         );
 
-        this.dragFactory
+        this.dropzoneFactory
             .on("*", () => {
                 // update view on changes
                 this.changeDetector.detectChanges();
@@ -115,6 +125,10 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
             });
     }
 
+    /**
+     * Initialize child components and assign property values
+     * @param itemList EditorItemList   Ordered list of child components
+     */
     public initDropzone( itemList: EditorItemList ):void
     {
         this.itemList = itemList;
@@ -129,22 +143,35 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         );
     }
 
+    /**
+     * Check if element can be dropped in this dropzone
+     * @param args
+     * @returns {boolean}
+     */
     public acceptDrop(args:any)
     {
-        return true;
-        //if(!args.dragData || !args.dragData.element)
-        //{
-        //    return false;
-        //}
-        //
-        //if(!this.allowedElements)
-        //{
-        //    return true;
-        //}
-        //
-        //return this.editorService.matchesElementQuery(this.allowedElements, args.dragData.element);
+        if(!args.dragData || !args.dragData.editorComponent)
+        {
+            // dragged element is not a editor component
+            return false;
+        }
+
+        if(!this.allowedElements)
+        {
+            // allowed elements are not defined so all elements are allowed.
+            return true;
+        }
+
+        // check if dropped element is allowed
+        return this.editorService.matchesElementQuery(this.allowedElements, args.dragData.editorComponent);
     }
 
+    /**
+     * Create a new instance of an angular component. Instance will be created in 'dropTarget'-Element at defined position
+     * @param component     Type<any>   The angular component to create instance of
+     * @param position      number      The position to insert component element at.
+     * @returns {ComponentRef<C>}       The instance of the created component
+     */
     private createComponent<T>(component:Type<any>, position:number = 0):ComponentRef<T>
     {
         return this.dropTarget.createComponent(
@@ -153,6 +180,14 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         );
     }
 
+    /**
+     * Add a new editor component at defined position and assign initial property values.
+     * Instance of EditorComponent will be wrapped in ElementContainerComponent.
+     * @param editorComponent   EditorComponent     The editor component to create instance of.
+     * @param editorItem        EditorItem          Editor item containing initial property values of created component
+     * @param index             number              The position to insert created component at.
+     * @returns {ComponentRef<ElementContainerComponent>}
+     */
     private addEditorElement(editorComponent:EditorComponent, editorItem?:EditorItem, index: number = -1):ComponentRef<ElementContainerComponent>
     {
         // create container to wrap editor component

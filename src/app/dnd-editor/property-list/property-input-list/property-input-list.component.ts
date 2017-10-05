@@ -13,28 +13,43 @@ import { EditorPropertyInterface } from '../../model/dnd-editor-property.decorat
 })
 export class ElementPropertyInputListComponent
 {
+    // the property to render a list of input components for
     @Input()
     public property:EditorPropertyInterface;
 
+    // list of values for each rendered input component
     @Input()
     public value:any[] = [];
 
+    // emits changes to any rendered input component in the list
     @Output()
     public valueChange:EventEmitter<any[]> = new EventEmitter<any[]>();
 
-
+    /**
+     * Assign property value at defined index
+     * @param index     number  The index of the input component
+     * @param value     any     The value to assign
+     */
     public setPropertyValue(index:number, value:any)
     {
-        console.log("Set " + index + " to " + value);
         this.value[index] = value;
         this.valueChange.emit(this.value);
     }
 
+    /**
+     * Track list entries by index
+     * @param index
+     * @param item
+     * @returns {number}
+     */
     public trackByFn(index:number, item:any)
     {
         return index;
     }
 
+    /**
+     * Add new input component
+     */
     public addEntry()
     {
         if(!this.value)
@@ -47,12 +62,21 @@ export class ElementPropertyInputListComponent
         );
     }
 
+    /**
+     * Remove input component at given index.
+     * @param index
+     */
     public removeEntry(index:number)
     {
         this.value.splice(index, 1);
         this.valueChange.emit(this.value);
     }
 
+    /**
+     * Clone definition of editor property and append index to label
+     * @param index
+     * @returns {EditorPropertyInterface}
+     */
     private cloneProperty(index:number):EditorPropertyInterface
     {
         let clone:EditorPropertyInterface = {
