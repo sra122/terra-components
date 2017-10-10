@@ -1,8 +1,8 @@
 <div class="editor-dropzone"
-     [class.drag-over]="dragFactory?.isDragOver"
-     [class.drag-active]="dragFactory?.isDragActive"
+     [class.drag-over]="dropzoneFactory?.isDragOver"
+     [class.drag-active]="dropzoneFactory?.isDragActive"
      terra-dropzone
      [terra-dropzone-accept]="acceptDrop.bind(this)">
     <div #dropTarget></div>
-    <ng-content *ngIf="!isDragOver && itemList.length <= 0"></ng-content>
+    <ng-content *ngIf="!dropzoneFactory?.isDragOver && itemList.length <= 0"></ng-content>
 </div>

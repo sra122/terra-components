@@ -6,6 +6,9 @@ import {
     ComponentRef,
     ElementRef,
     EventEmitter,
+    forwardRef,
+    Host,
+    Inject,
     OnDestroy,
     OnInit,
     ViewChild,
@@ -66,7 +69,8 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
     constructor(public element:ElementRef,
                 private editorService:DndEditorService,
                 private changeDetector:ChangeDetectorRef,
-                private componentFactoryResolver:ComponentFactoryResolver)
+                private componentFactoryResolver:ComponentFactoryResolver
+    )
     {
     }
 
@@ -75,7 +79,7 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
         // subscribe to changes to the currently selected editor component.
         // on changes check if this container is currently selected
         this.selectedComponentSubscription =
-            this.editorService.selectedComponent.subscribe((container: ElementContainerComponent) =>
+            this.editorService.selectedComponentChange.subscribe((container: ElementContainerComponent) =>
             {
                 this.selected = container === this;
                 this.changeDetector.detectChanges();
@@ -189,29 +193,30 @@ export class ElementContainerComponent implements OnInit, AfterViewInit, OnDestr
 
     /**
      * Initialize a new dropzone as a child of this component.
-     * If the component assigned to this container gets initialized, all dropzones contained by this component will call this function at ngOnInit().
+     * If the component assigned to this container gets initialized, all dropzones contained by this component will call this function at
+     * ngOnInit().
      * @param dropzone ElementDropzoneComponent     The dropzone which is initialized as a child of the assigned component.
      */
-    public registerDropzone(dropzone:ElementDropzoneComponent)
-    {
-        // set initial values if defined
-        if(this.editorItem && this.editorItem.children.has(dropzone.dropzoneId))
-        {
-            dropzone.initDropzone(
-                this.editorItem.children.get(dropzone.dropzoneId)
-            );
-        }
-
-        // subscribe to changes on child components.
-        dropzone.itemListChange.subscribe((itemList:EditorItemList) =>
-        {
-            this.editorItem.children.set(
-                dropzone.dropzoneId,
-                itemList
-            );
-
-            // passthrough changes to parent
-            this.editorItemChange.emit(this.editorItem);
-        });
-    }
+    //public registerDropzone(dropzone:ElementDropzoneComponent)
+    //{
+    //    // set initial values if defined
+    //    if(this.editorItem && this.editorItem.children.has(dropzone.dropzoneId))
+    //    {
+    //        dropzone.initDropzone(
+    //            this.editorItem.children.get(dropzone.dropzoneId)
+    //        );
+    //    }
+    //
+    //    // subscribe to changes on child components.
+    //    dropzone.itemListChange.subscribe((itemList:EditorItemList) =>
+    //    {
+    //        this.editorItem.children.set(
+    //            dropzone.dropzoneId,
+    //            itemList
+    //        );
+    //
+    //        // passthrough changes to parent
+    //        this.editorItemChange.emit(this.editorItem);
+    //    });
+    //}
 }

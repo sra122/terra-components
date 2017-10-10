@@ -58,7 +58,7 @@ export class PlaceholderListComponent implements OnInit, OnChanges, OnDestroy
     public ngOnInit():void
     {
         // subscribe to selected component
-        this.selectedComponentSubscription = this.editorService.selectedComponent.subscribe(componentRef =>
+        this.selectedComponentSubscription = this.editorService.selectedComponentChange.subscribe(componentRef =>
         {
             this.selectedComponent = componentRef;
             this.changeDetector.detectChanges();

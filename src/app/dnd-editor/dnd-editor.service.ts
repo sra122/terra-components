@@ -11,40 +11,31 @@ import {
     PlaceholderMap
 } from './model/dnd-editor-config.interface';
 import { EditorHelper } from './helper/editor.helper';
+import { Subject } from 'rxjs/Subject';
+import { SectionContainerComponent } from './section-container/section-container.component';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class DndEditorService
 {
-    public selectedComponent:Observable<ElementContainerComponent>;
-    private selectedComponentValue:ElementContainerComponent;
-    private selectedComponentListeners:Observer<ElementContainerComponent>[] = [];
+    public selectedComponentChange: BehaviorSubject<ElementContainerComponent> = new BehaviorSubject(null);
+    public selectedSectionChange: BehaviorSubject<SectionContainerComponent> = new BehaviorSubject(null);
 
     public currentElementContainer:ElementContainerComponent;
 
     public editorConfig:DndEditorConfig;
 
-    constructor()
-    {
-        this.selectedComponent = new Observable((observer:Observer<ElementContainerComponent>) =>
-        {
-            this.selectedComponentListeners.push(observer);
-            observer.next(this.selectedComponentValue);
-            return () =>
-            {
-                let idx = this.selectedComponentListeners.indexOf(observer);
-                this.selectedComponentListeners.splice(idx, 1);
-            };
-        });
-    }
-
     public selectComponent(componentContainer?:ElementContainerComponent)
     {
-        this.selectedComponentValue = componentContainer;
-        this.selectedComponentListeners
-            .forEach((listener:Observer<ElementContainerComponent>) =>
-            {
-                listener.next(componentContainer);
-            });
+        if ( this.selectedSectionChange.getValue() )
+        {
+            this.selectedComponentChange.next( componentContainer );
+        }
+    }
+
+    public selectSection( sectionContainer?: SectionContainerComponent )
+    {
+        this.selectedSectionChange.next( sectionContainer );
     }
 
     public getEditorElement(elementName:string):EditorComponent

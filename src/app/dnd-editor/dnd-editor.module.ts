@@ -14,6 +14,7 @@ import { PlaceholderDropzoneComponent } from './placeholder-dropzone/placeholder
 import { SliderPropertyInputComponent } from './property-list/property-input/property-input-components/slider-property-input/slider-property-input.component';
 import { FilePropertyInputComponent } from './property-list/property-input/property-input-components/file-property-input/file-property-input.component';
 import { ExclusiveHoverDirective } from './helper/exclusive-hover.directive';
+import { SectionContainerComponent } from './section-container/section-container.component';
 
 
 export const DND_EDITOR_DECLARATIONS = [
@@ -21,6 +22,7 @@ export const DND_EDITOR_DECLARATIONS = [
     EditorComponentListComponent,
     ElementDropzoneComponent,
     ElementContainerComponent,
+    SectionContainerComponent,
     PropertyListComponent,
     PlaceholderListComponent,
     PlaceholderDropzoneComponent,
@@ -36,7 +38,9 @@ export const DND_EDITOR_DECLARATIONS = [
 ];
 
 export const DND_EDITOR_ENTRY_COMPONENTS = [
+    ElementDropzoneComponent,
     ElementContainerComponent,
+    SectionContainerComponent,
     TextPropertyInputComponent,
     ColorPropertyInputComponent,
     CheckboxPropertyInputComponent,

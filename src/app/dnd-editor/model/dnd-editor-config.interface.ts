@@ -12,6 +12,9 @@ export interface DndEditorConfig
     width?:Ruler;
     height?:Ruler;
 
+    // Allow dragging elements in root dropzone (not having a parent section)
+    allowRootSection?: boolean;
+
     // available components
     componentGroups:EditorComponentGroup[];
 

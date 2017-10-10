@@ -1,6 +1,7 @@
 import { EditorItemList } from './dnd-editor-item-list.model';
 import { EditorDocumentInterface } from './dnd-editor-document.model';
 import { EditorBlockMap } from './dnd-editor-block-map.model';
+import { Subject } from 'rxjs/Subject';
 
 /**
  * Plain representation of a single editor element in the document.
@@ -53,6 +54,8 @@ export class EditorItem
     // Child items
     public children: EditorBlockMap = new EditorBlockMap();
 
+    public onChange: Subject<void> = new Subject();
+
     /**
      * Create a new instance from plain data.
      * @param data  EditorItemInterface
@@ -62,12 +65,13 @@ export class EditorItem
     {
         let item = new EditorItem();
 
-        Object.keys( data.children ).forEach( (dropzoneId: string) => {
-            item.children.set(
-                dropzoneId,
-                EditorItemList.create( data.children[dropzoneId] )
-            );
-        });
+        if ( data.children )
+        {
+            item.children = EditorBlockMap.create( data.children );
+            item.children.onChange.subscribe( () => {
+                item.onChange.next();
+            })
+        }
 
         if ( (<EditorElementInterface> data).name )
         {

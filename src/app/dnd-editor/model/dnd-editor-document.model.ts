@@ -4,6 +4,8 @@ import {
     EditorSectionInterface
 } from './dnd-editor-item.model';
 import { EditorBlockMap } from './dnd-editor-block-map.model';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Subject } from 'rxjs/Subject';
 
 /**
  * Plain representation of an EditorDocument
@@ -21,6 +23,8 @@ export class EditorDocument
     // Blocks of the document. Each block references a dropzone in the editor preview.
     public blocks: EditorBlockMap = new EditorBlockMap();
 
+    public onChange: Subject<EditorDocument> = new Subject();
+
     /**
      * Create a new EditorDocument from plain data.
      * @param data  EditorDocumentInterface
@@ -31,6 +35,9 @@ export class EditorDocument
         let document = new EditorDocument();
 
         document.blocks = EditorBlockMap.create( data );
+        document.blocks.onChange.subscribe( () => {
+            document.onChange.next( document );
+        });
 
         return document;
     }

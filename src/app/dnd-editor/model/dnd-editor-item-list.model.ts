@@ -2,6 +2,7 @@ import {
     EditorItemInterface,
     EditorItem
 } from './dnd-editor-item.model';
+import { Subject } from 'rxjs/Subject';
 
 /**
  * Linked list of editor items.
@@ -20,6 +21,8 @@ export class EditorItemList
         return this._entry( this.length - 1 );
     }
 
+    public onChange: Subject<void> = new Subject();
+
     /**
      * Create a new instance from plain data
      * @param dataList  Array<EditorItemInterface>
@@ -29,9 +32,13 @@ export class EditorItemList
     {
         let itemList: EditorItemList = new EditorItemList();
         dataList.forEach( (data: EditorItemInterface) => {
-            itemList.add(
-                EditorItem.create( data )
-            );
+            let item: EditorItem = EditorItem.create( data );
+
+            item.onChange.subscribe( () => {
+                itemList.onChange.next();
+            });
+
+            itemList.add( item );
         });
 
         return itemList;
@@ -111,6 +118,7 @@ export class EditorItemList
         if ( entry )
         {
             entry.item = item;
+            this.onChange.next();
         }
     }
 
@@ -129,6 +137,7 @@ export class EditorItemList
         }
 
         this._insertListEntry( listEntry, position );
+        this.onChange.next();
     }
 
     /**
@@ -223,9 +232,27 @@ export class EditorItemList
             let prevEntry: EditorItemListEntry = entry.previous;
             let nextEntry: EditorItemListEntry = entry.next;
 
-            prevEntry.next = nextEntry;
+            if ( prevEntry )
+            {
+                prevEntry.next = nextEntry;
+            }
+            else
+            {
+                // entry is first in list
+                if ( nextEntry )
+                {
+                    nextEntry.previous = null;
+                    this._head = nextEntry;
+                }
+                else
+                {
+                    // list is empty
+                    this._head = null;
+                }
+            }
             let idx: number = this._items.indexOf( entry );
             this._items.splice( idx, 1 );
+            this.onChange.next();
         }
     }
 

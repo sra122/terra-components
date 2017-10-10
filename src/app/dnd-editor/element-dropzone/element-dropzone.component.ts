@@ -5,7 +5,11 @@ import {
     ComponentFactoryResolver,
     ComponentRef,
     EventEmitter,
+    forwardRef,
+    Host,
+    Inject,
     Input,
+    OnDestroy,
     OnInit,
     Output,
     Type,
@@ -20,14 +24,17 @@ import { TerraDropzoneDirective } from '../../interactables/dropzone.directive';
 import { DropzoneFactory } from '../../interactables/dropzone.factory';
 import { EditorItemList } from '../model/dnd-editor-item-list.model';
 import { EditorItem } from '../model/dnd-editor-item.model';
+import { SectionContainerComponent } from '../section-container/section-container.component';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'dnd-editor-element-dropzone',
     template: require('./element-dropzone.component.html'),
     styles:   [require('./element-dropzone.component.scss')]
 })
-export class ElementDropzoneComponent implements OnInit, AfterViewInit
+export class ElementDropzoneComponent implements OnInit, AfterViewInit, OnDestroy
 {
+
     // id of this dropzone. Will be used as key when generating editor document
     @Input('dnd-editor-dropzoneId')
     public dropzoneId:string;
@@ -37,11 +44,35 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
     public allowedElements:string;
 
     // ordered list of child editor components assigned to this dropzone
-    public itemList: EditorItemList = new EditorItemList();
+    private _itemList: EditorItemList;
 
-    // emitted on changes to any child component
-    @Output()
-    public itemListChange:EventEmitter<EditorItemList> = new EventEmitter<EditorItemList>();
+    public get itemList(): EditorItemList
+    {
+        if ( !this._itemList )
+        {
+            this.itemList = new EditorItemList();
+        }
+        return this._itemList;
+    }
+
+    public set itemList( list: EditorItemList )
+    {
+        if ( this.itemListSubscription )
+        {
+            this.itemListSubscription.unsubscribe();
+            this.itemListSubscription = null;
+        }
+
+        this._itemList = list;
+        if ( this._itemList )
+        {
+            this.itemListSubscription = this._itemList.onChange.subscribe( () => {
+                this.changeDetector.detectChanges();
+            });
+        }
+    }
+
+    private itemListSubscription: Subscription;
 
     // references the dropzone element to assign dropzone behavior to
     @ViewChild(TerraDropzoneDirective)
@@ -54,9 +85,16 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
     // factory for handling default dropzone behavior
     private dropzoneFactory: DropzoneFactory;
 
+    private isSectionSelected: boolean = false;
+    private selectedSectionSubscription: Subscription;
+
+
     constructor(private editorService:DndEditorService,
                 private changeDetector:ChangeDetectorRef,
-                private componentFactory:ComponentFactoryResolver)
+                private componentFactory:ComponentFactoryResolver,
+                @Inject(forwardRef(() => ElementContainerComponent)) private parent: ElementContainerComponent,
+                @Inject(forwardRef(() => SectionContainerComponent)) private parentSection: SectionContainerComponent
+    )
     {
     }
 
@@ -67,12 +105,19 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
             console.error("Property 'dnd-editor-dropzoneId' is mandatory!");
         }
 
-        // register dropzone on current element container.
-        // currentElementContainer will be set by addEditorElement() when instantiating new ElementContainerComponents on drop.
-        if(this.editorService.currentElementContainer)
+        if ( this.parent )
         {
-            this.editorService.currentElementContainer.registerDropzone(this);
+            let itemList = this.parent.editorItem.children.get( this.dropzoneId );
+            if ( itemList )
+            {
+                this.initDropzone( itemList );
+            }
         }
+
+        this.selectedSectionSubscription = this.editorService.selectedSectionChange.subscribe( (section: SectionContainerComponent) => {
+            this.isSectionSelected = (section && section === this.parentSection)
+                                     || (!section && !this.parentSection && this.editorService.editorConfig.allowRootSection );
+        });
     }
 
     public ngAfterViewInit():void
@@ -125,6 +170,19 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
             });
     }
 
+    public ngOnDestroy():void
+    {
+        if ( this.itemListSubscription )
+        {
+            this.itemListSubscription.unsubscribe();
+        }
+
+        if ( this.selectedSectionSubscription )
+        {
+            this.selectedSectionSubscription.unsubscribe();
+        }
+    }
+
     /**
      * Initialize child components and assign property values
      * @param itemList EditorItemList   Ordered list of child components
@@ -134,11 +192,21 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
         this.itemList = itemList;
         this.itemList.items.forEach(
             (item: EditorItem, index: number) => {
-                this.addEditorElement(
-                    this.editorService.getEditorElement( item.name ),
-                    item,
-                    index
-                );
+                if ( item.isSection )
+                {
+                    this.addEditorSection(
+                        item,
+                        index
+                    );
+                }
+                else
+                {
+                    this.addEditorElement(
+                        this.editorService.getEditorElement( item.name ),
+                        item,
+                        index
+                    );
+                }
             }
         );
     }
@@ -150,6 +218,11 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
      */
     public acceptDrop(args:any)
     {
+        if ( !this.isSectionSelected )
+        {
+            return false;
+        }
+
         if(!args.dragData || !args.dragData.editorComponent)
         {
             // dragged element is not a editor component
@@ -196,29 +269,34 @@ export class ElementDropzoneComponent implements OnInit, AfterViewInit
             index
         );
 
-        // subscribe to changes on editor properties
-        container.instance.editorItemChange.subscribe((editorItem: EditorItem) =>
-        {
-            this.itemList.set( editorItem, index );
-            this.itemListChange.emit( this.itemList );
-        });
 
         // set function to destroy container
         container.instance.destroy = () =>
         {
+            this.itemList.remove( editorItem );
             container.destroy();
         };
-
-        // store created container instance
-        // dropzone inside the assigned editor component will be registered on this container
-        this.editorService.currentElementContainer = container.instance;
 
         // render editor component in created container and optionally set initial values
         container.instance.initEditorElement(editorComponent, editorItem);
 
+        if ( !this.itemList.contains( container.instance.editorItem ) )
+        {
+            // add editor item to document tree if not exists
+            this.itemList.add( container.instance.editorItem, index );
+        }
 
-        this.itemList.add( container.instance.editorItem, index );
-        this.itemListChange.emit( this.itemList );
+        return container;
+    }
+
+    private addEditorSection( editorItem: EditorItem, index: number = -1): ComponentRef<SectionContainerComponent>
+    {
+        let container: ComponentRef<SectionContainerComponent> = this.dropTarget.createComponent(
+            this.componentFactory.resolveComponentFactory(SectionContainerComponent),
+            index
+        );
+
+        container.instance.editorItem = editorItem;
 
         return container;
     }

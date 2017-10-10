@@ -3,6 +3,7 @@ import {
     EditorItem,
     EditorItemInterface
 } from './dnd-editor-item.model';
+import { Subject } from 'rxjs/Subject';
 
 /**
  * Collection in lists of editor items.
@@ -11,6 +12,13 @@ export class EditorBlockMap
 {
     // the map itself. A blockId references a dropzoneId in the editor
     private _blocks: {[blockId: string]: EditorItemList} = {};
+
+    public onChange: Subject<EditorBlockMap> = new Subject();
+
+    public get idList(): Array<string>
+    {
+        return Object.keys( this._blocks );
+    }
 
     /**
      * Create a new Map from plain object.
@@ -24,6 +32,9 @@ export class EditorBlockMap
         Object.keys( data ).forEach(
             (blockId: string) => {
                 map._blocks[blockId] = EditorItemList.create( data[blockId] );
+                map._blocks[blockId].onChange.subscribe( () => {
+                    map.onChange.next();
+                });
             }
         );
 
@@ -58,6 +69,7 @@ export class EditorBlockMap
     public set( blockId: string, itemList: EditorItemList )
     {
         this._blocks[blockId] = itemList;
+        this.onChange.next();
     }
 
     /**
@@ -73,9 +85,13 @@ export class EditorBlockMap
         if ( !this._blocks[blockId] )
         {
             this._blocks[blockId] = new EditorItemList();
+            this._blocks[blockId].onChange.subscribe( () => {
+                this.onChange.next();
+            });
         }
 
         this._blocks[blockId].add( item, position );
+        this.onChange.next();
     }
 
     /**

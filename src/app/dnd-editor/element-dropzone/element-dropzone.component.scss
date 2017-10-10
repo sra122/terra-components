@@ -4,3 +4,16 @@
     display: block;
     opacity: 0.4;
 }
+
+/deep/
+.dropzone-placeholder
+{
+    width: 100%;
+    background-color: transparentize( $brand-primary, 0.3 );
+    color: #fff;
+    text-align: center;
+    font-family: $font-family-base;
+    line-height: 2 * $font-size-base;
+    padding: 4px;
+    font-style: italic;
+}

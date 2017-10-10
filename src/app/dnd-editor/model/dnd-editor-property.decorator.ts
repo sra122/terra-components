@@ -114,7 +114,7 @@ export function EditorProperty(propertyDescription?:EditorPropertyInterface):Pro
 export function OnEditorPropertyChange( component: any, callback: (key: string, value: any) => void ): Subscription
 {
     return ElementPropertyChange.subscribe( (arg: { instance: string, key: string, value: any} ) => {
-        if ( arg.instance === component )
+        if ( component === null || arg.instance === component )
         {
             callback( arg.key, arg.value );
         }

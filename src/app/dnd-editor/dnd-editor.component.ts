@@ -21,13 +21,18 @@ import {
 } from './model/dnd-editor-document.model';
 import { ElementContainerComponent } from './element-container/element-container.component';
 import { EditorItemList } from './model/dnd-editor-item-list.model';
+import { Subscription } from 'rxjs/Subscription';
+import { OnEditorPropertyChange } from './model/dnd-editor-property.decorator';
+import { SectionContainerComponent } from './section-container/section-container.component';
 
 @Component({
     selector:  'terra-dnd-editor',
     template:  require('./dnd-editor.component.html'),
     styles:    [require('./dnd-editor.component.scss')],
     providers: [
-        DndEditorService
+        DndEditorService,
+        { provide: ElementContainerComponent, useValue: null },
+        { provide: SectionContainerComponent, useValue: null }
     ]
 })
 export class DndEditorCompontent implements OnInit, AfterContentInit
@@ -43,6 +48,17 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
     public set document( data: EditorDocumentInterface )
     {
         this._document = EditorDocument.create( data );
+
+        if ( this.documentSubscription )
+        {
+            this.documentSubscription.unsubscribe();
+        }
+
+        this.documentSubscription = this._document.onChange.subscribe(
+            ( document: EditorDocument ) => {
+                this.documentChange.emit( document.serialize() );
+            }
+        );
     }
 
     // get plain data of the editor document
@@ -72,6 +88,8 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
 
     private selectedComponent:ElementContainerComponent;
 
+    private documentSubscription: Subscription;
+
     constructor(private editorService:DndEditorService,
                 private changeDetector:ChangeDetectorRef)
     {
@@ -80,10 +98,14 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
     public ngOnInit():void
     {
         this.editorService.editorConfig = this.config;
-        this.editorService.selectedComponent.subscribe((component:ElementContainerComponent) =>
+        this.editorService.selectedComponentChange.subscribe((component:ElementContainerComponent) =>
         {
             this.selectedComponent = component;
             this.changeDetector.detectChanges();
+        });
+
+        OnEditorPropertyChange( null, () => {
+            this.documentChange.emit( this.document );
         });
     }
 
@@ -93,6 +115,7 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
         {
             let dropzoneId = dropzone.dropzoneId;
 
+            /*
             dropzone.itemListChange.subscribe( (itemList: EditorItemList) =>
             {
                 this._document.blocks.set(
@@ -101,6 +124,7 @@ export class DndEditorCompontent implements OnInit, AfterContentInit
                 );
                 this.documentChange.emit( this.document );
             });
+            */
 
             if ( this._document && this._document.blocks.has( dropzoneId ) )
             {
