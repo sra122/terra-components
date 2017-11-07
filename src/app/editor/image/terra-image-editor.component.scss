@@ -1,0 +1,80 @@
+:host
+{
+    width: 100%;
+    height: 100%;
+    padding: 4px 4px 0 4px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    
+    .editor-wrapper
+    {
+        flex: 1;
+    }
+}
+
+.zoom-slider
+{
+    float: right;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    
+    > terra-slider
+    {
+        flex: 1;
+    }
+    
+    > span
+    {
+        font-size: 1rem;
+        padding: 8px 4px;
+    }
+}
+
+.editor-wrapper
+{
+    overflow: hidden;
+    position: relative;
+    
+    .editor-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        transition: all 300ms ease;
+        
+        terra-editable-image
+        {
+            flex: 1;
+            margin-bottom: 4px;
+        }
+    }
+    
+    .editor-sidebar
+    {
+        width: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -300px;
+        overflow: hidden;
+        padding: 4px;
+        background-color: $grey-2;
+        transition: all 300ms ease;
+    }
+    
+    &.sidebar-visible
+    {
+        .editor-container
+        {
+            padding-right: 304px;
+        }
+        
+        .editor-sidebar
+        {
+            right: 0;
+        }
+    }
+}

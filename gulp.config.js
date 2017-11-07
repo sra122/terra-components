@@ -9,10 +9,12 @@ module.exports = function () {
         allSCSS: './src/**/*.scss',
         allHTML: './src/**/*.html',
         allLang: './src/app/assets/lang/**/*',
+        allScripts: './src/app/assets/scripts/**/*.js',
         tsOutputPath: './dist/',
         fontsOutputPath: './dist/app/assets/fonts/',
         imagesOutputPath: './dist/app/assets/images/',
         langOutputPath: './dist/app/assets/lang/',
+        scriptsOutputPath: './dist/app/assets/scripts/',
         excluded: '!./src/system-config.ts'
     };
 

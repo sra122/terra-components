@@ -1,0 +1,14 @@
+<div class="dimension-input">
+    <div class="input-container">
+        <terra-number-input inputName="Breite" [ngModel]="inputWidth" (ngModelChange)="setWidth($event)"></terra-number-input>
+        <terra-number-input inputName="Höhe" [ngModel]="inputHeight" (ngModelChange)="setHeight($event)"></terra-number-input>
+    </div>
+    
+    <div class="button-container" [class.active]="preserveRatio">
+        <terra-button
+            inputIcon="fa fa-link"
+            [inputIsTertiary]="preserveRatio"
+            [inputIsSmall]="true"
+            (outputClicked)="preserveRatio = !preserveRatio"></terra-button>
+    </div>
+</div>

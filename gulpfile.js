@@ -47,6 +47,7 @@ gulp.task('npm-publish', function (callback)
         'copy-fonts',
         'copy-images',
         'copy-lang',
+        'copy-scripts',
         'publish',
         callback
     );
@@ -61,6 +62,7 @@ gulp.task('build-local', function (callback)
         'copy-fonts',
         'copy-images',
         'copy-lang',
+        'copy-scripts',
         'copy-to-terra',
         callback
     );
@@ -202,6 +204,12 @@ gulp.task('copy-lang', function ()
 {
     return gulp.src(config.allLang)
         .pipe(gulp.dest(config.langOutputPath));
+});
+
+gulp.task('copy-scripts', function ()
+{
+    return gulp.src(config.allScripts)
+        .pipe(gulp.dest(config.scriptsOutputPath))
 });
 
 //copy files from dist to terra

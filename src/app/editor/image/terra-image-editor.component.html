@@ -1,0 +1,59 @@
+<div class="editor-wrapper" [class.sidebar-visible]="_isScaling">
+    <div class="editor-container">
+        <terra-base-toolbar>
+            <div class="btn-group" role="group">
+                <terra-button
+                    inputIcon="icon-save"
+                    inputTooltipText="Bild speichern"
+                    [inputIsDisabled]="!_imageProperties"></terra-button>
+                <terra-button
+                    inputIcon="icon-save"
+                    inputTooltipText="Als Kopie speichern"
+                    [inputIsDisabled]="!_imageProperties"></terra-button>
+            </div>
+        
+            <div class="btn-group" role="group">
+                <terra-button
+                    inputIcon="fa fa-arrows"
+                    inputTooltipText="Bild skalieren"
+                    [inputIsTertiary]="_isScaling"
+                    (outputClicked)="startScaling()"
+                    [inputIsDisabled]="!_imageProperties"></terra-button>
+            
+                <terra-button inputIcon="fa fa-crop"
+                              inputTooltipText="Bild zuschneiden"
+                              [inputIsDisabled]="!_imageProperties"></terra-button>
+                <terra-button
+                    inputIcon="icon-reload"
+                    inputTooltipText="Nach links drehen"
+                    (outputClicked)="rotateLeft()"
+                    [inputIsDisabled]="!_imageProperties"></terra-button>
+            
+                <terra-button
+                    inputIcon="icon-refresh"
+                    inputTooltipText="Nach rechts drehen"
+                    (outputClicked)="rotateRight()"
+                    [inputIsDisabled]="!_imageProperties"></terra-button>
+            </div>
+        </terra-base-toolbar>
+    
+        <terra-editable-image [inputSource]="inputImageUrl" [(inputZoom)]="_zoom" [(inputImageProperties)]="_imageProperties"></terra-editable-image>
+        
+        <terra-base-toolbar>
+            <div class="zoom-slider" role="group">
+                <span class="fa fa-search-minus" (click)="decreaseZoom()"></span>
+                <terra-slider [inputMin]="_zoomMin" [inputMax]="_zoomMax" [inputInterval]="1" [inputPrecision]="0" [(inputValue)]="_zoom"></terra-slider>
+                <span class="fa fa-search-plus" (click)="increaseZoom()"></span>
+                <span class="fa fa-arrows-alt" (click)="autoZoom()"></span>
+            </div>
+        </terra-base-toolbar>
+    </div>
+    
+    <div class="editor-sidebar" *ngIf="_isScaling">
+        <terra-base-toolbar>
+            <terra-button inputIcon="icon-save" (outputClicked)="stopScaling(false)"></terra-button>
+            <terra-button inputIcon="icon-close" (outputClicked)="stopScaling(true)"></terra-button>
+        </terra-base-toolbar>
+        <terra-dimension-input [(inputWidth)]="_imageProperties.width" [(inputHeight)]="_imageProperties.height"></terra-dimension-input>
+    </div>
+</div>

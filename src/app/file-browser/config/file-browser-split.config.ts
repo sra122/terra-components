@@ -9,12 +9,25 @@ import { TerraBaseStorageService } from '../terra-base-storage.interface';
 const SPLIT_WIDTH_FULL      = "col-xs-12 col-md-12 col-lg-12";
 const SPLIT_WIDTH_CONTENT   = "col-xs-12 col-md-9 col-lg-10";
 const SPLIT_WIDTH_SIDEBAR   = "col-xs-12 col-md-3 col-lg-2";
+const FILE_LIST_INPUTS      = {
+    inputStorageServices: 'inputStorageServices'
+};
+
+const IMAGE_PREVIEW_INPUTS  = {
+    inputStorageService: 'inputStorageService',
+    inputStorageObject: 'inputStorageObject'
+};
+
+const IMAGE_EDITOR_INPUTS   = {
+    inputImageUrl: 'inputImageUrl'
+};
 
 @Injectable()
 export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
 {
     private _fileListView: TerraMultiSplitViewInterface;
     private _imagePreviewView: TerraMultiSplitViewInterface;
+    private _imageEditorView: TerraMultiSplitViewInterface;
     private _storageServices: Array<TerraBaseStorageService>;
 
     public init( storageServices: Array<TerraBaseStorageService> )
@@ -29,7 +42,7 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
             mainComponentName: TerraFileListModule.getMainComponent(),
             inputs: [
                 {
-                    name: 'inputStorageServices',
+                    name: FILE_LIST_INPUTS.inputStorageServices,
                     value: this._storageServices
                 }
             ]
@@ -44,11 +57,11 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
             mainComponentName: TerraImagePreviewModule.getMainComponent(),
             inputs: [
                 {
-                    name: 'inputStorageObject',
+                    name: IMAGE_PREVIEW_INPUTS.inputStorageObject,
                     value: null
                 },
                 {
-                    name: 'inputStorageService',
+                    name: IMAGE_PREVIEW_INPUTS.inputStorageService,
                     value: null
                 }
             ]
@@ -65,11 +78,12 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
     {
         this._imagePreviewView.inputs = [
             {
-                name: 'inputStorageService',
+                // IMPORTANT: need to assign inputStorageService before inputStorageObject because setting inputStorageObject will receive metadata from inputStorageService.
+                name: IMAGE_PREVIEW_INPUTS.inputStorageService,
                 value: storageService
             },
             {
-                name: 'inputStorageObject',
+                name: IMAGE_PREVIEW_INPUTS.inputStorageObject,
                 value: storageObject
             }
         ];

@@ -1,4 +1,4 @@
-<div class="slider" [class.has-ticks]="inputShowTicks">
+<div class="slider" [class.has-ticks]="inputShowTicks" [class.no-label]="!inputName">
     <div class="slider-label" *ngIf="inputName">{{ inputName }}</div>
     
     <div class="slider-container">
@@ -15,7 +15,7 @@
                      [terra-draggable-restrict]="'self'"
                      [terra-draggable-grid]="grid"
                      (terra-draggable-onMove)="onDrag( $event )">
-                    {{ inputValue.toFixed(inputPrecision) }}
+                    {{ inputValue?.toFixed(inputPrecision) }}
                 </div>
                 
                 <div *ngIf="inputShowTicks" class="slider-ticks">

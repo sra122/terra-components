@@ -77,6 +77,9 @@ import { TerraButtonWithOptionsComponent } from './button-with-options/terra-but
 import { FixedHeaderDirective } from './table/fixed-header/fixed-header.directive';
 import { TerraFileBrowserService } from './file-browser/terra-file-browser.service';
 import { TerraFileBrowserComponent } from './file-browser/terra-file-browser.component';
+import { TerraImageEditorComponent } from './editor/image/terra-image-editor.component';
+import { TerraEditableImageComponent } from './editor/image/editable-image/terra-editable-image.component';
+import { TerraDimensionInputComponent } from './editor/image/dimension-input/dimension-input.component';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -195,7 +198,10 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraFileInputComponent,
         TerraNoResultNoticeComponent,
         TerraButtonWithOptionsComponent,
-        FixedHeaderDirective
+        FixedHeaderDirective,
+        TerraImageEditorComponent,
+        TerraEditableImageComponent,
+        TerraDimensionInputComponent,
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -239,7 +245,10 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        TerraButtonWithOptionsComponent
+        TerraButtonWithOptionsComponent,
+        TerraImageEditorComponent,
+        TerraEditableImageComponent,
+        TerraDimensionInputComponent,
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -288,7 +297,10 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraFileInputComponent,
         TerraNoResultNoticeComponent,
         TerraButtonWithOptionsComponent,
-        FixedHeaderDirective
+        FixedHeaderDirective,
+        TerraImageEditorComponent,
+        TerraEditableImageComponent,
+        TerraDimensionInputComponent,
     ],
     imports:         [
         BrowserModule,

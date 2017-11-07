@@ -1,0 +1,49 @@
+.dimension-input
+{
+    display: flex;
+    flex-direction: row;
+    
+    .input-container
+    {
+        flex: 1;
+    }
+    
+    .button-container
+    {
+        position: relative;
+        padding: 26px 0 26px 9px;
+        
+        &:before,
+        &:after
+        {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 7px;
+            display: block;
+            border-right: 1px solid $gray-dark;
+        }
+        
+        &:before
+        {
+            top: 18px;
+            border-top: 1px solid $gray-dark;
+        }
+        
+        &:after
+        {
+            bottom: 18px;
+            border-bottom: 1px solid $gray-dark;
+        }
+        
+        &.active
+        {
+            &:before,
+            &:after
+            {
+                border-color: $alert-green;
+            }
+        }
+    }
+}
