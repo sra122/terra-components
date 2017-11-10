@@ -400,7 +400,7 @@ export interface FabricObject
     shouldCache():boolean;
     straighten():FabricObject;
     toDatalessObject(propertiesToInclude?:any[]):any;
-    toDataURL(options:DataURLOptions);
+    toDataURL(options?:DataURLOptions);
     toJSON(propertiesToInclude?:any[]):any;
     toLocalPoint(point:FabricPoint,originX:"left"|"center"|"right",originY:"top"|"center"|"bottom");
     toObject(propertiesToInclude?:any[]):any;
@@ -425,7 +425,7 @@ export interface FabricObject
  */
 export interface StaticFabricImage
 {
-    new (image:HTMLElement): FabricImage;
+    new (image:HTMLElement, options?:any): FabricImage;
     fromURL(url:string, callback:(img:FabricImage) => void, options?:any):void
     fromElement(element:SVGElement,options?:any,callback?:(img:FabricImage)=>void):FabricImage;
     fromObject(object:any,callback:(img:FabricImage)=>void):void;

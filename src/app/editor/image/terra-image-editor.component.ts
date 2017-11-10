@@ -5,8 +5,7 @@ import {
 } from '@angular/core';
 import { TerraEditableImageComponent } from './editable-image/terra-editable-image.component';
 import { TerraEditableImageProperties } from './data/editable-image-properties.interface';
-
-const FOO = "asd";
+import { RotateTransformation } from './data/transformations/rotate.transformation';
 
 @Component({
     selector: 'terra-image-editor',
@@ -22,16 +21,13 @@ export class TerraImageEditorComponent
     public inputSpacing:number|[number,number] = 0;
 
     @ViewChild(TerraEditableImageComponent)
-    private _editableImage: TerraEditableImageComponent;
+    private _editableImageComponent: TerraEditableImageComponent;
 
     private _zoom:number = 100;
     private _zoomMin:number = 10;
     private _zoomMax:number = 200;
 
-    private _isScaling:boolean = false;
-    private _originalSize:{width: number, height: number};
-
-    private _imageProperties: TerraEditableImageProperties;
+    private _readyState: boolean = false;
 
     private increaseZoom()
     {
@@ -51,44 +47,15 @@ export class TerraImageEditorComponent
         }
     }
 
-    private startScaling()
+    private rotate(clockwise:boolean)
     {
-        this._isScaling = true;
-        this._originalSize = {
-            width: this._imageProperties.width,
-            height: this._imageProperties.height
-        };
-        this._editableImage.startScaling();
-    }
-
-    private stopScaling( resetScale: boolean = false )
-    {
-        this._isScaling = false;
-        if ( resetScale )
-        {
-            this._imageProperties.width = this._originalSize.width;
-            this._imageProperties.height = this._originalSize.height;
-        }
-        else
-        {
-            this._originalSize = null;
-        }
-
-        this._editableImage.stopScaling();
-    }
-
-    private rotateLeft()
-    {
-        this._editableImage.rotateBy(-90);
-    }
-
-    private rotateRight()
-    {
-        this._editableImage.rotateBy(90);
+        this._editableImageComponent.applyTransformation(
+            new RotateTransformation( clockwise )
+        )
     }
 
     private autoZoom()
     {
-        this._editableImage.autoZoom();
+        this._editableImageComponent.autoZoom();
     }
 }
