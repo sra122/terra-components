@@ -6,9 +6,10 @@ import { TerraMultiSplitViewInterface } from '../../split-view/multi/data/terra-
 import { TerraStorageObject } from '../model/terra-storage-object';
 import { TerraBaseStorageService } from '../terra-base-storage.interface';
 
-const SPLIT_WIDTH_FULL      = "col-xs-12 col-md-12 col-lg-12";
-const SPLIT_WIDTH_CONTENT   = "col-xs-12 col-md-9 col-lg-10";
-const SPLIT_WIDTH_SIDEBAR   = "col-xs-12 col-md-3 col-lg-2";
+const SPLIT_WIDTH_FULL = 'col-xs-12 col-md-12 col-lg-12';
+const SPLIT_WIDTH_CONTENT = 'col-xs-12 col-md-9 col-lg-10';
+const SPLIT_WIDTH_SIDEBAR = 'col-xs-12 col-md-3 col-lg-2';
+
 const FILE_LIST_INPUTS      = {
     inputStorageServices: 'inputStorageServices'
 };
@@ -30,32 +31,32 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
     private _imageEditorView: TerraMultiSplitViewInterface;
     private _storageServices: Array<TerraBaseStorageService>;
 
-    public init( storageServices: Array<TerraBaseStorageService> )
+    public init(storageServices:Array<TerraBaseStorageService>):void
     {
         this._storageServices = storageServices;
 
         this._fileListView = {
-            module: TerraFileListModule.forRoot(),
-            defaultWidth: SPLIT_WIDTH_CONTENT,
-            focusedWidth: SPLIT_WIDTH_FULL,
-            name: "File List",
+            module:            TerraFileListModule.forRoot(),
+            defaultWidth:      SPLIT_WIDTH_CONTENT,
+            focusedWidth:      SPLIT_WIDTH_FULL,
+            name:              'File List',
             mainComponentName: TerraFileListModule.getMainComponent(),
-            inputs: [
+            inputs:            [
                 {
                     name: FILE_LIST_INPUTS.inputStorageServices,
                     value: this._storageServices
                 }
             ]
         };
-        this.addView( this._fileListView );
+        this.addView(this._fileListView);
 
         this._imagePreviewView = {
-            module: TerraImagePreviewModule.forRoot(),
-            defaultWidth: "",
-            focusedWidth: SPLIT_WIDTH_SIDEBAR,
-            name: 'Image Preview',
+            module:            TerraImagePreviewModule.forRoot(),
+            defaultWidth:      '',
+            focusedWidth:      SPLIT_WIDTH_SIDEBAR,
+            name:              'Image Preview',
             mainComponentName: TerraImagePreviewModule.getMainComponent(),
-            inputs: [
+            inputs:            [
                 {
                     name: IMAGE_PREVIEW_INPUTS.inputStorageObject,
                     value: null
@@ -66,15 +67,16 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
                 }
             ]
         };
-        this.addView( this._imagePreviewView, this._fileListView );
+        this.addView(this._imagePreviewView, this._fileListView);
 
-        setTimeout((() => {
-            this.setSelectedView( this._fileListView );
+        setTimeout((() =>
+        {
+            this.setSelectedView(this._fileListView);
         }).bind(this));
 
     }
 
-    public showImagePreview( storageObject: TerraStorageObject, storageService: TerraBaseStorageService )
+    public showImagePreview(storageObject:TerraStorageObject, storageService:TerraBaseStorageService):void
     {
         this._imagePreviewView.inputs = [
             {
@@ -87,13 +89,11 @@ export class FileBrowserSplitConfig extends TerraMultiSplitViewConfig
                 value: storageObject
             }
         ];
-        this.setSelectedView( this._imagePreviewView );
+        this.setSelectedView(this._imagePreviewView);
     }
 
-    public hideImagePreview()
+    public hideImagePreview():void
     {
-        this.setSelectedView( this._fileListView );
+        this.setSelectedView(this._fileListView);
     }
-
-
 }

@@ -14,6 +14,7 @@ import {
     ModalModule,
     TooltipModule
 } from 'ngx-bootstrap';
+import { QuillModule } from 'ngx-quill';
 import { TerraComponentsComponent } from './terra-components.component';
 import { TerraTextInputComponent } from './forms/input/text-input/terra-text-input.component';
 import { TerraNumberInputComponent } from './forms/input/number-input/terra-number-input.component';
@@ -80,7 +81,8 @@ import { TerraFileBrowserComponent } from './file-browser/terra-file-browser.com
 import { TerraImageEditorComponent } from './editor/image/terra-image-editor.component';
 import { TerraEditableImageComponent } from './editor/image/editable-image/terra-editable-image.component';
 import { TerraDimensionInputComponent } from './editor/image/dimension-input/dimension-input.component';
-
+import { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
+import { TerraNoteComponent } from './note/terra-note.component';
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
 export { TerraButtonInterface } from './button/data/terra-button.interface';
@@ -202,6 +204,8 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraImageEditorComponent,
         TerraEditableImageComponent,
         TerraDimensionInputComponent,
+        TerraNoteEditorComponent,
+        TerraNoteComponent
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -249,6 +253,8 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraImageEditorComponent,
         TerraEditableImageComponent,
         TerraDimensionInputComponent,
+        TerraNoteEditorComponent,
+        TerraNoteComponent
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -301,6 +307,8 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TerraImageEditorComponent,
         TerraEditableImageComponent,
         TerraDimensionInputComponent,
+        TerraNoteEditorComponent,
+        TerraNoteComponent
     ],
     imports:         [
         BrowserModule,
@@ -316,7 +324,8 @@ export { TerraNoResultNoticeComponent} from './no-result/terra-no-result-notice.
         TranslationModule.forRoot(),
         MyDatePickerModule,
         AceEditorModule,
-        TerraInteractModule
+        TerraInteractModule,
+        QuillModule
     ],
     providers:       [
         COMPILER_PROVIDERS,

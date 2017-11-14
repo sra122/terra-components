@@ -15,6 +15,9 @@ Toggling checkboxes required `[inputHasCheckbox]="true"`
 * **terra-data-table-no-result-notice-component** new component, that can be used to display a notice whenever no results are available
 * **terra-number-input** removed spin-buttons
 * **terra-pager** limit page number input to a valid range
+* **terra-note** Added new component to display notes which auto adjust the height by its content.
+* **terra-file-browser** Add new component to upload and manage files. Uses frontend storage by default and provides properties to register custom services to handle files from different resources. 
+* **terra-note-editor** new component based on [quill](https://quilljs.com/), that realizes an editor for notes with several features.
 
 ### Bug Fixes
 * **terra-multi-split-view** 
@@ -24,6 +27,7 @@ Toggling checkboxes required `[inputHasCheckbox]="true"`
 * **terra-base-service** avoid to show error message if code of error is null
 * **terra-select-box** Drop down closes if user had clicked on another select box
 * **terra-pager** Added missing translation
+* **context-menu-holder** Adapted new styles and change structure to make components usable again
 
 <a name="1.4.2"></a>
 # 1.4.2 (20.09.2017)
