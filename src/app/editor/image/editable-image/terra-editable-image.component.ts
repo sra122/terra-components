@@ -24,6 +24,7 @@ import { isArray } from 'util';
 import { EditableImage } from '../data/editable-image.class';
 import { EditableImageOptions } from '../data/editable-image-options.interface';
 import { EditableImageTransformation } from '../data/editable-image-transformation.interface';
+import { EditableImageHistory } from '../data/editable-image-history.class';
 
 @Component({
     selector: 'terra-editable-image',
@@ -51,6 +52,16 @@ export class TerraEditableImageComponent implements OnChanges, AfterViewInit, Do
     private _originalCanvas: ElementRef;
 
     private editableImage: EditableImage;
+
+    public get canBeUndone(): boolean
+    {
+        return this.editableImage.history.canBeUndone;
+    }
+
+    public get canBeRedone(): boolean
+    {
+        return this.editableImage.history.canBeRedone;
+    }
 
     constructor( private _hostElement: ElementRef )
     {
@@ -89,7 +100,7 @@ export class TerraEditableImageComponent implements OnChanges, AfterViewInit, Do
                 (readyState:boolean) => {
                     this.outputReadyState.emit( readyState );
 
-                    this.autoZoom();
+                    this.resetZoom();
                 }
             );
 
@@ -111,12 +122,12 @@ export class TerraEditableImageComponent implements OnChanges, AfterViewInit, Do
         this.calculateCanvasSize();
     }
 
-    public autoZoom():void
+    public resetZoom():void
     {
         if ( this.editableImage )
         {
             this.calculateCanvasSize();
-            this.editableImage.updateViewport( true );
+            this.editableImage.setZoom(1);
         }
     }
 
@@ -125,6 +136,22 @@ export class TerraEditableImageComponent implements OnChanges, AfterViewInit, Do
         if ( this.editableImage )
         {
             this.editableImage.applyTransformation( transformation );
+        }
+    }
+
+    public undoTransformation():void
+    {
+        if ( this.editableImage )
+        {
+            this.editableImage.undoTransformation();
+        }
+    }
+
+    public redoTransformation():void
+    {
+        if ( this.editableImage )
+        {
+            this.editableImage.redoTransformation();
         }
     }
 

@@ -54,8 +54,8 @@ export class TerraImageEditorComponent
         )
     }
 
-    private autoZoom()
+    private resetZoom()
     {
-        this._editableImageComponent.autoZoom();
+        this._editableImageComponent.resetZoom();
     }
 }

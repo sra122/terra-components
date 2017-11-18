@@ -10,6 +10,6 @@ export class RotateTransformation implements EditableImageTransformation
 
     public transform(image:FabricImage):void
     {
-        //image.angle = image.angle + (this.clockwise ? 90 : -90);
+        image.angle = image.angle + (this.clockwise ? 90 : -90);
     }
 }

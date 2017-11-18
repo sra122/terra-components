@@ -11,6 +11,20 @@
                     inputTooltipText="Als Kopie speichern"
                     [inputIsDisabled]="!_readyState"></terra-button>
             </div>
+            
+            <div class="btn-group" role="group">
+                <terra-button
+                    inputIcon="icon-reload"
+                    inputTooltipText="Rückgängig"
+                    (outputClicked)="_editableImageComponent.undoTransformation()"
+                    [inputIsDisabled]="!_readyState || !_editableImageComponent.canBeUndone"></terra-button>
+    
+                <terra-button
+                    inputIcon="icon-refresh"
+                    inputTooltipText="Wiederherstellen"
+                    (outputClicked)="_editableImageComponent.redoTransformation()"
+                    [inputIsDisabled]="!_readyState || !_editableImageComponent.canBeRedone"></terra-button>
+            </div>
         
             <div class="btn-group" role="group">
                 <terra-button
@@ -44,7 +58,7 @@
                 <span class="fa fa-search-minus" (click)="decreaseZoom()"></span>
                 <terra-slider [inputMin]="_zoomMin" [inputMax]="_zoomMax" [inputInterval]="1" [inputPrecision]="0" [(inputValue)]="_zoom"></terra-slider>
                 <span class="fa fa-search-plus" (click)="increaseZoom()"></span>
-                <span class="fa fa-arrows-alt" (click)="autoZoom()"></span>
+                <span class="fa fa-arrows-alt" (click)="resetZoom()"></span>
             </div>
         </terra-base-toolbar>
     </div>

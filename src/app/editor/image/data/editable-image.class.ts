@@ -10,7 +10,10 @@ import {
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { EditableImageTransformation } from './editable-image-transformation.interface';
 import { EditableImageHistory } from './editable-image-history.class';
-import { isArray } from 'util';
+import {
+    isArray,
+    isNullOrUndefined
+} from 'util';
 
 require('../../../assets/scripts/fabric');
 declare const fabric: Fabric;
@@ -19,7 +22,9 @@ export class EditableImage
 {
     public readyState: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-    public zoom: BehaviorSubject<number> = new BehaviorSubject(0);
+    public zoom: BehaviorSubject<number> = new BehaviorSubject(1);
+
+    public history: EditableImageHistory;
 
     private options: EditableImageOptions;
 
@@ -29,9 +34,9 @@ export class EditableImage
 
     private image: FabricImage;
 
-    private isEditable: boolean;
+    private isEditable: boolean = true;
 
-    private history: EditableImageHistory;
+    private canvasSize: {width: number, height: number};
 
     constructor( originalCanvas: HTMLCanvasElement, imageURL: string, options?: EditableImageOptions )
     {
@@ -74,7 +79,7 @@ export class EditableImage
         this.refresh();
     }
 
-    public refresh( autoZoom: boolean = false ): void
+    public refresh(): void
     {
         let imageElement: HTMLImageElement = new Image();
         imageElement.onload = () => {
@@ -82,12 +87,14 @@ export class EditableImage
             this.image = this.initializeImage( imageElement );
             this.canvas.add( this.image );
 
-            this.updateViewport( autoZoom );
+            this.updateViewport();
         };
 
-        let zoom = this.canvas.getZoom();
-        //this.setZoom(1);
+        let zoom: number = this.canvas.getZoom();
+        this.canvas.setZoom(1);
+        this.image.setCoords();
         imageElement.src = this.image.toDataURL();
+        this.canvas.setZoom(zoom);
     }
 
     public applyTransformation( transformation: EditableImageTransformation ): void
@@ -104,6 +111,7 @@ export class EditableImage
     {
         if ( this.readyState.getValue() && this.history.canBeUndone )
         {
+            this.canvas.remove( this.image );
             this.image = this.history.undo();
             this.refresh();
         }
@@ -113,6 +121,7 @@ export class EditableImage
     {
         if ( this.readyState.getValue() && this.history.canBeRedone )
         {
+            this.canvas.remove( this.image );
             this.image = this.history.redo();
             this.refresh();
         }
@@ -120,32 +129,35 @@ export class EditableImage
 
     public resizeCanvas( width: number, height: number ): void
     {
-        if ( this.readyState.getValue() && ( width !== this.canvas.width || height !== this.canvas.height ) )
+        if ( this.readyState.getValue() && ( isNullOrUndefined(this.canvasSize) || width !== this.canvasSize.width || height !== this.canvasSize.height ) )
         {
+            let diffX: number = (width * this.image.height / height ) - this.image.width;
+            let diffY: number = 0;
+            if ( diffX <= 0 )
+            {
+                diffX = 0;
+                diffY = (height * this.image.width / width) - this.image.height;
+            }
+
             this.canvas.setDimensions(
                 { width: width + 'px', height: height + 'px' },
                 { cssOnly: true }
             );
 
-            let vptWidth: number = this.image.width;
-            let vptHeight: number = this.image.height;
-            let ratioX: number = width / vptWidth;
-            let ratioY: number = height / vptHeight;
-
-            if( ratioX > ratioY )
-            {
-                vptHeight = vptWidth * ratioX;
-            }
-            else
-            {
-                vptWidth = vptHeight * ratioY;
-            }
-
-            console.log( vptWidth, vptHeight );
             this.canvas.setDimensions(
-                { width: vptWidth, height :vptHeight },
-                { backstoreOnly: true }
+                {
+                    width: this.image.width + diffX + this.getViewportSpacing(false),
+                    height: this.image.height + diffY + this.getViewportSpacing(true)
+                },
+                {
+                    backstoreOnly: true
+                }
             );
+
+            this.canvasSize = {
+                width: width,
+                height: height
+            };
 
             this.updateViewport();
         }
@@ -164,16 +176,18 @@ export class EditableImage
         }
     }
 
-    public updateViewport( autoZoom: boolean = false ): void
+    public updateViewport(): void
     {
         if ( this.readyState.getValue() )
         {
+            /*
             if ( autoZoom )
             {
                 let zoomWidth: number =  (this.canvas.width - this.getViewportSpacing(false)) / this.image.getScaledWidth();
                 let zoomHeight: number = (this.canvas.height - this.getViewportSpacing(true)) / this.image.getScaledHeight();
                 this.setZoom( Math.min( zoomWidth, zoomHeight ) );
             }
+            */
 
             this.canvas.viewportCenterObject( this.image );
             this.image.setCoords();
