@@ -29,6 +29,8 @@ export class TerraImageEditorComponent
 
     private _readyState: boolean = false;
 
+    private _isFullscreen: boolean = false;
+
     private increaseZoom()
     {
         let diff:number = 10 - (this._zoom % 10);
@@ -57,5 +59,10 @@ export class TerraImageEditorComponent
     private resetZoom()
     {
         this._editableImageComponent.resetZoom();
+    }
+
+    private toggleFullscreen()
+    {
+        this._isFullscreen = !this._isFullscreen;
     }
 }

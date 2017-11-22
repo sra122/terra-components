@@ -68,7 +68,7 @@ export class EditableImage
             // emit ready state
             this.readyState.next(true);
 
-            this.updateViewport();
+            this.updateViewport(true);
         };
         this.originalImage.src = imageURL;
     }
@@ -140,10 +140,10 @@ export class EditableImage
             }
 
             this.canvas.setDimensions(
-                { width: width + 'px', height: height + 'px' },
-                { cssOnly: true }
+                { width: width, height: height }
             );
 
+            /*
             this.canvas.setDimensions(
                 {
                     width: this.image.width + diffX + this.getViewportSpacing(false),
@@ -153,6 +153,7 @@ export class EditableImage
                     backstoreOnly: true
                 }
             );
+            */
 
             this.canvasSize = {
                 width: width,
@@ -176,18 +177,16 @@ export class EditableImage
         }
     }
 
-    public updateViewport(): void
+    public updateViewport( autoZoom: boolean = false ): void
     {
         if ( this.readyState.getValue() )
         {
-            /*
             if ( autoZoom )
             {
                 let zoomWidth: number =  (this.canvas.width - this.getViewportSpacing(false)) / this.image.getScaledWidth();
                 let zoomHeight: number = (this.canvas.height - this.getViewportSpacing(true)) / this.image.getScaledHeight();
                 this.setZoom( Math.min( zoomWidth, zoomHeight ) );
             }
-            */
 
             this.canvas.viewportCenterObject( this.image );
             this.image.setCoords();
