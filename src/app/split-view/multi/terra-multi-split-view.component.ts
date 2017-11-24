@@ -339,7 +339,10 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
         let hierarchyLevel:number = this.getHierarchyLevelOfView(view);
 
         // cut off last elements
-        this.modules = this.modules.slice(0, hierarchyLevel + 1);
+        if (this.modules.length > hierarchyLevel)
+        {
+            this.modules = this.modules.slice(0, hierarchyLevel + 1);
+        }
 
         // rebuild
         if(!isNullOrUndefined(view.children))
@@ -349,8 +352,8 @@ export class TerraMultiSplitViewComponent implements OnDestroy, OnInit
                     // add view to the modules array
                     this.addToModulesIfNotExist(child);
 
-                    // set selected view and rebuild sub tree for children
-                    this.setSelectedView(child);
+                    // rebuild sub tree for children
+                    this.rebuildModules(child, this.getModuleOfView(child));
                 }
             );
         }
