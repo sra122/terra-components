@@ -28,7 +28,7 @@ export class TerraDataTableService extends TerraBaseService
         // add orderBy attribute to pager params
         if(params && orderBy)
         {
-            params['orderBy'] = orderBy;
+            params['sortBy'] = orderBy;
         }
 
         this.setAuthorization();
