@@ -13,18 +13,18 @@
                 </span>
     </div>
     <div class="input-group">
-        <div>
+        <div class="input-group-text">
             <div class="input-unit-v1"
                  placement="{{inputTooltipPlacement}}"
                  tooltip="{{inputTooltipText}}"
                  [isDisabled]="!inputTooltipText"
                  [ngClass]="{'error': !isValid, 'disabled': isDisabled}"
                  container="body">
-                <label htmlFor="{{inputName}}">{{inputName}}
+                <label htmlFor="{{_id}}">{{inputName}}
                     <span *ngIf="inputIsRequired">*</span>
                 </label>
                 <input #valueInput
-                       id="{{inputName}}"
+                       id="{{_id}}"
                        type="text"
                        [(ngModel)]="value"
                        name="{{inputName}}"
@@ -49,10 +49,14 @@
     <terra-overlay #overlay
                    [inputPrimaryButtonInterface]="primaryOverlayButton"
                    [inputSecondaryButtonInterface]="secondaryOverlayButton"
+                   [inputIsExtraLarge]="true"
                    (outputOnShow)="fileBrowser.selectUrl(value)"
-                   (outputOnHide)="selectedUrl = value">
-        <terra-file-browser #fileBrowser [inputAllowedExtensions]="inputAllowedExtensions"
-                            (outputSelected)="selectedUrl = $event">
+                   (outputOnHide)="_selectedObjectUrl = value" class="hasSplitView">
+        <terra-file-browser #fileBrowser
+                            [inputAllowedExtensions]="inputAllowedExtensions"
+                            [inputAllowFolders]="inputAllowFolders"
+                            [inputStorageServices]="inputStorageServices"
+                            (outputSelectedChange)="onSelectedObjectChange($event)">
         </terra-file-browser>
     </terra-overlay>
     

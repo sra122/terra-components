@@ -99,10 +99,11 @@ export class TerraSuggestionBoxComponent implements OnInit, OnChanges
            && changes["inputListBoxValues"].currentValue.length > 0
            && !this.inputListBoxValues.find((x) => this._selectedValue === x))
         {
-            setTimeout(() =>
-            {
-                this.select(this.inputListBoxValues[0]);
-            });
+            this.select(this.inputListBoxValues[0]);
+        }
+        if(changes["inputListBoxValues"])
+        {
+            this._displayListBoxValues = this.inputListBoxValues;
         }
     }
 
@@ -361,7 +362,7 @@ export class TerraSuggestionBoxComponent implements OnInit, OnChanges
                         break;
                     case 'Enter': // select the marked element
                         // check if element is really available
-                        if (this._displayListBoxValues.find((item:TerraSuggestionBoxValueInterface) => item === this._tmpSelectedValue))
+                        if(this._displayListBoxValues.find((item:TerraSuggestionBoxValueInterface) => item === this._tmpSelectedValue))
                         {
                             this.select(this._tmpSelectedValue); // select the chosen element
                             this.toggleOpen = false; // close the dropdown

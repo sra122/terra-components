@@ -11,14 +11,24 @@
 		"delete": "Löschen",
 		"myFiles": "Meine Dateien",
 		"createFolder": "Ordner erstellen",
-		"confirmDelete": "Löschen bestätigen",
+		"confirmDelete": "Datei löschen?",
+		"confirmDeleteMany": "{{ count }} Dateien löschen?",
 		"deleteFolder": "Ordner löschen",
 		"deleteFile": "Datei löschen",
+		"deleteSelectedFiles": "Ausgewählte Dateien löschen",
 		"folderName": "Ordnername",
 		"folderIsEmpty": "Der Ordner ist leer.",
 		"uploadFile": "Datei hochladen",
 		"fileURL": "Datei-URL",
-		"copyToClipboard": "In Zwischenablage kopieren"
+		"copyToClipboard": "In Zwischenablage kopieren",
+		"saveMetadata": "Metadaten speichern",
+		"altText": "Alternativtext",
+		"imageSize": "Größe",
+		"fileSize": "Dateigröße",
+		"fileName": "Dateiname",
+		"lastChange": "Letzte Änderung",
+		"loadingFiles": "Dateien werden geladen",
+		"noFiles": "Keine Dateien"
 	},
 	"terraFileInput": {
 		"choose": "Wählen",
@@ -31,7 +41,20 @@
 		"noSuggestions": "Keine Vorschläge",
 		"noRecentlyUsed": "Keine zuletzt verwendeten Elemente"
 	},
-    "terraNavigator": {
-        "search": "Suche"
-    }
+	"terraNavigator": {
+		"search": "Suche"
+	},
+	"terraPager": {
+		"page": "Seite",
+		"of": "von"
+	},
+	"terraNoteEditor": {
+		"insertText": "Text eingeben."
+	},
+	"terraTextInput": {
+		"invalidIban": "IBAN ist ungültig."
+	},
+	"terraNodeTree":{
+		"search": "Suche"
+	}
 }

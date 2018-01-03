@@ -17,9 +17,15 @@ import { TerraCheckboxComponent } from '../../forms/checkbox/terra-checkbox.comp
 import { TerraSelectBoxValueInterface } from '../../forms/select-box/data/terra-select-box.interface';
 import { TerraAlertComponent } from '../../alert/terra-alert.component';
 import { TerraDataTableContextMenuService } from './context-menu/service/terra-data-table-context-menu.service';
-import { TerraDataTableContextMenuEntryInterface } from './context-menu/data/terra-data-table-context-menu-entry.interface';
 import { TerraDataTableCellInterface } from './cell/terra-data-table-cell.interface';
-import { isNullOrUndefined } from 'util';
+import {
+    isArray,
+    isNullOrUndefined
+} from 'util';
+import { TerraButtonInterface } from '../../button/data/terra-button.interface';
+import { TerraRefTypeInterface } from './cell/terra-ref-type.interface';
+import { TerraTagInterface } from '../../tag/data/terra-tag.interface';
+import { TerraDataTableTextInterface } from './cell/terra-data-table-text.interface';
 
 @Component({
     selector:  'terra-data-table',
@@ -36,6 +42,9 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     @Input() inputHasCheckboxes:boolean;
     @Input() inputHasPager:boolean;
     @Input() inputHasInitialLoading:boolean;
+    @Input() inputNoResultTextPrimary:string;
+    @Input() inputNoResultTextSecondary:string;
+    @Input() inputNoResultButtons:Array<TerraButtonInterface>;
 
     @Output() outputDoPagingEvent = new EventEmitter<TerraPagerInterface>();
     @Output() outputRowCheckBoxChanged:EventEmitter<TerraDataTableRowInterface<D>> = new EventEmitter();
@@ -51,6 +60,7 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     private _initialLoadingMessage:string;
     private _alert:TerraAlertComponent = TerraAlertComponent.getInstance();
     private _langPrefix:string = 'terraDataTable';
+    private _requestPending:boolean;
 
     /**
      * @deprecated
@@ -64,6 +74,8 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
         this.inputHasCheckboxes = true;
         this.inputHasInitialLoading = false;
         this.inputHasPager = true;
+
+        this.rowList = [];
     }
 
 
@@ -83,7 +95,10 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
         this.rowList.forEach((row) =>
         {
-            this.changeRowState(isChecked, row);
+            if(!row.disabled)
+            {
+                this.changeRowState(isChecked, row);
+            }
         });
     }
 
@@ -147,7 +162,7 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
     private rowClicked(cell:TerraDataTableCellInterface, row:TerraDataTableRowInterface<D>):void
     {
-        if(!cell.buttonList)
+        if(!cell.buttonList && !row.disabled)
         {
             this._rowList.forEach((row) =>
             {
@@ -177,20 +192,6 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     public set rowList(value:Array<TerraDataTableRowInterface<D>>)
     {
         this._rowList = value;
-
-        this.rowList.forEach((row:TerraDataTableRowInterface<D>) =>
-        {
-            if(row.contextMenuLinkList)
-            {
-                row.contextMenuLinkList.forEach((link:TerraDataTableContextMenuEntryInterface<D>) =>
-                {
-                    link.subject.subscribe((valueToClick:TerraDataTableContextMenuEntryInterface<D>) =>
-                    {
-                        valueToClick.clickFunction(valueToClick)
-                    })
-                })
-            }
-        });
     }
 
     public deleteRow(rowToDelete:TerraDataTableRowInterface<D>):void
@@ -270,7 +271,12 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
 
     public doSearch(restCall:Observable<I>):void
     {
-        //TODO check
+        if(isNullOrUndefined(restCall))
+        {
+            return;
+        }
+
+        this._requestPending = true;
         restCall.subscribe(this.onSuccessFunction, error =>
             {
                 if(error.status == 401 || error.status == 500)
@@ -278,19 +284,96 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
                     //TODO
                     alert(error.status);
                 }
+            },
+            () =>
+            {
+                this._requestPending = false;
             }
-        )
+        );
     }
 
-    public getTextAlign(item:TerraDataTableHeaderCellInterface):any
+    public getTextAlign(item:TerraDataTableHeaderCellInterface):string
     {
         if(!isNullOrUndefined(item.textAlign))
         {
-            return {'text-align': item.textAlign};
+            return item.textAlign;
         }
         else
         {
-            return {'text-align': "left"};
+            return 'left';
         }
+    }
+
+    private getCellDataType(data:any):string
+    {
+        function isRefType(arg:any):arg is TerraRefTypeInterface
+        {
+            return arg
+                   && arg.type && typeof arg.type == 'string'
+                   && arg.value && typeof arg.value == 'string';
+        }
+
+        function isTextType(arg:any):arg is TerraDataTableTextInterface
+        {
+            return arg
+                   && arg.caption && typeof arg.caption == 'string';
+        }
+
+        function isTagArray(arg:any):arg is Array<TerraTagInterface>
+        {
+            // check if it is an array
+            if(!isArray(arg))
+            {
+                return false;
+            }
+
+            // check if every element of the array implements the tag interface
+            let implementsInterface:boolean = true;
+            arg.forEach((elem:any) =>
+            {
+                implementsInterface = implementsInterface && elem.badge && typeof elem.badge == 'string';
+            });
+
+            return arg && implementsInterface;
+        }
+
+        function isButtonArray(arg:any):arg is Array<TerraButtonInterface>
+        {
+            // check if it is an array
+            if(!isArray(arg))
+            {
+                return false;
+            }
+
+            // check if every element of the array implements the button interface
+            let implementsInterface:boolean = true;
+            arg.forEach((elem:any) =>
+            {
+                implementsInterface = implementsInterface && elem.clickFunction && typeof elem.clickFunction == 'function';
+            });
+
+            return arg && implementsInterface;
+        }
+
+        if(typeof data === 'object')
+        {
+            if(isRefType(data))
+            {
+                return 'TerraRefTypeInterface';
+            }
+            else if(isTextType(data))
+            {
+                return 'TerraDataTableTextInterface';
+            }
+            else if(isTagArray(data))
+            {
+                return 'tags';
+            }
+            else if(isButtonArray(data))
+            {
+                return 'buttons';
+            }
+        }
+        return typeof data;
     }
 }

@@ -15,6 +15,7 @@ import {
     ModalModule,
     TooltipModule
 } from 'ngx-bootstrap';
+import { QuillModule } from 'ngx-quill';
 import { TerraComponentsComponent } from './terra-components.component';
 import { TerraTextInputComponent } from './forms/input/text-input/terra-text-input.component';
 import { TerraNumberInputComponent } from './forms/input/number-input/terra-number-input.component';
@@ -72,12 +73,20 @@ import {
     DND_EDITOR_EXPORTS
 } from "./dnd-editor/dnd-editor.module";
 import { BrowserModule } from '@angular/platform-browser';
-import { TerraFileBrowserComponent } from "./file-browser/terra-file-browser.component";
 import { TerraFileInputComponent } from "./forms/input/file-input/terra-file-input.component";
 import { TerraFrontendStorageService } from "./file-browser/terra-frontend-storage.service";
 import { TerraColorPickerComponent } from "./forms/input/color-picker/terra-color-picker.component";
 import { TerraInteractModule } from "./interactables/interact.module";
 import { TerraSliderComponent } from "./forms/slider/terra-slider.component";
+import { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice.component';
+import { TerraButtonWithOptionsComponent } from './button-with-options/terra-button-with-options.component';
+import { FixedHeaderDirective } from './table/fixed-header/fixed-header.directive';
+import { TerraFileBrowserService } from './file-browser/terra-file-browser.service';
+import { TerraFileBrowserComponent } from './file-browser/terra-file-browser.component';
+import { TerraNoteEditorComponent } from './note-editor/terra-note-editor.component';
+import { TerraNoteComponent } from './note/terra-note.component';
+import { TerraNodeTreeComponent } from './tree/node-tree/terra-node-tree.component';
+import { TerraNodeComponent } from './tree/node-tree/node/terra-node.component';
 
 export { TerraAlertPanelComponent } from './alert/terra-alert-panel.component';
 export { TerraAlertComponent } from './alert/terra-alert.component';
@@ -145,6 +154,10 @@ export { TerraTextAreaInputComponent } from './forms/input/text-area-input/terra
 export { TerraCardComponent } from './card/terra-card.component';
 export { TerraSyntaxEditorComponent } from './editor/syntax/terra-syntax-editor.component';
 export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.data';
+export { TerraNoResultNoticeComponent } from './no-result/terra-no-result-notice.component';
+export { TerraNodeTreeComponent } from './tree/node-tree/terra-node-tree.component';
+export { TerraNodeTreeConfig } from './tree/node-tree/data/terra-node-tree.config';
+export { TerraNodeInterface } from './tree/node-tree/data/terra-node.interface';
 
 @NgModule({
     declarations:    [
@@ -193,7 +206,14 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        ...DND_EDITOR_DECLARATIONS,
+        TerraNoResultNoticeComponent,
+        TerraButtonWithOptionsComponent,
+        FixedHeaderDirective,
+        TerraNoteEditorComponent,
+        TerraNoteComponent,
+        TerraNodeTreeComponent,
+        TerraNodeComponent,
+        ...DND_EDITOR_DECLARATIONS
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -237,7 +257,12 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        ...DND_EDITOR_ENTRY_COMPONENTS,
+        TerraButtonWithOptionsComponent,
+        TerraNoteEditorComponent,
+        TerraNoteComponent,
+        TerraNodeTreeComponent,
+        TerraNodeComponent,
+        ...DND_EDITOR_ENTRY_COMPONENTS
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -284,7 +309,13 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TerraSliderComponent,
         TerraFileBrowserComponent,
         TerraFileInputComponent,
-        ...DND_EDITOR_EXPORTS,
+        TerraNoResultNoticeComponent,
+        TerraButtonWithOptionsComponent,
+        FixedHeaderDirective,
+        TerraNoteEditorComponent,
+        TerraNoteComponent,
+        TerraNodeTreeComponent,
+        ...DND_EDITOR_EXPORTS
     ],
     imports:         [
         BrowserModule,
@@ -300,12 +331,14 @@ export { TerraSyntaxEditorData } from './editor/syntax/data/terra-syntax-editor.
         TranslationModule.forRoot(),
         MyDatePickerModule,
         AceEditorModule,
-        TerraInteractModule
+        TerraInteractModule,
+        QuillModule
     ],
     providers:       [
         COMPILER_PROVIDERS,
         TerraNavigatorSplitViewConfig,
         TerraFrontendStorageService,
+        TerraFileBrowserService,
     ],
     bootstrap:       [
         TerraComponentsComponent
@@ -323,6 +356,7 @@ export class TerraComponentsModule
                         TerraBaseService,
                         TerraNavigatorSplitViewConfig,
                         TerraUrlParamsDecorator,
+                        TerraFrontendStorageService,
                         TerraAlertComponent]
         };
     }
@@ -337,6 +371,7 @@ export class TerraComponentsModule
                         TerraBaseService,
                         TerraNavigatorSplitViewConfig,
                         TerraUrlParamsDecorator,
+                        TerraFrontendStorageService,
                         TerraAlertComponent]
         };
     }

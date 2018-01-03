@@ -16,12 +16,17 @@ import {
 } from 'mydatepicker';
 import moment = require('moment');
 
+let nextId:number = 0;
+
 /**
  * @author mfrank
  */
 @Component({
     selector:  'terra-date-picker',
-    styles:    [require('./terra-date-picker.component.scss')],
+    styles:    [
+        require('./terra-date-picker.component.scss'),
+        require('./terra-date-picker.component.glob.scss').toString()
+    ],
     template:  require('./terra-date-picker.component.html'),
     providers: [
         {
@@ -33,17 +38,38 @@ import moment = require('moment');
 })
 export class TerraDatePickerComponent implements OnChanges, ControlValueAccessor
 {
+    /**
+     * @description Set the label.
+     * */
     @Input() inputName:string;
+    /**
+     * @description If true, a * indicates that the value is required. Default false.
+     * */
     @Input() inputIsRequired:boolean;
+    /**
+     * @description If false, the input will appear with a red border to indicate that the entered value is not valid. Default true.
+     * */
     @Input() inputIsValid:boolean;
+    /**
+     * @description If true, the input will be disabled. Default false.
+     * */
     @Input() inputIsDisabled:boolean;
+    /**
+     * @description If true, the calendar will be opened on top. Default false.
+     * */
     @Input() inputOpenCalendarTop:boolean;
+    /**
+     * @description Set the date format. Default 'dd.mm.yyyy'.
+     * */
     @Input() inputDisplayDateFormat:string;
 
     @ViewChild('viewChildMyDatePicker') viewChildMyDatePicker:MyDatePicker;
 
+    /**
+     * @description a unique string identifier for the specific input instance.
+     */
+    private _id:string;
     private _value:IMyDateModel;
-    private _myDateModel:IMyDateModel;
     private _currentLocale:string;
     private _datePickerOptions:IMyOptions;
 
@@ -53,9 +79,12 @@ export class TerraDatePickerComponent implements OnChanges, ControlValueAccessor
         this.inputIsDisabled = false;
         this.inputIsValid = true;
         this.inputOpenCalendarTop = false;
-        this.inputDisplayDateFormat = "dd.mm.yyyy";
+        this.inputDisplayDateFormat = 'dd.mm.yyyy';
 
         this._currentLocale = localStorage.getItem('plentymarkets_lang_');
+
+        // generate the id of the input instance
+        this._id = `date-picker_#${nextId++}`;
     }
 
     ngOnChanges()
@@ -135,29 +164,6 @@ export class TerraDatePickerComponent implements OnChanges, ControlValueAccessor
             this.onTouchedCallback();
             this.onChangeCallback(null);
         }
-    }
-
-    public get myDateModel():IMyDateModel
-    {
-        return this._myDateModel;
-    }
-
-    public set myDateModel(value:IMyDateModel)
-    {
-        this._myDateModel = value;
-
-        if(this.myDateModel.epoc === 0)
-        {
-            this.myDateModel.date = null;
-        }
-
-        this.onTouchedCallback();
-        this.onChangeCallback(this.myDateModel.epoc);
-    }
-
-    public onDateChanged(event:IMyDateModel):void
-    {
-        this.myDateModel = event;
     }
 
     public clearDate():void

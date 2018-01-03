@@ -8,18 +8,52 @@ import { isNullOrUndefined } from 'util';
 
 export class TerraInputComponent implements ControlValueAccessor
 {
+    /**
+     * @description Set the label.
+     * */
     @Input() inputName:string;
+    /**
+     * @description If true, a * indicates that the value is required. Default false.
+     * */
     @Input() inputIsRequired:boolean;
     @Input() inputEmptyMessage:string;
     @Input() inputInvalidMessage:string;
+    /**
+     * @description Set the tooltip.
+     * */
     @Input() inputTooltipText:string;
+    /**
+     * @description If true, the button will be disabled. Default false.
+     * */
     @Input() inputIsDisabled:boolean;
-    @Input() inputTooltipPlacement:string; //top, bottom, left, right (default: top)
+    /**
+     * @description Set the tooltip placement (bottom, top, left, right). Default top.
+     * */
+    @Input() inputTooltipPlacement:string;
+    /**
+     * @description Set a maximum number of characters allowed.
+     * */
     @Input() inputMaxLength:number;
+    /**
+     * @description Set the maximum number value allowed.
+     * */
     @Input() inputMaxValue:number;
+    /**
+     * @description Set a minimum number of characters allowed.
+     * */
     @Input() inputMinLength:number;
+    /**
+     * @description Set the minimum number value allowed.
+     * */
     @Input() inputMinValue:number;
+    /**
+     * @deprecated inputPlaceholder is deprecated and will be removed in one of the upcoming releases. Use inputName instead.
+     * */
     @Input() inputPlaceholder:string;
+    /**
+     * @description If true, the button will be small. Default false.
+     * */
+    @Input() inputIsSmall:boolean;
 
     private _isValid:boolean;
     private _regex:string;
@@ -43,6 +77,7 @@ export class TerraInputComponent implements ControlValueAccessor
         this.regex = _inputRegex;
         this.isValid = true;
         this.inputTooltipPlacement = 'top';
+        this.inputIsSmall = false;
     }
 
     public get isDisabled():boolean
@@ -82,7 +117,7 @@ export class TerraInputComponent implements ControlValueAccessor
     }
 
     //Set touched on blur
-    private onBlur():void
+    public onBlur():void
     {
         this.onTouchedCallback();
     }
@@ -136,7 +171,6 @@ export class TerraInputComponent implements ControlValueAccessor
 
                         this._alert.addAlert({
                             msg:              emptyMessage,
-                            closable:         true,
                             type:             'danger',
                             dismissOnTimeout: 0
                         });
@@ -157,7 +191,6 @@ export class TerraInputComponent implements ControlValueAccessor
 
                         this._alert.addAlert({
                             msg:              invalidMessage,
-                            closable:         true,
                             type:             'danger',
                             dismissOnTimeout: 0
                         });

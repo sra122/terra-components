@@ -34,6 +34,8 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     @Input() inputName:string;
     @Input() inputIsRequired:boolean;
     @Input() inputIsDisabled:boolean;
+    @Input() inputIsSmall:boolean;
+    @Input() inputOpenOnTop:boolean;
     @Input() inputTooltipText:string;
     @Input() inputTooltipPlacement:string;
     @Input() inputListBoxValues:Array<TerraSelectBoxValueInterface>;
@@ -90,6 +92,8 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
 
         this._isInit = false;
         this.inputTooltipPlacement = 'top';
+        this.inputIsSmall = false;
+        this.inputOpenOnTop = false;
     }
 
     ngOnInit()
@@ -162,9 +166,11 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
                     }
                 });
         }
-        else
+        else if(!isNullOrUndefined(this.inputListBoxValues[0]))
         {
             this._selectedValue = this.inputListBoxValues[0];
+            this.onTouchedCallback();
+            this.onChangeCallback(this.inputListBoxValues[0].value);
         }
     }
 
@@ -182,7 +188,7 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     {
         if(this._toggleOpen !== value && value == true)
         {
-            document.addEventListener('click', this.clickListener);
+            document.addEventListener('click', this.clickListener, true);
         }
         else if(this._toggleOpen !== value && value == false)
         {
