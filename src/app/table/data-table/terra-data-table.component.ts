@@ -21,6 +21,7 @@ import { TerraTagInterface } from '../../tag/data/terra-tag.interface';
 import { TerraDataTableTextInterface } from './cell/terra-data-table-text.interface';
 import { TerraDataTableSortOrder } from './terra-data-table-sort-order.enum';
 import { TerraDataTableBaseService } from './terra-data-table-base.service';
+import { TerraBaseTableComponent } from '../base/terra-base-table.component';
 
 /**
  * @author pweyrich
@@ -31,21 +32,12 @@ import { TerraDataTableBaseService } from './terra-data-table-base.service';
     template:  require('./terra-data-table.component.html'),
     providers: [TerraDataTableContextMenuService]
 })
-export class TerraDataTableComponent<T, P> implements OnInit, OnChanges
+export class TerraDataTableComponent<T, P> extends TerraBaseTableComponent<T> implements OnInit, OnChanges
 {
     /**
      * @description Service, that is used to request the table data from the server
      */
     @Input() inputService:TerraDataTableBaseService<T, P>;
-    /**
-     * @description List of header cell elements
-     */
-    @Input() inputHeaderList:Array<TerraDataTableHeaderCellInterface>;
-    /**
-     * @description List of table rows containing all the data
-     */
-    @Input() inputRowList:Array<TerraDataTableRowInterface<T>>;
-
     /**
      * @description enables the user to sort the table by selected columns
      */
@@ -71,13 +63,6 @@ export class TerraDataTableComponent<T, P> implements OnInit, OnChanges
      */
     @Input() inputNoResultButtons:Array<TerraButtonInterface>;
 
-    /**
-     * @description EventEmitter that notifies when a row has been selected via the select box. This is enabled, only if `inputHasCheckboxes` is true.
-     */
-    @Output() outputRowCheckBoxChanged:EventEmitter<TerraDataTableRowInterface<T>> = new EventEmitter();
-
-    private _headerCheckbox:{ checked:boolean, isIndeterminate:boolean };
-    private _selectedRowList:Array<TerraDataTableRowInterface<T>>;
     private _sortOrderEnum = TerraDataTableSortOrder;
 
     /**
@@ -85,6 +70,8 @@ export class TerraDataTableComponent<T, P> implements OnInit, OnChanges
      */
     constructor()
     {
+        super();
+
         // set default input values
         this.inputHasCheckboxes = true;
         this.inputHasPager = true;
@@ -146,122 +133,6 @@ export class TerraDataTableComponent<T, P> implements OnInit, OnChanges
             lastOnPage:     1,
             firstOnPage:    1
         });
-    }
-
-    private onHeaderCheckboxChange():void
-    {
-        if(this._headerCheckbox.checked)
-        {
-            this.resetSelectedRows();
-        }
-        else
-        {
-            this.selectAllRows();
-        }
-    }
-
-    private onRowCheckboxChange(row:TerraDataTableRowInterface<T>):void
-    {
-        // notify component user
-        this.outputRowCheckBoxChanged.emit(row);
-
-        // update row selection
-        if(this.isSelectedRow(row))
-        {
-            this.deselectRow(row);
-        }
-        else
-        {
-            this.selectRow(row);
-        }
-
-        // update header checkbox state
-        this.updateHeaderCheckboxState();
-    }
-
-    private checkHeaderCheckbox():void
-    {
-        this._headerCheckbox.checked = true;
-        this._headerCheckbox.isIndeterminate = false;
-    }
-
-    private uncheckHeaderCheckbox():void
-    {
-        this._headerCheckbox.checked = false;
-        this._headerCheckbox.isIndeterminate = false;
-    }
-
-    private setHeaderCheckboxIndeterminate():void
-    {
-        this._headerCheckbox.checked = false;
-        this._headerCheckbox.isIndeterminate = true;
-    }
-
-    private updateHeaderCheckboxState()
-    {
-        if(this.selectedRowList.length === 0) // anything selected?
-        {
-            this.uncheckHeaderCheckbox();
-        }
-        else if(this.selectedRowList.length > 0 && this.inputRowList.length === this.selectedRowList.length) // all selected?
-        {
-            this.checkHeaderCheckbox();
-        }
-        else // some rows selected -> indeterminate
-        {
-            this.setHeaderCheckboxIndeterminate();
-        }
-    }
-
-    private selectRow(row:TerraDataTableRowInterface<T>):void
-    {
-        // check if row is already selected
-        if(this.selectedRowList.find((r:TerraDataTableRowInterface<T>) => r === row))
-        {
-            return;
-        }
-
-        // add row to selected row list
-        this.selectedRowList.push(row);
-    }
-
-    private deselectRow(row:TerraDataTableRowInterface<T>):void
-    {
-        // get index of the row in the selected row list
-        let rowIndex:number = this.selectedRowList.indexOf(row);
-
-        // check if selected row list contains the given row
-        if(rowIndex >= 0)
-        {
-            // remove row from selected row list
-            this.selectedRowList.splice(rowIndex, 1);
-        }
-    }
-
-    private selectAllRows():void
-    {
-        this.checkHeaderCheckbox();
-
-        this.inputRowList.forEach((row) =>
-        {
-            if(!row.disabled)
-            {
-                this.selectRow(row);
-            }
-        });
-    }
-
-    private resetSelectedRows():void
-    {
-        this.uncheckHeaderCheckbox();
-
-        // reset selected row list
-        this._selectedRowList = [];
-    }
-
-    private isSelectedRow(row:TerraDataTableRowInterface<T>):boolean
-    {
-        return this.selectedRowList.indexOf(row) >= 0;
     }
 
     /**
