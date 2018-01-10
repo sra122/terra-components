@@ -24,7 +24,7 @@ export class TerraBaseTableComponent<T>
     protected _headerCheckbox:{ checked:boolean, isIndeterminate:boolean };
     protected _selectedRowList:Array<TerraDataTableRowInterface<T>>;
 
-    protected onHeaderCheckboxChange():void
+    private handleHeaderCheckboxChange():void
     {
         if(this._headerCheckbox.checked)
         {
@@ -36,7 +36,7 @@ export class TerraBaseTableComponent<T>
         }
     }
 
-    protected onRowCheckboxChange(row:TerraDataTableRowInterface<T>):void
+    private handleRowCheckboxChange(row:TerraDataTableRowInterface<T>):void
     {
         // notify component user
         this.outputRowCheckBoxChanged.emit(row);
