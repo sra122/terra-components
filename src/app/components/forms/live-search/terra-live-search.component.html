@@ -1,0 +1,35 @@
+<div class="select-box-wrapper"
+     placement="{{inputTooltipPlacement}}"
+     tooltip="{{inputTooltipText}}"
+     [isDisabled]="!inputTooltipText"
+     [ngClass]="{
+                  'error': !isValid,
+                  'disabled': inputIsDisabled,
+                  'open': _toggleOpen
+                }"
+     (click)="onClick($event)"
+     (keydown)="onKeyDown($event)"
+     container="body">
+    
+    <terra-text-input #textInput
+                      [inputIsDisabled]="inputIsDisabled"
+                      [inputName]="inputName"
+                      (click)="onInputClick($event)"
+                      [(ngModel)]="_searchString">
+    </terra-text-input>
+    
+    <!-- suggestions -->
+    <div class="select-box-dropdown">
+        <span *ngIf="_displayListBoxValues.length === 0" (click)="$event.stopPropagation()">
+            <i>{{ _noEntriesTextKey | translate:lang }} </i>
+        </span>
+        
+        <span *ngFor="let suggestion of _suggestions"
+              (click)="select(item)"
+              [ngClass]="{active: suggestion.value === selectedValue?.value, selected: suggestion.value === _tmpSelectedValue?.value}">
+            <span class="{{suggestion.icon}}" *ngIf="suggestion.icon"></span>
+            <span [innerHtml]="suggestion.caption"></span>
+        </span>
+    </div>
+
+</div>
