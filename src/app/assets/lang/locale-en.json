@@ -55,7 +55,11 @@
 	"terraTextInput": {
 		"invalidIban": "IBAN is not valid."
 	},
-	"terraNodeTree":{
+	"terraNodeTree": {
 		"search": "Search"
+	},
+	"terraLiveSearch": {
+		"noEntries": "Test",
+		"noResults": "No results"
 	}
 }

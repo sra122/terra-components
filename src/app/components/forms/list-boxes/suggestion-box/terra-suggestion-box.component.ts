@@ -12,8 +12,9 @@ import {
 import { TerraSuggestionBoxValueInterface } from './data/terra-suggestion-box.interface';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { isNullOrUndefined } from 'util';
+import { TerraListBoxBaseComponent } from '../base/terra-list-box-base.component';
 
-const MAX_LASTLY_USED_ENTRIES = 5;
+const MAX_LASTLY_USED_ENTRIES:number = 5;
 
 @Component({
     selector:  'terra-suggestion-box',
@@ -27,40 +28,30 @@ const MAX_LASTLY_USED_ENTRIES = 5;
         }
     ]
 })
-export class TerraSuggestionBoxComponent implements OnInit, OnChanges
+export class TerraSuggestionBoxComponent extends TerraListBoxBaseComponent implements OnInit, OnChanges
 {
-    @Input() inputName:string;
-    @Input() inputIsRequired:boolean;
-    @Input() inputIsDisabled:boolean;
-    @Input() inputTooltipText:string;
-    @Input() inputTooltipPlacement:string;
     @Input() inputListBoxValues:Array<TerraSuggestionBoxValueInterface>;
     @Input() inputWithRecentlyUsed:boolean;
     @Output() outputValueChanged = new EventEmitter<TerraSuggestionBoxValueInterface>();
-    @Output() outputClicked = new EventEmitter<Event>();
+    //@Output() outputClicked = new EventEmitter<Event>();
 
-    public isValid:boolean;
     public selectedValue:TerraSuggestionBoxValueInterface;
     private _tmpSelectedValue:TerraSuggestionBoxValueInterface;
-    private _toggleOpen:boolean;
     private _hasLabel:boolean;
     private _value:number | string;
-    private clickListener:(event:Event) => void;
-    protected _displayListBoxValues:Array<TerraSuggestionBoxValueInterface> = [];
-    protected _lastSelectedValues:Array<TerraSuggestionBoxValueInterface>;
-    protected _listBoxHeadingKey:string;
-    protected _noEntriesTextKey:string;
+    private _displayListBoxValues:Array<TerraSuggestionBoxValueInterface> = [];
+    private _lastSelectedValues:Array<TerraSuggestionBoxValueInterface>;
+    private _listBoxHeadingKey:string;
+    private _noEntriesTextKey:string;
 
-    constructor(private _elementRef:ElementRef)
+    constructor(_elementRef:ElementRef)
     {
+        super(_elementRef);
     }
 
     ngOnInit()
     {
-        this.clickListener = (event) =>
-        {
-            this.clickedOutside(event);
-        };
+
 
         this.inputTooltipPlacement = 'top';
         this.selectedValue =
@@ -70,8 +61,6 @@ export class TerraSuggestionBoxComponent implements OnInit, OnChanges
             };
         this._tmpSelectedValue = null;
 
-        this.isValid = true;
-        this._toggleOpen = false;
         this._hasLabel = this.inputName != null;
         this._lastSelectedValues = [];
         this._listBoxHeadingKey = '';
@@ -153,39 +142,6 @@ export class TerraSuggestionBoxComponent implements OnInit, OnChanges
         this._tmpSelectedValue = this.selectedValue;
     }
 
-    private onClick(evt:Event):void
-    {
-        evt.stopPropagation(); // prevents the click listener on the document to be fired right after
-        this.toggleOpen = !this.toggleOpen;
-    }
-
-    public set toggleOpen(value:boolean)
-    {
-        if(this._toggleOpen !== value && value == true)
-        {
-            document.addEventListener('click', this.clickListener);
-            this.focusSelectedElement();
-        }
-        else if(this._toggleOpen !== value && value == false)
-        {
-            document.removeEventListener('click', this.clickListener);
-        }
-
-        this._toggleOpen = value;
-    }
-
-    public get toggleOpen():boolean
-    {
-        return this._toggleOpen;
-    }
-
-    private clickedOutside(event):void
-    {
-        if(!this._elementRef.nativeElement.contains(event.target))
-        {
-            this.toggleOpen = false;
-        }
-    }
 
     private select(value:TerraSuggestionBoxValueInterface):void
     {
@@ -372,34 +328,5 @@ export class TerraSuggestionBoxComponent implements OnInit, OnChanges
 
         // stop event bubbling
         event.stopPropagation();
-    }
-
-    private focusSelectedElement():void
-    {
-        // get the temporary selected DOM element
-        let selectedElement:HTMLElement = $('.select-box-dropdown > span.selected').get().pop();
-
-        // check if the element has been found
-        if(selectedElement)
-        {
-            // scroll to the selected element
-            selectedElement.parentElement.scrollTop = selectedElement.offsetTop - selectedElement.parentElement.offsetTop;
-        }
-    }
-
-    /**
-     * workaround to prevent calling the select() method on the label click
-     * @param event
-     */
-    private onInputClick(event:any):void
-    {
-        this.outputClicked.emit(event);
-
-        // check if the input has been clicked
-        if(event.target.nodeName === 'INPUT')
-        {
-            // select the input text <-> mark all
-            event.target.select();
-        }
     }
 }

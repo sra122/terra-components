@@ -7,7 +7,7 @@ import {
     Output
 } from '@angular/core';
 import { TerraPagerInterface } from './data/terra-pager.interface';
-import { TerraSelectBoxValueInterface } from '../forms/select-box/data/terra-select-box.interface';
+import { TerraSelectBoxValueInterface } from '../forms/list-boxes/select-box/data/terra-select-box.interface';
 import { Subject } from 'rxjs/Subject';
 
 @Component({

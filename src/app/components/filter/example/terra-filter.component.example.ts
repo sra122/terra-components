@@ -2,7 +2,7 @@ import {
     Component,
     OnInit
 } from "@angular/core";
-import { TerraSelectBoxValueInterface } from '../../forms/select-box/data/terra-select-box.interface';
+import { TerraSelectBoxValueInterface } from '../../forms/list-boxes/select-box/data/terra-select-box.interface';
 
 @Component({
     selector: 'terra-filter-example',

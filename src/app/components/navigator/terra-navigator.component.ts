@@ -12,7 +12,7 @@ import { TerraNavigatorNodeInterface } from './data/terra-navigator-node.interfa
 import { TerraButtonGroupModule } from './button-group/terra-button-group.module';
 import { TerraNavigatorConfig } from './config/terra-navigator.config';
 import { isNullOrUndefined } from 'util';
-import { TerraSuggestionBoxValueInterface } from '../forms/suggestion-box/data/terra-suggestion-box.interface';
+import { TerraSuggestionBoxValueInterface } from '../forms/list-boxes/suggestion-box/data/terra-suggestion-box.interface';
 import { Router } from '@angular/router';
 import { TranslationService } from 'angular-l10n';
 

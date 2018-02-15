@@ -2,7 +2,7 @@ import {
     TerraFormFieldBase,
     TerraFormFieldBaseOptions
 } from './terra-form-field-base';
-import { TerraSelectBoxValueInterface } from '../../select-box/data/terra-select-box.interface';
+import { TerraSelectBoxValueInterface } from '../../list-boxes/select-box/data/terra-select-box.interface';
 import { TerraControlTypeEnum } from '../enum/terra-control-type.enum';
 
 /**

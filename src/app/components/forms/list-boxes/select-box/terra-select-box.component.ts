@@ -15,6 +15,7 @@ import {
     NG_VALUE_ACCESSOR
 } from '@angular/forms';
 import { isNullOrUndefined } from 'util';
+import { TerraListBoxBaseComponent } from '../base/terra-list-box-base.component';
 
 @Component({
     selector:  'terra-select-box',
@@ -28,7 +29,7 @@ import { isNullOrUndefined } from 'util';
         }
     ]
 })
-export class TerraSelectBoxComponent implements OnInit, OnChanges
+export class TerraSelectBoxComponent extends TerraListBoxBaseComponent implements OnInit, OnChanges
 {
     @Input() inputName:string;
     @Input() inputIsRequired:boolean;
@@ -40,8 +41,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     @Input() inputListBoxValues:Array<TerraSelectBoxValueInterface>;
     @Output() outputValueChanged = new EventEmitter<TerraSelectBoxValueInterface>();
     @Output() inputSelectedValueChange = new EventEmitter<TerraSelectBoxValueInterface>();
-
-    private clickListener:(event:Event) => void;
 
     /**
      * @deprecated
@@ -71,10 +70,8 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
         return this._selectedValue.value;
     }
 
-    public isValid:boolean;
     private _value:number | string;
     private _selectedValue:TerraSelectBoxValueInterface;
-    private _toggleOpen:boolean;
     private _hasLabel:boolean;
     private _isInit:boolean;
 
@@ -82,12 +79,9 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
      *
      * @param elementRef
      */
-    constructor(private elementRef:ElementRef)
+    constructor(_elementRef:ElementRef)
     {
-        this.clickListener = (event) =>
-        {
-            this.clickedOutside(event);
-        };
+        super(_elementRef);
 
         this._isInit = false;
         this.inputTooltipPlacement = 'top';
@@ -97,8 +91,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
 
     ngOnInit()
     {
-        this.isValid = true;
-        this._toggleOpen = false;
         this._hasLabel = this.inputName != null;
         this._isInit = true;
     }
@@ -171,43 +163,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
             this.onTouchedCallback();
             this.onChangeCallback(this.inputListBoxValues[0].value);
         }
-    }
-
-    private set toggleOpen(value)
-    {
-        if(this._toggleOpen !== value && value == true)
-        {
-            document.addEventListener('click', this.clickListener, true);
-        }
-        else if(this._toggleOpen !== value && value == false)
-        {
-            document.removeEventListener('click', this.clickListener);
-        }
-
-        this._toggleOpen = value;
-    }
-
-    private get toggleOpen():boolean
-    {
-        return this._toggleOpen;
-    }
-
-    /**
-     *
-     * @param event
-     */
-    private clickedOutside(event:Event):void
-    {
-        if(!this.elementRef.nativeElement.contains(event.target))
-        {
-            this.toggleOpen = false;
-        }
-    }
-
-    private onClick(evt:Event):void
-    {
-        evt.stopPropagation(); // prevents the click listener on the document to be fired right after
-        this.toggleOpen = !this.toggleOpen;
     }
 
     /**

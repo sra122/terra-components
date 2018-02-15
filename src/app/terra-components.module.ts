@@ -24,7 +24,7 @@ import { TerraTreeComponent } from './components/tree/terra-tree.component';
 import { TerraCheckboxTreeComponent } from './components/tree/checkbox-tree/terra-checkbox-tree.component';
 import { TerraCheckboxComponent } from './components/forms/checkbox/terra-checkbox.component';
 import { TerraRadioButtonComponent } from './components/forms/radio-button/terra-radio-button.component';
-import { TerraSelectBoxComponent } from './components/forms/select-box/terra-select-box.component';
+import { TerraSelectBoxComponent } from './components/forms/list-boxes/select-box/terra-select-box.component';
 import { TerraBaseToolbarComponent } from './components/toolbar/base-toolbar/terra-base-toolbar.component';
 import { TerraIndicatorComponent } from './components/indicator/terra-indicator.component';
 import { TerraPagerComponent } from './components/pager/terra-pager.component';
@@ -46,7 +46,7 @@ import { TerraDynamicComponentLoaderComponent } from './components/dynamic-compo
 import { TerraDynamicModuleLoaderComponent } from './components/dynamic-module-loader/terra-dynamic-module-loader.component';
 import { TerraTileBoxComponent } from './components/tile/box/terra-tile-box.component';
 import { TerraTileBoxPanelComponent } from './components/tile/panel/terra-tile-box-panel.component';
-import { TerraSuggestionBoxComponent } from './components/forms/suggestion-box/terra-suggestion-box.component';
+import { TerraSuggestionBoxComponent } from './components/forms/list-boxes/suggestion-box/terra-suggestion-box.component';
 import { TerraDatePickerComponent } from './components/forms/input/date-picker/terra-date-picker.component';
 import { TerraTextAreaInputComponent } from './components/forms/input/text-area-input/terra-text-area-input.component';
 import { TerraCardComponent } from './components/layouts/card/terra-card.component';
@@ -99,9 +99,9 @@ import { TerraTextInputComponentExample } from './components/forms/input/text-in
 import { TerraCheckboxComponentExample } from './components/forms/checkbox/example/terra-checkbox.component.example';
 import { TerraMultiSelectBoxComponentExample } from './components/forms/multi-select-box/example/terra-multi-select-box.component.example';
 import { TerraRadioButtonComponentExample } from './components/forms/radio-button/example/terra-radio-button.component.example';
-import { TerraSelectBoxComponentExample } from './components/forms/select-box/example/terra-select-box.component.example';
+import { TerraSelectBoxComponentExample } from './components/forms/list-boxes/select-box/example/terra-select-box.component.example';
 import { TerraSliderComponentExample } from './components/forms/slider/example/terra-slider.component.example';
-import { TerraSuggestionBoxComponentExample } from './components/forms/suggestion-box/example/terra-suggestion-box.component.example';
+import { TerraSuggestionBoxComponentExample } from './components/forms/list-boxes/suggestion-box/example/terra-suggestion-box.component.example';
 import { TerraDataTableComponentExample } from './components/tables/data-table/example/terra-data-table.component.example';
 import { TerraTagComponentExample } from './components/layouts/tag/example/terra-tag.component.example';
 import { TerraFileInputComponentExample } from './components/forms/input/file-input/example/terra-file-input.component.example';
@@ -121,6 +121,8 @@ import { TerraDataTableContextMenuComponentExample } from './components/tables/d
 import { TerraNoteEditorComponentExample } from './components/editors/note-editor/example/terra-note-editor.component.example';
 import { TerraNoteComponentExample } from './components/note/example/terra-note.component.example';
 import { TerraNodeTreeComponentExample } from './components/tree/node-tree/example/terra-node-tree.component.example';
+import { TerraLiveSearchComponentExample } from './components/forms/list-boxes/live-search/example/terra-live-search.component.example';
+import { TerraLiveSearchComponent } from './components/forms/list-boxes/live-search/terra-live-search.component';
 
 @NgModule({
     declarations:    [
@@ -175,6 +177,7 @@ import { TerraNodeTreeComponentExample } from './components/tree/node-tree/examp
         TerraNoteComponent,
         TerraNodeTreeComponent,
         TerraNodeComponent,
+        TerraLiveSearchComponent,
 
         //### declarations of terra-components examples
         TerraButtonComponentExample,
@@ -214,7 +217,8 @@ import { TerraNodeTreeComponentExample } from './components/tree/node-tree/examp
         TerraDataTableContextMenuComponentExample,
         TerraNoteEditorComponentExample,
         TerraNoteComponentExample,
-        TerraNodeTreeComponentExample
+        TerraNodeTreeComponentExample,
+        TerraLiveSearchComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -261,7 +265,8 @@ import { TerraNodeTreeComponentExample } from './components/tree/node-tree/examp
         TerraNoteEditorComponent,
         TerraNoteComponent,
         TerraNodeTreeComponent,
-        TerraNodeComponent
+        TerraNodeComponent,
+        TerraLiveSearchComponent
     ],
     exports:         [
         TerraAlertPanelComponent,
@@ -313,6 +318,7 @@ import { TerraNodeTreeComponentExample } from './components/tree/node-tree/examp
         TerraNoteEditorComponent,
         TerraNoteComponent,
         TerraNodeTreeComponent,
+        TerraLiveSearchComponent,
 
 
         //### declarations of terra-components examples

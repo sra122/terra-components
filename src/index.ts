@@ -12,10 +12,10 @@ export * from './app/components/forms/input/double-input/terra-double-input.comp
 export * from './app/components/forms/input/number-input/terra-number-input.component';
 export * from './app/components/forms/input/text-input/terra-text-input.component';
 export * from './app/components/forms/input/color-picker/terra-color-picker.component';
-export * from './app/components/forms/select-box/data/terra-select-box.interface';
-export * from './app/components/forms/suggestion-box/data/terra-suggestion-box.interface';
-export * from './app/components/forms/select-box/terra-select-box.component';
-export * from './app/components/forms/suggestion-box/terra-suggestion-box.component';
+export * from './app/components/forms/list-boxes/select-box/data/terra-select-box.interface';
+export * from './app/components/forms/list-boxes/suggestion-box/data/terra-suggestion-box.interface';
+export * from './app/components/forms/list-boxes/select-box/terra-select-box.component';
+export * from './app/components/forms/list-boxes/suggestion-box/terra-suggestion-box.component';
 export * from './app/components/forms/multi-select-box/data/terra-multi-select-box-value.interface';
 export * from './app/components/forms/multi-select-box/terra-multi-select-box.component';
 export * from './app/components/forms/input/text-area-input/terra-text-area-input.component';
