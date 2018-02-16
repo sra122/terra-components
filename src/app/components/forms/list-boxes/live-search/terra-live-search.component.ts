@@ -56,9 +56,13 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
     private _onTouchedCallback:() => void;
     private _onChangeCallback:(_:any) => void;
 
+    private readonly _minSearchStringLength:number;
+
     constructor(_elementRef:ElementRef)
     {
         super(_elementRef);
+
+        this._minSearchStringLength = 3;
 
         this._suggestions = [];
         this._searchString = '';
@@ -75,14 +79,16 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
     public ngOnInit():void
     {
         // set default paging values
-        this.service.pagingData.page = 1;
-        this.service.pagingData.itemsPerPage = 1;
+        this.resetPaging();
 
+        // register debounced listener on input
         this._textInput.outputOnInput.do(() => this._isTyping = true).debounceTime(500).subscribe(() =>
         {
             this._isTyping = false;
-            this.service.pagingData.page = 1;
-            if(this._searchString.length > 2)
+
+            this.resetPaging();
+
+            if(this._searchString.length >= this._minSearchStringLength)
             {
                 this.search();
             }
@@ -122,6 +128,13 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
     public select(value:TerraSuggestionBoxValueInterface):void
     {
         this.value = value;
+        this.resetPaging();
+    }
+
+    private resetPaging():void
+    {
+        this.service.pagingData.page = 1;
+        this.service.pagingData.itemsPerPage = 1;
     }
 
     private search():void
