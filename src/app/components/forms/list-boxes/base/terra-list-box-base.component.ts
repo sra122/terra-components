@@ -80,7 +80,10 @@ export class TerraListBoxBaseComponent
     protected onClick(evt:Event):void
     {
         evt.stopPropagation(); // prevents the click listener on the document to be fired right after
-        this.toggleOpen = !this.toggleOpen;
+        if(!this.toggleOpen)
+        {
+            this.toggleOpen = true;
+        }
     }
 
     protected clickedOutside(event:Event):void

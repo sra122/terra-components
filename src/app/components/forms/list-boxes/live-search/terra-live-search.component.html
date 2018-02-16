@@ -20,11 +20,11 @@
     <!-- suggestions -->
     <div class="select-box-dropdown">
         <span *ngIf="_suggestions.length === 0 && _searchString.length < 3" (click)="$event.stopPropagation()">
-            <i>{{ _noEntriesTextKey | translate:lang }} </i>
+            <i>{{ 'terraLiveSearch.noEntries' | translate:lang }} </i>
         </span>
     
-        <span *ngIf="_suggestions.length === 0 && _searchString.length >= 3" (click)="$event.stopPropagation()">
-            <i>{{ _noResultsTextKey | translate:lang }} </i>
+        <span *ngIf="_suggestions.length === 0 && _searchString.length >= 3 && !isLoading" (click)="$event.stopPropagation()">
+            <i>{{ 'terraLiveSearch.noResults' | translate:lang }} </i>
         </span>
         
         <span *ngFor="let suggestion of _suggestions"
@@ -32,6 +32,10 @@
               [ngClass]="{active: suggestion.value === selectedValue?.value, selected: suggestion.value === _tmpSelectedValue?.value}">
             <span class="{{suggestion.icon}}" *ngIf="suggestion.icon"></span>
             <span [innerHtml]="suggestion.caption"></span>
+        </span>
+        
+        <span *ngIf="_suggestions.length > 0 && !service.pagingData.isLastPage" (click)="requestNextPage();$event.stopPropagation()">
+            <i>{{ 'terraLiveSearch.moreResults' | translate:lang }} </i>
         </span>
     </div>
 

@@ -14,6 +14,7 @@ import { TerraTextInputComponent } from '../../input/text-input/terra-text-input
 import { TerraSuggestionBoxValueInterface } from '../suggestion-box/data/terra-suggestion-box.interface';
 import { TerraLiveSearchService } from './terra-live-search.service';
 import { TerraListBoxBaseComponent } from '../base/terra-list-box-base.component';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector:  'terra-live-search',
@@ -54,9 +55,6 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
     private _onTouchedCallback:() => void;
     private _onChangeCallback:(_:any) => void;
 
-    private readonly _noEntriesTextKey:string = 'terraLiveSearch.noEntries';
-    private readonly _noResultsTextKey:string = 'terraLiveSearch.noResults';
-
     constructor(_elementRef:ElementRef)
     {
         super(_elementRef);
@@ -75,8 +73,13 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
 
     public ngOnInit():void
     {
+        // set default paging values
+        this.service.pagingData.page = 1;
+        this.service.pagingData.itemsPerPage = 1;
+
         this._textInput.outputOnInput.debounceTime(500).subscribe(() =>
         {
+            this.service.pagingData.page = 1;
             if(this._searchString.length > 2)
             {
                 this.search();
@@ -121,13 +124,26 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
 
     private search():void
     {
-        this.service.requestData(this._searchString).map((data:Array<T>) =>
-        {
-            return data.map(this.mappingFunction);
-        }).subscribe((suggestions:Array<TerraSuggestionBoxValueInterface>) =>
+        this.getSuggestions().subscribe((suggestions:Array<TerraSuggestionBoxValueInterface>) =>
         {
             this._suggestions = suggestions;
         });
     }
 
+    private getSuggestions():Observable<Array<TerraSuggestionBoxValueInterface>>
+    {
+        return this.service.search(this._searchString).map((data:Array<T>) =>
+        {
+            return data.map(this.mappingFunction);
+        });
+    }
+
+    private requestNextPage():void
+    {
+        this.service.pagingData.page++;
+        this.getSuggestions().subscribe((suggestions:Array<TerraSuggestionBoxValueInterface>) =>
+        {
+            this._suggestions.push(...suggestions);
+        });
+    }
 }

@@ -60,6 +60,7 @@
 	},
 	"terraLiveSearch": {
 		"noEntries": "Test",
-		"noResults": "Keine Ergebnisse"
+		"noResults": "Keine Ergebnisse",
+		"moreResults": "Weitere Ergebnisse anzeigen"
 	}
 }
