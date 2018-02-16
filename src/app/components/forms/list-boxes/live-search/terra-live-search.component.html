@@ -12,18 +12,18 @@
     
     <terra-text-input #textInput
                       [inputIsDisabled]="inputIsDisabled"
-                      [inputName]="inputName"
+                      [inputName]="_searchString.length > 0 ? inputName : 'terraLiveSearch.placeholder' | translate:lang:{name: inputName}"
                       (click)="onInputClick($event)"
                       [(ngModel)]="_searchString">
     </terra-text-input>
     
     <!-- suggestions -->
     <div class="select-box-dropdown">
-        <span *ngIf="_suggestions.length === 0 && _searchString.length < 3" (click)="$event.stopPropagation()">
+        <span *ngIf="_suggestions.length === 0 && _searchString.length < 3 && !this._isTyping" (click)="$event.stopPropagation()">
             <i>{{ 'terraLiveSearch.noEntries' | translate:lang }} </i>
         </span>
     
-        <span *ngIf="_suggestions.length === 0 && _searchString.length >= 3 && !isLoading" (click)="$event.stopPropagation()">
+        <span *ngIf="_suggestions.length === 0 && _searchString.length >= 3 && !service.requestPending && !this._isTyping" (click)="$event.stopPropagation()">
             <i>{{ 'terraLiveSearch.noResults' | translate:lang }} </i>
         </span>
         

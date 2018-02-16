@@ -61,6 +61,7 @@
 	"terraLiveSearch": {
 		"noEntries": "Test",
 		"noResults": "No results",
-		"moreResults": "Show more results"
+		"moreResults": "Show more results",
+		"placeholder": "Search for {{name}}"
 	}
 }

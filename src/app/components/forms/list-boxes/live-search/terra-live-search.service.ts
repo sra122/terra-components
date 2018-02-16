@@ -5,6 +5,7 @@ import { TerraPagerParameterInterface } from '../../../pager/data/terra-pager.pa
 export abstract class TerraLiveSearchService<T>
 {
     public pagingData:TerraPagerInterface;
+    public requestPending:boolean;
 
     constructor()
     {
@@ -53,8 +54,10 @@ export abstract class TerraLiveSearchService<T>
         }
 
         // request table data from the server
+        this.requestPending = true;
         return this.requestData(searchString, params).map((response:TerraPagerInterface) =>
         {
+            this.requestPending = false;
             this.updatePagingData(response);
             return response.entries;
         });

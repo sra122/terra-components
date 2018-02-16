@@ -51,6 +51,7 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
     private _value:TerraSuggestionBoxValueInterface;
     private _searchString:string;
     private _suggestions:Array<TerraSuggestionBoxValueInterface>;
+    private _isTyping:boolean;
 
     private _onTouchedCallback:() => void;
     private _onChangeCallback:(_:any) => void;
@@ -77,8 +78,9 @@ export class TerraLiveSearchComponent<T> extends TerraListBoxBaseComponent imple
         this.service.pagingData.page = 1;
         this.service.pagingData.itemsPerPage = 1;
 
-        this._textInput.outputOnInput.debounceTime(500).subscribe(() =>
+        this._textInput.outputOnInput.do(() => this._isTyping = true).debounceTime(500).subscribe(() =>
         {
+            this._isTyping = false;
             this.service.pagingData.page = 1;
             if(this._searchString.length > 2)
             {

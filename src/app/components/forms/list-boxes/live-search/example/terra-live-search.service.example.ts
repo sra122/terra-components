@@ -28,7 +28,6 @@ export class TerraLiveSearchServiceExample extends TerraLiveSearchService<any>
 
     public requestData(searchString:string, params:TerraPagerParameterInterface):Observable<TerraPagerInterface>
     {
-        console.log('data requested');
         let data:any[] = this.data.filter((elem:any) => elem.name.toLowerCase().includes(searchString.toLowerCase()));
 
         // build up paging information
