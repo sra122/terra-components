@@ -126,6 +126,8 @@ import { TerraDynamicSwitchComponent } from './components/forms/dynamic-form/dyn
 import { TerraDynamicFormService } from './components/forms/dynamic-form/service/terra-dynamic-form.service';
 import { TerraFormFieldControlService } from './components/forms/dynamic-form/service/terra-form-field-control.service';
 import { TerraCategoryPickerComponent } from './components/category-picker/terra-category-picker.component';
+import { TerraMultiCheckBoxComponent } from './components/forms/multi-check-box/terra-multi-check-box.component';
+import { TerraMultiCheckBoxComponentExample } from './components/forms/multi-check-box/example/terra-multi-check-box.component.example';
 
 @NgModule({
     declarations:    [
@@ -158,6 +160,7 @@ import { TerraCategoryPickerComponent } from './components/category-picker/terra
         TerraSplitViewComponent,
         TerraFilterComponent,
         TerraMultiSelectBoxComponent,
+        TerraMultiCheckBoxComponent,
         TerraDynamicComponentLoaderComponent,
         TerraDynamicModuleLoaderComponent,
         TerraTileBoxComponent,
@@ -200,6 +203,7 @@ import { TerraCategoryPickerComponent } from './components/category-picker/terra
         TerraTextInputComponentExample,
         TerraCheckboxComponentExample,
         TerraMultiSelectBoxComponentExample,
+        TerraMultiCheckBoxComponentExample,
         TerraRadioButtonComponentExample,
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
@@ -252,6 +256,7 @@ import { TerraCategoryPickerComponent } from './components/category-picker/terra
         TerraSplitViewComponent,
         TerraFilterComponent,
         TerraMultiSelectBoxComponent,
+        TerraMultiCheckBoxComponent,
         TerraTileBoxComponent,
         TerraTileBoxPanelComponent,
         TerraSuggestionBoxComponent,
@@ -301,6 +306,7 @@ import { TerraCategoryPickerComponent } from './components/category-picker/terra
         TerraSplitViewComponent,
         TerraFilterComponent,
         TerraMultiSelectBoxComponent,
+        TerraMultiCheckBoxComponent,
         TerraDynamicComponentLoaderComponent,
         TerraDynamicModuleLoaderComponent,
         TerraTileBoxComponent,
@@ -343,6 +349,7 @@ import { TerraCategoryPickerComponent } from './components/category-picker/terra
         TerraTextInputComponentExample,
         TerraCheckboxComponentExample,
         TerraMultiSelectBoxComponentExample,
+        TerraMultiCheckBoxComponentExample,
         TerraRadioButtonComponentExample,
         TerraSelectBoxComponentExample,
         TerraSliderComponentExample,
