@@ -237,8 +237,7 @@ export class TerraSimpleTableComponent<D> implements OnChanges
     {
         this.checkHeaderCheckbox();
 
-        this.inputRowList.forEach((row:TerraSimpleTableRowInterface<D>) =>
-        {
+        this.inputRowList.forEach((row:TerraSimpleTableRowInterface<D>) => {
             if(!row.disabled)
             {
                 this.selectRow(row);
@@ -275,6 +274,7 @@ export class TerraSimpleTableComponent<D> implements OnChanges
             this.inputHighlightedRow = row;
             this.outputHighlightedRowChange.emit(this.inputHighlightedRow);
         }
+        row.clickFunction();
         this.outputRowClicked.emit(row);
     }
 
