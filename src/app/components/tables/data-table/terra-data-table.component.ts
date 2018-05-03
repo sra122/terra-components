@@ -37,6 +37,10 @@ import { TerraButtonInterface } from '../../buttons/button/data/terra-button.int
 import { TerraSelectBoxValueInterface } from '../../forms/select-box/data/terra-select-box.interface';
 import { TerraAlertComponent } from '../../alert/terra-alert.component';
 import { TerraTagInterface } from '../../layouts/tag/data/terra-tag.interface';
+import {
+    TerraTemplateEnum,
+    TerraTemplateInterface
+} from './cell/terra-template.interface';
 
 @Component({
     selector:   'terra-data-table',
@@ -113,6 +117,7 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
     public onSuccessFunction:(res:I) => void;
     public defaultPagingSize:number;
     public TerraRefTypeEnum:object = TerraRefTypeEnum;
+    public TerraTemplateEnum:object = TerraTemplateEnum;
     private _selectedRowList:Array<TerraDataTableRowInterface<D>> = [];
     private _isHeaderCheckboxChecked:boolean = false;
     private _initialLoadingMessage:string;
@@ -328,6 +333,13 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
                    && arg.value && typeof arg.value === 'string';
         }
 
+        function isTemplateType(arg:any):arg is TerraTemplateInterface
+        {
+            return arg
+                   && arg.type && typeof arg.type === 'string'
+                   && arg.value && typeof arg.value === 'string';
+        }
+
         function isTextType(arg:any):arg is TerraDataTableTextInterface
         {
             return arg && arg.caption && typeof arg.caption === 'string';
@@ -374,6 +386,10 @@ export class TerraDataTableComponent<S extends TerraBaseService, D extends Terra
             if(isRefType(data))
             {
                 return 'TerraRefTypeInterface';
+            }
+            else if(isTemplateType(data))
+            {
+                return 'TerraTemplateInterface';
             }
             else if(isTextType(data))
             {

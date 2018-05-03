@@ -5,6 +5,7 @@ import {
     TerraRefTypeEnum,
     TerraRefTypeInterface
 } from './terra-ref-type.interface';
+import { TerraTemplateInterface } from './terra-template.interface';
 
 /**
  * @author mkunze
@@ -12,7 +13,8 @@ import {
 export interface TerraDataTableCellInterface
 {
     identifier:string;
-    data?:string | number | TerraDataTableTextInterface | TerraRefTypeInterface | Array<TerraButtonInterface> | Array<TerraTagInterface>;
+    data?:string | number |
+        TerraDataTableTextInterface | TerraRefTypeInterface | Array<TerraButtonInterface> | Array<TerraTagInterface> | TerraTemplateInterface;
     isHidden?:boolean;
     tooltipText?:string;
     tooltipPlacement?:string;
