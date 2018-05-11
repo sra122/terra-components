@@ -14,10 +14,4 @@ import {
 export class TerraBaseToolbarComponent
 {
 
-    @Input() inputIsSticky:boolean;
-
-    constructor()
-    {
-        this.inputIsSticky = false;
-    }
 }
