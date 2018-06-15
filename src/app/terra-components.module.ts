@@ -142,6 +142,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TerraMultiSplitViewBreadcrumbsService } from './components/split-view/multi/injectables/terra-multi-split-view-breadcrumbs.service';
 import { RouterModule } from '@angular/router';
 import { TerraTimePickerComponentExample } from './components/forms/input/time-picker/example/terra-time-picker.component.example';
+import { TerraExampleCollectionComponent } from '../../component-documentation/terra-example-collection/terra-example-collection.component';
+import { TerraFileBrowserComponentExample } from './components/file-browser/example/terra-file-browser.component.example';
 
 function createCompiler(compilerFactory:CompilerFactory):Compiler
 {
@@ -210,6 +212,7 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraCategoryPickerComponent,
 
         // ### declarations of terra-components examples
+        TerraExampleCollectionComponent,
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
@@ -249,7 +252,8 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraNoteEditorComponentExample,
         TerraNoteComponentExample,
         TerraNodeTreeComponentExample,
-        TerraTimePickerComponentExample
+        TerraTimePickerComponentExample,
+        TerraFileBrowserComponentExample
     ],
     entryComponents: [
         TerraAlertPanelComponent,
@@ -361,6 +365,7 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraCategoryPickerComponent,
 
         // ### declarations of terra-components examples
+        TerraExampleCollectionComponent,
         TerraButtonComponentExample,
         TerraAlertComponentExample,
         TerraCardComponentExample,
@@ -402,7 +407,8 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraDynamicFormComponent,
         TerraDynamicSwitchComponent,
         TerraNodeTreeComponentExample,
-        TerraTimePickerComponentExample
+        TerraTimePickerComponentExample,
+        TerraFileBrowserComponentExample
     ],
     imports:         [
         BrowserModule,
@@ -427,6 +433,8 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraNavigatorSplitViewConfig,
         TerraFrontendStorageService,
         TerraFileBrowserService,
+        TerraAlertComponent,
+        TerraLoadingSpinnerService,
         {
             provide:  COMPILER_OPTIONS,
             useValue: {},
