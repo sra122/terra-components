@@ -4,8 +4,9 @@ export class TerraBreadcrumb
     public routerLink:string;
     public isHidden:boolean;
     public parent:TerraBreadcrumb;
+    public isRedirected:boolean;
 
-    constructor(name:string, parent:TerraBreadcrumb, routerLink:string)
+    constructor(name:string, parent:TerraBreadcrumb, routerLink:string, isRedirected:boolean)
     {
         this.name = name;
 
@@ -14,5 +15,7 @@ export class TerraBreadcrumb
         this.routerLink = routerLink;
 
         this.isHidden = false;
+
+        this.isRedirected = isRedirected;
     }
 }

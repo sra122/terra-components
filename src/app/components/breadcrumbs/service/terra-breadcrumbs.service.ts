@@ -117,7 +117,7 @@ export class TerraBreadcrumbsService
             let currentContainerIndex:number = this._breadcrumbContainer.indexOf(container);
             let previousContainer:TerraBreadcrumbContainer = this._breadcrumbContainer[currentContainerIndex - 1];
             let parentBreadcrumb:TerraBreadcrumb = isNullOrUndefined(previousContainer) ? undefined : previousContainer.currentSelectedBreadcrumb;
-            breadcrumb = new TerraBreadcrumb(label, parentBreadcrumb, url);
+            breadcrumb = new TerraBreadcrumb(label, parentBreadcrumb, url, !isNullOrUndefined(route.redirectTo));
             container.breadcrumbList.push(breadcrumb);
         }
 
