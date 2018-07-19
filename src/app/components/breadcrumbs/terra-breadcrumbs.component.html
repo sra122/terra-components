@@ -11,7 +11,7 @@
                     <a *ngIf="container.currentSelectedBreadcrumb.isRedirected" class="ellipsis"
                        [routerLink]="container.currentSelectedBreadcrumb.routerLink"
                        [ngClass]="{'active' : checkActiveRoute(container.currentSelectedBreadcrumb)}"
-                       fragment="left" queryParamsHandling="preserve" [queryParams]="{left:true}">
+                       fragment="left" queryParamsHandling="preserve">
                         {{container.currentSelectedBreadcrumb.name}}
                     </a>
                     <a class="icon-caret" *ngIf="getAmountOfVisibleBreadcrumbsForContainer(container) > 1">
