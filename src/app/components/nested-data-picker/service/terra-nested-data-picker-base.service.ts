@@ -14,5 +14,8 @@ export abstract class TerraNestedDataPickerBaseService<T>
      * @param {string | number} dataId
      * @returns {Observable<Array<NestedDataInterface>>}
      */
-    public abstract requestNestedData():Observable<Array<NestedDataInterface<T>>>;
+    public abstract requestNestedData(parentId:string | number):Observable<Array<NestedDataInterface<T>>>;
+
+    public abstract requestNestedDataById(id:number):Observable<Array<NestedDataInterface<T>>>;
+
 }

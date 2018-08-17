@@ -150,6 +150,9 @@ import { TerraBreadcrumbsComponent } from './components/breadcrumbs/terra-breadc
 import { TerraBreadcrumbsService } from './components/breadcrumbs/service/terra-breadcrumbs.service';
 import { Type } from '@angular/core/src/type';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import { TerraNestedDataPickerBaseService } from '..';
+import { NestedPickerService } from './service/nested-picker.service';
+import { NestedDataTreeConfig } from './components/nested-data-picker/config/nested-data-tree.config';
 
 
 function createCompiler(compilerFactory:CompilerFactory):Compiler
@@ -455,6 +458,10 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
         TerraNavigatorSplitViewConfig,
         TerraFrontendStorageService,
         TerraFileBrowserService,
+        NestedPickerService,
+        TerraDynamicFormService,
+        TerraLoadingSpinnerService,
+        NestedDataTreeConfig,
         {
             provide:  COMPILER_OPTIONS,
             useValue: {},

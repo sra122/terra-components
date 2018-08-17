@@ -7,40 +7,44 @@ import { Observer } from 'rxjs';
 @Injectable()
 export class NestedPickerExampleService extends TerraNestedDataPickerBaseService<{}>
 {
-    public results:Object = {
-            Parent:{
-                child1:{
-                    fieldName:'age',
-                    fieldType:'int',
-                    fieldValuesMapKey:'',
-                    groupFieldLabel:'Parent',
-                    label:'Age rating'
+    public results:Array<Object> = [
+            {
+                Parent:{
+                    child1:{
+                        fieldName:'age',
+                        fieldType:'int',
+                        fieldValuesMapKey:'',
+                        groupFieldLabel:'Parent',
+                        label:'Age rating'
+                    },
+                    child2:{
+                        fieldName:'name',
+                        fieldType:'string',
+                        fieldValuesMapKey:'',
+                        groupFieldLabel:'Parent',
+                        label:'Name'
+                    }
                 },
-                child2:{
-                    fieldName:'name',
-                    fieldType:'string',
-                    fieldValuesMapKey:'',
-                    groupFieldLabel:'Parent',
-                    label:'Name'
-                }
             },
-            Parent2:{
-                child3:{
-                    fieldName:'ean',
-                    fieldType:'float',
-                    fieldValuesMapKey:'',
-                    groupFieldLabel:'Parent2',
-                    label:'EAN'
-                },
-                child4:{
-                    fieldName:'tall',
-                    fieldType:'boolean',
-                    fieldValuesMapKey:'',
-                    groupFieldLabel:'Parent2',
-                    label:'Tall'
+            {
+                Parent2:{
+                    child3:{
+                        fieldName:'ean',
+                        fieldType:'float',
+                        fieldValuesMapKey:'',
+                        groupFieldLabel:'Parent2',
+                        label:'EAN'
+                    },
+                    child4:{
+                        fieldName:'tall',
+                        fieldType:'boolean',
+                        fieldValuesMapKey:'',
+                        groupFieldLabel:'Parent2',
+                        label:'Tall'
+                    }
                 }
             }
-    };
+        ];
     public requestNestedData():Observable<Array<NestedDataInterface<{}>>>
     {
         let nestedData:Array<NestedDataInterface<{}>> = [];
@@ -70,5 +74,11 @@ export class NestedPickerExampleService extends TerraNestedDataPickerBaseService
             observer.next(nestedData);
             observer.complete();
         });
+    }
+
+    public requestNestedDataById(id:number):Observable<Array<NestedDataInterface<{}>>>
+    {
+        let x:any = [];
+        return x;
     }
 }

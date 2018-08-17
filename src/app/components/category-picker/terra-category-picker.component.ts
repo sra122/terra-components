@@ -191,6 +191,7 @@ export class TerraCategoryPickerComponent extends TerraNestedDataPickerComponent
     public addNodes(data:any, parentNodeId:number | string):void
     {
         // List of Categories which will be turned into Nodes to add to the node tree
+        console.log(data, parentNodeId);
         let entries:Array<{}> = data.entries;
 
         // Necessary for re-initializing of the Node Tree after data was loaded
