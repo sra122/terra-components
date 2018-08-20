@@ -1,5 +1,3 @@
-import { Observable } from 'rxjs/Observable';
-import { TerraPagerInterface } from '../../../..';
 import { NestedDetailDataInterface } from './nested-detail-data.interface';
 
 /**
@@ -8,16 +6,9 @@ import { NestedDetailDataInterface } from './nested-detail-data.interface';
 export interface NestedDataInterface<T>
 {
     id?:number;
-    name?:string;
-    label?:string;
-    key?:string;
-    isSelected?:boolean;
-    children?:Array<NestedDataInterface<T>>;
     hasChildren?:boolean;
-    parentId?:number;
-    onLazyLoad?:() => Observable<any>;
-    selectable?:boolean;
-    isLastPage?:number;
     details?:Array<NestedDetailDataInterface>;
+    parentId?:number;
+    isLastPage?:boolean;
     data?:T;
 }

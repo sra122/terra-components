@@ -3,6 +3,6 @@
  */
 export interface NestedDetailDataInterface
 {
-    nestedId?:number;
+    detailId?:number;
     name?:string;
 }

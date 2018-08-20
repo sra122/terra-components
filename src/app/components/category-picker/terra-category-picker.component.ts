@@ -178,10 +178,12 @@ export class TerraCategoryPickerComponent extends TerraNestedDataPickerComponent
 
     private getCategories(parentId:number | string):Observable<CategoryPagerDataInterface>
     {
+        console.error(parentId);
         let obs:Observable<CategoryPagerDataInterface> = this.inputCategoryService.requestCategoryData(parentId);
 
         obs.subscribe((data:CategoryPagerDataInterface) =>
         {
+            console.warn(data);
             this.addNodes(data, parentId);
         });
 

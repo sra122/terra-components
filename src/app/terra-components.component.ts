@@ -14,7 +14,7 @@ import { TerraBaseService, TerraDynamicFormService } from '..';
 export class TerraComponentsComponent
 {
     private _viewContainerRef:ViewContainerRef;
-    private _terraPicker:NestedPickerService = new NestedPickerService(this.terraService);
+    private _terraPicker:NestedPickerService = new NestedPickerService();
     private _terraCategoryPicker:CategoryPickerService = new CategoryPickerService(this.terraService);
     constructor(private viewContainerRef:ViewContainerRef,
                 private terraService:TerraDynamicFormService)
