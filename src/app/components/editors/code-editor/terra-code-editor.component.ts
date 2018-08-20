@@ -208,28 +208,28 @@ export class TerraCodeEditorComponent extends TerraBaseEditorComponent implement
      */
     private sanitizeHTML(input:string):string
     {
+        // //
+        // // CHECK FOR UNCLOSED QUOTES
+        // //
+        // const tagContentExp:RegExp = /<(\w[^>]*?)(\/?>)/g;
+        // let output:string = input.replace(tagContentExp, (match:string, tagContent:string, closingTag:string) =>
+        // {
+        //     const attributeExp:RegExp = /([a-zA-Z0-9_-]+)=(?:"|')?(.*?)(?:"|')?(?=(?:\w+=)|\s*$)/g;
+        //     tagContent = tagContent.replace(attributeExp, (attrMatch:string, attrName:string, attrValue:string) =>
+        //     {
+        //         if ( !!attrValue.trim() )
+        //         {
+        //             return attrName + '="' + attrValue.trim() + '"';
+        //         }
+        //         return attrName;
+        //     });
+        //     return '<' + tagContent + closingTag;
+        // });
         //
-        // CHECK FOR UNCLOSED QUOTES
-        //
-        const tagContentExp:RegExp = /<(\w[^>]*?)(\/?>)/g;
-        let output:string = input.replace(tagContentExp, (match:string, tagContent:string, closingTag:string) =>
-        {
-            const attributeExp:RegExp = /([a-zA-Z0-9_-]+)=(?:"|')?(.*?)(?:"|')?(?=(?:\w+=)|\s*$)/g;
-            tagContent = tagContent.replace(attributeExp, (attrMatch:string, attrName:string, attrValue:string) =>
-            {
-                if ( !!attrValue.trim() )
-                {
-                    return attrName + '="' + attrValue.trim() + '"';
-                }
-                return attrName;
-            });
-            return '<' + tagContent + closingTag;
-        });
-
-        //
-        // DISABLE SRC ATTRIBUTES
-        //
-        output = output.replace(/src=/g, '###tmp-src=');
+        // //
+        // // DISABLE SRC ATTRIBUTES
+        // //
+        // output = output.replace(/src=/g, '###tmp-src=');
 
         //
         // SANITIZE UNCLOSED TAGS BY BROWSER
@@ -255,7 +255,7 @@ export class TerraCodeEditorComponent extends TerraBaseEditorComponent implement
         //
         // ENABLE SRC ATTRIBUTES AGAIN
         //
-        output = output.replace(/###tmp-src=/g, 'src=');
+        // output = output.replace(/###tmp-src=/g, 'src=');
 
         return output;
     }
