@@ -235,22 +235,22 @@ export class TerraCodeEditorComponent extends TerraBaseEditorComponent implement
         // SANITIZE UNCLOSED TAGS BY BROWSER
         //
         let tmp:any = document.createElement('div');
-        tmp.innerHTML = output;
-        output = tmp.innerHTML;
+        tmp.innerHTML = input;
+        let output:string = tmp.innerHTML;
 
-        const entities:any = {
-            'lt': '<',
-            'gt': '>',
-            'amp': '&'
-        };
-        output = output.replace(/&(\w+);/g, (match:string, entity:string) =>
-        {
-            if ( entities.hasOwnProperty(entity) )
-            {
-                return entities[entity];
-            }
-            return match;
-        });
+        // const entities:any = {
+        //     'lt': '<',
+        //     'gt': '>',
+        //     'amp': '&'
+        // };
+        // output = output.replace(/&(\w+);/g, (match:string, entity:string) =>
+        // {
+        //     if ( entities.hasOwnProperty(entity) )
+        //     {
+        //         return entities[entity];
+        //     }
+        //     return match;
+        // });
 
         //
         // ENABLE SRC ATTRIBUTES AGAIN
