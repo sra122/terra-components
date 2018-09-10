@@ -48,7 +48,7 @@ export class TerraSimpleTableComponentExample implements OnInit
             width:   '100'
         });
 
-        for(let i:number = 1; i < 10; i++)
+        for(let i:number = 1; i < 40; i++)
         {
             let cellList:Array<TerraSimpleTableCellInterface> = [];
 

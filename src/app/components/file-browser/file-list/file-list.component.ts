@@ -209,7 +209,7 @@ export class TerraFileListComponent implements OnInit, AfterViewInit, OnChanges,
         this._newDirectoryName = this.activeStorageService.prepareKey(name, true, true);
     }
 
-    protected get _deleteCount():number
+    protected get deleteCount():number
     {
         if(isNullOrUndefined(this.objectsToDelete))
         {
