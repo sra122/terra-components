@@ -19,6 +19,7 @@ import {
     isNullOrUndefined
 } from 'util';
 import { StringHelper } from '../../../helpers/string.helper';
+import { TerraSelectBoxBase } from '../selection/terra-select-box.base';
 
 @Component({
     selector:  'terra-select-box',
@@ -32,7 +33,7 @@ import { StringHelper } from '../../../helpers/string.helper';
         }
     ]
 })
-export class TerraSelectBoxComponent implements OnInit, OnChanges
+export class TerraSelectBoxComponent extends TerraSelectBoxBase implements OnInit, OnChanges
 {
     @Input()
     public inputName:string;
@@ -55,9 +56,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     @Input()
     public inputTooltipPlacement:string;
 
-    @Input()
-    public inputListBoxValues:Array<TerraSelectBoxValueInterface>;
-
     /**
      * @deprecated
      */
@@ -69,13 +67,10 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
 
     public isValid:boolean;
 
-    protected selectedValue:TerraSelectBoxValueInterface;
     protected hasLabel:boolean;
 
     private _value:number | string;
-    private _toggleOpen:boolean;
     private isInit:boolean;
-    private clickListener:(event:Event) => void;
 
     /**
      * @deprecated
@@ -109,12 +104,9 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
      *
      * @param elementRef
      */
-    constructor(private elementRef:ElementRef)
+    constructor(elementRef:ElementRef)
     {
-        this.clickListener = (event:Event):void =>
-        {
-            this.clickedOutside(event);
-        };
+        super(elementRef);
 
         this.isInit = false;
         this.inputTooltipPlacement = 'top';
@@ -125,7 +117,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     public ngOnInit():void
     {
         this.isValid = true;
-        this._toggleOpen = false;
         this.hasLabel = !isNull(this.inputName);
         this.isInit = true;
     }
@@ -203,42 +194,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
         }
     }
 
-    private set toggleOpen(value:boolean)
-    {
-        if(this._toggleOpen !== value && value === true)
-        {
-            document.addEventListener('click', this.clickListener, true);
-        }
-        else if(this._toggleOpen !== value && value === false)
-        {
-            document.removeEventListener('click', this.clickListener);
-        }
-
-        this._toggleOpen = value;
-    }
-
-    private get toggleOpen():boolean
-    {
-        return this._toggleOpen;
-    }
-
-    /**
-     *
-     * @param event
-     */
-    private clickedOutside(event:Event):void
-    {
-        if(!this.elementRef.nativeElement.contains(event.target))
-        {
-            this.toggleOpen = false;
-        }
-    }
-
-    private onClick(evt:Event):void
-    {
-        evt.stopPropagation(); // prevents the click listener on the document to be fired right after
-        this.toggleOpen = !this.toggleOpen;
-    }
 
     /**
      *
@@ -267,50 +222,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
             if(!this.inputIsDisabled)
             {
                 this.isValid = false;
-
-                // if(this.inputIsRequired && (isNullOrUndefined(this.value) || this.value.length == 0))
-                // {
-                //    let emptyMessage:string;
-                //
-                //    if(!this.inputEmptyMessage || this.inputEmptyMessage.length == 0)
-                //    {
-                //        //// TODO i18n
-                //        // emptyMessage = 'Mach eine Eingabe!';
-                //
-                //    }
-                //    else
-                //    {
-                //        emptyMessage = this.inputEmptyMessage;
-                //
-                //        this.alert.addAlert({
-                //                                 msg:              emptyMessage,
-                //                                 closable:         true,
-                //                                 type:             'danger',
-                //                                 dismissOnTimeout: 0
-                //                             });
-                //    }
-                // }
-                // else if(!isNullOrUndefined(this.value) && this.value.length > 0)
-                // {
-                //    let invalidMessage:string;
-                //
-                //    if(!this.inputInvalidMessage || this.inputInvalidMessage.length == 0)
-                //    {
-                //        //// TODO i18n
-                //        // invalidMessage = 'Eingabe ungültig!';
-                //    }
-                //    else
-                //    {
-                //        invalidMessage = this.inputInvalidMessage;
-                //
-                //        this.alert.addAlert({
-                //                                 msg:              invalidMessage,
-                //                                 closable:         true,
-                //                                 type:             'danger',
-                //                                 dismissOnTimeout: 0
-                //                             });
-                //    }
-                // }
             }
         }
     }
