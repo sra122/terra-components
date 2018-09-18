@@ -5,11 +5,11 @@
      [ngClass]="{
                   'error': !isValid,
                   'disabled': inputIsDisabled,
-                  'open': toggleOpen,
+                  'open': dropdownOpen,
                   'isSmall': inputIsSmall,
                   'isEmpty': emptyValueSelected
                 }"
-     (click)="onClick($event)"
+     (click)="toggleDropdown($event)"
      container="body">
     
     <label *ngIf="hasLabel" htmlFor="{{inputName}}">{{inputName}}

@@ -11,7 +11,7 @@ export class TerraSelectBoxBase
 
     protected selectedValue:TerraSelectBoxValueInterface;
 
-    private _toggleOpen:boolean = false;
+    private _dropdownOpen:boolean = false;
     private readonly clickListener:(event:Event) => void;
 
     constructor(private elementRef:ElementRef)
@@ -22,36 +22,36 @@ export class TerraSelectBoxBase
         };
     }
 
-    protected onClick(evt:Event):void
+    protected toggleDropdown(evt:Event):void
     {
         evt.stopPropagation(); // prevents the click listener on the document to be fired right after
-        this.toggleOpen = !this.toggleOpen;
+        this.dropdownOpen = !this.dropdownOpen;
     }
 
-    protected set toggleOpen(value:boolean)
+    protected set dropdownOpen(value:boolean)
     {
-        if(this._toggleOpen !== value && value === true)
+        if(this._dropdownOpen !== value && value === true)
         {
             document.addEventListener('click', this.clickListener, true);
         }
-        else if(this._toggleOpen !== value && value === false)
+        else if(this._dropdownOpen !== value && value === false)
         {
             document.removeEventListener('click', this.clickListener);
         }
 
-        this._toggleOpen = value;
+        this._dropdownOpen = value;
     }
 
-    protected get toggleOpen():boolean
+    protected get dropdownOpen():boolean
     {
-        return this._toggleOpen;
+        return this._dropdownOpen;
     }
 
     private clickedOutside(event:Event):void
     {
         if(!this.elementRef.nativeElement.contains(event.target))
         {
-            this.toggleOpen = false;
+            this.dropdownOpen = false;
         }
     }
 
