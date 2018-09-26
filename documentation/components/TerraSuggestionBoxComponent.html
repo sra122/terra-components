@@ -1,0 +1,2892 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraSuggestionBoxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../components/TerraSuggestionBoxComponent.html" target="_self" >{
+    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() &#x3D;&gt; TerraSuggestionBoxComponent), multi: true
+}</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>terra-suggestion-box</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_selectedValue">_selectedValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_textInputValue">_textInputValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_toggleOpen">_toggleOpen</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#clickListener">clickListener</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#displayListBoxValues">displayListBoxValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hasLabel">hasLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isValid">isValid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#lastSelectedValues">lastSelectedValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#listBoxHeadingKey">listBoxHeadingKey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#noEntriesTextKey">noEntriesTextKey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onChangeCallback">onChangeCallback</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onTouchedCallback">onTouchedCallback</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#tmpSelectedValue">tmpSelectedValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#clickedOutside">clickedOutside</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#focusSelectedElement">focusSelectedElement</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onChange">onChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#onClick">onClick</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#onInputClick">onInputClick</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#onKeyDown">onKeyDown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#registerOnChange">registerOnChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#registerOnTouched">registerOnTouched</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resetComponentValue">resetComponentValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#select">select</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setSelectedValue">setSelectedValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateLastSelectedValues">updateLastSelectedValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#writeValue">writeValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inputIsDisabled">inputIsDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#inputIsRequired">inputIsRequired</a>
+                            </li>
+                            <li>
+                                <a href="#inputListBoxValues">inputListBoxValues</a>
+                            </li>
+                            <li>
+                                <a href="#inputName">inputName</a>
+                            </li>
+                            <li>
+                                <a href="#inputTooltipPlacement">inputTooltipPlacement</a>
+                            </li>
+                            <li>
+                                <a href="#inputTooltipText">inputTooltipText</a>
+                            </li>
+                            <li>
+                                <a href="#inputWithRecentlyUsed">inputWithRecentlyUsed</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#outputClicked">outputClicked</a>
+                            </li>
+                            <li>
+                                <a href="#outputValueChanged">outputValueChanged</a>
+                            </li>
+                            <li>
+                                <a href="#textInputValueChange">textInputValueChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#value">value</a>
+                                </li>
+                                <li>
+                                    <a href="#toggleOpen">toggleOpen</a>
+                                </li>
+                                <li>
+                                    <a href="#textInputValue">textInputValue</a>
+                                </li>
+                                <li>
+                                    <a href="#selectedValue">selectedValue</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputIsDisabled"></a>
+                        <code>inputIsDisabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:47</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputIsRequired"></a>
+                        <code>inputIsRequired</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputListBoxValues"></a>
+                        <code>inputListBoxValues</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:56</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputName"></a>
+                        <code>inputName</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputTooltipPlacement"></a>
+                        <code>inputTooltipPlacement</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/enumerations.html#TerraPlacementEnum" target="_self" >TerraPlacementEnum</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>TerraPlacementEnum.TOP</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:53</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputTooltipText"></a>
+                        <code>inputTooltipText</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:50</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputWithRecentlyUsed"></a>
+                        <code>inputWithRecentlyUsed</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:59</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputClicked"></a>
+                        <code>outputClicked</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;Event&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:68</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputValueChanged"></a>
+                        <code>outputValueChanged</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >EventEmitter&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:65</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="textInputValueChange"></a>
+                        <code>textInputValueChange</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:71</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickedOutside"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            clickedOutside
+                            </b>
+                            <a href="#clickedOutside"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>clickedOutside(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:200</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="focusSelectedElement"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            focusSelectedElement
+                            </b>
+                            <a href="#focusSelectedElement"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>focusSelectedElement()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="399" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:399</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:121</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:92</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onChange
+                            </b>
+                            <a href="#onChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onChange()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="262" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:262</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClick"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            onClick
+                            </b>
+                            <a href="#onClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onClick(evt: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:174</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>evt</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onInputClick"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            onInputClick
+                            </b>
+                            <a href="#onInputClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onInputClick(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="416" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:416</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>workaround to prevent calling the select() method on the label click</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onKeyDown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            onKeyDown
+                            </b>
+                            <a href="#onKeyDown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onKeyDown(event: KeyboardEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="322" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:322</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>KeyboardEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="registerOnChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            registerOnChange
+                            </b>
+                            <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>registerOnChange(fn: (_: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>) => void)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:136</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fn</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="registerOnTouched"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            registerOnTouched
+                            </b>
+                            <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>registerOnTouched(fn: () => void)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:141</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fn</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetComponentValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            resetComponentValue
+                            </b>
+                            <a href="#resetComponentValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>resetComponentValue()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="309" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:309</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="select"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            select
+                            </b>
+                            <a href="#select"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>select(value: <a href="../interfaces/TerraSuggestionBoxValueInterface.html">TerraSuggestionBoxValueInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:208</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setSelectedValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setSelectedValue
+                            </b>
+                            <a href="#setSelectedValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setSelectedValue(value: <a href="../interfaces/TerraSuggestionBoxValueInterface.html">TerraSuggestionBoxValueInterface</a>, onChange?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="447" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:447</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>onChange</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateLastSelectedValues"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            updateLastSelectedValues
+                            </b>
+                            <a href="#updateLastSelectedValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateLastSelectedValues()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="234" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:234</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="writeValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            writeValue
+                            </b>
+                            <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>writeValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:150</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_selectedValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            _selectedValue
+                            </b>
+                            <a href="#_selectedValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_selectedValue:     <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:79</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_textInputValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            _textInputValue
+                            </b>
+                            <a href="#_textInputValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_textInputValue:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:81</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_toggleOpen"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            _toggleOpen
+                            </b>
+                            <a href="#_toggleOpen"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_toggleOpen:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:82</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickListener"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            clickListener
+                            </b>
+                            <a href="#clickListener"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>clickListener:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayListBoxValues"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            displayListBoxValues
+                            </b>
+                            <a href="#displayListBoxValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>displayListBoxValues:     <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasLabel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            hasLabel
+                            </b>
+                            <a href="#hasLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>hasLabel:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isValid"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isValid
+                            </b>
+                            <a href="#isValid"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isValid:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastSelectedValues"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            lastSelectedValues
+                            </b>
+                            <a href="#lastSelectedValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>lastSelectedValues:     <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:76</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listBoxHeadingKey"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            listBoxHeadingKey
+                            </b>
+                            <a href="#listBoxHeadingKey"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>listBoxHeadingKey:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noEntriesTextKey"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            noEntriesTextKey
+                            </b>
+                            <a href="#noEntriesTextKey"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>noEntriesTextKey:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onChangeCallback"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onChangeCallback
+                            </b>
+                            <a href="#onChangeCallback"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>onChangeCallback:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(_:any):void &#x3D;&gt; undefined</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:148</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onTouchedCallback"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onTouchedCallback
+                            </b>
+                            <a href="#onTouchedCallback"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>onTouchedCallback:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>():void &#x3D;&gt; undefined</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:146</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tmpSelectedValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            tmpSelectedValue
+                            </b>
+                            <a href="#tmpSelectedValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>tmpSelectedValue:     <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:80</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>value()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:155</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>value(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:160</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleOpen"></a>
+                        <span class="name"><b>toggleOpen</b><a href="#toggleOpen"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>toggleOpen()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:195</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>toggleOpen(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:180</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="textInputValue"></a>
+                        <span class="name"><b>textInputValue</b><a href="#textInputValue"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>textInputValue()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="428" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:428</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>textInputValue(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="433" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:433</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedValue"></a>
+                        <span class="name"><b>selectedValue</b><a href="#selectedValue"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>selectedValue()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="474" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:474</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>selectedValue(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="442" class="link-to-prism">src/app/components/forms/suggestion-box/terra-suggestion-box.component.ts:442</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    ElementRef,
+    EventEmitter,
+    forwardRef,
+    Input,
+    OnChanges,
+    OnInit,
+    Output,
+    SimpleChanges
+} from &#x27;@angular/core&#x27;;
+import { TerraSuggestionBoxValueInterface } from &#x27;./data/terra-suggestion-box.interface&#x27;;
+import {
+    ControlValueAccessor,
+    NG_VALUE_ACCESSOR
+} from &#x27;@angular/forms&#x27;;
+import {
+    isNull,
+    isNullOrUndefined
+} from &#x27;util&#x27;;
+import { TerraPlacementEnum } from &#x27;../../../helpers/enums/terra-placement.enum&#x27;;
+import { TerraBaseData } from &#x27;../../data/terra-base.data&#x27;;
+
+const MAX_LASTLY_USED_ENTRIES:number &#x3D; 5;
+
+@Component({
+    selector:  &#x27;terra-suggestion-box&#x27;,
+    styles:    [require(&#x27;./terra-suggestion-box.component.scss&#x27;)],
+    template:  require(&#x27;./terra-suggestion-box.component.html&#x27;),
+    providers: [
+        {
+            provide:     NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() &#x3D;&gt; TerraSuggestionBoxComponent),
+            multi:       true
+        }
+    ]
+})
+export class TerraSuggestionBoxComponent implements OnInit, OnChanges, ControlValueAccessor
+{
+    @Input()
+    public inputName:string;
+
+    @Input()
+    public inputIsRequired:boolean;
+
+    @Input()
+    public inputIsDisabled:boolean;
+
+    @Input()
+    public inputTooltipText:string;
+
+    @Input()
+    public inputTooltipPlacement:TerraPlacementEnum &#x3D; TerraPlacementEnum.TOP;
+
+    @Input()
+    public inputListBoxValues:Array&lt;TerraSuggestionBoxValueInterface&gt;;
+
+    @Input()
+    public inputWithRecentlyUsed:boolean;
+
+    /**
+     * @deprecated since it notifies the user at exactly the same time as ngModelChange &lt;-&gt; onChangeCallback
+     */
+    @Output()
+    public outputValueChanged:EventEmitter&lt;TerraSuggestionBoxValueInterface&gt; &#x3D; new EventEmitter&lt;TerraSuggestionBoxValueInterface&gt;();
+
+    @Output()
+    public outputClicked:EventEmitter&lt;Event&gt; &#x3D; new EventEmitter&lt;Event&gt;();
+
+    @Output()
+    public textInputValueChange:EventEmitter&lt;string&gt; &#x3D; new EventEmitter&lt;string&gt;();
+
+    public isValid:boolean &#x3D; true;
+
+    protected displayListBoxValues:Array&lt;TerraSuggestionBoxValueInterface&gt; &#x3D; [];
+    protected lastSelectedValues:Array&lt;TerraSuggestionBoxValueInterface&gt; &#x3D; [];
+    protected listBoxHeadingKey:string &#x3D; &#x27;&#x27;;
+    protected noEntriesTextKey:string;
+    protected _selectedValue:TerraSuggestionBoxValueInterface &#x3D; null;
+    protected tmpSelectedValue:TerraSuggestionBoxValueInterface &#x3D; null;
+    protected _textInputValue:string;
+    protected _toggleOpen:boolean &#x3D; false;
+
+    private hasLabel:boolean;
+
+    private clickListener:(event:Event) &#x3D;&gt; void;
+
+    constructor(private elementRef:ElementRef)
+    {
+    }
+
+    public ngOnInit():void
+    {
+        this.clickListener &#x3D; (event:Event):void &#x3D;&gt;
+        {
+            this.clickedOutside(event);
+        };
+
+        this.inputTooltipPlacement &#x3D; TerraPlacementEnum.TOP;
+        this.selectedValue &#x3D;
+            {
+                value:   &#x27;&#x27;,
+                caption: &#x27;&#x27;
+            };
+        this.tmpSelectedValue &#x3D; null;
+
+        this.isValid &#x3D; true;
+        this._toggleOpen &#x3D; false;
+        this.hasLabel &#x3D; !isNull(this.inputName);
+        this.lastSelectedValues &#x3D; [];
+        this.listBoxHeadingKey &#x3D; &#x27;&#x27;;
+        this.noEntriesTextKey &#x3D; this.inputWithRecentlyUsed ? &#x27;terraSuggestionBox.noRecentlyUsed&#x27; : &#x27;terraSuggestionBox.noSuggestions&#x27;;
+
+        if(!this.inputWithRecentlyUsed)
+        {
+            // initialize the displayed list with all possible values
+            this.displayListBoxValues &#x3D; this.inputListBoxValues;
+        }
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        if(changes[&#x27;inputListBoxValues&#x27;])
+        {
+            this.displayListBoxValues &#x3D; this.inputListBoxValues;
+            if(changes[&#x27;inputListBoxValues&#x27;].currentValue.length &gt; 0 &amp;&amp;
+                !isNullOrUndefined(this.selectedValue) &amp;&amp;
+                !this.inputListBoxValues.find((x:TerraSuggestionBoxValueInterface):boolean &#x3D;&gt; this.selectedValue.value &#x3D;&#x3D;&#x3D; x.value))
+            {
+                // reset selected value if the value does not exists or the list is empty
+                this.selectedValue &#x3D; null;
+            }
+        }
+    }
+
+    public registerOnChange(fn:(_:any) &#x3D;&gt; void):void
+    {
+        this.onChangeCallback &#x3D; fn;
+    }
+
+    public registerOnTouched(fn:() &#x3D;&gt; void):void
+    {
+        this.onTouchedCallback &#x3D; fn;
+    }
+
+    private onTouchedCallback:() &#x3D;&gt; void &#x3D; ():void &#x3D;&gt; undefined;
+
+    private onChangeCallback:(_:any) &#x3D;&gt; void &#x3D; (_:any):void &#x3D;&gt; undefined;
+
+    public writeValue(value:any):void
+    {
+        this.value &#x3D; value;
+    }
+
+    public get value():number | string | TerraBaseData
+    {
+        return !isNullOrUndefined(this.selectedValue) ? this.selectedValue.value : null;
+    }
+
+    public set value(value:number | string | TerraBaseData)
+    {
+        if(isNullOrUndefined(this.inputListBoxValues))
+        {
+            this.selectedValue &#x3D; null;
+        }
+        else
+        {
+            this.selectedValue &#x3D; this.inputListBoxValues.find((item:TerraSuggestionBoxValueInterface) &#x3D;&gt; item.value &#x3D;&#x3D;&#x3D; value);
+        }
+
+        this.tmpSelectedValue &#x3D; this.selectedValue;
+    }
+
+    protected onClick(evt:Event):void
+    {
+        evt.stopPropagation(); // prevents the click listener on the document to be fired right after
+        this.toggleOpen &#x3D; !this.toggleOpen;
+    }
+
+    public set toggleOpen(value:boolean)
+    {
+        if(this._toggleOpen !&#x3D;&#x3D; value &amp;&amp; value &#x3D;&#x3D;&#x3D; true)
+        {
+            document.addEventListener(&#x27;click&#x27;, this.clickListener, true);
+            this.focusSelectedElement();
+        }
+        else if(this._toggleOpen !&#x3D;&#x3D; value &amp;&amp; value &#x3D;&#x3D;&#x3D; false)
+        {
+            document.removeEventListener(&#x27;click&#x27;, this.clickListener);
+        }
+
+        this._toggleOpen &#x3D; value;
+    }
+
+    public get toggleOpen():boolean
+    {
+        return this._toggleOpen;
+    }
+
+    private clickedOutside(event:Event):void
+    {
+        if(!this.elementRef.nativeElement.contains(event.target))
+        {
+            this.toggleOpen &#x3D; false;
+        }
+    }
+
+    private select(value:TerraSuggestionBoxValueInterface):void
+    {
+        // check if value is available
+        if(!this.displayListBoxValues.find((elem:TerraSuggestionBoxValueInterface):boolean &#x3D;&gt; elem &#x3D;&#x3D;&#x3D; value))
+        {
+            return;
+        }
+
+        // update selected value
+        this.selectedValue &#x3D; value;
+
+        // update last selected values
+        if(this.inputWithRecentlyUsed)
+        {
+            this.updateLastSelectedValues();
+        }
+
+        // update temp selected value
+        this.tmpSelectedValue &#x3D; this.selectedValue;
+
+        // execute callback functions
+        this.onTouchedCallback();
+        this.onChangeCallback(value.value);
+        this.outputValueChanged.emit(value);
+    }
+
+    private updateLastSelectedValues():void
+    {
+        // check if newly selected value has been selected lastly
+        let valueSelected:TerraSuggestionBoxValueInterface &#x3D;
+            this.lastSelectedValues.find((value:TerraSuggestionBoxValueInterface) &#x3D;&gt;
+                value.caption &#x3D;&#x3D;&#x3D; this.selectedValue.caption &amp;&amp;
+                value.value &#x3D;&#x3D;&#x3D; this.selectedValue.value
+            );
+
+        // add value to the last selected values, if it is not already added
+        if(isNullOrUndefined(valueSelected))
+        {
+            let length:number &#x3D; this.lastSelectedValues.unshift(
+                {
+                    caption: this.selectedValue.caption,
+                    value:   this.selectedValue.value
+                }
+            );
+
+            // check if length of the array exceeds the maximum amount of &quot;lastly used&quot; entries
+            if(length &gt; MAX_LASTLY_USED_ENTRIES)
+            {
+                // remove last element of the array
+                this.lastSelectedValues.pop();
+            }
+        }
+    }
+
+    public onChange():void
+    {
+        let searchString:any &#x3D; this.textInputValue;
+        this.toggleOpen &#x3D; true;
+
+        if(searchString.length &gt;&#x3D; 3)
+        {
+            this.listBoxHeadingKey &#x3D; &#x27;terraSuggestionBox.suggestions&#x27;;
+            this.noEntriesTextKey &#x3D; &#x27;terraSuggestionBox.noSuggestions&#x27;;
+            if(!isNullOrUndefined(this.inputListBoxValues))
+            {
+                this.displayListBoxValues &#x3D; this.inputListBoxValues.filter((value:TerraSuggestionBoxValueInterface) &#x3D;&gt;
+                {
+                    // check if search string has a full match
+                    if(value.caption.toUpperCase().includes(searchString.toUpperCase()))
+                    {
+                        return true;
+                    }
+
+                    // search for partial strings
+                    let searchStringIncluded:boolean &#x3D; true;
+                    searchString.split(&#x27; &#x27;).forEach((word:string) &#x3D;&gt;
+                    {
+                        searchStringIncluded &#x3D; searchStringIncluded &amp;&amp; value.caption.toUpperCase().includes(word.toUpperCase());
+                    });
+                    return searchStringIncluded;
+                });
+            }
+        }
+        else if(this.inputWithRecentlyUsed)
+        {
+            this.listBoxHeadingKey &#x3D; &#x27;terraSuggestionBox.recentlyUsed&#x27;;
+            this.noEntriesTextKey &#x3D; &#x27;terraSuggestionBox.noRecentlyUsed&#x27;;
+            this.displayListBoxValues &#x3D; this.lastSelectedValues;
+        }
+        else if(!isNullOrUndefined(this.inputListBoxValues))
+        {
+            this.displayListBoxValues &#x3D; this.inputListBoxValues;
+        }
+
+        // update selected value
+        this.setSelectedValue(this.displayListBoxValues.find((val:TerraSuggestionBoxValueInterface) &#x3D;&gt; val.caption &#x3D;&#x3D;&#x3D; searchString), true);
+    }
+
+    /**
+     * @deprecated use ngModel instead to reset the selected value
+     */
+    public resetComponentValue():void
+    {
+        this.value &#x3D; null;
+
+        this.selectedValue &#x3D;
+            {
+                value:   &#x27;&#x27;,
+                caption: &#x27;&#x27;
+            };
+
+        this.tmpSelectedValue &#x3D; null;
+    }
+
+    protected onKeyDown(event:KeyboardEvent):void
+    {
+        // check if one of the dedicated keys has been pressed
+        if(!(event.key &#x3D;&#x3D;&#x3D; &#x27;ArrowDown&#x27; || event.key &#x3D;&#x3D;&#x3D; &#x27;ArrowUp&#x27; || event.key &#x3D;&#x3D;&#x3D; &#x27;Enter&#x27; || event.key &#x3D;&#x3D;&#x3D; &#x27;Escape&#x27;))
+        {
+            return;
+        }
+
+        // check if there is any selected value yet
+        if(isNullOrUndefined(this.tmpSelectedValue))
+        {
+            this.tmpSelectedValue &#x3D; this.displayListBoxValues[0];
+        }
+        else
+        {
+            // get the array index of the selected value
+            let index:number &#x3D; this.displayListBoxValues.findIndex((item:TerraSuggestionBoxValueInterface) &#x3D;&gt;
+                item.value &#x3D;&#x3D;&#x3D; this.tmpSelectedValue.value
+            );
+
+            // check if element has been found
+            if(index &gt;&#x3D; 0)
+            {
+                // determine the key, that has been pressed
+                switch(event.key)
+                {
+                    case &#x27;ArrowDown&#x27;: // mark the succeeding list element
+                        if(index + 1 &lt; this.displayListBoxValues.length)
+                        {
+                            // open dropdown if not already opened
+                            if(!this.toggleOpen)
+                            {
+                                this.toggleOpen &#x3D; true;
+                            }
+                            // mark next element for selection
+                            this.tmpSelectedValue &#x3D; this.displayListBoxValues[index + 1];
+                            // adjust scrolling viewport
+                            this.focusSelectedElement();
+                        }
+                        break;
+                    case &#x27;ArrowUp&#x27;: // mark the preceding list element
+                        if(index - 1 &gt;&#x3D; 0)
+                        {
+                            // open dropdown if not already opened
+                            if(!this.toggleOpen)
+                            {
+                                this.toggleOpen &#x3D; true;
+                            }
+                            // mark previous element for selection
+                            this.tmpSelectedValue &#x3D; this.displayListBoxValues[index - 1];
+                            // adjust scrolling viewport
+                            this.focusSelectedElement();
+                        }
+                        break;
+                    case &#x27;Enter&#x27;: // select the marked element
+                        // check if element is really available
+                        if(this.displayListBoxValues.find((item:TerraSuggestionBoxValueInterface) &#x3D;&gt; item &#x3D;&#x3D;&#x3D; this.tmpSelectedValue))
+                        {
+                            this.select(this.tmpSelectedValue); // select the chosen element
+                            this.toggleOpen &#x3D; false; // close the dropdown
+                        }
+                        break;
+                    case &#x27;Escape&#x27;: // close the dropdown
+                        this.toggleOpen &#x3D; false; // close the dropdown
+                        break;
+                }
+            }
+            else
+            {
+                this.tmpSelectedValue &#x3D; this.displayListBoxValues[0];
+            }
+        }
+
+        // stop event bubbling
+        event.stopPropagation();
+    }
+
+    private focusSelectedElement():void
+    {
+        // get the temporary selected DOM element
+        let selectedElement:HTMLElement &#x3D; $(&#x27;.select-box-dropdown &gt; span.selected&#x27;).get().pop();
+
+        // check if the element has been found
+        if(selectedElement)
+        {
+            // scroll to the selected element
+            selectedElement.parentElement.scrollTop &#x3D; selectedElement.offsetTop - selectedElement.parentElement.offsetTop;
+        }
+    }
+
+    /**
+     * workaround to prevent calling the select() method on the label click
+     * @param event
+     */
+    protected onInputClick(event:any):void
+    {
+        this.outputClicked.emit(event);
+
+        // check if the input has been clicked
+        if(event.target.nodeName &#x3D;&#x3D;&#x3D; &#x27;INPUT&#x27;)
+        {
+            // select the input text &lt;-&gt; mark all
+            event.target.select();
+        }
+    }
+
+    protected get textInputValue():string
+    {
+        return this._textInputValue;
+    }
+
+    protected set textInputValue(value:string)
+    {
+        if(this._textInputValue !&#x3D;&#x3D; value)
+        {
+            this.textInputValueChange.emit(value);
+        }
+        this._textInputValue &#x3D; value;
+    }
+
+    public set selectedValue(value:TerraSuggestionBoxValueInterface)
+    {
+        this.setSelectedValue(value);
+    }
+
+    private setSelectedValue(value:TerraSuggestionBoxValueInterface, onChange?:boolean):void
+    {
+        // does not do anything if the value changes from undefined to null or reverse
+        if(isNullOrUndefined(this._selectedValue) &amp;&amp; isNullOrUndefined(value))
+        {
+            return;
+        }
+        // the value has changed?
+        if(this._selectedValue !&#x3D;&#x3D; value)
+        {
+            // update local model
+            this._selectedValue &#x3D; value;
+            this.tmpSelectedValue &#x3D; this._selectedValue;
+
+            // execute callback functions
+            this.onTouchedCallback(); // this may be called when the text input value changes instead!?
+            this.onChangeCallback(this.value);
+            this.outputValueChanged.emit(this._selectedValue);
+
+            // finally update text input value
+            if(!onChange)
+            {
+                this.textInputValue &#x3D; !isNullOrUndefined(this._selectedValue) ? this._selectedValue.caption : undefined;
+            }
+        }
+    }
+
+    public get selectedValue():TerraSuggestionBoxValueInterface
+    {
+        return this._selectedValue;
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraSuggestionBoxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraSuggestionBoxComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

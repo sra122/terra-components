@@ -1,0 +1,1632 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>Color</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/forms/input/color-picker/color.helper.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Handles transformation of colors between hexadecimal representation and RGB and HSL representation.
+Providers functions to decide if a color is dark enough to read white text on it
+or light enough to read white text.</p>
+
+            </p>
+
+
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#b">b</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#g">g</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#r">r</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getGrayscale">getGrayscale</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hue2rgb">hue2rgb</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isDark">isDark</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isHEX">isHEX</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isHSL">isHSL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isLight">isLight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isRGB">isRGB</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#random">random</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#readHEX">readHEX</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#readHSL">readHSL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#readRGB">readRGB</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toHEX">toHEX</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toHSL">toHSL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toRGB">toRGB</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(color?: <a href="../classes/Color.html">string | ColorRGB | ColorHSL</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Construct a new color instance. Accepts hexadecimal formatted colors as string or colors formatted as RGB or HSL.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >string | ColorRGB | ColorHSL</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>string|ColorRGB|ColorHSL</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="b"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            b
+                            </b>
+                            <a href="#b"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>b:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="g"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            g
+                            </b>
+                            <a href="#g"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>g:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="r"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            r
+                            </b>
+                            <a href="#r"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>r:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getGrayscale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getGrayscale
+                            </b>
+                            <a href="#getGrayscale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getGrayscale()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:273</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Calculate the grayscale of this color.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>number</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hue2rgb"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            hue2rgb
+                            </b>
+                            <a href="#hue2rgb"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>hue2rgb(p: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, q: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, t: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:161</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>p</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>q</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>t</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDark"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isDark
+                            </b>
+                            <a href="#isDark"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isDark()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="282" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:282</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Decide if this color is dark enough so white text could be read.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>boolean</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isHEX"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isHEX
+                            </b>
+                            <a href="#isHEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isHEX(color: <a href="../classes/Color.html">string | ColorRGB | ColorHSL</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Checks if a given color is formatted as a string containing a hexadecimal
+representation of a color</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >string | ColorRGB | ColorHSL</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>string|ColorRGB|ColorHSL The color</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>boolean</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isHSL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isHSL
+                            </b>
+                            <a href="#isHSL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isHSL(color: <a href="../classes/Color.html">string | ColorRGB | ColorHSL</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:94</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Checks if a given color is given in a HSL-representation.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >string | ColorRGB | ColorHSL</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>string|ColorRGB|ColorHSL The color</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>boolean</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLight"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isLight
+                            </b>
+                            <a href="#isLight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isLight()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="291" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:291</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Decide if this color is light enough so black text could be read.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>boolean</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isRGB"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isRGB
+                            </b>
+                            <a href="#isRGB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isRGB(color: <a href="../classes/Color.html">string | ColorRGB | ColorHSL</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Checks if a given color is given in a RGB-representation.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >string | ColorRGB | ColorHSL</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>string|ColorRGB|ColorHSL The color</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>boolean</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="random"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            random
+                            </b>
+                            <a href="#random"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>random()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/Color.html" target="_self" >Color</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readHEX"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            readHEX
+                            </b>
+                            <a href="#readHEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>readHEX(color: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:103</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Converts a string representation of a color to a RGB representation.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>string The hexadecimal representation of a color</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readHSL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            readHSL
+                            </b>
+                            <a href="#readHSL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>readHSL(color: <a href="../classes/Color.html">ColorHSL</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:131</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Read a color formatted as HSL.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >ColorHSL</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>ColorHSL The color formatted as HSL</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readRGB"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            readRGB
+                            </b>
+                            <a href="#readRGB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>readRGB(color: <a href="../classes/Color.html">ColorRGB</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:120</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Read a color formatted as RGB. No transformation required because colors are stored as RGB internally.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>color</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Color.html" target="_self" >ColorRGB</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>ColorRGB The color formatted as RGB.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toHEX"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toHEX
+                            </b>
+                            <a href="#toHEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toHEX()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:190</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Converts this color to a hexadecimal string.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>string</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toHSL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toHSL
+                            </b>
+                            <a href="#toHSL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toHSL()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="215" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:215</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Converts this color to a HSL formatted representation.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/Color.html" target="_self" >ColorHSL</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>ColorHSL</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toRGB"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toRGB
+                            </b>
+                            <a href="#toRGB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toRGB()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="202" class="link-to-prism">src/app/components/forms/input/color-picker/color.helper.ts:202</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Converts this color to a RGB formatted representation.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/Color.html" target="_self" >ColorRGB</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>ColorRGB</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { isUndefined } from &#x27;util&#x27;;
+
+export type ColorRGB &#x3D; { r:number, g:number, b:number };
+
+/**
+ * Defines HSL-formatted colors.
+ * @package modules/helpers
+ */
+export type ColorHSL &#x3D; { h:number, s:number, l:number };
+
+/**
+ * Handles transformation of colors between hexadecimal representation and RGB and HSL representation.
+ * Providers functions to decide if a color is dark enough to read white text on it
+ * or light enough to read white text.
+ *
+ * @package modules/helpers
+ */
+export class Color
+{
+    public static random():Color
+    {
+        let rgb:ColorRGB &#x3D; {
+            r: Math.floor(Math.random() * 255),
+            g: Math.floor(Math.random() * 255),
+            b: Math.floor(Math.random() * 255)
+        };
+
+        return new Color(rgb);
+    }
+
+    private r:number &#x3D; 0;
+    private g:number &#x3D; 0;
+    private b:number &#x3D; 0;
+
+    /**
+     * Construct a new color instance. Accepts hexadecimal formatted colors as string or colors formatted as RGB or HSL.
+     * @param color string|ColorRGB|ColorHSL
+     */
+    constructor(color?:string | ColorRGB | ColorHSL)
+    {
+        if(color)
+        {
+            if(this.isHEX(color))
+            {
+                this.readHEX(&lt;string&gt; color);
+                return;
+            }
+
+            if(this.isRGB(color))
+            {
+                this.readRGB(&lt;ColorRGB&gt; color);
+                return;
+            }
+
+            if(this.isHSL(color))
+            {
+                this.readHSL(&lt;ColorHSL&gt; color);
+                return;
+            }
+        }
+    }
+
+    /**
+     * Checks if a given color is formatted as a string containing a hexadecimal
+     * representation of a color
+     * @param color string|ColorRGB|ColorHSL The color
+     * @returns boolean
+     */
+    private isHEX(color:string | ColorRGB | ColorHSL):boolean
+    {
+        let hexExp:RegExp &#x3D; /^#[a-f0-9]{3}$|#[a-f0-9]{6}$/i;
+        return typeof color &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; hexExp.test(color);
+    }
+
+    /**
+     * Checks if a given color is given in a RGB-representation.
+     * @param color string|ColorRGB|ColorHSL The color
+     * @returns boolean
+     */
+    private isRGB(color:string | ColorRGB | ColorHSL):boolean
+    {
+        return !isUndefined((&lt;ColorRGB&gt; color).r);
+    }
+
+    /**
+     * Checks if a given color is given in a HSL-representation.
+     * @param color string|ColorRGB|ColorHSL The color
+     * @returns boolean
+     */
+    private isHSL(color:string | ColorRGB | ColorHSL):boolean
+    {
+        return !isUndefined((&lt;ColorHSL&gt; color).h);
+    }
+
+    /**
+     * Converts a string representation of a color to a RGB representation.
+     * @param color string The hexadecimal representation of a color
+     */
+    private readHEX(color:string):void
+    {
+        color &#x3D; color.replace(&#x27;#&#x27;, &#x27;&#x27;);
+        if(color.length &#x3D;&#x3D;&#x3D; 3)
+        {
+            color +&#x3D; color;
+        }
+
+        this.r &#x3D; parseInt(color.substr(0, 2), 16);
+        this.g &#x3D; parseInt(color.substr(2, 2), 16);
+        this.b &#x3D; parseInt(color.substr(4, 2), 16);
+    }
+
+    /**
+     * Read a color formatted as RGB. No transformation required because colors are stored as RGB internally.
+     * @param color ColorRGB The color formatted as RGB.
+     */
+    private readRGB(color:ColorRGB):void
+    {
+        this.r &#x3D; color.r;
+        this.g &#x3D; color.g;
+        this.b &#x3D; color.b;
+    }
+
+    /**
+     * Read a color formatted as HSL.
+     * @param color ColorHSL The color formatted as HSL
+     */
+    private readHSL(color:ColorHSL):void
+    {
+        let r:number &#x3D; color.l;
+        let g:number &#x3D; color.l;
+        let b:number &#x3D; color.l;
+
+        if(color.s !&#x3D;&#x3D; 0)
+        {
+            let q:number;
+            if(color.l &lt; 0.5)
+            {
+                q &#x3D; color.l * (1 + color.s);
+            }
+            else
+            {
+                q &#x3D; color.l + color.s - color.l * color.s;
+            }
+
+            let p:number &#x3D; 2 * color.l - q;
+
+            r &#x3D; this.hue2rgb(p, q, color.h + (1 / 3));
+            g &#x3D; this.hue2rgb(p, q, color.h);
+            b &#x3D; this.hue2rgb(p, q, color.h - (1 / 3));
+        }
+
+        this.r &#x3D; Math.round(r * 255);
+        this.g &#x3D; Math.round(g * 255);
+        this.b &#x3D; Math.round(b * 255);
+    }
+
+    private hue2rgb(p:number, q:number, t:number):number
+    {
+        if(t &lt; 0)
+        {
+            t +&#x3D; 1;
+        }
+        if(t &gt; 1)
+        {
+            t -&#x3D; 1;
+        }
+        if(t &lt; (1 / 6))
+        {
+            return p + (q - p) * 6 * t;
+        }
+        if(t &lt; (1 / 2))
+        {
+            return q;
+        }
+        if(t &lt; (2 / 3))
+        {
+            return p + (q - p) * ((2 / 3) - t) * 6;
+        }
+        return p;
+    }
+
+    /**
+     * Converts this color to a hexadecimal string.
+     * @returns string
+     */
+    public toHEX():string
+    {
+        return &#x27;#&#x27; +
+               ((this.r &lt; 16) ? &#x27;0&#x27; : &#x27;&#x27;) + this.r.toString(16) +
+               ((this.g &lt; 16) ? &#x27;0&#x27; : &#x27;&#x27;) + this.g.toString(16) +
+               ((this.b &lt; 16) ? &#x27;0&#x27; : &#x27;&#x27;) + this.b.toString(16);
+    }
+
+    /**
+     * Converts this color to a RGB formatted representation.
+     * @returns ColorRGB
+     */
+    public toRGB():ColorRGB
+    {
+        return {
+            r: this.r,
+            g: this.g,
+            b: this.b
+        };
+    }
+
+    /**
+     * Converts this color to a HSL formatted representation.
+     * @returns ColorHSL
+     */
+    public toHSL():ColorHSL
+    {
+        let r:number &#x3D; this.r / 255;
+        let g:number &#x3D; this.g / 255;
+        let b:number &#x3D; this.b / 255;
+        let max:number &#x3D; Math.max(r, g, b);
+        let min:number &#x3D; Math.min(r, g, b);
+
+        let h:number &#x3D; (max + min) / 2;
+        let s:number &#x3D; (max + min) / 2;
+        let l:number &#x3D; (max + min) / 2;
+
+        if(max &#x3D;&#x3D;&#x3D; min)
+        {
+            h &#x3D; 0;
+            s &#x3D; 0;
+        }
+        else
+        {
+            let diff:number &#x3D; max - min;
+            if(l &gt; 0.5)
+            {
+                s &#x3D; diff / (2 - max - min);
+            }
+            else
+            {
+                s &#x3D; diff / (max + min);
+            }
+
+            switch(max)
+            {
+                case r:
+                    h &#x3D; (g - b) / diff + (g &lt; b ? 6 : 0);
+                    break;
+                case g:
+                    h &#x3D; (b - r) / diff + 2;
+                    break;
+                case b:
+                    h &#x3D; (r - g) / diff + 4;
+                    break;
+                default:
+                    throw new Error(&#x27;This should never be reached!&#x27;);
+            }
+
+            h &#x3D; h / 6;
+        }
+
+        return {
+            h,
+            s,
+            l
+        };
+    }
+
+    /**
+     * Calculate the grayscale of this color.
+     * @returns number
+     */
+    public getGrayscale():number
+    {
+        return (this.r * 0.299) + (this.g * 0.587) + (this.b * 0.114);
+    }
+
+    /**
+     * Decide if this color is dark enough so white text could be read.
+     * @returns boolean
+     */
+    public isDark():boolean
+    {
+        return this.getGrayscale() &lt; 186;
+    }
+
+    /**
+     * Decide if this color is light enough so black text could be read.
+     * @returns boolean
+     */
+    public isLight():boolean
+    {
+        return this.getGrayscale() &gt;&#x3D; 186;
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Color.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

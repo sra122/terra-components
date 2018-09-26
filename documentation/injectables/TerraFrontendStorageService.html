@@ -1,0 +1,1472 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TerraFrontendStorageService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/file-browser/terra-frontend-storage.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isImagePreviewEnabled">isImagePreviewEnabled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#metadataCache">metadataCache</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#name">name</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#queue">queue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#storageInitialized">storageInitialized</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#storageListSubject">storageListSubject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createDirectory">createDirectory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deleteFiles">deleteFiles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getMetadata">getMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getStorageList">getStorageList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initStorageList">initStorageList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateMetadata">updateMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#uploadFile">uploadFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#uploadFiles">uploadFiles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#_storageList">_storageList</a>
+                                </li>
+                                <li>
+                                    <a href="#uploadProgress">uploadProgress</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(terraLoadingSpinnerService: <a href="../injectables/TerraLoadingSpinnerService.html">TerraLoadingSpinnerService</a>, http: <a href="https://angular.io/api/http/Http" target="_blank">Http</a>, translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>terraLoadingSpinnerService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/TerraLoadingSpinnerService.html" target="_self" >TerraLoadingSpinnerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createDirectory"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            createDirectory
+                            </b>
+                            <a href="#createDirectory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createDirectory(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>path</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Observable&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteFiles"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            deleteFiles
+                            </b>
+                            <a href="#deleteFiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>deleteFiles(keyList: Array<string>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:218</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>keyList</td>
+                                                        <td>
+                                                                    <code>Array&lt;string&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Observable&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMetadata"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getMetadata
+                            </b>
+                            <a href="#getMetadata"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getMetadata(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:159</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraImageMetadata.html" target="_self" >Observable&lt;TerraImageMetadata&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getStorageList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getStorageList
+                            </b>
+                            <a href="#getStorageList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getStorageList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraStorageObjectList.html" target="_self" >Observable&lt;TerraStorageObjectList&gt;</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initStorageList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            initStorageList
+                            </b>
+                            <a href="#initStorageList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>initStorageList(continuationToken?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="245" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:245</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>continuationToken</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateMetadata"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            updateMetadata
+                            </b>
+                            <a href="#updateMetadata"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateMetadata(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, metadata: <a href="../interfaces/TerraImageMetadata.html">TerraImageMetadata</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:189</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>metadata</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraImageMetadata.html" target="_self" >TerraImageMetadata</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadFile"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            uploadFile
+                            </b>
+                            <a href="#uploadFile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>uploadFile(file: File, path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>file</td>
+                                                        <td>
+                                                                    <code>File</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>path</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>&#x27;/&#x27;</code>
+                                                        </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraUploadItem.html" target="_self" >TerraUploadItem</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadFiles"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            uploadFiles
+                            </b>
+                            <a href="#uploadFiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>uploadFiles(files: FileList | Array<File>, path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:91</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>files</td>
+                                                        <td>
+                                                                    <code>FileList | Array&lt;File&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>path</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>&#x27;/&#x27;</code>
+                                                        </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraUploadItem.html" target="_self" >Array&lt;TerraUploadItem&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isImagePreviewEnabled"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isImagePreviewEnabled
+                            </b>
+                            <a href="#isImagePreviewEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isImagePreviewEnabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metadataCache"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            metadataCache
+                            </b>
+                            <a href="#metadataCache"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>metadataCache:     <code>literal type</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            name
+                            </b>
+                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>name:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="queue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            queue
+                            </b>
+                            <a href="#queue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>queue:     <code><a href="../classes/TerraUploadQueue.html" target="_self" >TerraUploadQueue</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraUploadQueue.html" target="_self" >TerraUploadQueue</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new TerraUploadQueue(&#x27;/rest/storage/frontend/file&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storageInitialized"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            storageInitialized
+                            </b>
+                            <a href="#storageInitialized"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>storageInitialized:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storageListSubject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            storageListSubject
+                            </b>
+                            <a href="#storageListSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>storageListSubject:     <code><a href="../classes/TerraStorageObjectList.html" target="_self" >BehaviorSubject&lt;TerraStorageObjectList&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObjectList.html" target="_self" >BehaviorSubject&lt;TerraStorageObjectList&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject(null)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_storageList"></a>
+                        <span class="name"><b>_storageList</b><a href="#_storageList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>_storageList()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:28</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadProgress"></a>
+                        <span class="name"><b>uploadProgress</b><a href="#uploadProgress"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>uploadProgress()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/file-browser/terra-frontend-storage.service.ts:33</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { TerraUploadItem } from &#x27;./model/terra-upload-item&#x27;;
+import { TerraUploadQueue } from &#x27;./model/terra-upload-queue&#x27;;
+import { Http } from &#x27;@angular/http&#x27;;
+import { TerraStorageObjectList } from &#x27;./model/terra-storage-object-list&#x27;;
+import { Observable } from &#x27;rxjs/Observable&#x27;;
+import { createS3StorageObject } from &#x27;./model/s3-storage-object.interface&#x27;;
+import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
+import { TerraImageMetadata } from &#x27;./model/terra-image-metadata.interface&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import { TerraLoadingSpinnerService } from &#x27;../loading-spinner/service/terra-loading-spinner.service&#x27;;
+import { TerraBaseMetadataStorageService } from &#x27;./terra-base-metadata-storage.interface&#x27;;
+
+@Injectable()
+export class TerraFrontendStorageService extends TerraBaseMetadataStorageService
+{
+    public isImagePreviewEnabled:boolean &#x3D; true;
+
+    public name:string;
+
+    public queue:TerraUploadQueue &#x3D; new TerraUploadQueue(&#x27;/rest/storage/frontend/file&#x27;);
+
+    private storageInitialized:boolean &#x3D; false;
+
+    private storageListSubject:BehaviorSubject&lt;TerraStorageObjectList&gt; &#x3D; new BehaviorSubject(null);
+
+    private get _storageList():TerraStorageObjectList
+    {
+        return this.storageListSubject.getValue();
+    }
+
+    public get uploadProgress():Observable&lt;number&gt;
+    {
+        return this.queue.progress;
+    }
+
+    private metadataCache:{ [storageKey:string]:TerraImageMetadata } &#x3D; {};
+
+    constructor(terraLoadingSpinnerService:TerraLoadingSpinnerService, http:Http, translation:TranslationService)
+    {
+        super(terraLoadingSpinnerService, http, &#x27;/rest/storage/frontend/file&#x27;);
+        this.name &#x3D; translation.translate(&#x27;terraFileBrowser.myFiles&#x27;);
+    }
+
+    public getStorageList():Observable&lt;TerraStorageObjectList&gt;
+    {
+        if(!this.storageInitialized)
+        {
+            this.initStorageList();
+        }
+
+        return this.storageListSubject;
+    }
+
+    public createDirectory(path:string):Observable&lt;void&gt;
+    {
+        if(path.charAt(0) &#x3D;&#x3D;&#x3D; &#x27;/&#x27;)
+        {
+            path &#x3D; path.substr(1);
+        }
+
+        if(path.charAt(path.length - 1) !&#x3D;&#x3D; &#x27;/&#x27;)
+        {
+            path +&#x3D; &#x27;/&#x27;;
+        }
+
+        path &#x3D; this.prepareKey(path);
+
+        this.setAuthorization();
+        let request:Observable&lt;void&gt; &#x3D; this.mapRequest(
+            this.http.post(
+                this.url + &#x27;?key&#x3D;&#x27; + path,
+                null,
+                {
+                    headers: this.headers
+                }
+            )
+        );
+
+        request.subscribe(() &#x3D;&gt;
+        {
+            this.storageListSubject.next(
+                this._storageList.insertObject(createS3StorageObject(path))
+            );
+        });
+
+        return request;
+    }
+
+    public uploadFiles(files:FileList | Array&lt;File&gt;, path:string &#x3D; &#x27;/&#x27;):Array&lt;TerraUploadItem&gt;
+    {
+        if(isNullOrUndefined(files) || files.length &lt;&#x3D; 0)
+        {
+            return [];
+        }
+
+        let uploadItems:Array&lt;TerraUploadItem&gt; &#x3D; [];
+
+        /* tslint:disable:prefer-for-of */
+        for(let i:number &#x3D; 0; i &lt; files.length; i++)
+        {
+            uploadItems.push(this.uploadFile(files[i], path));
+        }
+        /* tslint:enable:prefer-for-of */
+
+        return uploadItems;
+    }
+
+    private uploadFile(file:File, path:string &#x3D; &#x27;/&#x27;):TerraUploadItem
+    {
+        if(isNullOrUndefined(file))
+        {
+            return TerraUploadItem.DONE;
+        }
+
+        let item:TerraUploadItem &#x3D; new TerraUploadItem(file, path, this);
+        item.beforeUpload(() &#x3D;&gt;
+        {
+            this.storageListSubject.next(
+                this._storageList.insertObject(createS3StorageObject(item.pathname))
+            );
+        });
+
+        item.onSuccess((response:string) &#x3D;&gt;
+        {
+            let s3Data:any &#x3D; JSON.parse(response);
+            this.storageListSubject.next(
+                this._storageList.insertObject({
+                    eTag:         s3Data.eTag,
+                    key:          s3Data.key,
+                    lastModified: (new Date()).toISOString(),
+                    size:         file.size,
+                    publicUrl:    s3Data.publicUrl,
+                    storageClass: &#x27;STANDARD&#x27;
+                })
+            );
+        });
+
+        item.onError(() &#x3D;&gt;
+        {
+            this._storageList.root.removeChild(item.pathname);
+            this.storageListSubject.next(this._storageList);
+        });
+
+        item.onCancel(() &#x3D;&gt;
+        {
+            this._storageList.root.removeChild(item.pathname);
+            this.storageListSubject.next(this._storageList);
+        });
+
+        this.queue.add(item);
+
+        this.queue.startUpload();
+
+        return item;
+    }
+
+    public getMetadata(key:string):Observable&lt;TerraImageMetadata&gt;
+    {
+        if(this.metadataCache.hasOwnProperty(key))
+        {
+            return Observable.from([this.metadataCache[key]]);
+        }
+
+        this.setAuthorization();
+        let request:Observable&lt;any&gt; &#x3D; this.mapRequest(
+            this.http.get(
+                this.url + &#x27;/metadata?key&#x3D;&#x27; + key,
+                {
+                    headers: this.headers
+                }
+            )
+        );
+
+        request.subscribe((metadata:any) &#x3D;&gt;
+            {
+                this.metadataCache[key] &#x3D; metadata;
+            },
+            () &#x3D;&gt;
+            {
+                delete this.metadataCache[key];
+            }
+        );
+
+        return request;
+    }
+
+    public updateMetadata(key:string, metadata:TerraImageMetadata):Observable&lt;any&gt;
+    {
+        this.setAuthorization();
+        let request:Observable&lt;any&gt; &#x3D; this.mapRequest(
+            this.http.post(
+                this.url + &#x27;/metadata&#x27;,
+                {
+                    key:      key,
+                    metadata: metadata
+                },
+                {
+                    headers: this.headers
+                }
+            )
+        );
+
+        request.subscribe(() &#x3D;&gt;
+            {
+                this.metadataCache[key] &#x3D; metadata;
+            },
+            () &#x3D;&gt;
+            {
+                delete this.metadataCache[key];
+            }
+        );
+
+        return request;
+    }
+
+    public deleteFiles(keyList:Array&lt;string&gt;):Observable&lt;void&gt;
+    {
+        this.setAuthorization();
+        let request:Observable&lt;any&gt; &#x3D; this.mapRequest(
+            this.http.delete(
+                &#x27;/rest/storage/frontend/files?&#x27; + keyList.map((key:string):string &#x3D;&gt; &#x27;keyList[]&#x3D;&#x27; + key).join(&#x27;&amp;&#x27;),
+                {
+                    headers: this.headers
+                }
+            )
+        );
+
+        request.subscribe(():void &#x3D;&gt;
+            {
+                keyList.forEach((key:string):void &#x3D;&gt; this._storageList.root.removeChild(key));
+                this.storageListSubject.next(this._storageList);
+            },
+            ():void &#x3D;&gt;
+            {
+                this.storageInitialized &#x3D; false;
+                this.storageListSubject.next(null);
+            }
+        );
+
+        return request;
+    }
+
+    private initStorageList(continuationToken?:string):void
+    {
+        this.storageInitialized &#x3D; true;
+
+        let url:string &#x3D; &#x27;/rest/storage/frontend/files&#x27;;
+        if(!isNullOrUndefined(continuationToken))
+        {
+            url +&#x3D; &#x27;?continuationToken&#x3D;&#x27; + encodeURIComponent(continuationToken);
+        }
+
+        this.setAuthorization();
+        this.mapRequest(this.http.get(url, {headers: this.headers})).subscribe((results:any):void &#x3D;&gt;
+            {
+                let storageList:TerraStorageObjectList &#x3D; this.storageListSubject.getValue() || new TerraStorageObjectList();
+                storageList.insertObjects(results.objects);
+                this.storageListSubject.next(storageList);
+
+                if(results.isTruncated &amp;&amp; results.nextContinuationToken.length &gt; 0)
+                {
+                    this.initStorageList(results.nextContinuationToken);
+                }
+            },
+            (err:any):void &#x3D;&gt;
+            {
+                console.error(err);
+                this.storageInitialized &#x3D; false;
+                this.storageListSubject.next(null);
+            }
+        );
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraFrontendStorageService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

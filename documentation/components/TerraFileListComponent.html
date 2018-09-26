@@ -1,0 +1,3477 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraFileListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/file-browser/file-list/file-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>terra-file-list</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_activeStorageService">_activeStorageService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_currentStorageRoot">_currentStorageRoot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_newDirectoryName">_newDirectoryName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#datePipe">datePipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#defaultLocale">defaultLocale</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#dragSubscription">dragSubscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fileDropzoneElement">fileDropzoneElement</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fileTableComponent">fileTableComponent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#fileTableHeaderList">fileTableHeaderList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#fileTableRowList">fileTableRowList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#imagePreviewObject">imagePreviewObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#imagePreviewTimeout">imagePreviewTimeout</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#isDragActive">isDragActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#objectsToDelete">objectsToDelete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#progress">progress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#progressSubscription">progressSubscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#selectedStorageObjects">selectedStorageObjects</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#showNewDirectoryPrompt">showNewDirectoryPrompt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#storageList">storageList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#storageSubscription">storageSubscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#translationPrefix">translationPrefix</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addClipboardButton">addClipboardButton</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addDeleteButton">addDeleteButton</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addDownloadButton">addDownloadButton</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#createDirectory">createDirectory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createHeaderListDependingOnAccessLevel">createHeaderListDependingOnAccessLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createPrivateHeaderList">createPrivateHeaderList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createPublicHeaderList">createPublicHeaderList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createTableRow">createTableRow</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#deleteObjects">deleteObjects</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fillTableRowList">fillTableRowList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isAllowed">isAllowed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#onActiveRowChange">onActiveRowChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onFileDrop">onFileDrop</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onFileSelect">onFileSelect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSelectionChange">onSelectionChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#renderFileList">renderFileList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#uploadFiles">uploadFiles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inputStorageServices">inputStorageServices</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#activeStorageService">activeStorageService</a>
+                                </li>
+                                <li>
+                                    <a href="#currentStorageRoot">currentStorageRoot</a>
+                                </li>
+                                <li>
+                                    <a href="#parentStorageObjects">parentStorageObjects</a>
+                                </li>
+                                <li>
+                                    <a href="#newDirectoryName">newDirectoryName</a>
+                                </li>
+                                <li>
+                                    <a href="#_deleteCount">_deleteCount</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(changeDetector: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, fileBrowserService: <a href="../injectables/TerraFileBrowserService.html">TerraFileBrowserService</a>, translationService: TranslationService, parentFileBrowser: <a href="../components/TerraFileBrowserComponent.html">TerraFileBrowserComponent</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="237" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:237</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changeDetector</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileBrowserService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/TerraFileBrowserService.html" target="_self" >TerraFileBrowserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translationService</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>parentFileBrowser</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../components/TerraFileBrowserComponent.html" target="_self" >TerraFileBrowserComponent</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputStorageServices"></a>
+                        <code>inputStorageServices</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../classes/TerraBaseStorageService.html" target="_self" >Array&lt;TerraBaseStorageService&gt;</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>null</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:51</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addClipboardButton"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addClipboardButton
+                            </b>
+                            <a href="#addClipboardButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addClipboardButton(storageObject: <a href="../classes/TerraStorageObject.html">TerraStorageObject</a>, cellList: <a href="../interfaces/TerraSimpleTableCellInterface.html">Array<TerraSimpleTableCellInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="430" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:430</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageObject</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>cellList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSimpleTableCellInterface.html" target="_self" >Array&lt;TerraSimpleTableCellInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addDeleteButton"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addDeleteButton
+                            </b>
+                            <a href="#addDeleteButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addDeleteButton(storageObject: <a href="../classes/TerraStorageObject.html">TerraStorageObject</a>, cellList: <a href="../interfaces/TerraSimpleTableCellInterface.html">Array<TerraSimpleTableCellInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="466" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:466</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageObject</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>cellList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSimpleTableCellInterface.html" target="_self" >Array&lt;TerraSimpleTableCellInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addDownloadButton"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addDownloadButton
+                            </b>
+                            <a href="#addDownloadButton"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addDownloadButton(storageObject: <a href="../classes/TerraStorageObject.html">TerraStorageObject</a>, cellList: <a href="../interfaces/TerraSimpleTableCellInterface.html">Array<TerraSimpleTableCellInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="450" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:450</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageObject</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>cellList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSimpleTableCellInterface.html" target="_self" >Array&lt;TerraSimpleTableCellInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createDirectory"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            createDirectory
+                            </b>
+                            <a href="#createDirectory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createDirectory()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="314" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:314</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createHeaderListDependingOnAccessLevel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            createHeaderListDependingOnAccessLevel
+                            </b>
+                            <a href="#createHeaderListDependingOnAccessLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createHeaderListDependingOnAccessLevel()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="485" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:485</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createPrivateHeaderList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            createPrivateHeaderList
+                            </b>
+                            <a href="#createPrivateHeaderList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createPrivateHeaderList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="527" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:527</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createPublicHeaderList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            createPublicHeaderList
+                            </b>
+                            <a href="#createPublicHeaderList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createPublicHeaderList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="497" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:497</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createTableRow"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            createTableRow
+                            </b>
+                            <a href="#createTableRow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createTableRow(storageObject: <a href="../classes/TerraStorageObject.html">TerraStorageObject</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="387" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:387</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageObject</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraSimpleTableRowInterface.html" target="_self" >TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteObjects"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            deleteObjects
+                            </b>
+                            <a href="#deleteObjects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>deleteObjects()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="325" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:325</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillTableRowList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            fillTableRowList
+                            </b>
+                            <a href="#fillTableRowList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>fillTableRowList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="370" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:370</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isAllowed"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isAllowed
+                            </b>
+                            <a href="#isAllowed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isAllowed(filename: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="553" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:553</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>filename</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngAfterViewInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngAfterViewInit
+                            </b>
+                            <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngAfterViewInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="285" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:285</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:290</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="298" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:298</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:246</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onActiveRowChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            onActiveRowChange
+                            </b>
+                            <a href="#onActiveRowChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onActiveRowChange(row: <a href="../interfaces/TerraSimpleTableRowInterface.html">TerraSimpleTableRowInterface<TerraStorageObject></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="565" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:565</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>row</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSimpleTableRowInterface.html" target="_self" >TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onFileDrop"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onFileDrop
+                            </b>
+                            <a href="#onFileDrop"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onFileDrop(event: DragEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="612" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:612</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>DragEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onFileSelect"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onFileSelect
+                            </b>
+                            <a href="#onFileSelect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onFileSelect(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="599" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:599</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSelectionChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onSelectionChange
+                            </b>
+                            <a href="#onSelectionChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onSelectionChange(rows: <a href="../interfaces/TerraSimpleTableRowInterface.html">Array<TerraSimpleTableRowInterface<TerraStorageObject>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="591" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:591</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>rows</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSimpleTableRowInterface.html" target="_self" >Array&lt;TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="renderFileList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            renderFileList
+                            </b>
+                            <a href="#renderFileList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>renderFileList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="349" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:349</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadFiles"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            uploadFiles
+                            </b>
+                            <a href="#uploadFiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>uploadFiles(fileList: FileList | Array<File>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="620" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:620</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fileList</td>
+                                                        <td>
+                                                                    <code>FileList | Array&lt;File&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_activeStorageService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _activeStorageService
+                            </b>
+                            <a href="#_activeStorageService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_activeStorageService:     <code><a href="../classes/TerraBaseStorageService.html" target="_self" >TerraBaseStorageService</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraBaseStorageService.html" target="_self" >TerraBaseStorageService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_currentStorageRoot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _currentStorageRoot
+                            </b>
+                            <a href="#_currentStorageRoot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_currentStorageRoot:     <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:149</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_newDirectoryName"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _newDirectoryName
+                            </b>
+                            <a href="#_newDirectoryName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_newDirectoryName:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:204</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="datePipe"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            datePipe
+                            </b>
+                            <a href="#datePipe"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>datePipe:     <code>L10nDatePipe</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L10nDatePipe</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new L10nDatePipe()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="234" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:234</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultLocale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            defaultLocale
+                            </b>
+                            <a href="#defaultLocale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>defaultLocale:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>DefaultLocale</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="237" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:237</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dragSubscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            dragSubscription
+                            </b>
+                            <a href="#dragSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dragSubscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:143</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileDropzoneElement"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            fileDropzoneElement
+                            </b>
+                            <a href="#fileDropzoneElement"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>fileDropzoneElement:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:138</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileTableComponent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            fileTableComponent
+                            </b>
+                            <a href="#fileTableComponent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>fileTableComponent:     <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraSimpleTableComponent&lt;TerraStorageObject&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraSimpleTableComponent&lt;TerraStorageObject&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:141</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileTableHeaderList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            fileTableHeaderList
+                            </b>
+                            <a href="#fileTableHeaderList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>fileTableHeaderList:     <code><a href="../interfaces/TerraSimpleTableHeaderCellInterface.html" target="_self" >Array&lt;TerraSimpleTableHeaderCellInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSimpleTableHeaderCellInterface.html" target="_self" >Array&lt;TerraSimpleTableHeaderCellInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileTableRowList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            fileTableRowList
+                            </b>
+                            <a href="#fileTableRowList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>fileTableRowList:     <code><a href="../interfaces/TerraSimpleTableRowInterface.html" target="_self" >Array&lt;TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSimpleTableRowInterface.html" target="_self" >Array&lt;TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:68</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="imagePreviewObject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            imagePreviewObject
+                            </b>
+                            <a href="#imagePreviewObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>imagePreviewObject:     <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:153</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="imagePreviewTimeout"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            imagePreviewTimeout
+                            </b>
+                            <a href="#imagePreviewTimeout"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>imagePreviewTimeout:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:151</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDragActive"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            isDragActive
+                            </b>
+                            <a href="#isDragActive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isDragActive:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="objectsToDelete"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            objectsToDelete
+                            </b>
+                            <a href="#objectsToDelete"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>objectsToDelete:     <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progress"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            progress
+                            </b>
+                            <a href="#progress"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>progress:     <code><a href="../interfaces/TerraUploadProgress.html" target="_self" >TerraUploadProgress</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraUploadProgress.html" target="_self" >TerraUploadProgress</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progressSubscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            progressSubscription
+                            </b>
+                            <a href="#progressSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>progressSubscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:147</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedStorageObjects"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            selectedStorageObjects
+                            </b>
+                            <a href="#selectedStorageObjects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>selectedStorageObjects:     <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showNewDirectoryPrompt"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            showNewDirectoryPrompt
+                            </b>
+                            <a href="#showNewDirectoryPrompt"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>showNewDirectoryPrompt:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storageList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            storageList
+                            </b>
+                            <a href="#storageList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>storageList:     <code><a href="../classes/TerraStorageObjectList.html" target="_self" >TerraStorageObjectList</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObjectList.html" target="_self" >TerraStorageObjectList</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storageSubscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            storageSubscription
+                            </b>
+                            <a href="#storageSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>storageSubscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:145</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translationPrefix"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            translationPrefix
+                            </b>
+                            <a href="#translationPrefix"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translationPrefix:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;terraFileBrowser&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeStorageService"></a>
+                        <span class="name"><b>activeStorageService</b><a href="#activeStorageService"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>activeStorageService()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:72</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>activeStorageService(service: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:87</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>service</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentStorageRoot"></a>
+                        <span class="name"><b>currentStorageRoot</b><a href="#currentStorageRoot"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>currentStorageRoot()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:155</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>currentStorageRoot(storageObject: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:170</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>storageObject</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parentStorageObjects"></a>
+                        <span class="name"><b>parentStorageObjects</b><a href="#parentStorageObjects"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>parentStorageObjects()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:185</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newDirectoryName"></a>
+                        <span class="name"><b>newDirectoryName</b><a href="#newDirectoryName"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>newDirectoryName()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:206</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>newDirectoryName(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:211</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>name</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_deleteCount"></a>
+                        <span class="name"><b>_deleteCount</b><a href="#_deleteCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>_deleteCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="216" class="link-to-prism">src/app/components/file-browser/file-list/file-list.component.ts:216</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    AfterViewInit,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    forwardRef,
+    Inject,
+    Input,
+    OnChanges,
+    OnDestroy,
+    OnInit,
+    SimpleChanges,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs/Subscription&#x27;;
+import { TerraBaseStorageService } from &#x27;../terra-base-storage.interface&#x27;;
+import { TerraFileBrowserComponent } from &#x27;../terra-file-browser.component&#x27;;
+import { TerraFileBrowserService } from &#x27;../terra-file-browser.service&#x27;;
+import {
+    DefaultLocale,
+    L10nDatePipe,
+    TranslationService
+} from &#x27;angular-l10n&#x27;;
+import { TerraUploadProgress } from &#x27;../model/terra-upload-progress&#x27;;
+import {
+    isNull,
+    isNullOrUndefined,
+    isNumber
+} from &#x27;util&#x27;;
+import { TerraBasePrivateStorageService } from &#x27;../terra-base-private-storage.interface&#x27;;
+import { TerraStorageObjectList } from &#x27;../model/terra-storage-object-list&#x27;;
+import { PathHelper } from &#x27;../../../helpers/path.helper&#x27;;
+import { TerraSimpleTableComponent } from &#x27;../../tables/simple/terra-simple-table.component&#x27;;
+import { TerraStorageObject } from &#x27;../model/terra-storage-object&#x27;;
+import { FileTypeHelper } from &#x27;../../../helpers/fileType.helper&#x27;;
+import { TerraSimpleTableRowInterface } from &#x27;../../tables/simple/row/terra-simple-table-row.interface&#x27;;
+import { ClipboardHelper } from &#x27;../../../helpers/clipboard.helper&#x27;;
+import { TerraSimpleTableCellInterface } from &#x27;../../tables/simple/cell/terra-simple-table-cell.interface&#x27;;
+import { TerraButtonInterface } from &#x27;../../buttons/button/data/terra-button.interface&#x27;;
+import { TerraSimpleTableHeaderCellInterface } from &#x27;../../tables/simple/cell/terra-simple-table-header-cell.interface&#x27;;
+
+
+@Component({
+    selector: &#x27;terra-file-list&#x27;,
+    template: require(&#x27;./file-list.component.html&#x27;),
+    styles:   [require(&#x27;./file-list.component.scss&#x27;)]
+})
+export class TerraFileListComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy
+{
+    @Input()
+    public inputStorageServices:Array&lt;TerraBaseStorageService&gt; &#x3D; null;
+
+    protected translationPrefix:string &#x3D; &#x27;terraFileBrowser&#x27;;
+
+    protected isDragActive:boolean &#x3D; false;
+    protected progress:TerraUploadProgress &#x3D; null;
+
+    protected storageList:TerraStorageObjectList;
+
+    protected showNewDirectoryPrompt:boolean &#x3D; false;
+
+    protected objectsToDelete:Array&lt;TerraStorageObject&gt; &#x3D; [];
+
+    protected selectedStorageObjects:Array&lt;TerraStorageObject&gt; &#x3D; [];
+
+    protected fileTableHeaderList:Array&lt;TerraSimpleTableHeaderCellInterface&gt; &#x3D; [];
+
+    protected fileTableRowList:Array&lt;TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;&gt; &#x3D; [];
+
+    private _activeStorageService:TerraBaseStorageService;
+
+    public get activeStorageService():TerraBaseStorageService
+    {
+        if(!isNullOrUndefined(this._activeStorageService))
+        {
+            return this._activeStorageService;
+        }
+
+        if(!isNullOrUndefined(this.inputStorageServices))
+        {
+            return this.inputStorageServices[0];
+        }
+
+        return null;
+    }
+
+    public set activeStorageService(service:TerraBaseStorageService)
+    {
+        if(service !&#x3D;&#x3D; this._activeStorageService)
+        {
+            if(!isNullOrUndefined(this.storageSubscription))
+            {
+                this.storageSubscription.unsubscribe();
+                this.storageSubscription &#x3D; null;
+            }
+            if(!isNullOrUndefined(this.progressSubscription))
+            {
+                this.progressSubscription.unsubscribe();
+                this.progressSubscription &#x3D; null;
+            }
+
+            this.storageList &#x3D; null;
+            this._currentStorageRoot &#x3D; null;
+            this._activeStorageService &#x3D; service;
+            if(this.imagePreviewObject)
+            {
+                this.imagePreviewObject &#x3D; null;
+                this.parentFileBrowser.splitConfig.hideImagePreview();
+            }
+            this.renderFileList();
+            this.storageSubscription &#x3D; this.activeStorageService.getStorageList().subscribe((storageList:TerraStorageObjectList):void &#x3D;&gt;
+            {
+                this.storageList &#x3D; storageList;
+                this.renderFileList();
+            });
+            this.progressSubscription &#x3D; this.activeStorageService.queue.status.subscribe((progress:TerraUploadProgress) &#x3D;&gt;
+            {
+                this.progress &#x3D; progress;
+
+                if(!isNullOrUndefined(this.progress))
+                {
+                    if(isNumber(this.progress.sizeUploaded))
+                    {
+                        this.progress.sizeUploaded &#x3D; PathHelper.sizeString(this.progress.sizeUploaded);
+                    }
+                    if(isNumber(this.progress.sizeTotal))
+                    {
+                        this.progress.sizeTotal &#x3D; PathHelper.sizeString(this.progress.sizeTotal);
+                    }
+                }
+                this.changeDetector.detectChanges();
+            });
+        }
+
+    }
+
+    @ViewChild(&#x27;fileDropzone&#x27;, {read: ElementRef})
+    private fileDropzoneElement:ElementRef;
+
+    @ViewChild(TerraSimpleTableComponent)
+    private fileTableComponent:TerraSimpleTableComponent&lt;TerraStorageObject&gt;;
+
+    private dragSubscription:Subscription;
+
+    private storageSubscription:Subscription;
+
+    private progressSubscription:Subscription;
+
+    private _currentStorageRoot:TerraStorageObject;
+
+    private imagePreviewTimeout:number;
+
+    private imagePreviewObject:TerraStorageObject;
+
+    public get currentStorageRoot():TerraStorageObject
+    {
+        if(!isNullOrUndefined(this._currentStorageRoot))
+        {
+            return this._currentStorageRoot;
+        }
+
+        if(!isNullOrUndefined(this.storageList))
+        {
+            return this.storageList.root;
+        }
+
+        return null;
+    }
+
+    public set currentStorageRoot(storageObject:TerraStorageObject)
+    {
+        if((isNullOrUndefined(storageObject) || storageObject.isDirectory) &amp;&amp; this._currentStorageRoot !&#x3D;&#x3D; storageObject)
+        {
+            if(this.imagePreviewObject &amp;&amp; storageObject !&#x3D;&#x3D; this.imagePreviewObject)
+            {
+                this.imagePreviewObject &#x3D; null;
+                this.parentFileBrowser.splitConfig.hideImagePreview();
+            }
+
+            this._currentStorageRoot &#x3D; storageObject;
+            this.renderFileList();
+        }
+    }
+
+    public get parentStorageObjects():Array&lt;TerraStorageObject&gt;
+    {
+        let current:TerraStorageObject &#x3D; this.currentStorageRoot;
+        let parents:Array&lt;TerraStorageObject&gt; &#x3D; [];
+
+        if(!isNullOrUndefined(this.imagePreviewObject))
+        {
+            parents.push(this.imagePreviewObject);
+        }
+
+        while(!isNullOrUndefined(current))
+        {
+            parents.push(current);
+            current &#x3D; current.parent;
+        }
+
+        return parents.reverse();
+    }
+
+    private _newDirectoryName:string &#x3D; &#x27;&#x27;;
+
+    public get newDirectoryName():string
+    {
+        return this._newDirectoryName;
+    }
+
+    public set newDirectoryName(name:string)
+    {
+        this._newDirectoryName &#x3D; this.activeStorageService.prepareKey(name, true, true);
+    }
+
+    protected get _deleteCount():number
+    {
+        if(isNullOrUndefined(this.objectsToDelete))
+        {
+            return 0;
+        }
+
+        return this.objectsToDelete
+                   .map((object:TerraStorageObject) &#x3D;&gt;
+                   {
+                       return object.fileCount;
+                   })
+                   .reduce((sum:number, current:number) &#x3D;&gt;
+                   {
+                       return sum + current;
+                   }, 0);
+    }
+
+    private datePipe:L10nDatePipe &#x3D; new L10nDatePipe();
+
+    @DefaultLocale()
+    private defaultLocale:string;
+
+    constructor(private changeDetector:ChangeDetectorRef,
+                private fileBrowserService:TerraFileBrowserService,
+                private translationService:TranslationService,
+                @Inject(forwardRef(() &#x3D;&gt; TerraFileBrowserComponent)) protected parentFileBrowser:TerraFileBrowserComponent)
+    {
+    }
+
+    public ngOnInit():void
+    {
+        if(!isNullOrUndefined(this.inputStorageServices) &amp;&amp; this.inputStorageServices.length &gt; 0)
+        {
+            this.activeStorageService &#x3D; this.inputStorageServices[0];
+        }
+        else
+        {
+            console.error(&#x27;At least one instance of TerraBaseStorageService is required&#x27;);
+        }
+
+        this.dragSubscription &#x3D; this.fileBrowserService.isDragActive.subscribe((isDragActive:boolean) &#x3D;&gt;
+        {
+            this.isDragActive &#x3D; isDragActive;
+            this.changeDetector.detectChanges();
+        });
+
+        this.parentFileBrowser.onSelectedUrlChange.subscribe((selectedUrl:string) &#x3D;&gt;
+        {
+            if(selectedUrl &amp;&amp; this.storageList)
+            {
+                let object:TerraStorageObject &#x3D; this.storageList.flatList.find(
+                    (storage:TerraStorageObject):boolean &#x3D;&gt; storage.publicUrl &#x3D;&#x3D;&#x3D; selectedUrl);
+
+                if(!isNullOrUndefined(object))
+                {
+                    this.currentStorageRoot &#x3D; object.parent;
+                    if(FileTypeHelper.isWebImage(object.key))
+                    {
+                        this.imagePreviewObject &#x3D; object;
+                        this.parentFileBrowser.splitConfig.showImagePreview(object, this.activeStorageService);
+                    }
+                    this.fileTableComponent.inputHighlightedRow &#x3D; this.fileTableRowList.find(
+                        (r:TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;):boolean &#x3D;&gt; r.value &#x3D;&#x3D;&#x3D; object);
+                }
+            }
+        });
+    }
+
+    public ngAfterViewInit():void
+    {
+        this.fileBrowserService.addDropzone(this.fileDropzoneElement.nativeElement);
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        if(changes.hasOwnProperty(&#x27;inputStorageServices&#x27;) &amp;&amp; isNull(changes[&#x27;inputStorageServices&#x27;].previousValue))
+        {
+            this.activeStorageService &#x3D; this.inputStorageServices[0];
+        }
+    }
+
+    public ngOnDestroy():void
+    {
+        if(!isNullOrUndefined(this.storageSubscription))
+        {
+            this.storageSubscription.unsubscribe();
+        }
+
+        if(!isNullOrUndefined(this.dragSubscription))
+        {
+            this.dragSubscription.unsubscribe();
+        }
+
+        this.fileBrowserService.removeDropzone(this.fileDropzoneElement.nativeElement);
+
+    }
+
+    protected createDirectory():void
+    {
+        let path:string &#x3D; PathHelper.join(
+            this.currentStorageRoot ? this.currentStorageRoot.key : &#x27;/&#x27;,
+            this.newDirectoryName
+        );
+        this.showNewDirectoryPrompt &#x3D; false;
+        this._newDirectoryName &#x3D; null;
+        this.activeStorageService.createDirectory(path);
+    }
+
+    protected deleteObjects():void
+    {
+        let keyList:Array&lt;string&gt; &#x3D; [];
+        let extractKeys:Function &#x3D; (objects:Array&lt;TerraStorageObject&gt;):void &#x3D;&gt;
+        {
+            objects.forEach((object:TerraStorageObject) &#x3D;&gt;
+            {
+                keyList.push(object.key);
+                if(object.isDirectory)
+                {
+                    extractKeys(object.children);
+                }
+            });
+        };
+        extractKeys(this.objectsToDelete);
+        this.activeStorageService.deleteFiles(keyList);
+        this.objectsToDelete &#x3D; [];
+        if(!isNullOrUndefined(this.imagePreviewObject) &amp;&amp; keyList.indexOf(this.imagePreviewObject.key))
+        {
+            this.imagePreviewObject &#x3D; null;
+            this.parentFileBrowser.splitConfig.hideImagePreview();
+        }
+    }
+
+    private renderFileList():void
+    {
+        if(!isNullOrUndefined(this.activeStorageService))
+        {
+            this.createHeaderListDependingOnAccessLevel();
+        }
+
+        if(!isNullOrUndefined(this.currentStorageRoot))
+        {
+            this.fillTableRowList();
+        }
+        else
+        {
+            this.fileTableRowList &#x3D; [];
+        }
+
+        this.selectedStorageObjects &#x3D; [];
+        this.parentFileBrowser.outputSelectedChange.emit(null);
+        this.changeDetector.detectChanges();
+    }
+
+    private fillTableRowList():void
+    {
+        this.fileTableRowList &#x3D; this.currentStorageRoot.children.filter((storageObject:TerraStorageObject) &#x3D;&gt;
+            {
+                return storageObject.isFile || this.parentFileBrowser.inputAllowFolders;
+            }
+        ).sort((objectA:TerraStorageObject, objectB:TerraStorageObject) &#x3D;&gt;
+            {
+                return objectA.name.localeCompare(objectB.name);
+            }
+        ).filter((storageObject:TerraStorageObject) &#x3D;&gt; this.isAllowed(storageObject.key))
+                                    .map((storageObject:TerraStorageObject) &#x3D;&gt;
+                                    {
+                                        return this.createTableRow(storageObject);
+                                    });
+    }
+
+    private createTableRow(storageObject:TerraStorageObject):TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;
+    {
+        let cellList:Array&lt;TerraSimpleTableCellInterface&gt; &#x3D; [];
+
+        cellList.push(
+            {
+                caption: storageObject.name,
+                icon:    storageObject.icon
+            }
+        );
+
+        if(!(this.activeStorageService instanceof TerraBasePrivateStorageService))
+        {
+            cellList.push({
+                caption: storageObject.isFile ? storageObject.publicUrl : &#x27;&#x27;
+            });
+
+            this.addClipboardButton(storageObject, cellList);
+        }
+
+        cellList.push(
+            {
+                caption: storageObject.isFile ? storageObject.sizeString : &#x27;&#x27;
+            },
+            {
+                caption: storageObject.isFile ? this.datePipe.transform(storageObject.lastModified, this.defaultLocale, &#x27;medium&#x27;) : &#x27;&#x27;
+            }
+        );
+
+        if(this.activeStorageService instanceof TerraBasePrivateStorageService &amp;&amp; storageObject.isFile)
+        {
+            this.addDownloadButton(storageObject, cellList);
+        }
+
+        this.addDeleteButton(storageObject, cellList);
+
+        return {
+            cellList: cellList,
+            value:    storageObject,
+            disabled: !this.isAllowed(storageObject.key)
+        };
+    }
+
+    private addClipboardButton(storageObject:TerraStorageObject, cellList:Array&lt;TerraSimpleTableCellInterface&gt;):void
+    {
+        let clipboardButton:TerraButtonInterface &#x3D; {
+            icon:             &#x27;icon-copy_clipboard&#x27;,
+            clickFunction:    (event:Event):void &#x3D;&gt;
+                              {
+                                  ClipboardHelper.copyText(storageObject.publicUrl);
+                                  event.stopPropagation();
+                              },
+            tooltipText:      this.translationService.translate(this.translationPrefix + &#x27;.copyToClipboard&#x27;),
+            tooltipPlacement: &#x27;left&#x27;
+        };
+
+        cellList.push(
+            {
+                buttonList: storageObject.isFile ? [clipboardButton] : []
+            }
+        );
+    }
+
+    private addDownloadButton(storageObject:TerraStorageObject, cellList:Array&lt;TerraSimpleTableCellInterface&gt;):void
+    {
+        cellList.push({
+            buttonList: [{
+                icon:             &#x27;icon-download&#x27;,
+                clickFunction:    (event:Event):void &#x3D;&gt;
+                                  {
+                                      (&lt;TerraBasePrivateStorageService&gt; this.activeStorageService).downloadFile(storageObject.key);
+                                      event.stopPropagation();
+                                  },
+                tooltipText:      this.translationService.translate(this.translationPrefix + &#x27;.downloadFile&#x27;),
+                tooltipPlacement: &#x27;left&#x27;
+            }]
+        });
+    }
+
+    private addDeleteButton(storageObject:TerraStorageObject, cellList:Array&lt;TerraSimpleTableCellInterface&gt;):void
+    {
+        cellList.push({
+            buttonList: [{
+                icon:             &#x27;icon-delete&#x27;,
+                clickFunction:    (event:Event):void &#x3D;&gt;
+                                  {
+                                      this.objectsToDelete &#x3D; [storageObject];
+                                      event.stopPropagation();
+                                  },
+                isSecondary:      true,
+                tooltipText:      storageObject.isFile ?
+                                      this.translationService.translate(this.translationPrefix + &#x27;.deleteFile&#x27;) :
+                                      this.translationService.translate(this.translationPrefix + &#x27;.deleteFolder&#x27;),
+                tooltipPlacement: &#x27;left&#x27;
+            }]
+        });
+    }
+
+    private createHeaderListDependingOnAccessLevel():void
+    {
+        if(this.activeStorageService instanceof TerraBasePrivateStorageService)
+        {
+            this.createPrivateHeaderList();
+        }
+        else
+        {
+            this.createPublicHeaderList();
+        }
+    }
+
+    private createPublicHeaderList():void
+    {
+        this.fileTableHeaderList &#x3D; [
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.fileName&#x27;),
+                width:   &#x27;30%&#x27;
+            },
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.fileURL&#x27;),
+                width:   &#x27;50%&#x27;
+            },
+            {
+                caption: &#x27;&#x27;,
+                width:   &#x27;1&#x27;
+            },
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.fileSize&#x27;),
+                width:   &#x27;7.5%&#x27;
+            },
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.lastChange&#x27;),
+                width:   &#x27;12.5%&#x27;
+            },
+            {
+                caption: &#x27;&#x27;,
+                width:   &#x27;1&#x27;
+            }
+        ];
+    }
+
+    private createPrivateHeaderList():void
+    {
+        this.fileTableHeaderList &#x3D; [
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.fileName&#x27;),
+                width:   &#x27;80%&#x27;
+            },
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.fileSize&#x27;),
+                width:   &#x27;7.5%&#x27;
+            },
+            {
+                caption: this.translationService.translate(this.translationPrefix + &#x27;.lastChange&#x27;),
+                width:   &#x27;12.5%&#x27;
+            },
+            {
+                caption: &#x27;&#x27;,
+                width:   &#x27;1&#x27;
+            },
+            {
+                caption: &#x27;&#x27;,
+                width:   &#x27;1&#x27;
+            }
+        ];
+    }
+
+    private isAllowed(filename:string):boolean
+    {
+        if(isNullOrUndefined(filename))
+        {
+            return false;
+        }
+
+        return this.parentFileBrowser.inputAllowedExtensions.length &lt;&#x3D; 0
+               || this.parentFileBrowser.inputAllowedExtensions.indexOf(PathHelper.extName(filename).toUpperCase()) &gt;&#x3D; 0
+               || PathHelper.isDirectory(filename);
+    }
+
+    protected onActiveRowChange(row:TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;):void
+    {
+        if(isNullOrUndefined(this.imagePreviewTimeout))
+        {
+            clearTimeout(this.imagePreviewTimeout);
+        }
+        let debounceFn:Function &#x3D; ():void &#x3D;&gt;
+        {
+            let storageObject:TerraStorageObject &#x3D; row.value;
+
+            if(!isNullOrUndefined(storageObject) &amp;&amp; FileTypeHelper.isWebImage(storageObject.key))
+            {
+                this.imagePreviewObject &#x3D; storageObject;
+                this.parentFileBrowser.splitConfig.showImagePreview(storageObject, this.activeStorageService);
+            }
+            else
+            {
+                this.imagePreviewObject &#x3D; null;
+                this.parentFileBrowser.splitConfig.hideImagePreview();
+            }
+
+            this.parentFileBrowser.outputSelectedChange.emit(storageObject);
+        };
+        this.imagePreviewTimeout &#x3D; setTimeout(debounceFn.bind(this), 500);
+    }
+
+    public onSelectionChange(rows:Array&lt;TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;&gt;):void
+    {
+        this.selectedStorageObjects &#x3D; rows.map((row:TerraSimpleTableRowInterface&lt;TerraStorageObject&gt;) &#x3D;&gt;
+        {
+            return row.value;
+        });
+    }
+
+    public onFileSelect(event:Event):void
+    {
+        let target:any &#x3D; event.target || event.srcElement;
+
+        if(!isNullOrUndefined(target) &amp;&amp; !isNullOrUndefined(target.files))
+        {
+            this.uploadFiles(target.files);
+
+            // unset value of file input to allow selecting same file again
+            (&lt;HTMLInputElement&gt; event.target).value &#x3D; &#x27;&#x27;;
+        }
+    }
+
+    public onFileDrop(event:DragEvent):void
+    {
+        if(!isNullOrUndefined(event.dataTransfer.files))
+        {
+            this.uploadFiles(event.dataTransfer.files);
+        }
+    }
+
+    private uploadFiles(fileList:FileList | Array&lt;File&gt;):void
+    {
+        let uploadPrefix:string &#x3D; this.currentStorageRoot ? this.currentStorageRoot.key : &#x27;/&#x27;;
+        this.activeStorageService
+            .uploadFiles(
+                fileList,
+                uploadPrefix
+            );
+    }
+
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraFileListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraFileListComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

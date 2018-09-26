@@ -1,0 +1,1502 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraMultiSelectBoxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>terra-multi-select-box</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isInit">isInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#langPrefix">langPrefix</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#selectedValueList">selectedValueList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translation">translation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#viewChildHeaderCheckbox">viewChildHeaderCheckbox</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#changeValueState">changeValueState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractSelectedValues">extractSelectedValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onHeaderCheckboxChange">onHeaderCheckboxChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onValueCheckboxChange">onValueCheckboxChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#primaryClicked">primaryClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inputIsDisabled">inputIsDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#inputIsError">inputIsError</a>
+                            </li>
+                            <li>
+                                <a href="#inputIsRequired">inputIsRequired</a>
+                            </li>
+                            <li>
+                                <a href="#inputName">inputName</a>
+                            </li>
+                            <li>
+                                <a href="#inputSelectedValueList">inputSelectedValueList</a>
+                            </li>
+                            <li>
+                                <a href="#inputValueList">inputValueList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inputSelectedValueListChange">inputSelectedValueListChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#inputSelectedValueList">inputSelectedValueList</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:96</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputIsDisabled"></a>
+                        <code>inputIsDisabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:31</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputIsError"></a>
+                        <code>inputIsError</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputIsRequired"></a>
+                        <code>inputIsRequired</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputName"></a>
+                        <code>inputName</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:40</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputSelectedValueList"></a>
+                        <code>inputSelectedValueList</code>
+                    </td>
+                    <td class="col-md-10">
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:49</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputValueList"></a>
+                        <code>inputValueList</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/TerraMultiSelectBoxValueInterface.html" target="_self" >Array&lt;TerraMultiSelectBoxValueInterface&gt;</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputSelectedValueListChange"></a>
+                        <code>inputSelectedValueListChange</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;Array&lt;any&gt;&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeValueState"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            changeValueState
+                            </b>
+                            <a href="#changeValueState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>changeValueState(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, valueToChange: <a href="../interfaces/TerraMultiSelectBoxValueInterface.html">TerraMultiSelectBoxValueInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:178</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>valueToChange</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSelectBoxValueInterface.html" target="_self" >TerraMultiSelectBoxValueInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="extractSelectedValues"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            extractSelectedValues
+                            </b>
+                            <a href="#extractSelectedValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>extractSelectedValues(valueList: <a href="../interfaces/TerraMultiSelectBoxValueInterface.html">Array<TerraMultiSelectBoxValueInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:211</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>valueList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSelectBoxValueInterface.html" target="_self" >Array&lt;TerraMultiSelectBoxValueInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Array&lt;any&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:124</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onHeaderCheckboxChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onHeaderCheckboxChange
+                            </b>
+                            <a href="#onHeaderCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onHeaderCheckboxChange(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:147</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onValueCheckboxChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onValueCheckboxChange
+                            </b>
+                            <a href="#onValueCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onValueCheckboxChange(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, value: <a href="../interfaces/TerraMultiSelectBoxValueInterface.html">TerraMultiSelectBoxValueInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:159</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSelectBoxValueInterface.html" target="_self" >TerraMultiSelectBoxValueInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="primaryClicked"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            primaryClicked
+                            </b>
+                            <a href="#primaryClicked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>primaryClicked()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:142</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isInit
+                            </b>
+                            <a href="#isInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isInit:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:94</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="langPrefix"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            langPrefix
+                            </b>
+                            <a href="#langPrefix"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>langPrefix:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;terraMultiSelectBox&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:96</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedValueList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            selectedValueList
+                            </b>
+                            <a href="#selectedValueList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>selectedValueList:     <code>Array&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translation
+                            </b>
+                            <a href="#translation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translation:     <code>TranslationService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslationService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:98</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewChildHeaderCheckbox"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            viewChildHeaderCheckbox
+                            </b>
+                            <a href="#viewChildHeaderCheckbox"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>viewChildHeaderCheckbox:     <code><a href="../components/TerraCheckboxComponent.html" target="_self" >TerraCheckboxComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../components/TerraCheckboxComponent.html" target="_self" >TerraCheckboxComponent</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inputSelectedValueList"></a>
+                        <span class="name"><b>inputSelectedValueList</b><a href="#inputSelectedValueList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>inputSelectedValueList(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/forms/multi-select-box/terra-multi-select-box.component.ts:49</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    EventEmitter,
+    Input,
+    OnChanges,
+    OnInit,
+    Output,
+    SimpleChanges,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+import { TerraMultiSelectBoxValueInterface } from &#x27;./data/terra-multi-select-box-value.interface&#x27;;
+import { TerraCheckboxComponent } from &#x27;../checkbox/terra-checkbox.component&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+import {
+    isNull,
+    isNullOrUndefined
+} from &#x27;util&#x27;;
+
+/** @deprecated - please use &#x60;TerraMultiCheckBoxComponent&#x60; instead */
+@Component({
+    selector: &#x27;terra-multi-select-box&#x27;,
+    styles:   [require(&#x27;./terra-multi-select-box.component.scss&#x27;)],
+    template: require(&#x27;./terra-multi-select-box.component.html&#x27;)
+})
+export class TerraMultiSelectBoxComponent implements OnInit, OnChanges
+{
+    @ViewChild(&#x27;viewChildHeaderCheckbox&#x27;)
+    public viewChildHeaderCheckbox:TerraCheckboxComponent;
+
+    @Input()
+    public inputIsDisabled:boolean;
+
+    @Input()
+    public inputIsError:boolean;
+
+    @Input()
+    public inputValueList:Array&lt;TerraMultiSelectBoxValueInterface&gt;;
+
+    @Input()
+    public inputName:string;
+
+    @Input()
+    public inputIsRequired:boolean;
+
+    @Output()
+    public inputSelectedValueListChange:EventEmitter&lt;Array&lt;any&gt;&gt; &#x3D; new EventEmitter&lt;Array&lt;any&gt;&gt;();
+
+    @Input()
+    public set inputSelectedValueList(value:Array&lt;any&gt;)
+    {
+        if(!isNullOrUndefined(value))
+        {
+            let valueCopy:any &#x3D; value.slice(0);
+
+            if(valueCopy.length &#x3D;&#x3D;&#x3D; 0)
+            {
+                this.viewChildHeaderCheckbox.value &#x3D; false;
+            }
+            else if(this.selectedValueList.length &gt; 0 &amp;&amp; this.inputValueList.length &#x3D;&#x3D;&#x3D; this.selectedValueList.length)
+            {
+                this.viewChildHeaderCheckbox.value &#x3D; true;
+            }
+            else
+            {
+                this.viewChildHeaderCheckbox.isIndeterminate &#x3D; true;
+            }
+
+            for(let i:number &#x3D; this.selectedValueList.length; i &gt;&#x3D; 0; i--)
+            {
+                this.selectedValueList.pop();
+            }
+
+            this.inputValueList
+                .forEach((item:TerraMultiSelectBoxValueInterface) &#x3D;&gt;
+                {
+                    item.selected &#x3D; false;
+
+                    valueCopy.forEach((key:any) &#x3D;&gt;
+                    {
+                        if(item.value &#x3D;&#x3D;&#x3D; key)
+                        {
+                            item.selected &#x3D; true;
+                            this.selectedValueList.push(item.value);
+                            return;
+                        }
+                    });
+                });
+
+            setTimeout(() &#x3D;&gt; this.inputSelectedValueListChange.emit(this.selectedValueList), 0);
+        }
+    }
+
+    private selectedValueList:Array&lt;any&gt; &#x3D; [];
+    private isInit:boolean;
+
+    private langPrefix:string &#x3D; &#x27;terraMultiSelectBox&#x27;;
+
+    constructor(public translation:TranslationService)
+    {
+        console.warn(&#x27;TerraMultiSelectBoxComponent is deprecated. It will be removed in one of the upcoming releases&#x27; +
+                     &#x27;Please use TerraMultiCheckBoxComponent instead.&#x27;);
+    }
+
+    public ngOnInit():void
+    {
+        if(!this.inputName)
+        {
+            this.inputName &#x3D; this.translation.translate(this.langPrefix + &#x27;.selectAll&#x27;);
+
+            // this is necessary for language switch
+            this.translation.translationChanged().subscribe(() &#x3D;&gt;
+            {
+                this.inputName &#x3D; this.translation.translate(this.langPrefix + &#x27;.selectAll&#x27;);
+            });
+        }
+
+        this.isInit &#x3D; true;
+    }
+
+    /**
+     *
+     * @param changes
+     */
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        if(this.isInit &#x3D;&#x3D;&#x3D; true &amp;&amp; changes[&#x27;inputValueList&#x27;] &amp;&amp; changes[&#x27;inputValueList&#x27;].currentValue.length &gt; 0)
+        {
+            let temp:Array&lt;any&gt; &#x3D; [];
+
+            changes[&#x27;inputValueList&#x27;].currentValue.forEach((item:TerraMultiSelectBoxValueInterface) &#x3D;&gt;
+            {
+                if(item.selected &amp;&amp; item.selected &#x3D;&#x3D;&#x3D; true)
+                {
+                    temp.push(item.value);
+                }
+            });
+
+            setTimeout(() &#x3D;&gt; this.inputSelectedValueList &#x3D; temp, 0);
+        }
+    }
+
+    private primaryClicked():void
+    {
+        this.onHeaderCheckboxChange(!this.viewChildHeaderCheckbox.value);
+    }
+
+    private onHeaderCheckboxChange(isChecked:boolean):void
+    {
+        this.viewChildHeaderCheckbox.value &#x3D; isChecked;
+
+        this.inputValueList.forEach((value:TerraMultiSelectBoxValueInterface) &#x3D;&gt;
+        {
+            this.changeValueState(isChecked, value);
+        });
+
+        this.inputSelectedValueList &#x3D; this.selectedValueList;
+    }
+
+    private onValueCheckboxChange(isChecked:boolean, value:TerraMultiSelectBoxValueInterface):void
+    {
+        this.changeValueState(isChecked, value);
+        this.inputSelectedValueList &#x3D; this.selectedValueList;
+
+        if(this.selectedValueList.length &#x3D;&#x3D;&#x3D; 0)
+        {
+            this.viewChildHeaderCheckbox.value &#x3D; false;
+        }
+        else if(this.selectedValueList.length &gt; 0 &amp;&amp; this.inputValueList.length &#x3D;&#x3D;&#x3D; this.selectedValueList.length)
+        {
+            this.viewChildHeaderCheckbox.value &#x3D; true;
+        }
+        else
+        {
+            this.viewChildHeaderCheckbox.isIndeterminate &#x3D; true;
+        }
+    }
+
+    private changeValueState(isChecked:boolean, valueToChange:TerraMultiSelectBoxValueInterface):void
+    {
+        valueToChange.selected &#x3D; isChecked;
+
+        let valueFound:boolean &#x3D; false;
+
+        let index:number &#x3D; this.selectedValueList.indexOf(valueToChange.value);
+
+        // check if value exists in list
+        if(index &#x3D;&#x3D;&#x3D; -1)
+        {
+            valueFound &#x3D; false;
+        }
+        else
+        {
+            valueFound &#x3D; !isNull(this.selectedValueList[index]);
+        }
+
+        if(valueToChange.selected)
+        {
+            if(!valueFound)
+            {
+                this.selectedValueList.push(valueToChange.value);
+            }
+        }
+        else
+        {
+            index &#x3D; this.selectedValueList.indexOf(valueToChange.value);
+
+            this.selectedValueList.splice(index, 1);
+        }
+    }
+
+    private extractSelectedValues(valueList:Array&lt;TerraMultiSelectBoxValueInterface&gt;):Array&lt;any&gt;
+    {
+        let result:Array&lt;any&gt; &#x3D; [];
+
+        if(valueList &amp;&amp; valueList.length &gt; 0)
+        {
+            valueList.forEach((item:TerraMultiSelectBoxValueInterface) &#x3D;&gt;
+            {
+                if(item.selected &#x3D;&#x3D;&#x3D; true)
+                {
+                    result.push(item.value);
+                }
+            });
+        }
+
+        return result;
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraMultiSelectBoxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraMultiSelectBoxComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

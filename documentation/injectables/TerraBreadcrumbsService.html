@@ -1,0 +1,2035 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TerraBreadcrumbsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_containers">_containers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_initialPath">_initialPath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initialRoute">initialRoute</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkActiveRoute">checkActiveRoute</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeBreadcrumb">closeBreadcrumb</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeBreadcrumbByUrl">closeBreadcrumbByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findActivatedRouteSnapshot">findActivatedRouteSnapshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findBreadcrumbByUrl">findBreadcrumbByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findBreadcrumbContainerByUrl">findBreadcrumbContainerByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findRoute">findRoute</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getBreadcrumbLabel">getBreadcrumbLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleBreadcrumb">handleBreadcrumb</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleBreadcrumbForUrl">handleBreadcrumbForUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeBreadcrumbContainer">removeBreadcrumbContainer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeBreadcrumbsByParent">removeBreadcrumbsByParent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateBreadcrumbNameByUrl">updateBreadcrumbNameByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateBreadcrumbVisibilities">updateBreadcrumbVisibilities</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#initialPath">initialPath</a>
+                                </li>
+                                <li>
+                                    <a href="#containers">containers</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkActiveRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            checkActiveRoute
+                            </b>
+                            <a href="#checkActiveRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>checkActiveRoute(breadcrumb: <a href="../classes/TerraBreadcrumb.html">TerraBreadcrumb</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:220</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumb.html" target="_self" >TerraBreadcrumb</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closeBreadcrumb"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            closeBreadcrumb
+                            </b>
+                            <a href="#closeBreadcrumb"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>closeBreadcrumb(breadcrumbContainer: <a href="../classes/TerraBreadcrumbContainer.html">TerraBreadcrumbContainer</a>, breadcrumb: <a href="../classes/TerraBreadcrumb.html">TerraBreadcrumb</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="302" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:302</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>breadcrumbContainer</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >TerraBreadcrumbContainer</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumb.html" target="_self" >TerraBreadcrumb</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closeBreadcrumbByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            closeBreadcrumbByUrl
+                            </b>
+                            <a href="#closeBreadcrumbByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>closeBreadcrumbByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:229</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Close the breadcrumb by given url</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Url to close the breadcrumb.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findActivatedRouteSnapshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            findActivatedRouteSnapshot
+                            </b>
+                            <a href="#findActivatedRouteSnapshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findActivatedRouteSnapshot(activatedRouteSnapshot: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:156</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRouteSnapshot</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findBreadcrumbByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            findBreadcrumbByUrl
+                            </b>
+                            <a href="#findBreadcrumbByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findBreadcrumbByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="281" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:281</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraBreadcrumb.html" target="_self" >TerraBreadcrumb</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findBreadcrumbContainerByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            findBreadcrumbContainerByUrl
+                            </b>
+                            <a href="#findBreadcrumbContainerByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findBreadcrumbContainerByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="267" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:267</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >TerraBreadcrumbContainer</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            findRoute
+                            </b>
+                            <a href="#findRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findRoute(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, routeConfig: <a href="https://angular.io/api/router/Routes" target="_blank">Routes</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:166</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>routeConfig</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Routes" target="_blank" >Routes</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getBreadcrumbLabel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getBreadcrumbLabel
+                            </b>
+                            <a href="#getBreadcrumbLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getBreadcrumbLabel(route: <a href="https://angular.io/api/router/Route" target="_blank">Route</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:117</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleBreadcrumb"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            handleBreadcrumb
+                            </b>
+                            <a href="#handleBreadcrumb"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleBreadcrumb(route: <a href="https://angular.io/api/router/Route" target="_blank">Route</a>, url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, urlPartsCount: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:80</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>urlPartsCount</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleBreadcrumbForUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            handleBreadcrumbForUrl
+                            </b>
+                            <a href="#handleBreadcrumbForUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleBreadcrumbForUrl(shortUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fullUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>shortUrl</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>fullUrl</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeBreadcrumbContainer"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            removeBreadcrumbContainer
+                            </b>
+                            <a href="#removeBreadcrumbContainer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeBreadcrumbContainer(breadcrumbContainer: <a href="../classes/TerraBreadcrumbContainer.html">TerraBreadcrumbContainer</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="344" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:344</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>breadcrumbContainer</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >TerraBreadcrumbContainer</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeBreadcrumbsByParent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            removeBreadcrumbsByParent
+                            </b>
+                            <a href="#removeBreadcrumbsByParent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeBreadcrumbsByParent(container: <a href="../classes/TerraBreadcrumbContainer.html">TerraBreadcrumbContainer</a>, parent: <a href="../classes/TerraBreadcrumb.html">TerraBreadcrumb</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="373" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:373</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>container</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >TerraBreadcrumbContainer</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>parent</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumb.html" target="_self" >TerraBreadcrumb</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateBreadcrumbNameByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            updateBreadcrumbNameByUrl
+                            </b>
+                            <a href="#updateBreadcrumbNameByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateBreadcrumbNameByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, name?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="245" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:245</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Update the breadcrumb name by given url</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Url to update the breadcrumb.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>name</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>If not given, it will be automatically update the name by the label of the route data.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateBreadcrumbVisibilities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            updateBreadcrumbVisibilities
+                            </b>
+                            <a href="#updateBreadcrumbVisibilities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateBreadcrumbVisibilities(breadcrumbContainer: <a href="../classes/TerraBreadcrumbContainer.html">TerraBreadcrumbContainer</a>, parentBreadcrumb: <a href="../classes/TerraBreadcrumb.html">TerraBreadcrumb</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:136</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>breadcrumbContainer</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >TerraBreadcrumbContainer</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>parentBreadcrumb</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraBreadcrumb.html" target="_self" >TerraBreadcrumb</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_containers"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _containers
+                            </b>
+                            <a href="#_containers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_containers:     <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >Array&lt;TerraBreadcrumbContainer&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraBreadcrumbContainer.html" target="_self" >Array&lt;TerraBreadcrumbContainer&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_initialPath"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _initialPath
+                            </b>
+                            <a href="#_initialPath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_initialPath:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initialRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            initialRoute
+                            </b>
+                            <a href="#initialRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>initialRoute:     <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initialPath"></a>
+                        <span class="name"><b>initialPath</b><a href="#initialPath"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>initialPath(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:61</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="containers"></a>
+                        <span class="name"><b>containers</b><a href="#containers"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>containers()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/breadcrumbs/service/terra-breadcrumbs.service.ts:68</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { TerraBreadcrumb } from &#x27;../terra-breadcrumb&#x27;;
+import {
+    ActivatedRouteSnapshot,
+    NavigationEnd,
+    Route,
+    Router,
+    RouterEvent,
+    Routes
+} from &#x27;@angular/router&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+import { TerraBreadcrumbContainer } from &#x27;../terra-breadcrumb-container&#x27;;
+import { UrlHelper } from &#x27;../../../helpers/url.helper&#x27;;
+import { StringHelper } from &#x27;../../../helpers/string.helper&#x27;;
+
+@Injectable()
+export class TerraBreadcrumbsService
+{
+    private _containers:Array&lt;TerraBreadcrumbContainer&gt; &#x3D; [];
+
+    private _initialPath:string;
+    private initialRoute:Route;
+
+    constructor(private router:Router,
+                private translation:TranslationService)
+    {
+        this.router.events.filter((event:RouterEvent) &#x3D;&gt;
+        {
+            return event instanceof NavigationEnd // navigation is done
+                   &amp;&amp; !isNullOrUndefined(this._initialPath) // initialPath is set
+                   &amp;&amp; event.urlAfterRedirects.startsWith(&#x27;/&#x27; + this._initialPath); // url starts with the initial path
+        }).subscribe((event:NavigationEnd) &#x3D;&gt;
+        {
+            if(!isNullOrUndefined(this.initialRoute.children))
+            {
+                let shortUrl:string &#x3D; event.urlAfterRedirects.replace(&#x27;/&#x27; + this._initialPath, &#x27;&#x27;);
+
+                let urlParts:Array&lt;string&gt; &#x3D; shortUrl.split(&#x27;/&#x27;);
+                let urls:Array&lt;string&gt; &#x3D; urlParts.map((urlPart:string, index:number) &#x3D;&gt; urlParts.slice(0, index + 1).join(&#x27;/&#x27;));
+                urls.forEach((url:string) &#x3D;&gt;
+                {
+                    this.handleBreadcrumbForUrl(url, &#x27;/&#x27; + this._initialPath + url);
+                });
+
+                // update breadcrumb visibility for containers that have not been checked since the url is to short
+                if(urlParts.length &lt; this._containers.length)
+                {
+                    for(let j:number &#x3D; urlParts.length; j &lt; this._containers.length; j++)
+                    {
+                        this.updateBreadcrumbVisibilities(
+                            this._containers[j],
+                            this._containers[j - 1].currentSelectedBreadcrumb
+                        );
+                    }
+                }
+            }
+        });
+    }
+
+    public set initialPath(value:string)
+    {
+        this._containers &#x3D; [];
+        this._initialPath &#x3D; value;
+        this.initialRoute &#x3D; this.findRoute(value, this.router.config);
+    }
+
+    public get containers():Array&lt;TerraBreadcrumbContainer&gt;
+    {
+        return this._containers;
+    }
+
+    private handleBreadcrumbForUrl(shortUrl:string, fullUrl:string):void
+    {
+        let shortUrlWithoutLeadingSlash:string &#x3D; UrlHelper.removeLeadingSlash(shortUrl);
+        let route:Route &#x3D; this.findRoute(shortUrlWithoutLeadingSlash, this.initialRoute.children);
+        this.handleBreadcrumb(route, fullUrl, shortUrl.split(&#x27;/&#x27;).length - 1);
+    }
+
+    private handleBreadcrumb(route:Route, url:string, urlPartsCount:number):void
+    {
+        if(isNullOrUndefined(route))
+        {
+            return;
+        }
+
+        // search for existing container - create new container if not existing
+        let container:TerraBreadcrumbContainer &#x3D; this._containers[urlPartsCount];
+        if(isNullOrUndefined(container))
+        {
+            container &#x3D; new TerraBreadcrumbContainer();
+            this._containers.push(container);
+        }
+
+        // search for existing breadcrumb
+        let breadcrumb:TerraBreadcrumb &#x3D; container.breadcrumbList.find((bc:TerraBreadcrumb) &#x3D;&gt;
+        {
+            return bc.routerLink &#x3D;&#x3D;&#x3D; url;
+        });
+
+        // breadcrumb not found
+        if(isNullOrUndefined(breadcrumb))
+        {
+            let label:string &#x3D; this.getBreadcrumbLabel(route);
+            let currentContainerIndex:number &#x3D; this._containers.indexOf(container);
+            let previousContainer:TerraBreadcrumbContainer &#x3D; this._containers[currentContainerIndex - 1];
+            let parentBreadcrumb:TerraBreadcrumb &#x3D; isNullOrUndefined(previousContainer) ? undefined : previousContainer.currentSelectedBreadcrumb;
+            breadcrumb &#x3D; new TerraBreadcrumb(label, parentBreadcrumb, url);
+            container.breadcrumbList.push(breadcrumb);
+        }
+
+        // select breadcrumb and update visibilities
+        container.currentSelectedBreadcrumb &#x3D; breadcrumb;
+        this.updateBreadcrumbVisibilities(container, breadcrumb.parent);
+    }
+
+    private getBreadcrumbLabel(route:Route):string
+    {
+        let label:string &#x3D; &#x27;&#x27;;
+        if(!isNullOrUndefined(route.data))
+        {
+            if(typeof route.data.label &#x3D;&#x3D;&#x3D; &#x27;function&#x27;)
+            {
+                let activatedSnapshot:ActivatedRouteSnapshot &#x3D; this.findActivatedRouteSnapshot(this.router.routerState.snapshot.root);
+
+                label &#x3D; route.data.label(this.translation, activatedSnapshot.params, activatedSnapshot.data);
+            }
+            else
+            {
+                label &#x3D; this.translation.translate(route.data.label);
+            }
+        }
+        return label;
+    }
+
+    private updateBreadcrumbVisibilities(breadcrumbContainer:TerraBreadcrumbContainer, parentBreadcrumb:TerraBreadcrumb):void
+    {
+        breadcrumbContainer.breadcrumbList.forEach((bc:TerraBreadcrumb) &#x3D;&gt;
+        {
+            bc.isHidden &#x3D; bc.parent !&#x3D;&#x3D; parentBreadcrumb || !isNullOrUndefined(bc.parent) &amp;&amp; bc.parent.isHidden;
+        });
+
+        // is the current selected breadcrumb now hidden?
+        if(breadcrumbContainer.currentSelectedBreadcrumb.isHidden)
+        {
+            // search for another breadcrumb to be selected that is not hidden
+            let foundBreadcrumb:TerraBreadcrumb &#x3D; breadcrumbContainer.breadcrumbList.find((bc:TerraBreadcrumb) &#x3D;&gt; !bc.isHidden);
+            if(!isNullOrUndefined(foundBreadcrumb))
+            {
+                breadcrumbContainer.currentSelectedBreadcrumb &#x3D; foundBreadcrumb;
+            }
+        }
+    }
+
+    // same exists in TerraRouterHelper
+    private findActivatedRouteSnapshot(activatedRouteSnapshot:ActivatedRouteSnapshot):ActivatedRouteSnapshot
+    {
+        if(!isNullOrUndefined(activatedRouteSnapshot.firstChild))
+        {
+            return this.findActivatedRouteSnapshot(activatedRouteSnapshot.firstChild);
+        }
+
+        return activatedRouteSnapshot;
+    }
+
+    private findRoute(url:string, routeConfig:Routes):Route
+    {
+        let urlParts:Array&lt;string&gt; &#x3D;  UrlHelper.removeLeadingSlash(url).split(&#x27;/&#x27;);
+        let urlPart:string &#x3D; urlParts.shift();
+
+        let routes:Routes &#x3D; routeConfig;
+        let route:Route &#x3D; routeConfig.find((routeToFind:Route) &#x3D;&gt;
+        {
+            return routeToFind.path &#x3D;&#x3D;&#x3D; urlPart;
+        });
+
+        while(!isNullOrUndefined(route) &amp;&amp; urlParts.length &gt; 0)
+        {
+            if(!isNullOrUndefined(route.children))
+            {
+                routes &#x3D; route.children;
+                urlPart &#x3D; urlParts.shift();
+            }
+            else
+            {
+                urlPart &#x3D; urlPart + &#x27;/&#x27; + urlParts.shift();
+            }
+
+            route &#x3D; routes.find((routeToFind:Route) &#x3D;&gt;
+            {
+                let splittedRoutePath:Array&lt;string&gt; &#x3D; routeToFind.path.split(&#x27;/&#x27;);
+
+                let parameterisedRoutes:{ [key:string]:number } &#x3D; {};
+
+                let splittedFlatPath:Array&lt;string&gt; &#x3D; urlPart.split(&#x27;/&#x27;);
+
+                splittedRoutePath.forEach((path:string, index:number) &#x3D;&gt;
+                {
+                    if(path.startsWith(&#x27;:&#x27;))
+                    {
+                        parameterisedRoutes[path] &#x3D; index;
+                    }
+                });
+
+                Object.values(parameterisedRoutes).forEach((index:number) &#x3D;&gt;
+                {
+                    splittedRoutePath[index] &#x3D; splittedFlatPath[index];
+                });
+
+                let gluedRoutePath:string &#x3D; splittedRoutePath.join(&#x27;/&#x27;);
+
+                return !StringHelper.isNullUndefinedOrEmpty(routeToFind.path) &amp;&amp;
+                       urlPart &#x3D;&#x3D;&#x3D; gluedRoutePath;
+            });
+        }
+
+        return route;
+    }
+
+    public checkActiveRoute(breadcrumb:TerraBreadcrumb):boolean
+    {
+        return this.router.isActive(breadcrumb.routerLink, true);
+    }
+
+    /**
+     * Close the breadcrumb by given url
+     * @param {string} url Url to close the breadcrumb.
+     */
+    public closeBreadcrumbByUrl(url:string):void
+    {
+        let breadcrumb:TerraBreadcrumb &#x3D; this.findBreadcrumbByUrl(url);
+        let container:TerraBreadcrumbContainer &#x3D; this.findBreadcrumbContainerByUrl(url);
+
+        if(!isNullOrUndefined(breadcrumb))
+        {
+            this.closeBreadcrumb(container, breadcrumb);
+        }
+    }
+
+    /**
+     * Update the breadcrumb name by given url
+     * @param {string} url Url to update the breadcrumb.
+     * @param {string} name If not given, it will be automatically update the name by the label of the route data.
+     */
+    public updateBreadcrumbNameByUrl(url:string, name?:string):void
+    {
+        let breadcrumb:TerraBreadcrumb &#x3D; this.findBreadcrumbByUrl(url);
+
+        let shortUrlWithoutLeadingSlash:string &#x3D; UrlHelper.removeLeadingSlash(url);
+        let route:Route &#x3D; this.findRoute(shortUrlWithoutLeadingSlash, this.initialRoute.children);
+
+        if(!isNullOrUndefined(route) &amp;&amp; !isNullOrUndefined(route.data) &amp;&amp; !isNullOrUndefined(breadcrumb))
+        {
+            // you can set a name to update the breadcrumb name
+            if(!isNullOrUndefined(name))
+            {
+                breadcrumb.name &#x3D; this.translation.translate(name);
+            }
+            // or it will be updated automatically from it&#x27;s route data
+            else
+            {
+                breadcrumb.name &#x3D; this.getBreadcrumbLabel(route);
+            }
+        }
+    }
+
+    private findBreadcrumbContainerByUrl(url:string):TerraBreadcrumbContainer
+    {
+        let urlPartsCount:number &#x3D; url.split(&#x27;/&#x27;).length - 1;
+
+        let container:TerraBreadcrumbContainer &#x3D; this._containers[urlPartsCount];
+
+        if(isNullOrUndefined(container))
+        {
+            console.error(&#x27;No existing breadcrumb container found.&#x27;);
+        }
+
+        return container;
+    }
+
+    private findBreadcrumbByUrl(url:string):TerraBreadcrumb
+    {
+        let container:TerraBreadcrumbContainer &#x3D; this.findBreadcrumbContainerByUrl(url);
+
+        let routerLink:string &#x3D; &#x27;/&#x27; + this._initialPath + url;
+
+        if(!isNullOrUndefined(container) &amp;&amp;
+           !isNullOrUndefined(container.currentSelectedBreadcrumb) &amp;&amp;
+           container.currentSelectedBreadcrumb.routerLink &#x3D;&#x3D;&#x3D; routerLink)
+        {
+            return container.currentSelectedBreadcrumb;
+        }
+        else
+        {
+            return container.breadcrumbList.find((bc:TerraBreadcrumb) &#x3D;&gt;
+            {
+                return bc.routerLink &#x3D;&#x3D;&#x3D; routerLink;
+            });
+        }
+    }
+
+    public closeBreadcrumb(breadcrumbContainer:TerraBreadcrumbContainer, breadcrumb:TerraBreadcrumb):void
+    {
+        let breadcrumbList:Array&lt;TerraBreadcrumb&gt; &#x3D; breadcrumbContainer.breadcrumbList;
+        let breadcrumbIndex:number &#x3D; breadcrumbList.indexOf(breadcrumb);
+
+        // current selected breadcrumb should be closed?
+        if(breadcrumbContainer.currentSelectedBreadcrumb &#x3D;&#x3D;&#x3D; breadcrumb)
+        {
+            let currentUrl:string &#x3D; this.router.url;
+
+            let currentSelectedContainer:TerraBreadcrumbContainer &#x3D; this._containers.find((bcc:TerraBreadcrumbContainer) &#x3D;&gt;
+            {
+                return bcc.currentSelectedBreadcrumb.routerLink &#x3D;&#x3D;&#x3D; currentUrl;
+            });
+
+            // get the first remaining breadcrumb
+            breadcrumbContainer.currentSelectedBreadcrumb &#x3D; breadcrumbIndex &#x3D;&#x3D;&#x3D; 0 ? breadcrumbList[1] : breadcrumbList[0];
+
+            let currentSelectedIndex:number &#x3D; this._containers.indexOf(currentSelectedContainer);
+            let breadcrumbContainerIndex:number &#x3D; this._containers.indexOf(breadcrumbContainer);
+
+            // container has no more breadcrumbs
+            if(isNullOrUndefined(breadcrumbContainer.currentSelectedBreadcrumb))
+            {
+                this.removeBreadcrumbContainer(breadcrumbContainer);
+            }
+            // check indexes to start routing
+            else if(currentSelectedIndex &gt;&#x3D; breadcrumbContainerIndex)
+            {
+                this.router.navigateByUrl(breadcrumbContainer.currentSelectedBreadcrumb.routerLink);
+            }
+        }
+
+        // delete all related breadcrumbs
+        let currentContainerIndex:number &#x3D; this._containers.indexOf(breadcrumbContainer);
+        let nextContainer:TerraBreadcrumbContainer &#x3D; this._containers[currentContainerIndex + 1];
+        this.removeBreadcrumbsByParent(nextContainer, breadcrumb);
+
+        // finally delete breadcrumb
+        breadcrumbList.splice(breadcrumbIndex, 1);
+    }
+
+    private removeBreadcrumbContainer(breadcrumbContainer:TerraBreadcrumbContainer):void
+    {
+        let index:number &#x3D; this._containers.indexOf(breadcrumbContainer);
+
+        if(index &gt;&#x3D; 0)
+        {
+            // delete current breadcrumb container
+            this._containers.splice(index, 1);
+
+            // get next breadcrumb container with the same index
+            let nextContainer:TerraBreadcrumbContainer &#x3D; this._containers[index];
+
+            // if no more next container, select previous container and route to breadcrumb
+            if(isNullOrUndefined(nextContainer))
+            {
+                let previousContainer:TerraBreadcrumbContainer &#x3D; this._containers[index - 1];
+
+                if(!isNullOrUndefined(previousContainer) &amp;&amp; !isNullOrUndefined(previousContainer.currentSelectedBreadcrumb))
+                {
+                    this.router.navigateByUrl(previousContainer.currentSelectedBreadcrumb.routerLink);
+                }
+            }
+            else
+            {
+                this.removeBreadcrumbContainer(nextContainer);
+            }
+        }
+    }
+
+    private removeBreadcrumbsByParent(container:TerraBreadcrumbContainer, parent:TerraBreadcrumb):void
+    {
+        if(isNullOrUndefined(container))
+        {
+            return;
+        }
+
+        let currentContainerIndex:number &#x3D; this._containers.indexOf(container);
+        let nextContainer:TerraBreadcrumbContainer &#x3D; this._containers[currentContainerIndex + 1];
+        let filteredBreadcrumbList:Array&lt;TerraBreadcrumb&gt; &#x3D; container.breadcrumbList.filter((bc:TerraBreadcrumb) &#x3D;&gt;
+        {
+            if(bc.parent &#x3D;&#x3D;&#x3D; parent &amp;&amp; !isNullOrUndefined(nextContainer))
+            {
+                this.removeBreadcrumbsByParent(nextContainer, bc);
+            }
+
+            return bc.parent !&#x3D;&#x3D; parent;
+        });
+
+        if(filteredBreadcrumbList.length &#x3D;&#x3D;&#x3D; 0)
+        {
+            // remove container
+            this._containers.splice(currentContainerIndex, 1);
+        }
+        else
+        {
+            // update breadcrumb list
+            container.breadcrumbList &#x3D; filteredBreadcrumbList;
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraBreadcrumbsService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1423 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>TerraFormFieldHelper</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/forms/form/helper/terra-form-field.helper.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#CONTROL_TYPE_MAP">CONTROL_TYPE_MAP</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#detectLegacyFormFields">detectLegacyFormFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#extractFormFields">extractFormFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#injectOption">injectOption</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#isLegacyFormFields">isLegacyFormFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformCheckboxGroupField">transformCheckboxGroupField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformCodeEditorField">transformCodeEditorField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformDoubleField">transformDoubleField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformFileField">transformFileField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformLegacyFormField">transformLegacyFormField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformSelectField">transformSelectField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#transformTextField">transformTextField</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="CONTROL_TYPE_MAP"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                                <span class="modifier">Readonly</span>
+                            CONTROL_TYPE_MAP
+                            </b>
+                            <a href="#CONTROL_TYPE_MAP"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>CONTROL_TYPE_MAP:     <code>literal type</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+        checkBox:             &#x27;checkbox&#x27;,
+        conditionalContainer: &#x27;vertical&#x27;,
+        datePicker:           &#x27;date&#x27;,
+        horizontalContainer:  &#x27;horizontal&#x27;,
+        inputFile:            &#x27;file&#x27;,
+        inputText:            &#x27;text&#x27;,
+        inputTextArea:        &#x27;textarea&#x27;,
+        inputNumber:          &#x27;number&#x27;,
+        inputDouble:          &#x27;double&#x27;,
+        selectBox:            &#x27;select&#x27;,
+        verticalContainer:    &#x27;vertical&#x27;,
+        categoryPicker:       &#x27;category&#x27;,
+        multiCheckBox:        &#x27;checkboxGroup&#x27;,
+        noteEditor:           &#x27;noteEditor&#x27;,
+        codeEditor:           &#x27;codeEditor&#x27;
+    }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="detectLegacyFormFields"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            detectLegacyFormFields
+                            </b>
+                            <a href="#detectLegacyFormFields"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>detectLegacyFormFields(formFields: <a href="../classes/TerraFormFieldBase.html">literal type | Array<TerraFormFieldBase<any>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:95</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formFields</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldBase.html" target="_self" >literal type | Array&lt;TerraFormFieldBase&lt;any&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="extractFormFields"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            extractFormFields
+                            </b>
+                            <a href="#extractFormFields"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>extractFormFields(formModel: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formModel</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="injectOption"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            injectOption
+                            </b>
+                            <a href="#injectOption"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>injectOption(formFields: literal type, type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, optionKey: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, optionValue: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:69</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formFields</td>
+                                                        <td>
+                                                                    <code>literal type</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>optionKey</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>optionValue</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLegacyFormFields"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            isLegacyFormFields
+                            </b>
+                            <a href="#isLegacyFormFields"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isLegacyFormFields(formFields: <a href="../classes/TerraFormFieldBase.html">literal type | Array<TerraFormFieldBase<any>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:90</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formFields</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldBase.html" target="_self" >literal type | Array&lt;TerraFormFieldBase&lt;any&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformCheckboxGroupField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformCheckboxGroupField
+                            </b>
+                            <a href="#transformCheckboxGroupField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformCheckboxGroupField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../classes/TerraFormFieldMultiCheckBox.html">TerraFormFieldMultiCheckBox</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:201</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldMultiCheckBox.html" target="_self" >TerraFormFieldMultiCheckBox</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformCodeEditorField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformCodeEditorField
+                            </b>
+                            <a href="#transformCodeEditorField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformCodeEditorField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../interfaces/TerraFormFieldCodeEditorOptions.html">TerraFormFieldCodeEditorOptions</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:179</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldCodeEditorOptions.html" target="_self" >TerraFormFieldCodeEditorOptions</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformDoubleField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformDoubleField
+                            </b>
+                            <a href="#transformDoubleField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformDoubleField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../classes/TerraFormFieldInputDouble.html">TerraFormFieldInputDouble</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:186</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldInputDouble.html" target="_self" >TerraFormFieldInputDouble</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformFileField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformFileField
+                            </b>
+                            <a href="#transformFileField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformFileField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../classes/TerraFormFieldInputFile.html">TerraFormFieldInputFile</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:194</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldInputFile.html" target="_self" >TerraFormFieldInputFile</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformLegacyFormField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformLegacyFormField
+                            </b>
+                            <a href="#transformLegacyFormField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformLegacyFormField(field: <a href="../classes/TerraFormFieldBase.html">TerraFormFieldBase<any></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:117</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldBase.html" target="_self" >TerraFormFieldBase&lt;any&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformSelectField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformSelectField
+                            </b>
+                            <a href="#transformSelectField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformSelectField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../classes/TerraFormFieldSelectBox.html">TerraFormFieldSelectBox</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="217" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:217</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldSelectBox.html" target="_self" >TerraFormFieldSelectBox</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transformTextField"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            transformTextField
+                            </b>
+                            <a href="#transformTextField"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>transformTextField(result: <a href="../interfaces/TerraFormFieldInterface.html">TerraFormFieldInterface</a>, field: <a href="../classes/TerraFormFieldInputText.html">TerraFormFieldInputText</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">src/app/components/forms/form/helper/terra-form-field.helper.ts:208</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>field</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraFormFieldInputText.html" target="_self" >TerraFormFieldInputText</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraFormFieldInterface.html" target="_self" >TerraFormFieldInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import &#x27;reflect-metadata&#x27;;
+import {
+    isArray,
+    isFunction,
+    isNullOrUndefined
+} from &#x27;util&#x27;;
+import { TerraFormFieldBaseContainer } from &#x27;../../dynamic-form/data/terra-form-field-base-container&#x27;;
+import { TerraFormFieldCodeEditorOptions } from &#x27;../../dynamic-form/data/terra-form-field-code-editor&#x27;;
+import { TerraFormFieldInputDouble } from &#x27;../../dynamic-form/data/terra-form-field-input-double&#x27;;
+import { TerraFormFieldInputFile } from &#x27;../../dynamic-form/data/terra-form-field-input-file&#x27;;
+import { TerraFormFieldMultiCheckBox } from &#x27;../../dynamic-form/data/terra-form-field-multi-check-box&#x27;;
+import {
+    TERRA_FORM_PROPERTY_METADATA_KEY,
+    TerraControlTypeEnum,
+    TerraFormFieldBase,
+    TerraFormFieldInputText,
+    TerraFormFieldSelectBox,
+    TerraJsonToFormFieldService,
+    TerraFormFieldInterface
+} from &#x27;../../../../../&#x27;;
+
+export class TerraFormFieldHelper
+{
+    private static readonly CONTROL_TYPE_MAP:{ [key:string]:string } &#x3D; {
+        checkBox:             &#x27;checkbox&#x27;,
+        conditionalContainer: &#x27;vertical&#x27;,
+        datePicker:           &#x27;date&#x27;,
+        horizontalContainer:  &#x27;horizontal&#x27;,
+        inputFile:            &#x27;file&#x27;,
+        inputText:            &#x27;text&#x27;,
+        inputTextArea:        &#x27;textarea&#x27;,
+        inputNumber:          &#x27;number&#x27;,
+        inputDouble:          &#x27;double&#x27;,
+        selectBox:            &#x27;select&#x27;,
+        verticalContainer:    &#x27;vertical&#x27;,
+        categoryPicker:       &#x27;category&#x27;,
+        multiCheckBox:        &#x27;checkboxGroup&#x27;,
+        noteEditor:           &#x27;noteEditor&#x27;,
+        codeEditor:           &#x27;codeEditor&#x27;
+    };
+
+    public static extractFormFields(formModel:any):{ [key:string]:TerraFormFieldInterface }
+    {
+        let formFields:{ [key:string]:TerraFormFieldInterface }
+            &#x3D; Reflect.getMetadata(TERRA_FORM_PROPERTY_METADATA_KEY, formModel.constructor);
+
+        if(!isNullOrUndefined(formFields))
+        {
+            Object.keys(formFields)
+                  .forEach((formFieldProperty:string) &#x3D;&gt;
+                  {
+                      let formField:TerraFormFieldInterface &#x3D; formFields[formFieldProperty];
+                      if(isNullOrUndefined(formField.isList))
+                      {
+                          formField.isList &#x3D; Reflect.getMetadata(&#x27;design:type&#x27;, formModel.constructor, formFieldProperty) &#x3D;&#x3D;&#x3D; Array;
+                      }
+
+                      if(!isNullOrUndefined(formModel[formFieldProperty])
+                         &amp;&amp; Reflect.hasMetadata(TERRA_FORM_PROPERTY_METADATA_KEY, formModel[formFieldProperty].constructor))
+                      {
+                          formField.children &#x3D; TerraFormFieldHelper.extractFormFields(formModel[formFieldProperty]);
+                      }
+                  });
+        }
+        console.log(formFields);
+        return formFields;
+    }
+
+    public static injectOption(formFields:{ [key:string]:TerraFormFieldInterface },
+                               type:string,
+                               optionKey:string,
+                               optionValue:any):{ [key:string]:TerraFormFieldInterface }
+    {
+        Object.keys(formFields).forEach((key:string) &#x3D;&gt;
+        {
+            if(formFields[key].type &#x3D;&#x3D;&#x3D; type)
+            {
+                formFields[key].options &#x3D; formFields[key].options || {};
+                formFields[key].options[optionKey] &#x3D; optionValue;
+            }
+            if(!isNullOrUndefined(formFields[key].children))
+            {
+                formFields[key].children &#x3D; this.injectOption(formFields[key].children, type, optionKey, optionValue);
+            }
+        });
+
+        return formFields;
+    }
+
+    public static isLegacyFormFields(formFields:{ [key:string]:any } | Array&lt;TerraFormFieldBase&lt;any&gt;&gt;):boolean
+    {
+        return isArray(formFields) || Object.keys(formFields).some((key:string) &#x3D;&gt; !isNullOrUndefined(formFields[key].label));
+    }
+
+    public static detectLegacyFormFields(formFields:{ [key:string]:any } | Array&lt;TerraFormFieldBase&lt;any&gt;&gt;):{ [key:string]:TerraFormFieldInterface }
+    {
+        if(isArray(formFields))
+        {
+            let transformedFields:{ [key:string]:TerraFormFieldInterface } &#x3D; {};
+            formFields.forEach((field:TerraFormFieldBase&lt;any&gt;) &#x3D;&gt;
+            {
+                let transformedField:{ key:string, field:TerraFormFieldInterface } &#x3D; this.transformLegacyFormField(field);
+                transformedFields[transformedField.key] &#x3D; transformedField.field;
+            });
+            return transformedFields;
+        }
+        else if(TerraFormFieldHelper.isLegacyFormFields(formFields))
+        {
+            return this.detectLegacyFormFields(
+                TerraJsonToFormFieldService.generateFormFields(formFields)
+            );
+        }
+
+        return &lt;{ [key:string]:TerraFormFieldInterface }&gt; formFields;
+    }
+
+    private static transformLegacyFormField(field:TerraFormFieldBase&lt;any&gt;):{ key:string, field:TerraFormFieldInterface }
+    {
+        let result:{ key:string, field:TerraFormFieldInterface } &#x3D; {
+            key:   field.key,
+            field: null
+        };
+        let type:string &#x3D; this.CONTROL_TYPE_MAP[field.controlType];
+
+        result.field &#x3D; {
+            type:    type,
+            options: {
+                name:             field.label,
+                tooltip:          field.tooltip,
+                tooltipPlacement: field.tooltipPlacement,
+                required:         field.required
+            }
+        };
+
+        let transformFn:string &#x3D; &#x27;transform&#x27; + type.charAt(0).toUpperCase() + type.substr(1) + &#x27;Field&#x27;;
+        if(isFunction(this[transformFn]))
+        {
+            result.field &#x3D; this[transformFn](result.field, field);
+        }
+
+        if(!!field.pattern)
+        {
+            result.field.isValid &#x3D; field.pattern.toString();
+        }
+        else
+        {
+            let validators:Array&lt;string&gt; &#x3D; [];
+            if(field.minLength &gt;&#x3D; 0)
+            {
+                validators.push(&#x27;this.length &gt;&#x3D; &#x27; + field.minLength);
+            }
+            if(field.maxLength &gt;&#x3D; 0)
+            {
+                validators.push(&#x27;this.length &lt;&#x3D; &#x27; + field.maxLength);
+            }
+            if(!isNullOrUndefined(field.minValue))
+            {
+                validators.push(&#x27;this &gt;&#x3D; &#x27; + field.minValue);
+            }
+            if(!isNullOrUndefined(field.maxValue))
+            {
+                validators.push(&#x27;this &lt;&#x3D; &#x27; + field.maxValue);
+            }
+            result.field.isValid &#x3D; validators.join(&#x27; &amp;&amp; &#x27;);
+        }
+
+        if(field.controlType &#x3D;&#x3D;&#x3D; TerraControlTypeEnum.CONDITIONAL_CONTAINER
+           || field.controlType &#x3D;&#x3D;&#x3D; TerraControlTypeEnum.HORIZONTAL_CONTAINER
+           || field.controlType &#x3D;&#x3D;&#x3D; TerraControlTypeEnum.VERTICAL_CONTAINER)
+        {
+            result.field.children &#x3D; this.detectLegacyFormFields(
+                (&lt;TerraFormFieldBaseContainer&gt; field).containerEntries
+            );
+        }
+
+        return result;
+    }
+
+    private static transformCodeEditorField(result:TerraFormFieldInterface,
+                                            field:TerraFormFieldCodeEditorOptions):TerraFormFieldInterface
+    {
+        result.options.fixedHeight &#x3D; field.fixedHeight;
+        return result;
+    }
+
+    private static transformDoubleField(result:TerraFormFieldInterface,
+                                        field:TerraFormFieldInputDouble):TerraFormFieldInterface
+    {
+        result.options.isPrice &#x3D; field.isPrice;
+        result.options.decimalCount &#x3D; field.decimalCount;
+        return result;
+    }
+
+    private static transformFileField(result:TerraFormFieldInterface,
+                                      field:TerraFormFieldInputFile):TerraFormFieldInterface
+    {
+        result.options.allowedExtensions &#x3D; field.inputAllowedExtensions;
+        return result;
+    }
+
+    private static transformCheckboxGroupField(result:TerraFormFieldInterface,
+                                               field:TerraFormFieldMultiCheckBox):TerraFormFieldInterface
+    {
+        result.options.checkBoxValues &#x3D; field.checkBoxValues;
+        return result;
+    }
+
+    private static transformTextField(result:TerraFormFieldInterface,
+                                      field:TerraFormFieldInputText):TerraFormFieldInterface
+    {
+        result.options.isPassword &#x3D; field.isPassword;
+        result.options.isIBAN &#x3D; field.isIBAN;
+        result.options.isReadOnly &#x3D; field.isReadOnly;
+        return result;
+    }
+
+    private static transformSelectField(result:TerraFormFieldInterface,
+                                        field:TerraFormFieldSelectBox):TerraFormFieldInterface
+    {
+        result.options.listBoxValues &#x3D; field.selectBoxValues;
+        return result;
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraFormFieldHelper.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,3173 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TerraNodeTreeConfig</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/tree/node-tree/data/terra-node-tree.config.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_currentSelectedNode">_currentSelectedNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_list">_list</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addChildrenToNodeById">addChildrenToNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addChildToNodeById">addChildToNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addNode">addNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkDefaultAndAssignVisibility">checkDefaultAndAssignVisibility</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkVisibilityAndAssignDefault">checkVisibilityAndAssignDefault</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeAllNodes">closeAllNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#findNode">findNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#findNodeById">findNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getRecursiveNodePath">getRecursiveNodePath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleLazyLoading">handleLazyLoading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#internalRemoveNode">internalRemoveNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#recursiveFindNode">recursiveFindNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#recursiveFindNodeById">recursiveFindNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#recursiveSetNodeInactive">recursiveSetNodeInactive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#recursiveSetParentAndDefaultVisibility">recursiveSetParentAndDefaultVisibility</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeNode">removeNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeNodeById">removeNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#reset">reset</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setCurrentSelectedNodeById">setCurrentSelectedNodeById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setDefaultVisibility">setDefaultVisibility</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleOpenChildren">toggleOpenChildren</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleOpenParent">toggleOpenParent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleVisibilityForAllParents">toggleVisibilityForAllParents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleVisiblityForAllChildren">toggleVisiblityForAllChildren</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateNodeById">updateNodeById</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#list">list</a>
+                                </li>
+                                <li>
+                                    <a href="#currentSelectedNode">currentSelectedNode</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addChildrenToNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addChildrenToNodeById
+                            </b>
+                            <a href="#addChildrenToNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addChildrenToNodeById(parentId: string | number, nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, openParents?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:139</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>parentId</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The identifier of the parent node.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node list to be added.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>openParents</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional. Open all parents.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addChildToNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addChildToNodeById
+                            </b>
+                            <a href="#addChildToNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addChildToNodeById(parentId: string | number, node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, openParents?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>parentId</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The identifier of the parent node.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node to be added.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>openParents</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional. Open all parents.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addNode
+                            </b>
+                            <a href="#addNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addNode(nodeToAdd: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, parent?: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, openParents?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeToAdd</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The provided node to add to the tree.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>parent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional. The provided parent where nodeToAdd should be added to.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>openParents</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional. Open all parents.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkDefaultAndAssignVisibility"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            checkDefaultAndAssignVisibility
+                            </b>
+                            <a href="#checkDefaultAndAssignVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>checkDefaultAndAssignVisibility(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="548" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:548</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkVisibilityAndAssignDefault"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            checkVisibilityAndAssignDefault
+                            </b>
+                            <a href="#checkVisibilityAndAssignDefault"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>checkVisibilityAndAssignDefault(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="531" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:531</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closeAllNodes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            closeAllNodes
+                            </b>
+                            <a href="#closeAllNodes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>closeAllNodes()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="376" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:376</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            findNode
+                            </b>
+                            <a href="#findNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findNode(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:263</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node to be found.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            findNodeById
+                            </b>
+                            <a href="#findNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findNodeById(id: string | number)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="254" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:254</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The ID to find the correct node.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getRecursiveNodePath"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getRecursiveNodePath
+                            </b>
+                            <a href="#getRecursiveNodePath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getRecursiveNodePath(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:87</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>name</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleLazyLoading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            handleLazyLoading
+                            </b>
+                            <a href="#handleLazyLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleLazyLoading(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="403" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:403</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node where lazy loading is defined.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="internalRemoveNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            internalRemoveNode
+                            </b>
+                            <a href="#internalRemoveNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>internalRemoveNode(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:175</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recursiveFindNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            recursiveFindNode
+                            </b>
+                            <a href="#recursiveFindNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>recursiveFindNode(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, nodeToFind: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:269</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>nodeToFind</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recursiveFindNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            recursiveFindNodeById
+                            </b>
+                            <a href="#recursiveFindNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>recursiveFindNodeById(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, id: string | number)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:296</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recursiveSetNodeInactive"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            recursiveSetNodeInactive
+                            </b>
+                            <a href="#recursiveSetNodeInactive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>recursiveSetNodeInactive(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="485" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:485</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="recursiveSetParentAndDefaultVisibility"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            recursiveSetParentAndDefaultVisibility
+                            </b>
+                            <a href="#recursiveSetParentAndDefaultVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>recursiveSetParentAndDefaultVisibility(list: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, parent?: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="341" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:341</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>list</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>parent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeNode
+                            </b>
+                            <a href="#removeNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeNode(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:160</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node to be removed.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeNodeById
+                            </b>
+                            <a href="#removeNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeNodeById(id: string | number)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:196</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The ID of the node to be removed.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reset"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            reset
+                            </b>
+                            <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reset()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="460" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:460</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setCurrentSelectedNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setCurrentSelectedNodeById
+                            </b>
+                            <a href="#setCurrentSelectedNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setCurrentSelectedNodeById(id: string | number)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="470" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:470</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The ID to select a node.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setDefaultVisibility"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setDefaultVisibility
+                            </b>
+                            <a href="#setDefaultVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setDefaultVisibility(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleOpenChildren"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleOpenChildren
+                            </b>
+                            <a href="#toggleOpenChildren"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toggleOpenChildren(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, isOpen: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="386" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:386</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node list to open its children.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>isOpen</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Toggle open or not.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleOpenParent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleOpenParent
+                            </b>
+                            <a href="#toggleOpenParent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toggleOpenParent(node: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, isOpen: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="363" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:363</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node to open its parents.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>isOpen</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Toggle open or not.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleVisibilityForAllParents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleVisibilityForAllParents
+                            </b>
+                            <a href="#toggleVisibilityForAllParents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toggleVisibilityForAllParents(parentNode: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>, isVisible: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="521" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:521</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>parentNode</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node to toggle visibility of its parent.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>isVisible</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Toggle visibility.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleVisiblityForAllChildren"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleVisiblityForAllChildren
+                            </b>
+                            <a href="#toggleVisiblityForAllChildren"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>toggleVisiblityForAllChildren(nodeList: <a href="../interfaces/TerraNodeInterface.html">Array<TerraNodeInterface<D>></a>, isVisible: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="503" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:503</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodeList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node list to toggle visibility of its children.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>isVisible</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Toggle visibility.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateNodeById"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            updateNodeById
+                            </b>
+                            <a href="#updateNodeById"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateNodeById(id: string | number, newNode: <a href="../interfaces/TerraNodeInterface.html">TerraNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="215" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:215</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code>string | number</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The ID of the node.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>newNode</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The node with the new data.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_currentSelectedNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            _currentSelectedNode
+                            </b>
+                            <a href="#_currentSelectedNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_currentSelectedNode:     <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_list"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _list
+                            </b>
+                            <a href="#_list"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_list:     <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="list"></a>
+                        <span class="name"><b>list</b><a href="#list"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>list()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="325" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:325</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >Array&lt;TerraNodeInterface&lt;D&gt;&gt;</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>list(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="334" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:334</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                        <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                            <td>
+                                                                    <code><p>The node list to be shown.</p>
+</code>
+                                                            </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentSelectedNode"></a>
+                        <span class="name"><b>currentSelectedNode</b><a href="#currentSelectedNode"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>currentSelectedNode()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="452" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:452</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/TerraNodeInterface.html" target="_self" >TerraNodeInterface&lt;D&gt;</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>currentSelectedNode(node: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="434" class="link-to-prism">src/app/components/tree/node-tree/data/terra-node-tree.config.ts:434</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                        <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>node</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                            <td>
+                                                                    <code><p>The node to be set as selected.</p>
+</code>
+                                                            </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TerraNodeInterface } from &#x27;./terra-node.interface&#x27;;
+import {
+    isNull,
+    isNullOrUndefined
+} from &#x27;util&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+
+@Injectable()
+export class TerraNodeTreeConfig&lt;D&gt;
+{
+    protected _currentSelectedNode:TerraNodeInterface&lt;D&gt;;
+    private _list:Array&lt;TerraNodeInterface&lt;D&gt;&gt; &#x3D; [];
+
+    constructor(protected translation:TranslationService)
+    {
+
+    }
+
+    /**
+     * @description Adds a node.
+     * @param nodeToAdd The provided node to add to the tree.
+     * @param parent Optional. The provided parent where nodeToAdd should be added to.
+     * @param openParents Optional. Open all parents.
+     */
+    public addNode(nodeToAdd:TerraNodeInterface&lt;D&gt;, parent?:TerraNodeInterface&lt;D&gt;, openParents?:boolean):void
+    {
+        // check if the node to add is already added
+
+        let alreadyAddedNode:TerraNodeInterface&lt;D&gt; &#x3D; this.findNodeById(nodeToAdd.id);
+
+        if(isNullOrUndefined(alreadyAddedNode))
+        {
+            this.setDefaultVisibility(nodeToAdd);
+            // check children to set the parent correctly
+            if(!isNullOrUndefined(nodeToAdd.children))
+            {
+                this.recursiveSetParentAndDefaultVisibility(nodeToAdd.children, nodeToAdd);
+            }
+
+            // add to first level if no parent nor current selected node is given
+            if(isNullOrUndefined(this.currentSelectedNode) &amp;&amp; isNullOrUndefined(parent))
+            {
+
+                this._list.push(nodeToAdd);
+            }
+            else
+            {
+
+                // set parent
+                nodeToAdd.parent &#x3D; !isNullOrUndefined(parent) ? parent : this.currentSelectedNode;
+
+                // check children of parent to decide where to add the node
+                if(isNullOrUndefined(nodeToAdd.parent.children))
+                {
+                    nodeToAdd.parent.children &#x3D; [nodeToAdd];
+                }
+                else
+                {
+                    nodeToAdd.parent.children.push(nodeToAdd);
+                }
+
+                if(!isNullOrUndefined(openParents) &amp;&amp; openParents)
+                {
+                    this.toggleOpenParent(nodeToAdd, openParents);
+                }
+            }
+        }
+        else
+        {
+            console.error(&#x27;Node &#x27; + nodeToAdd.name + &#x27; with id &#x27; + nodeToAdd.id + &#x27; already added!&#x27;);
+        }
+    }
+
+    private setDefaultVisibility(node:TerraNodeInterface&lt;D&gt;):void
+    {
+        if(node.isVisible)
+        {
+            node.defaultVisibility &#x3D; true;
+        }
+        else
+        {
+            node.defaultVisibility &#x3D; false;
+        }
+    }
+
+    private getRecursiveNodePath(node:TerraNodeInterface&lt;D&gt;, name:string):string
+    {
+        if(!isNullOrUndefined(node))
+        {
+            if(isNullOrUndefined(name))
+            {
+                name &#x3D; this.translation.translate(node.name);
+            }
+            else
+            {
+                name &#x3D; this.translation.translate(node.name) + &#x27; » &#x27; + name;
+            }
+
+            if(!isNullOrUndefined(node.parent))
+            {
+                return this.getRecursiveNodePath(node.parent, name);
+            }
+            else
+            {
+                return name;
+            }
+        }
+
+        return name;
+    }
+
+    /**
+     * @description Adds a node to a given parentId.
+     * @param parentId The identifier of the parent node.
+     * @param node The node to be added.
+     * @param openParents Optional. Open all parents.
+     */
+    public addChildToNodeById(parentId:string | number, node:TerraNodeInterface&lt;D&gt;, openParents?:boolean):void
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNodeById(this.list, parentId);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node with id &#x27; + parentId + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            this.addNode(node, foundNode, openParents);
+        }
+    }
+
+    /**
+     * @description Adds a list of nodes to a given parentId.
+     * @param parentId The identifier of the parent node.
+     * @param nodeList The node list to be added.
+     * @param openParents Optional. Open all parents.
+     */
+    public addChildrenToNodeById(parentId:string | number, nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, openParents?:boolean):void
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNodeById(this.list, parentId);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node with id &#x27; + parentId + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+            {
+                this.addNode(node, foundNode, openParents);
+            });
+        }
+    }
+
+    /**
+     * @description Removes a given node.
+     * @param node The node to be removed.
+     */
+    public removeNode(node:TerraNodeInterface&lt;D&gt;):void
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNode(this.list, node);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node &#x27; + node.name + &#x27; with id &#x27; + node.id + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            this.internalRemoveNode(node);
+        }
+    }
+
+    // removes a given node
+    private internalRemoveNode(node:TerraNodeInterface&lt;D&gt;):void
+    {
+        let parent:TerraNodeInterface&lt;D&gt; &#x3D; node.parent;
+
+        if(!isNullOrUndefined(parent))
+        {
+            let index:number &#x3D; parent.children.indexOf(node);
+
+            parent.children.splice(index, 1);
+        }
+
+        if(node &#x3D;&#x3D;&#x3D; this.currentSelectedNode)
+        {
+            this._currentSelectedNode &#x3D; null;
+        }
+    }
+
+    /**
+     * @description Removes a node by ID.
+     * @param id The ID of the node to be removed.
+     */
+    public removeNodeById(id:string | number):void
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNodeById(this.list, id);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node with id &#x27; + id + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            this.internalRemoveNode(foundNode);
+        }
+    }
+
+    /**
+     * @description Updates a node by given ID.
+     * @param id The ID of the node.
+     * @param newNode The node with the new data.
+     */
+    public updateNodeById(id:string | number, newNode:TerraNodeInterface&lt;D&gt;):void
+    {
+        if(newNode.id.toString() !&#x3D;&#x3D; id.toString())
+        {
+            console.warn(&#x27;ID &#x27; + id + &#x27; is different from new node ID!&#x27;);
+        }
+
+        // search for node
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNodeById(this.list, id);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node with id &#x27; + id + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            // just copy stuff
+            foundNode.id &#x3D; newNode.id;
+            foundNode.name &#x3D; newNode.name;
+            foundNode.children &#x3D; newNode.children;
+            foundNode.icon &#x3D; newNode.icon;
+            foundNode.isActive &#x3D; newNode.isActive;
+            foundNode.isOpen &#x3D; newNode.isOpen;
+            foundNode.isVisible &#x3D; newNode.isVisible;
+            foundNode.defaultVisibility &#x3D; newNode.defaultVisibility;
+            foundNode.isLoading &#x3D; newNode.isLoading;
+            foundNode.tags &#x3D; newNode.tags;
+            foundNode.value &#x3D; newNode.value;
+            foundNode.parent &#x3D; newNode.parent;
+            foundNode.hasLoaded &#x3D; newNode.hasLoaded;
+            foundNode.onClick &#x3D; newNode.onClick;
+            foundNode.onLazyLoad &#x3D; newNode.onLazyLoad;
+        }
+    }
+
+    /**
+     * @description Find an existing node by ID.
+     * @param id The ID to find the correct node.
+     */
+    public findNodeById(id:string | number):TerraNodeInterface&lt;D&gt;
+    {
+        return this.recursiveFindNodeById(this.list, id);
+    }
+
+    /**
+     * @description Find an existing node.
+     * @param node The node to be found.
+     */
+    public findNode(node:TerraNodeInterface&lt;D&gt;):TerraNodeInterface&lt;D&gt;
+    {
+        return this.recursiveFindNode(this.list, node);
+    }
+
+    // find node
+    private recursiveFindNode(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, nodeToFind:TerraNodeInterface&lt;D&gt;):TerraNodeInterface&lt;D&gt;
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; null;
+
+        for(let node of nodeList)
+        {
+            if(node &#x3D;&#x3D;&#x3D; nodeToFind)
+            {
+                foundNode &#x3D; node;
+
+                return foundNode;
+            }
+            else if(node.children)
+            {
+                foundNode &#x3D; this.recursiveFindNode(node.children, nodeToFind);
+
+                if(!isNull(foundNode))
+                {
+                    break;
+                }
+            }
+        }
+
+        return foundNode;
+    }
+
+    // find node by id
+    private recursiveFindNodeById(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, id:string | number):TerraNodeInterface&lt;D&gt;
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; null;
+
+        for(let node of nodeList)
+        {
+            if(node.id.toString() &#x3D;&#x3D;&#x3D; id.toString())
+            {
+                foundNode &#x3D; node;
+
+                return foundNode;
+            }
+            else if(node.children)
+            {
+                foundNode &#x3D; this.recursiveFindNodeById(node.children, id);
+
+                if(!isNull(foundNode))
+                {
+                    break;
+                }
+            }
+        }
+
+        return foundNode;
+    }
+
+    /**
+     * @description The list with all the nodes.
+     */
+    public get list():Array&lt;TerraNodeInterface&lt;D&gt;&gt;
+    {
+        return this._list;
+    }
+
+    /**
+     * @description Set a list with all the nodes.
+     * @param value The node list to be shown.
+     */
+    public set list(value:Array&lt;TerraNodeInterface&lt;D&gt;&gt;)
+    {
+        this.recursiveSetParentAndDefaultVisibility(value);
+        this._list &#x3D; value;
+    }
+
+    // set parents to all nodes
+    private recursiveSetParentAndDefaultVisibility(list:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, parent?:TerraNodeInterface&lt;D&gt;):void
+    {
+        for(let node of list)
+        {
+            this.setDefaultVisibility(node);
+            if(!isNullOrUndefined(parent))
+            {
+                node.parent &#x3D; parent;
+            }
+
+            if(!isNullOrUndefined(node.children))
+            {
+                this.recursiveSetParentAndDefaultVisibility(node.children, node);
+            }
+        }
+    }
+
+    /**
+     * @description Open all parents of given node.
+     * @param node The node to open its parents.
+     * @param isOpen Toggle open or not.
+     */
+    public toggleOpenParent(node:TerraNodeInterface&lt;D&gt;, isOpen:boolean):void
+    {
+        if(!isNullOrUndefined(node) &amp;&amp; !isNullOrUndefined(node.parent))
+        {
+            node.parent.isOpen &#x3D; isOpen;
+
+            this.toggleOpenParent(node.parent, isOpen);
+        }
+    }
+
+    /**
+     * @description Close all nodes.
+     */
+    public closeAllNodes():void
+    {
+        this.toggleOpenChildren(this.list, false);
+    }
+
+    /**
+     * @description Open all children of given node.
+     * @param nodeList The node list to open its children.
+     * @param isOpen Toggle open or not.
+     */
+    public toggleOpenChildren(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, isOpen:boolean):void
+    {
+        nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            node.isOpen &#x3D; isOpen;
+
+            if(!isNullOrUndefined(node.children))
+            {
+                this.toggleOpenChildren(node.children, isOpen);
+            }
+        });
+    }
+
+    /**
+     * @description Call the lazy loading function of given node.
+     * @param node The node where lazy loading is defined.
+     */
+    public handleLazyLoading(node:TerraNodeInterface&lt;D&gt;):void
+    {
+        // check if lazy loading is desired
+        if(!node.hasLoaded &amp;&amp; !isNullOrUndefined(node.onLazyLoad))
+        {
+            node.hasLoaded &#x3D; true;
+            node.isLoading &#x3D; true;
+            // subscribe to Observable
+            node.onLazyLoad().subscribe(() &#x3D;&gt;
+                {
+                    node.hasLoaded &#x3D; true;
+                    node.isLoading &#x3D; false;
+                    node.isOpen &#x3D; true;
+                    this.checkVisibilityAndAssignDefault(node.children);
+                },
+                () &#x3D;&gt;
+                {
+                    node.hasLoaded &#x3D; false;
+                    node.isLoading &#x3D; false;
+                });
+        }
+        else
+        {
+            node.isOpen &#x3D; !node.isOpen;
+        }
+    }
+
+    /**
+     * @description Set a node as selected.
+     * @param node The node to be set as selected.
+     */
+    public set currentSelectedNode(node:TerraNodeInterface&lt;D&gt;)
+    {
+        if(!isNullOrUndefined(node))
+        {
+            this.toggleOpenParent(node, true);
+            this.recursiveSetNodeInactive(this.list);
+            node.isActive &#x3D; true;
+            this._currentSelectedNode &#x3D; node;
+        }
+        else
+        {
+            this._currentSelectedNode &#x3D; null;
+        }
+    }
+
+    /**
+     * @description Get the selected node.
+     */
+    public get currentSelectedNode():TerraNodeInterface&lt;D&gt;
+    {
+        return this._currentSelectedNode;
+    }
+
+    /**
+     * @description Reset the entire tree.
+     */
+    public reset():void
+    {
+        this._list &#x3D; [];
+        this._currentSelectedNode &#x3D; null;
+    }
+
+    /**
+     * @description Set a node as selected by given ID.
+     * @param id The ID to select a node.
+     */
+    public setCurrentSelectedNodeById(id:string | number):void
+    {
+        let foundNode:TerraNodeInterface&lt;D&gt; &#x3D; this.recursiveFindNodeById(this.list, id);
+
+        if(isNullOrUndefined(foundNode))
+        {
+            console.error(&#x27;Node with id &#x27; + id + &#x27; not found!&#x27;);
+        }
+        else
+        {
+            this.currentSelectedNode &#x3D; foundNode;
+        }
+    }
+
+    // set all nodes inactive
+    private recursiveSetNodeInactive(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;):void
+    {
+        nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            node.isActive &#x3D; false;
+
+            if(!isNullOrUndefined(node.children) &amp;&amp; node.children.length &gt; 0)
+            {
+                this.recursiveSetNodeInactive(node.children);
+            }
+        });
+    }
+
+    /**
+     * @description Toggle the visibility for all children.
+     * @param nodeList The node list to toggle visibility of its children.
+     * @param isVisible Toggle visibility.
+     */
+    public toggleVisiblityForAllChildren(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;, isVisible:boolean):void
+    {
+        nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            node.isVisible &#x3D; isVisible;
+
+            if(!isNullOrUndefined(node.children))
+            {
+                this.toggleVisiblityForAllChildren(node.children, isVisible);
+            }
+        });
+    }
+
+    /**
+     * @description Toggle the visibility for all parents.
+     * @param parentNode The node to toggle visibility of its parent.
+     * @param isVisible Toggle visibility.
+     */
+    public toggleVisibilityForAllParents(parentNode:TerraNodeInterface&lt;D&gt;, isVisible:boolean):void
+    {
+        parentNode.isVisible &#x3D; isVisible;
+
+        if(!isNullOrUndefined(parentNode.parent))
+        {
+            this.toggleVisibilityForAllParents(parentNode.parent, isVisible);
+        }
+    }
+
+    public checkVisibilityAndAssignDefault(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;):void
+    {
+        if(!isNullOrUndefined(nodeList))
+        {
+            nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+            {
+
+                this.setDefaultVisibility(node);
+
+                if(!isNullOrUndefined(node.children))
+                {
+                    this.checkVisibilityAndAssignDefault(node.children);
+                }
+            });
+        }
+    }
+
+    public checkDefaultAndAssignVisibility(nodeList:Array&lt;TerraNodeInterface&lt;D&gt;&gt;):void
+    {
+        nodeList.forEach((node:TerraNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+
+            if(node.defaultVisibility)
+            {
+                node.isVisible &#x3D; true;
+            }
+            else
+            {
+                node.isVisible &#x3D; false;
+            }
+
+            if(!isNullOrUndefined(node.children))
+            {
+                this.checkDefaultAndAssignVisibility(node.children);
+            }
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraNodeTreeConfig.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

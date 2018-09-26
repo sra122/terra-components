@@ -1,0 +1,1272 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>TerraUploadQueue</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/file-browser/model/terra-upload-queue.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inProgress">inProgress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#progress">progress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#progressListeners">progressListeners</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#progressValue">progressValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#size">size</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#status">status</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getUploadUrl">getUploadUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onProgress">onProgress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#parseHeaders">parseHeaders</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#remove">remove</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#startUpload">startUpload</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#uploadAllItems">uploadAllItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#uploadItem">uploadItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(uploadUrl: <a href="../undefineds/UploadQueueUrlFactory.html">string | UploadQueueUrlFactory</a>, uploadMethod: "GET" | "POST" | "DELETE" | "PUT")</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>uploadUrl</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/typealiases.html#UploadQueueUrlFactory" target="_self" >string | UploadQueueUrlFactory</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>uploadMethod</td>
+                                                  
+                                                        <td>
+                                                                    <code>&quot;GET&quot; | &quot;POST&quot; | &quot;DELETE&quot; | &quot;PUT&quot;</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inProgress"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            inProgress
+                            </b>
+                            <a href="#inProgress"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>inProgress:     <code>Promise&lt;void&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Promise&lt;void&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            items
+                            </b>
+                            <a href="#items"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>items:     <code><a href="../classes/TerraUploadItem.html" target="_self" >Array&lt;TerraUploadItem&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraUploadItem.html" target="_self" >Array&lt;TerraUploadItem&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progress"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            progress
+                            </b>
+                            <a href="#progress"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>progress:     <code>Observable&lt;number&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;number&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progressListeners"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            progressListeners
+                            </b>
+                            <a href="#progressListeners"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>progressListeners:     <code>Array&lt;Observer&lt;number&gt;&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;Observer&lt;number&gt;&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progressValue"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            progressValue
+                            </b>
+                            <a href="#progressValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>progressValue:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>-1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="size"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            size
+                            </b>
+                            <a href="#size"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>size:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="status"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            status
+                            </b>
+                            <a href="#status"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>status:     <code><a href="../interfaces/TerraUploadProgress.html" target="_self" >BehaviorSubject&lt;TerraUploadProgress&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraUploadProgress.html" target="_self" >BehaviorSubject&lt;TerraUploadProgress&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject&lt;TerraUploadProgress&gt;(null)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="add"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            add
+                            </b>
+                            <a href="#add"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>add(item: <a href="../classes/TerraUploadItem.html">TerraUploadItem</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraUploadItem.html" target="_self" >TerraUploadItem</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraUploadQueue.html" target="_self" >TerraUploadQueue</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUploadUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getUploadUrl
+                            </b>
+                            <a href="#getUploadUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getUploadUrl(storageKey: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="207" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:207</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageKey</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onProgress"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onProgress
+                            </b>
+                            <a href="#onProgress"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onProgress()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:167</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parseHeaders"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            parseHeaders
+                            </b>
+                            <a href="#parseHeaders"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>parseHeaders(headers: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:191</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>headers</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="remove"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            remove
+                            </b>
+                            <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>remove(item: <a href="../classes/TerraUploadItem.html">TerraUploadItem</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraUploadItem.html" target="_self" >TerraUploadItem</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraUploadQueue.html" target="_self" >TerraUploadQueue</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="startUpload"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            startUpload
+                            </b>
+                            <a href="#startUpload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>startUpload()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadAllItems"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            uploadAllItems
+                            </b>
+                            <a href="#uploadAllItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>uploadAllItems()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadItem"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            uploadItem
+                            </b>
+                            <a href="#uploadItem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>uploadItem(item: <a href="../classes/TerraUploadItem.html">TerraUploadItem</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/components/file-browser/model/terra-upload-queue.ts:107</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="../classes/TerraUploadItem.html" target="_self" >TerraUploadItem</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TerraUploadItem } from &#x27;./terra-upload-item&#x27;;
+import { Observable } from &#x27;rxjs/Observable&#x27;;
+import { Observer } from &#x27;rxjs/Observer&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
+import { TerraUploadProgress } from &#x27;./terra-upload-progress&#x27;;
+
+export type UploadQueueUrlFactory &#x3D; (storageKey:string) &#x3D;&gt; string;
+
+export class TerraUploadQueue
+{
+    public progress:Observable&lt;number&gt;;
+    public inProgress:Promise&lt;void&gt;;
+    public status:BehaviorSubject&lt;TerraUploadProgress&gt; &#x3D; new BehaviorSubject&lt;TerraUploadProgress&gt;(null);
+
+    private items:Array&lt;TerraUploadItem&gt; &#x3D; [];
+    private size:number &#x3D; 0;
+
+    private progressListeners:Array&lt;Observer&lt;number&gt;&gt; &#x3D; [];
+    private progressValue:number &#x3D; -1;
+
+    constructor(private uploadUrl:string | UploadQueueUrlFactory, private uploadMethod:&#x27;GET&#x27; | &#x27;POST&#x27; | &#x27;DELETE&#x27; | &#x27;PUT&#x27; &#x3D; &#x27;POST&#x27;)
+    {
+        this.progress &#x3D; new Observable((observer:Observer&lt;number&gt;):Function &#x3D;&gt;
+        {
+            this.progressListeners.push(observer);
+            observer.next(this.progressValue);
+
+            return ():void &#x3D;&gt;
+            {
+                let idx:number &#x3D; this.progressListeners.indexOf(observer);
+                if(idx &gt;&#x3D; 0)
+                {
+                    this.progressListeners.splice(idx, 1);
+                }
+            };
+        });
+    }
+
+    public add(item:TerraUploadItem):TerraUploadQueue
+    {
+        this.items.push(item);
+        this.size +&#x3D; item.file.size;
+        if(this.inProgress)
+        {
+            this.onProgress();
+        }
+        return this;
+    }
+
+    public remove(item:TerraUploadItem):TerraUploadQueue
+    {
+        let idx:number &#x3D; this.items.indexOf(item);
+        this.items.splice(idx, 1);
+        this.size -&#x3D; item.file.size;
+        if(this.inProgress)
+        {
+            this.onProgress();
+        }
+        return this;
+    }
+
+    public startUpload():Promise&lt;void&gt;
+    {
+        if(this.items.length &lt;&#x3D; 0)
+        {
+            return Promise.resolve();
+        }
+
+        if(this.inProgress)
+        {
+            return this.inProgress;
+        }
+
+        this.inProgress &#x3D; this.uploadAllItems()
+                              .then(() &#x3D;&gt;
+                              {
+                                  this.inProgress &#x3D; null;
+                                  this.items &#x3D; [];
+                                  this.size &#x3D; 0;
+                              });
+    }
+
+    private uploadAllItems():Promise&lt;void&gt;
+    {
+        return new Promise((resolve:(resp:void) &#x3D;&gt; void, reject:(err:any) &#x3D;&gt; void):void &#x3D;&gt;
+        {
+            let nextItem:TerraUploadItem &#x3D; this.items.find((item:TerraUploadItem) &#x3D;&gt; !item.uploaded);
+
+            if(isNullOrUndefined(nextItem))
+            {
+                // all items are uploaded
+                this.items &#x3D; [];
+                this.status.next(null);
+                resolve(null);
+            }
+            else
+            {
+                this.uploadItem(nextItem).then(() &#x3D;&gt;
+                {
+                    this.uploadAllItems().then(resolve).catch(reject);
+                }).catch(reject);
+            }
+        });
+    }
+
+    private uploadItem(item:TerraUploadItem):Promise&lt;void&gt;
+    {
+        return new Promise((resolve:(resp:void) &#x3D;&gt; void, reject:(err:any) &#x3D;&gt; void):void &#x3D;&gt;
+        {
+            let xhr:XMLHttpRequest &#x3D; item.xhr &#x3D; new XMLHttpRequest();
+
+            item.emit(&#x27;beforeUpload&#x27;, item.file);
+
+            xhr.upload.onprogress &#x3D; (event:ProgressEvent):void &#x3D;&gt;
+            {
+                let progress:number &#x3D; Math.round(event.lengthComputable ? event.loaded * 100 / event.total : 0);
+                item.emit(&#x27;onProgress&#x27;, progress);
+                this.onProgress();
+            };
+
+            xhr.onload &#x3D; ():void &#x3D;&gt;
+            {
+                item.emit(&#x27;onSuccess&#x27;, xhr.response, xhr.status, this.parseHeaders(xhr.getAllResponseHeaders()));
+                item.uploaded &#x3D; true;
+                this.onProgress();
+                resolve(null);
+            };
+
+            xhr.onerror &#x3D; ():void &#x3D;&gt;
+            {
+                item.emit(&#x27;onError&#x27;, xhr.response, xhr.status, this.parseHeaders(xhr.getAllResponseHeaders()));
+                item.uploaded &#x3D; true;
+                this.onProgress();
+                reject(xhr.response);
+            };
+
+            xhr.onabort &#x3D; ():void &#x3D;&gt;
+            {
+                item.emit(
+                    &#x27;onCancel&#x27;,
+                    xhr.response,
+                    xhr.status,
+                    this.parseHeaders(xhr.getAllResponseHeaders())
+                );
+                item.uploaded &#x3D; true;
+                this.onProgress();
+                reject(xhr.response);
+            };
+
+            xhr.open(
+                this.uploadMethod,
+                this.getUploadUrl(item.pathname),
+                true
+            );
+
+            if(localStorage.getItem(&#x27;accessToken&#x27;))
+            {
+                xhr.setRequestHeader(&#x27;Authorization&#x27;, &#x27;Bearer &#x27; + localStorage.getItem(&#x27;accessToken&#x27;));
+            }
+
+            xhr.send(item.file);
+        });
+
+    }
+
+    private onProgress():void
+    {
+        let filesUploaded:Array&lt;TerraUploadItem&gt; &#x3D; this.items.filter( (item:TerraUploadItem) &#x3D;&gt; item.uploaded);
+        let sizeUploaded:number &#x3D; filesUploaded
+            .map( (item:TerraUploadItem) &#x3D;&gt; item.file.size)
+            .reduce((prev:number, current:number) &#x3D;&gt; prev + current, 0);
+
+        let progress:number &#x3D; 100 - Math.round(((this.size - sizeUploaded) / this.size) * 100);
+
+        this.progressListeners.forEach((listener:Observer&lt;number&gt;) &#x3D;&gt;
+        {
+            listener.next(progress || 0);
+        });
+
+
+        this.status.next({
+            filesTotal: this.items.length,
+            filesUploaded: filesUploaded.length,
+            sizeTotal: this.size,
+            sizeUploaded: sizeUploaded,
+            progress: progress
+        });
+    }
+
+    private parseHeaders(headers:string):{ [key:string]:string }
+    {
+        let parsed:{ [key:string]:string } &#x3D; {};
+        headers.split(&#x27;\n&#x27;).forEach((header:string) &#x3D;&gt;
+        {
+            let pivot:number &#x3D; header.indexOf(&#x27;:&#x27;);
+            let key:string &#x3D; header.substr(0, pivot).trim().toLowerCase();
+            let value:string &#x3D; header.substr(pivot + 1).trim();
+            if(!isNullOrUndefined(key))
+            {
+                parsed[key] &#x3D; parsed[key] ? parsed[key] + &#x27;, &#x27; + value : value;
+            }
+        });
+        return parsed;
+    }
+
+    private getUploadUrl(storageKey:string):string
+    {
+        if(typeof this.uploadUrl &#x3D;&#x3D;&#x3D; &#x27;function&#x27;)
+        {
+            return this.uploadUrl(storageKey);
+        }
+        else
+        {
+            return this.uploadUrl + &#x27;?key&#x3D;&#x27; + storageKey;
+        }
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraUploadQueue.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

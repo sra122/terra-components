@@ -1,0 +1,813 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraDataTableContextMenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>context-menu</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#clickListener">clickListener</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#contextMenuLinkList">contextMenuLinkList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isShown">isShown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#locationCss">locationCss</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mouseLocation">mouseLocation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calcMenuPosition">calcMenuPosition</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#clickedOutside">clickedOutside</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showMenu">showMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(contextMenuService: <a href="../injectables/TerraDataTableContextMenuService.html">TerraDataTableContextMenuService<D></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>contextMenuService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/TerraDataTableContextMenuService.html" target="_self" >TerraDataTableContextMenuService&lt;D&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calcMenuPosition"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            calcMenuPosition
+                            </b>
+                            <a href="#calcMenuPosition"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>calcMenuPosition()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickedOutside"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            clickedOutside
+                            </b>
+                            <a href="#clickedOutside"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>clickedOutside()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMenu"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showMenu
+                            </b>
+                            <a href="#showMenu"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>showMenu(event: MouseEvent, contextMenuLinkList: <a href="../interfaces/TerraDataTableContextMenuEntryInterface.html">Array<TerraDataTableContextMenuEntryInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>MouseEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>contextMenuLinkList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableContextMenuEntryInterface.html" target="_self" >Array&lt;TerraDataTableContextMenuEntryInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickListener"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            clickListener
+                            </b>
+                            <a href="#clickListener"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>clickListener:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contextMenuLinkList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            contextMenuLinkList
+                            </b>
+                            <a href="#contextMenuLinkList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>contextMenuLinkList:     <code><a href="../interfaces/TerraDataTableContextMenuEntryInterface.html" target="_self" >Array&lt;TerraDataTableContextMenuEntryInterface&lt;D&gt;&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraDataTableContextMenuEntryInterface.html" target="_self" >Array&lt;TerraDataTableContextMenuEntryInterface&lt;D&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isShown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isShown
+                            </b>
+                            <a href="#isShown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isShown:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locationCss"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            locationCss
+                            </b>
+                            <a href="#locationCss"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>locationCss:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+        visibility: &#x27;hidden&#x27;,
+        left:       0,
+        top:        0,
+        right:      0
+    }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mouseLocation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            mouseLocation
+                            </b>
+                            <a href="#mouseLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>mouseLocation:     <code>literal type</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+        left: 0,
+        top:  0
+    }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/tables/data-table/context-menu/terra-data-table-context-menu.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { TerraDataTableContextMenuService } from &#x27;./service/terra-data-table-context-menu.service&#x27;;
+import { TerraDataTableContextMenuEntryInterface } from &#x27;./data/terra-data-table-context-menu-entry.interface&#x27;;
+import { TerraBaseData } from &#x27;../../../data/terra-base.data&#x27;;
+
+/**
+ * @author mkunze
+ */
+@Component({
+    // tslint:disable-next-line
+    selector: &#x27;context-menu&#x27;, // it still exists a terra-context-menu in terra, need to refactored first
+    styles:   [require(&#x27;./terra-data-table-context-menu.component.scss&#x27;)],
+    template: require(&#x27;./terra-data-table-context-menu.component.html&#x27;)
+})
+export class TerraDataTableContextMenuComponent&lt;D extends TerraBaseData&gt;
+{
+    protected contextMenuLinkList:Array&lt;TerraDataTableContextMenuEntryInterface&lt;D&gt;&gt; &#x3D; [];
+    protected locationCss:any &#x3D; {
+        visibility: &#x27;hidden&#x27;,
+        left:       0,
+        top:        0,
+        right:      0
+    };
+
+    private isShown:boolean &#x3D; false;
+    private clickListener:(event:Event) &#x3D;&gt; void;
+
+    private mouseLocation:{ left:number, top:number } &#x3D; {
+        left: 0,
+        top:  0
+    };
+
+    constructor(private contextMenuService:TerraDataTableContextMenuService&lt;D&gt;)
+    {
+        contextMenuService.show.subscribe(
+            (e:any):void &#x3D;&gt; this.showMenu(e.event, e.obj));
+
+        contextMenuService.init.subscribe(
+            (e:any):void &#x3D;&gt; this.contextMenuLinkList &#x3D; e
+        );
+
+        this.clickListener &#x3D; (event:Event):void &#x3D;&gt;
+        {
+            this.clickedOutside();
+            event.stopPropagation();
+        };
+    }
+
+    public clickedOutside():void
+    {
+        this.isShown &#x3D; false;
+        this.locationCss &#x3D; this.calcMenuPosition();
+        document.removeEventListener(&#x27;click&#x27;, this.clickListener);
+    }
+
+    public showMenu(event:MouseEvent, contextMenuLinkList:Array&lt;TerraDataTableContextMenuEntryInterface&lt;D&gt;&gt;):void
+    {
+        this.isShown &#x3D; true;
+        this.contextMenuLinkList &#x3D; contextMenuLinkList;
+        this.mouseLocation &#x3D; {
+            left: event.clientX,
+            top:  event.clientY
+        };
+
+        this.locationCss &#x3D; this.calcMenuPosition();
+
+        event.stopPropagation();
+        document.addEventListener(&#x27;click&#x27;, this.clickListener);
+    }
+
+    private calcMenuPosition():{ visibility:string, left:string, top:string }
+    {
+        // 70 (navbar) + 46 (tabbar) + 36 (breadcrumbs)
+        let offsetTop:number &#x3D; 108; // 161
+        let offsetLeft:number;
+        let anchor:JQuery &#x3D; $(&#x27;.context-menu#menu&#x27;);
+        let isMenuAtBottom:boolean;
+        let contextMenuHeight:number &#x3D; anchor.height();
+        let contextMenuWidth:number &#x3D; anchor.width();
+        let tableWidth:number;
+
+        let buttomTop:string &#x3D; this.mouseLocation.top - offsetTop - contextMenuHeight + &#x27;px&#x27;;
+        let top:string &#x3D; this.mouseLocation.top - offsetTop - 2 + &#x27;px&#x27;;
+
+        if(this.mouseLocation.top + contextMenuHeight &gt; innerHeight)
+        {
+            isMenuAtBottom &#x3D; true;
+        }
+
+        let dataTableElement:JQuery &#x3D; anchor.closest(&#x27;terra-data-table&#x27;);
+
+        offsetLeft &#x3D; dataTableElement.offset().left;
+
+        tableWidth &#x3D; dataTableElement.find(&#x27;tbody&#x27;).width();
+
+        if(Math.abs(this.mouseLocation.left - offsetLeft - 2) + contextMenuWidth &gt; tableWidth)
+        {
+            offsetLeft &#x3D; offsetLeft + contextMenuWidth - 6;
+        }
+
+        return {
+            visibility: this.isShown ? &#x27;visible&#x27; : &#x27;hidden&#x27;,
+            left:       this.mouseLocation.left - offsetLeft - 2 + &#x27;px&#x27;,
+            top:        isMenuAtBottom ? buttomTop : top
+        };
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraDataTableContextMenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraDataTableContextMenuComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

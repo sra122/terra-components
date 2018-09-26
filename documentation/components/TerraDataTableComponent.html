@@ -1,0 +1,2702 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraDataTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/tables/data-table/terra-data-table.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../injectables/TerraDataTableContextMenuService.html" target="_self" >TerraDataTableContextMenuService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>terra-data-table</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_rowList">_rowList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_selectedRowList">_selectedRowList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#alert">alert</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#defaultPagingSize">defaultPagingSize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#headerList">headerList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#initialLoadingMessage">initialLoadingMessage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#isHeaderCheckboxChecked">isHeaderCheckboxChecked</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#langPrefix">langPrefix</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSuccessFunction">onSuccessFunction</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pagingData">pagingData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pagingSize">pagingSize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#requestPending">requestPending</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#TerraRefTypeEnum">TerraRefTypeEnum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#viewChildHeaderCheckbox">viewChildHeaderCheckbox</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#changeRowState">changeRowState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkTooltipPlacement">checkTooltipPlacement</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deleteRow">deleteRow</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doPaging">doPaging</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doSearch">doSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCellDataType">getCellDataType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#getTextAlign">getTextAlign</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onGroupFunctionExecuteButtonClicked">onGroupFunctionExecuteButtonClicked</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onHeaderCheckboxChange">onHeaderCheckboxChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onRowCheckboxChange">onRowCheckboxChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rowClicked">rowClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#hasCheckboxes">hasCheckboxes</a>
+                            </li>
+                            <li>
+                                <a href="#inputDataType">inputDataType</a>
+                            </li>
+                            <li>
+                                <a href="#inputGroupFunctionExecuteButtonIsDisabled">inputGroupFunctionExecuteButtonIsDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#inputHasCheckboxes">inputHasCheckboxes</a>
+                            </li>
+                            <li>
+                                <a href="#inputHasInitialLoading">inputHasInitialLoading</a>
+                            </li>
+                            <li>
+                                <a href="#inputHasPager">inputHasPager</a>
+                            </li>
+                            <li>
+                                <a href="#inputNoResultButtons">inputNoResultButtons</a>
+                            </li>
+                            <li>
+                                <a href="#inputNoResultTextPrimary">inputNoResultTextPrimary</a>
+                            </li>
+                            <li>
+                                <a href="#inputNoResultTextSecondary">inputNoResultTextSecondary</a>
+                            </li>
+                            <li>
+                                <a href="#inputService">inputService</a>
+                            </li>
+                            <li>
+                                <a href="#inputShowGroupFunctions">inputShowGroupFunctions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#outputDoPagingEvent">outputDoPagingEvent</a>
+                            </li>
+                            <li>
+                                <a href="#outputGroupFunctionExecuteButtonClicked">outputGroupFunctionExecuteButtonClicked</a>
+                            </li>
+                            <li>
+                                <a href="#outputRowCheckBoxChanged">outputRowCheckBoxChanged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#rowList">rowList</a>
+                                </li>
+                                <li>
+                                    <a href="#getCollapsedState">getCollapsedState</a>
+                                </li>
+                                <li>
+                                    <a href="#selectedRowList">selectedRowList</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:129</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="hasCheckboxes"></a>
+                        <code>hasCheckboxes</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:129</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputDataType"></a>
+                        <code>inputDataType</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:74</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputGroupFunctionExecuteButtonIsDisabled"></a>
+                        <code>inputGroupFunctionExecuteButtonIsDisabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>true</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:98</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputHasCheckboxes"></a>
+                        <code>inputHasCheckboxes</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:77</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputHasInitialLoading"></a>
+                        <code>inputHasInitialLoading</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:83</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputHasPager"></a>
+                        <code>inputHasPager</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:80</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputNoResultButtons"></a>
+                        <code>inputNoResultButtons</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/TerraButtonInterface.html" target="_self" >Array&lt;TerraButtonInterface&gt;</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:92</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputNoResultTextPrimary"></a>
+                        <code>inputNoResultTextPrimary</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:86</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputNoResultTextSecondary"></a>
+                        <code>inputNoResultTextSecondary</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:89</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputService"></a>
+                        <code>inputService</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>S</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:71</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputShowGroupFunctions"></a>
+                        <code>inputShowGroupFunctions</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:95</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputDoPagingEvent"></a>
+                        <code>outputDoPagingEvent</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraPagerInterface.html" target="_self" >EventEmitter&lt;TerraPagerInterface&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:101</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputGroupFunctionExecuteButtonClicked"></a>
+                        <code>outputGroupFunctionExecuteButtonClicked</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >EventEmitter&lt;Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:107</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputRowCheckBoxChanged"></a>
+                        <code>outputRowCheckBoxChanged</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >EventEmitter&lt;TerraDataTableRowInterface&lt;D&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:104</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeRowState"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            changeRowState
+                            </b>
+                            <a href="#changeRowState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>changeRowState(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, rowToChange: <a href="../interfaces/TerraDataTableRowInterface.html">TerraDataTableRowInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="310" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:310</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>rowToChange</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >TerraDataTableRowInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkTooltipPlacement"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            checkTooltipPlacement
+                            </b>
+                            <a href="#checkTooltipPlacement"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>checkTooltipPlacement(placement: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:209</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>placement</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteRow"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            deleteRow
+                            </b>
+                            <a href="#deleteRow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>deleteRow(rowToDelete: <a href="../interfaces/TerraDataTableRowInterface.html">TerraDataTableRowInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="339" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:339</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>rowToDelete</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >TerraDataTableRowInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doPaging"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            doPaging
+                            </b>
+                            <a href="#doPaging"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>doPaging(pagerData: <a href="../interfaces/TerraPagerInterface.html">TerraPagerInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="359" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:359</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>pagerData</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraPagerInterface.html" target="_self" >TerraPagerInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doSearch"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            doSearch
+                            </b>
+                            <a href="#doSearch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>doSearch(restCall: Observable<I>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="374" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:374</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>restCall</td>
+                                                        <td>
+                                                                    <code>Observable&lt;I&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCellDataType"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getCellDataType
+                            </b>
+                            <a href="#getCellDataType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getCellDataType(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="233" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:233</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTextAlign"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            getTextAlign
+                            </b>
+                            <a href="#getTextAlign"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getTextAlign(item: <a href="../interfaces/TerraDataTableHeaderCellInterface.html">TerraDataTableHeaderCellInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="403" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:403</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableHeaderCellInterface.html" target="_self" >TerraDataTableHeaderCellInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:167</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onGroupFunctionExecuteButtonClicked"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onGroupFunctionExecuteButtonClicked
+                            </b>
+                            <a href="#onGroupFunctionExecuteButtonClicked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onGroupFunctionExecuteButtonClicked(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="305" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:305</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onHeaderCheckboxChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onHeaderCheckboxChange
+                            </b>
+                            <a href="#onHeaderCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onHeaderCheckboxChange(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:177</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onRowCheckboxChange"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onRowCheckboxChange
+                            </b>
+                            <a href="#onRowCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onRowCheckboxChange(isChecked: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, row: <a href="../interfaces/TerraDataTableRowInterface.html">TerraDataTableRowInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:190</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>isChecked</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>row</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >TerraDataTableRowInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rowClicked"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            rowClicked
+                            </b>
+                            <a href="#rowClicked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>rowClicked(cell: <a href="../interfaces/TerraDataTableCellInterface.html">TerraDataTableCellInterface</a>, clickedRow: <a href="../interfaces/TerraDataTableRowInterface.html">TerraDataTableRowInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="219" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:219</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cell</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableCellInterface.html" target="_self" >TerraDataTableCellInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>clickedRow</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >TerraDataTableRowInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_rowList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _rowList
+                            </b>
+                            <a href="#_rowList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_rowList:     <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:122</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_selectedRowList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _selectedRowList
+                            </b>
+                            <a href="#_selectedRowList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_selectedRowList:     <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraDataTableRowInterface.html" target="_self" >Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:123</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="alert"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            alert
+                            </b>
+                            <a href="#alert"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>alert:     <code><a href="../injectables/TerraAlertComponent.html" target="_self" >TerraAlertComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/TerraAlertComponent.html" target="_self" >TerraAlertComponent</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>TerraAlertComponent.getInstance()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:118</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultPagingSize"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            defaultPagingSize
+                            </b>
+                            <a href="#defaultPagingSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>defaultPagingSize:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            headerList
+                            </b>
+                            <a href="#headerList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>headerList:     <code><a href="../interfaces/TerraDataTableHeaderCellInterface.html" target="_self" >Array&lt;TerraDataTableHeaderCellInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraDataTableHeaderCellInterface.html" target="_self" >Array&lt;TerraDataTableHeaderCellInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initialLoadingMessage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            initialLoadingMessage
+                            </b>
+                            <a href="#initialLoadingMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>initialLoadingMessage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:117</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isHeaderCheckboxChecked"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            isHeaderCheckboxChecked
+                            </b>
+                            <a href="#isHeaderCheckboxChecked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isHeaderCheckboxChecked:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:116</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="langPrefix"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            langPrefix
+                            </b>
+                            <a href="#langPrefix"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>langPrefix:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;terraDataTable&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSuccessFunction"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onSuccessFunction
+                            </b>
+                            <a href="#onSuccessFunction"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>onSuccessFunction:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:112</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pagingData"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pagingData
+                            </b>
+                            <a href="#pagingData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>pagingData:     <code><a href="../interfaces/TerraPagerInterface.html" target="_self" >TerraPagerInterface</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraPagerInterface.html" target="_self" >TerraPagerInterface</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pagingSize"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pagingSize
+                            </b>
+                            <a href="#pagingSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>pagingSize:     <code><a href="../interfaces/TerraSelectBoxValueInterface.html" target="_self" >Array&lt;TerraSelectBoxValueInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSelectBoxValueInterface.html" target="_self" >Array&lt;TerraSelectBoxValueInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="requestPending"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            requestPending
+                            </b>
+                            <a href="#requestPending"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>requestPending:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:120</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TerraRefTypeEnum"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            TerraRefTypeEnum
+                            </b>
+                            <a href="#TerraRefTypeEnum"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>TerraRefTypeEnum:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>TerraRefTypeEnum</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:114</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewChildHeaderCheckbox"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            viewChildHeaderCheckbox
+                            </b>
+                            <a href="#viewChildHeaderCheckbox"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>viewChildHeaderCheckbox:     <code><a href="../components/TerraCheckboxComponent.html" target="_self" >TerraCheckboxComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../components/TerraCheckboxComponent.html" target="_self" >TerraCheckboxComponent</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:68</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rowList"></a>
+                        <span class="name"><b>rowList</b><a href="#rowList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>rowList()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:142</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>rowList(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:147</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCollapsedState"></a>
+                        <span class="name"><b>getCollapsedState</b><a href="#getCollapsedState"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>getCollapsedState()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:155</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedRowList"></a>
+                        <span class="name"><b>selectedRowList</b><a href="#selectedRowList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>selectedRowList()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="354" class="link-to-prism">src/app/components/tables/data-table/terra-data-table.component.ts:354</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    EventEmitter,
+    Input,
+    OnChanges,
+    Output,
+    SimpleChanges,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+import { Observable } from &#x27;rxjs/Observable&#x27;;
+import { TerraDataTableHeaderCellInterface } from &#x27;./cell/terra-data-table-header-cell.interface&#x27;;
+import { TerraDataTableRowInterface } from &#x27;./row/terra-data-table-row.interface&#x27;;
+import { TerraDataTableContextMenuService } from &#x27;./context-menu/service/terra-data-table-context-menu.service&#x27;;
+import { TerraDataTableCellInterface } from &#x27;./cell/terra-data-table-cell.interface&#x27;;
+import {
+    isArray,
+    isNull,
+    isNullOrUndefined
+} from &#x27;util&#x27;;
+import {
+    TerraRefTypeEnum,
+    TerraRefTypeInterface
+} from &#x27;./cell/terra-ref-type.interface&#x27;;
+import { TerraDataTableTextInterface } from &#x27;./cell/terra-data-table-text.interface&#x27;;
+import {
+    animate,
+    state,
+    style,
+    transition,
+    trigger
+} from &#x27;@angular/animations&#x27;;
+import { TerraBaseService } from &#x27;../../../service/terra-base.service&#x27;;
+import { TerraBaseData } from &#x27;../../data/terra-base.data&#x27;;
+import { TerraPagerInterface } from &#x27;../../pager/data/terra-pager.interface&#x27;;
+import { TerraCheckboxComponent } from &#x27;../../forms/checkbox/terra-checkbox.component&#x27;;
+import { TerraButtonInterface } from &#x27;../../buttons/button/data/terra-button.interface&#x27;;
+import { TerraSelectBoxValueInterface } from &#x27;../../forms/select-box/data/terra-select-box.interface&#x27;;
+import { TerraAlertComponent } from &#x27;../../alert/terra-alert.component&#x27;;
+import { TerraTagInterface } from &#x27;../../layouts/tag/data/terra-tag.interface&#x27;;
+
+@Component({
+    selector:   &#x27;terra-data-table&#x27;,
+    template:   require(&#x27;./terra-data-table.component.html&#x27;),
+    styles:     [require(&#x27;./terra-data-table.component.scss&#x27;)],
+    providers:  [TerraDataTableContextMenuService],
+    animations: [
+        trigger(&#x27;collapsedState&#x27;, [
+            state(&#x27;hidden&#x27;, style({
+                height:          &#x27;0&#x27;,
+                overflow:        &#x27;hidden&#x27;,
+                &#x27;margin-bottom&#x27;: &#x27;0&#x27;
+            })),
+            state(&#x27;collapsed&#x27;, style({
+                height:          &#x27;*&#x27;,
+                overflow:        &#x27;initial&#x27;,
+                &#x27;margin-bottom&#x27;: &#x27;6px&#x27;
+            })),
+            transition(&#x27;hidden &lt;&#x3D;&gt; collapsed&#x27;, [
+                animate(300)
+
+            ])
+        ])
+    ]
+})
+export class TerraDataTableComponent&lt;S extends TerraBaseService, D extends TerraBaseData, I extends TerraPagerInterface&gt; implements OnChanges
+{
+    @ViewChild(&#x27;viewChildHeaderCheckbox&#x27;)
+    public viewChildHeaderCheckbox:TerraCheckboxComponent;
+
+    @Input()
+    public inputService:S;
+
+    @Input()
+    public inputDataType:string;
+
+    @Input()
+    public inputHasCheckboxes:boolean;
+
+    @Input()
+    public inputHasPager:boolean;
+
+    @Input()
+    public inputHasInitialLoading:boolean;
+
+    @Input()
+    public inputNoResultTextPrimary:string;
+
+    @Input()
+    public inputNoResultTextSecondary:string;
+
+    @Input()
+    public inputNoResultButtons:Array&lt;TerraButtonInterface&gt;;
+
+    @Input()
+    public inputShowGroupFunctions:boolean &#x3D; false;
+
+    @Input()
+    public inputGroupFunctionExecuteButtonIsDisabled:boolean &#x3D; true;
+
+    @Output()
+    public outputDoPagingEvent:EventEmitter&lt;TerraPagerInterface&gt; &#x3D; new EventEmitter&lt;TerraPagerInterface&gt;();
+
+    @Output()
+    public outputRowCheckBoxChanged:EventEmitter&lt;TerraDataTableRowInterface&lt;D&gt;&gt; &#x3D; new EventEmitter();
+
+    @Output()
+    public outputGroupFunctionExecuteButtonClicked:EventEmitter&lt;Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;&gt; &#x3D; new EventEmitter();
+
+    public headerList:Array&lt;TerraDataTableHeaderCellInterface&gt;;
+    public pagingData:TerraPagerInterface;
+    public pagingSize:Array&lt;TerraSelectBoxValueInterface&gt;;
+    public onSuccessFunction:(res:I) &#x3D;&gt; void;
+    public defaultPagingSize:number;
+    public TerraRefTypeEnum:object &#x3D; TerraRefTypeEnum;
+
+    protected isHeaderCheckboxChecked:boolean &#x3D; false;
+    protected initialLoadingMessage:string;
+    protected alert:TerraAlertComponent &#x3D; TerraAlertComponent.getInstance();
+    protected langPrefix:string &#x3D; &#x27;terraDataTable&#x27;;
+    protected requestPending:boolean;
+
+    private _rowList:Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;;
+    private _selectedRowList:Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;;
+
+    /**
+     * @deprecated
+     */
+    @Input()
+    private hasCheckboxes:boolean;
+
+    constructor()
+    {
+        this.hasCheckboxes &#x3D; true;
+        this.inputHasCheckboxes &#x3D; true;
+        this.inputHasInitialLoading &#x3D; false;
+        this.inputHasPager &#x3D; true;
+
+        this._selectedRowList &#x3D; [];
+        this._rowList &#x3D; [];
+    }
+
+    public get rowList():Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;
+    {
+        return this._rowList;
+    }
+
+    public set rowList(value:Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;)
+    {
+        // reset selected RowList
+        this._selectedRowList &#x3D; [];
+
+        this._rowList &#x3D; value;
+    }
+
+    private get getCollapsedState():string
+    {
+        if(this.inputShowGroupFunctions)
+        {
+            return &#x27;collapsed&#x27;;
+        }
+        else
+        {
+            return &#x27;hidden&#x27;;
+        }
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        if(changes[&#x27;hasCheckboxes&#x27;])
+        {
+            console.warn(
+                &#x27;hasCheckboxes is deprecated. It will be removed in one of the upcoming releases. Please use inputHasCheckboxes instead.&#x27;);
+            this.inputHasCheckboxes &#x3D; changes[&#x27;hasCheckboxes&#x27;].currentValue;
+        }
+    }
+
+    public onHeaderCheckboxChange(isChecked:boolean):void
+    {
+        this.isHeaderCheckboxChecked &#x3D; isChecked;
+
+        this._rowList.forEach((row:TerraDataTableRowInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            if(!row.disabled)
+            {
+                this.changeRowState(isChecked, row);
+            }
+        });
+    }
+
+    public onRowCheckboxChange(isChecked:boolean, row:TerraDataTableRowInterface&lt;D&gt;):void
+    {
+        this.changeRowState(isChecked, row);
+        this.outputRowCheckBoxChanged.emit(row);
+
+        if(this.selectedRowList.length &#x3D;&#x3D;&#x3D; 0)
+        {
+            this.isHeaderCheckboxChecked &#x3D; false;
+        }
+        else if(this.selectedRowList.length &gt; 0 &amp;&amp; this._rowList.length &#x3D;&#x3D;&#x3D; this.selectedRowList.length)
+        {
+            this.isHeaderCheckboxChecked &#x3D; true;
+        }
+        else
+        {
+            this.viewChildHeaderCheckbox.isIndeterminate &#x3D; true;
+        }
+    }
+
+    public checkTooltipPlacement(placement:string):string
+    {
+        if(!isNullOrUndefined(placement) &amp;&amp; placement !&#x3D;&#x3D; &#x27;&#x27;)
+        {
+            return placement;
+        }
+
+        return &#x27;top&#x27;;
+    }
+
+    public rowClicked(cell:TerraDataTableCellInterface, clickedRow:TerraDataTableRowInterface&lt;D&gt;):void
+    {
+        if(!cell.buttonList &amp;&amp; !clickedRow.disabled)
+        {
+            this._rowList.forEach((row:TerraDataTableRowInterface&lt;D&gt;):void &#x3D;&gt;
+            {
+                row.isActive &#x3D; false;
+            });
+
+            clickedRow.isActive &#x3D; true;
+            clickedRow.clickFunction();
+        }
+    }
+
+    public getCellDataType(data:any):string
+    {
+        function isRefType(arg:any):arg is TerraRefTypeInterface
+        {
+            return arg
+                   &amp;&amp; arg.type &amp;&amp; typeof arg.type &#x3D;&#x3D;&#x3D; &#x27;string&#x27;
+                   &amp;&amp; arg.value &amp;&amp; typeof arg.value &#x3D;&#x3D;&#x3D; &#x27;string&#x27;;
+        }
+
+        function isTextType(arg:any):arg is TerraDataTableTextInterface
+        {
+            return arg &amp;&amp; arg.caption &amp;&amp; typeof arg.caption &#x3D;&#x3D;&#x3D; &#x27;string&#x27;;
+        }
+
+        function isTagArray(arg:any):arg is Array&lt;TerraTagInterface&gt;
+        {
+            // check if it is an array
+            if(!isArray(arg))
+            {
+                return false;
+            }
+
+            // check if every element of the array implements the tag interface
+            let implementsInterface:boolean &#x3D; true;
+            arg.forEach((elem:any) &#x3D;&gt;
+            {
+                implementsInterface &#x3D; implementsInterface &amp;&amp; elem.badge &amp;&amp; typeof elem.badge &#x3D;&#x3D;&#x3D; &#x27;string&#x27;;
+            });
+
+            return arg &amp;&amp; implementsInterface;
+        }
+
+        function isButtonArray(arg:any):arg is Array&lt;TerraButtonInterface&gt;
+        {
+            // check if it is an array
+            if(!isArray(arg))
+            {
+                return false;
+            }
+
+            // check if every element of the array implements the button interface
+            let implementsInterface:boolean &#x3D; true;
+            arg.forEach((elem:any) &#x3D;&gt;
+            {
+                implementsInterface &#x3D; implementsInterface &amp;&amp; elem.clickFunction &amp;&amp; typeof elem.clickFunction &#x3D;&#x3D;&#x3D; &#x27;function&#x27;;
+            });
+
+            return arg &amp;&amp; implementsInterface;
+        }
+
+        if(typeof data &#x3D;&#x3D;&#x3D; &#x27;object&#x27;)
+        {
+            if(isRefType(data))
+            {
+                return &#x27;TerraRefTypeInterface&#x27;;
+            }
+            else if(isTextType(data))
+            {
+                return &#x27;TerraDataTableTextInterface&#x27;;
+            }
+            else if(isTagArray(data))
+            {
+                return &#x27;tags&#x27;;
+            }
+            else if(isButtonArray(data))
+            {
+                return &#x27;buttons&#x27;;
+            }
+        }
+        return typeof data;
+    }
+
+    public onGroupFunctionExecuteButtonClicked(event:Event):void
+    {
+        this.outputGroupFunctionExecuteButtonClicked.emit(this._selectedRowList);
+    }
+
+    private changeRowState(isChecked:boolean, rowToChange:TerraDataTableRowInterface&lt;D&gt;):void
+    {
+        rowToChange.selected &#x3D; isChecked;
+
+        let rowFound:boolean &#x3D; false;
+
+        this.selectedRowList.forEach((row:TerraDataTableRowInterface&lt;D&gt;):void &#x3D;&gt;
+        {
+            if(row &#x3D;&#x3D;&#x3D; rowToChange)
+            {
+                rowFound &#x3D; true;
+            }
+        });
+
+        if(rowToChange.selected)
+        {
+            if(!rowFound)
+            {
+                this.selectedRowList.push(rowToChange);
+            }
+        }
+        else
+        {
+            let index:number &#x3D; this.selectedRowList.indexOf(rowToChange);
+
+            this.selectedRowList.splice(index, 1);
+        }
+    }
+
+    public deleteRow(rowToDelete:TerraDataTableRowInterface&lt;D&gt;):void
+    {
+        let index:number &#x3D; this._rowList.indexOf(rowToDelete);
+
+        this._rowList.splice(index, 1);
+
+        let selectedIndex:number &#x3D; this.selectedRowList.indexOf(rowToDelete);
+
+        // check if row exists in selectedRowList
+        if(!isNull(selectedIndex))
+        {
+            this.selectedRowList.splice(selectedIndex, 1);
+        }
+    }
+
+    public get selectedRowList():Array&lt;TerraDataTableRowInterface&lt;D&gt;&gt;
+    {
+        return this._selectedRowList;
+    }
+
+    public doPaging(pagerData:TerraPagerInterface):void
+    {
+        this.outputDoPagingEvent.emit(pagerData);
+
+        this.isHeaderCheckboxChecked &#x3D; false;
+
+        if(!isNullOrUndefined(this._rowList))
+        {
+            this._rowList.forEach((row:TerraDataTableRowInterface&lt;D&gt;) &#x3D;&gt;
+            {
+                this.changeRowState(false, row);
+            });
+        }
+    }
+
+    public doSearch(restCall:Observable&lt;I&gt;):void
+    {
+        if(isNullOrUndefined(restCall))
+        {
+            return;
+        }
+
+        this.requestPending &#x3D; true;
+        restCall.subscribe(
+            (res:I) &#x3D;&gt;
+            {
+                this._selectedRowList &#x3D; [];
+                this.onSuccessFunction(res);
+            },
+            (error:any) &#x3D;&gt;
+            {
+                if(error.status &#x3D;&#x3D;&#x3D; 401 || error.status &#x3D;&#x3D;&#x3D; 500)
+                {
+                    // TODO
+                    // alert(error.status);
+                }
+            },
+            () &#x3D;&gt;
+            {
+                this.requestPending &#x3D; false;
+            }
+        );
+    }
+
+    protected getTextAlign(item:TerraDataTableHeaderCellInterface):string
+    {
+        if(!isNullOrUndefined(item.textAlign))
+        {
+            return item.textAlign;
+        }
+        else
+        {
+            return &#x27;left&#x27;;
+        }
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraDataTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraDataTableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

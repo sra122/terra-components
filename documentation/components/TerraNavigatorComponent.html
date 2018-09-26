@@ -1,0 +1,2098 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TerraNavigatorComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/navigator/terra-navigator.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>terra-navigator</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>require(),require.require.toString()</code></td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_searchNodeList">_searchNodeList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isInit">isInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addNodeAt">addNodeAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addNodesRecursive">addNodesRecursive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addSearchNode">addSearchNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findRootPath">findRootPath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNodePath">getNodePath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNodeRoute">getNodeRoute</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTotalVisibleChildren">getTotalVisibleChildren</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initRootPaths">initRootPaths</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#openSelectedNode">openSelectedNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#refreshNodeVisibilities">refreshNodeVisibilities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateSearchNodes">updateSearchNodes</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inputBaseRoute">inputBaseRoute</a>
+                            </li>
+                            <li>
+                                <a href="#inputFirstBreadcrumbName">inputFirstBreadcrumbName</a>
+                            </li>
+                            <li>
+                                <a href="#inputModuleWidth">inputModuleWidth</a>
+                            </li>
+                            <li>
+                                <a href="#inputNavigatorService">inputNavigatorService</a>
+                            </li>
+                            <li>
+                                <a href="#inputNodes">inputNodes</a>
+                            </li>
+                            <li>
+                                <a href="#inputRouter">inputRouter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#outputEndpointClicked">outputEndpointClicked</a>
+                            </li>
+                            <li>
+                                <a href="#outputNodeClicked">outputNodeClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#searchNodeList">searchNodeList</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(terraNavigatorSplitViewConfig: <a href="../injectables/TerraNavigatorSplitViewConfig.html">TerraNavigatorSplitViewConfig<D></a>, translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>terraNavigatorSplitViewConfig</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/TerraNavigatorSplitViewConfig.html" target="_self" >TerraNavigatorSplitViewConfig&lt;D&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputBaseRoute"></a>
+                        <code>inputBaseRoute</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:52</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputFirstBreadcrumbName"></a>
+                        <code>inputFirstBreadcrumbName</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputModuleWidth"></a>
+                        <code>inputModuleWidth</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputNavigatorService"></a>
+                        <code>inputNavigatorService</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../classes/TerraNavigatorConfig.html" target="_self" >TerraNavigatorConfig&lt;D&gt;</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:40</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputNodes"></a>
+                        <code>inputNodes</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="inputRouter"></a>
+                        <code>inputRouter</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:49</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputEndpointClicked"></a>
+                        <code>outputEndpointClicked</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >EventEmitter&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:55</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="outputNodeClicked"></a>
+                        <code>outputNodeClicked</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >EventEmitter&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:58</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addNodeAt"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addNodeAt
+                            </b>
+                            <a href="#addNodeAt"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addNodeAt(data: <a href="../interfaces/TerraNavigatorNodeInterface.html">Array<TerraNavigatorNodeInterface<D>></a>, rootIndex: Array<number>, position: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, newNode: <a href="../interfaces/TerraNavigatorNodeInterface.html">TerraNavigatorNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="264" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:264</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>rootIndex</td>
+                                                        <td>
+                                                                    <code>Array&lt;number&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>position</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>newNode</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >TerraNavigatorNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addNodesRecursive"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addNodesRecursive
+                            </b>
+                            <a href="#addNodesRecursive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addNodesRecursive(nodes: <a href="../interfaces/TerraNavigatorNodeInterface.html">Array<TerraNavigatorNodeInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:214</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodes</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addSearchNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addSearchNode
+                            </b>
+                            <a href="#addSearchNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addSearchNode(node: <a href="../interfaces/TerraNavigatorNodeInterface.html">TerraNavigatorNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="357" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:357</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >TerraNavigatorNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="findRootPath"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            findRootPath
+                            </b>
+                            <a href="#findRootPath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>findRootPath(routeArray: Array<string>, routeIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, data: <a href="../interfaces/TerraNavigatorNodeInterface.html">Array<TerraNavigatorNodeInterface<D>></a>, result: Array<number>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:246</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>routeArray</td>
+                                                        <td>
+                                                                    <code>Array&lt;string&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>routeIndex</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>result</td>
+                                                        <td>
+                                                                    <code>Array&lt;number&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNodePath"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getNodePath
+                            </b>
+                            <a href="#getNodePath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getNodePath(node: <a href="../interfaces/TerraNavigatorNodeInterface.html">TerraNavigatorNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="412" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:412</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >TerraNavigatorNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNodeRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getNodeRoute
+                            </b>
+                            <a href="#getNodeRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getNodeRoute(node: <a href="../interfaces/TerraNavigatorNodeInterface.html">TerraNavigatorNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="395" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:395</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>node</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >TerraNavigatorNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTotalVisibleChildren"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getTotalVisibleChildren
+                            </b>
+                            <a href="#getTotalVisibleChildren"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getTotalVisibleChildren(rootNode: <a href="../interfaces/TerraNavigatorNodeInterface.html">TerraNavigatorNodeInterface<D></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="320" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:320</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>rootNode</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >TerraNavigatorNodeInterface&lt;D&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initRootPaths"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            initRootPaths
+                            </b>
+                            <a href="#initRootPaths"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>initRootPaths(data: <a href="../interfaces/TerraNavigatorNodeInterface.html">Array<TerraNavigatorNodeInterface<D>></a>, rootIndex: Array<number>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:189</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>rootIndex</td>
+                                                        <td>
+                                                                    <code>Array&lt;number&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:164</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openSelectedNode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            openSelectedNode
+                            </b>
+                            <a href="#openSelectedNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>openSelectedNode(suggest: <a href="../interfaces/TerraSuggestionBoxValueInterface.html">TerraSuggestionBoxValueInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="390" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:390</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>suggest</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >TerraSuggestionBoxValueInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refreshNodeVisibilities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            refreshNodeVisibilities
+                            </b>
+                            <a href="#refreshNodeVisibilities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>refreshNodeVisibilities(nodes: <a href="../interfaces/TerraNavigatorNodeInterface.html">Array<TerraNavigatorNodeInterface<D>></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="297" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:297</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>nodes</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraNavigatorNodeInterface.html" target="_self" >Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateSearchNodes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            updateSearchNodes
+                            </b>
+                            <a href="#updateSearchNodes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateSearchNodes()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="345" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:345</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_searchNodeList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _searchNodeList
+                            </b>
+                            <a href="#_searchNodeList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_searchNodeList:     <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraSuggestionBoxValueInterface.html" target="_self" >Array&lt;TerraSuggestionBoxValueInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isInit
+                            </b>
+                            <a href="#isInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>isInit:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchNodeList"></a>
+                        <span class="name"><b>searchNodeList</b><a href="#searchNodeList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>searchNodeList()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="437" class="link-to-prism">src/app/components/navigator/terra-navigator.component.ts:437</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    EventEmitter,
+    Input,
+    OnChanges,
+    OnInit,
+    Output,
+    SimpleChanges
+} from &#x27;@angular/core&#x27;;
+import { TerraNavigatorSplitViewConfig } from &#x27;./config/terra-navigator-split-view.config&#x27;;
+import { TerraNavigatorNodeInterface } from &#x27;./data/terra-navigator-node.interface&#x27;;
+import { TerraButtonGroupModule } from &#x27;./button-group/terra-button-group.module&#x27;;
+import { TerraNavigatorConfig } from &#x27;./config/terra-navigator.config&#x27;;
+import {
+    isNull,
+    isNullOrUndefined,
+    isUndefined
+} from &#x27;util&#x27;;
+import { TerraSuggestionBoxValueInterface } from &#x27;../forms/suggestion-box/data/terra-suggestion-box.interface&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+
+/**
+ * @author mscharf
+ */
+@Component({
+    selector: &#x27;terra-navigator&#x27;,
+    template: require(&#x27;./terra-navigator.component.html&#x27;),
+    styles:   [
+        require(&#x27;./terra-navigator.component.scss&#x27;),
+        require(&#x27;./terra-navigator.component.glob.scss&#x27;).toString()
+    ],
+})
+export class TerraNavigatorComponent&lt;D&gt; implements OnInit, OnChanges
+{
+    @Input()
+    public inputNodes:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;;
+
+    @Input()
+    public inputNavigatorService:TerraNavigatorConfig&lt;D&gt;;
+
+    @Input()
+    public inputModuleWidth:string;
+
+    @Input()
+    public inputFirstBreadcrumbName:string;
+
+    @Input()
+    public inputRouter:Router;
+
+    @Input()
+    public inputBaseRoute:string;
+
+    @Output()
+    public outputEndpointClicked:EventEmitter&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;;
+
+    @Output()
+    public outputNodeClicked:EventEmitter&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;;
+
+    private isInit:boolean;
+    private _searchNodeList:Array&lt;TerraSuggestionBoxValueInterface&gt;;
+
+    constructor(protected terraNavigatorSplitViewConfig:TerraNavigatorSplitViewConfig&lt;D&gt;, private translation:TranslationService)
+    {
+        this.isInit &#x3D; false;
+        this.outputEndpointClicked &#x3D; new EventEmitter();
+        this.outputNodeClicked &#x3D; new EventEmitter();
+        this._searchNodeList &#x3D; [];
+    }
+
+    public ngOnInit():void
+    {
+        if(isNullOrUndefined(this.inputModuleWidth))
+        {
+            this.inputModuleWidth &#x3D; &#x27;col-xs-12 col-md-12 col-lg-12&#x27;;
+        }
+
+        if(!isNullOrUndefined(this.inputNodes))
+        {
+            this.initRootPaths(this.inputNodes, null);
+            this.refreshNodeVisibilities(this.inputNodes);
+
+            if(isNull(this.inputFirstBreadcrumbName) || this.inputFirstBreadcrumbName &#x3D;&#x3D;&#x3D; &#x27;&#x27;)
+            {
+                console.error(&#x27;You have to define an initial breadcrumb!!!&#x27;);
+            }
+
+            this.terraNavigatorSplitViewConfig.addModule({
+                module:                TerraButtonGroupModule.forRoot(),
+                instanceKey:           0,
+                defaultWidth:          this.inputModuleWidth,
+                hidden:                false,
+                name:                  this.inputFirstBreadcrumbName,
+                mainComponentName:     &#x27;TerraButtonGroupComponent&#x27;,
+                parameter:             {
+                    nodes: this.inputNodes
+                }
+            });
+        }
+
+        this.terraNavigatorSplitViewConfig.observableNodeClicked.subscribe((item:TerraNavigatorNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            if(isNullOrUndefined(item.rootPath))
+            {
+                this.initRootPaths(this.inputNodes, null);
+            }
+
+            this.outputNodeClicked.emit(item);
+
+            if(!isNullOrUndefined(item.children))
+            {
+                this.terraNavigatorSplitViewConfig.modules[0].defaultWidth &#x3D; &#x27;col-xs-6 col-md-6 col-lg-6&#x27;;
+
+                this.terraNavigatorSplitViewConfig
+                    .addModule({
+                        module:                TerraButtonGroupModule.forRoot(),
+                        instanceKey:           item.rootPath.length,
+                        defaultWidth:          &#x27;col-xs-6 col-md-6 col-lg-6&#x27;,
+                        hidden:                false,
+                        name:                  item.nodeName,
+                        mainComponentName:     &#x27;TerraButtonGroupComponent&#x27;,
+                        parameter:             {
+                            nodes: item.children
+                        }
+                    });
+            }
+            else
+            {
+                while(this.terraNavigatorSplitViewConfig.modules.length &gt; item.rootPath.length)
+                {
+                    this.terraNavigatorSplitViewConfig.modules.pop();
+                }
+
+                this.outputEndpointClicked.emit(item);
+            }
+        });
+
+        this.inputNavigatorService.observableNewNodeByRootPath.subscribe((item:TerraNavigatorNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            this.addNodeAt(this.inputNodes, item.rootPath, -1, item);
+
+            this.initRootPaths(this.inputNodes, null);
+            this.refreshNodeVisibilities(this.inputNodes);
+
+            this.addSearchNode(item);
+        });
+
+        this.inputNavigatorService.observableNewNodesByRoute.subscribe((items:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;) &#x3D;&gt;
+        {
+            this.addNodesRecursive(items);
+            this.refreshNodeVisibilities(this.inputNodes);
+
+            items.forEach((item:TerraNavigatorNodeInterface&lt;D&gt;):void &#x3D;&gt;
+            {
+                this.addSearchNode(item);
+            });
+        });
+
+        this.updateSearchNodes();
+
+        this.isInit &#x3D; true;
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        if(this.isInit &#x3D;&#x3D;&#x3D; true &amp;&amp; changes[&#x27;inputNodes&#x27;])
+        {
+            this.terraNavigatorSplitViewConfig.modules &#x3D; [];
+
+            this.initRootPaths(changes[&#x27;inputNodes&#x27;].currentValue, null);
+            this.refreshNodeVisibilities(changes[&#x27;inputNodes&#x27;].currentValue);
+
+            this.updateSearchNodes();
+
+            this.terraNavigatorSplitViewConfig.addModule({
+                module:                TerraButtonGroupModule.forRoot(),
+                instanceKey:           0,
+                defaultWidth:          this.inputModuleWidth,
+                hidden:                false,
+                name:                  this.inputFirstBreadcrumbName,
+                mainComponentName:     &#x27;TerraButtonGroupComponent&#x27;,
+                parameter:             {
+                    nodes: changes[&#x27;inputNodes&#x27;].currentValue
+                }
+            });
+        }
+    }
+
+    private initRootPaths(data:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;, rootIndex:Array&lt;number&gt;):Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;
+    {
+        for(let i:number &#x3D; 0; i &lt; data.length; i++)
+        {
+            data[i].rootPath &#x3D; [];
+
+            if(!isNullOrUndefined(rootIndex))
+            {
+                rootIndex.forEach((item:number):void &#x3D;&gt;
+                {
+                    data[i].rootPath.push(item);
+                });
+            }
+
+            data[i].rootPath.push(i);
+
+            if(!isNullOrUndefined(data[i].children) &amp;&amp; data[i].children.length &gt; 0)
+            {
+                this.initRootPaths(data[i].children, data[i].rootPath);
+            }
+        }
+
+        return data;
+    }
+
+    private addNodesRecursive(nodes:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;):void
+    {
+        nodes.forEach((item:TerraNavigatorNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            let routeArray:Array&lt;string&gt; &#x3D; item.route.split(&#x27;/&#x27;);
+            let routeIndex:number &#x3D; -1;
+            let result:Array&lt;number&gt; &#x3D; [];
+
+            this.findRootPath(routeArray, routeIndex, this.inputNodes, result);
+
+            let newNode:TerraNavigatorNodeInterface&lt;D&gt; &#x3D; {
+                nodeName:  item.nodeName,
+                nodeIcon:  item.nodeIcon,
+                route:     routeArray[routeArray.length - 1],
+                value:     item.value,
+                rootPath:  [],
+                children:  null,
+                isVisible: item.isVisible,
+                isActive:  item.isActive
+            };
+
+            this.addNodeAt(this.inputNodes, result, -1, newNode);
+
+            this.initRootPaths(this.inputNodes, null);
+
+            if(!isNullOrUndefined(item.children))
+            {
+                this.addNodesRecursive(item.children);
+            }
+        });
+    }
+
+    private findRootPath(routeArray:Array&lt;string&gt;, routeIndex:number, data:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;, result:Array&lt;number&gt;):void
+    {
+        routeIndex++;
+
+        data.forEach((item:TerraNavigatorNodeInterface&lt;D&gt;):void &#x3D;&gt;
+        {
+            if(item.route &#x3D;&#x3D;&#x3D; routeArray[routeIndex])
+            {
+                result.push(item.rootPath[item.rootPath.length - 1]);
+
+                if(!isNull(item.children))
+                {
+                    this.findRootPath(routeArray, routeIndex, item.children, result);
+                }
+            }
+        });
+    }
+
+    private addNodeAt(data:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;, rootIndex:Array&lt;number&gt;, position:number,
+                      newNode:TerraNavigatorNodeInterface&lt;D&gt;):void
+    {
+        position++;
+
+        if(position &#x3D;&#x3D;&#x3D; rootIndex.length)
+        {
+            let newRootPath:Array&lt;number&gt; &#x3D; newNode.rootPath;
+
+            newRootPath.push(data.length);
+
+            data.push({
+                nodeName:  newNode.nodeName,
+                nodeIcon:  newNode.nodeIcon,
+                route:     newNode.route,
+                value:     newNode.value,
+                rootPath:  newRootPath,
+                children:  newNode.children,
+                isVisible: newNode.isVisible,
+                isActive:  newNode.isActive
+            });
+        }
+        else if(!isNullOrUndefined(data[rootIndex[position]].children))
+        {
+            this.addNodeAt(data[rootIndex[position]].children, rootIndex, position, newNode);
+        }
+        else
+        {
+            data[rootIndex[position]].children &#x3D; [];
+            this.addNodeAt(data[rootIndex[position]].children, rootIndex, position, newNode);
+        }
+    }
+
+    private refreshNodeVisibilities(nodes:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt;):void
+    {
+        // go through the node list
+        nodes.forEach((node:TerraNavigatorNodeInterface&lt;D&gt;):void &#x3D;&gt;
+            {
+                // check if there are children or if node is a leaf
+                if(!isNullOrUndefined(node.children) &amp;&amp; node.children.length &gt; 0)
+                {
+                    // check descendants visibility
+                    if(this.getTotalVisibleChildren(node) &gt; 0)
+                    {
+                        this.refreshNodeVisibilities(node.children);
+                    }
+                    // there are no visible descendants -&gt; hide node
+                    else
+                    {
+                        node.isVisible &#x3D; false;
+                    }
+                }
+            }
+        );
+    }
+
+    private getTotalVisibleChildren(rootNode:TerraNavigatorNodeInterface&lt;D&gt;):number
+    {
+        // initialize counter
+        let childrenCount:number &#x3D; 0;
+
+        // go deep into the children
+        if(!isNullOrUndefined(rootNode.children))
+        {
+            rootNode.children.forEach((node:TerraNavigatorNodeInterface&lt;D&gt;):void &#x3D;&gt;
+                {
+                    if(node.isVisible || isUndefined(node.isVisible))
+                    {
+                        childrenCount++;
+                    }
+
+                    // recursive
+                    childrenCount +&#x3D; this.getTotalVisibleChildren(node);
+                }
+            );
+        }
+
+        // return count of children
+        return childrenCount;
+    }
+
+    private updateSearchNodes():void
+    {
+        // reset node list
+        this._searchNodeList &#x3D; [];
+
+        // convert tree model into flat hierarchy
+        this.inputNodes.forEach((node:TerraNavigatorNodeInterface&lt;D&gt;) &#x3D;&gt;
+        {
+            this.addSearchNode(node);
+        });
+    }
+
+    private addSearchNode(node:TerraNavigatorNodeInterface&lt;D&gt;):void
+    {
+        // check for null pointer
+        if(isNullOrUndefined(node))
+        {
+            return;
+        }
+
+        // seek trough its children, if existing
+        if(!isNullOrUndefined(node.children) &amp;&amp; node.children.length &gt; 0)
+        {
+            node.children.forEach((child:TerraNavigatorNodeInterface&lt;D&gt;) &#x3D;&gt;
+            {
+                this.addSearchNode(child);
+            });
+        }
+        // only add nodes without children &lt;&#x3D;&gt; leaves
+        else
+        {
+            // check if node is visible
+            if(isNullOrUndefined(node.isVisible) || node.isVisible) // TODO: rename in hidden!
+            {
+                // add node to the flat list
+                this._searchNodeList.push(
+                    {
+                        value:   node,
+                        caption: this.getNodePath(node)
+                    }
+                );
+            }
+        }
+    }
+
+    private openSelectedNode(suggest:TerraSuggestionBoxValueInterface):void
+    {
+        this.inputRouter.navigateByUrl(this.inputBaseRoute + this.getNodeRoute(suggest.value as TerraNavigatorNodeInterface&lt;D&gt;));
+    }
+
+    private getNodeRoute(node:TerraNavigatorNodeInterface&lt;D&gt;):string
+    {
+        let route:string &#x3D; &#x27;&#x27;;
+        let nodes:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt; &#x3D; this.inputNodes;
+
+        if(!isNullOrUndefined(node.rootPath))
+        {
+            node.rootPath.forEach((root:number):void &#x3D;&gt;
+            {
+                route &#x3D; route + &#x27;/&#x27; + nodes[root].route;
+                nodes &#x3D; nodes[root].children;
+            });
+        }
+
+        return route;
+    }
+
+    private getNodePath(node:TerraNavigatorNodeInterface&lt;D&gt;):string
+    {
+        let route:string &#x3D; &#x27;&#x27;;
+        let nodes:Array&lt;TerraNavigatorNodeInterface&lt;D&gt;&gt; &#x3D; this.inputNodes;
+
+        if(!isNullOrUndefined(node.rootPath))
+        {
+            node.rootPath.forEach((root:number):void &#x3D;&gt;
+            {
+                let translatedNodeName:string &#x3D; this.translation.translate(nodes[root].nodeName);
+                if(route &#x3D;&#x3D;&#x3D; &#x27;&#x27;)
+                {
+                    route &#x3D; translatedNodeName;
+                }
+                else
+                {
+                    route +&#x3D; &#x27; » &#x27; + translatedNodeName;
+                }
+                nodes &#x3D; nodes[root].children;
+            });
+        }
+
+        return route;
+    }
+
+    public get searchNodeList():Array&lt;TerraSuggestionBoxValueInterface&gt;
+    {
+        return this._searchNodeList;
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'TerraAlertComponentExample', 'selector': 'terra-alert-example'},{'name': 'TerraAlertPanelComponent', 'selector': 'terra-alert-panel'},{'name': 'TerraBaseEditorComponent', 'selector': 'terra-base-editor'},{'name': 'TerraBaseToolbarComponent', 'selector': 'terra-base-toolbar'},{'name': 'TerraBaseToolbarComponentExample', 'selector': 'terra-base-toolbar-example'},{'name': 'TerraBreadcrumbsComponent', 'selector': 'terra-breadcrumbs'},{'name': 'TerraButtonComponent', 'selector': 'terra-button'},{'name': 'TerraButtonComponentExample', 'selector': 'terra-button-example'},{'name': 'TerraButtonGroupComponent', 'selector': 'terra-button-group'},{'name': 'TerraButtonWithOptionsComponent', 'selector': 'terra-button-with-options'},{'name': 'TerraButtonWithOptionsComponentExample', 'selector': 'terra-button-with-options-example'},{'name': 'TerraCardComponent', 'selector': 'terra-card'},{'name': 'TerraCardComponentExample', 'selector': 'terra-card-example'},{'name': 'TerraCategoryPickerComponent', 'selector': 'terra-category-picker'},{'name': 'TerraCheckboxComponent', 'selector': 'terra-checkbox'},{'name': 'TerraCheckboxComponentExample', 'selector': 'terra-checkbox-example'},{'name': 'TerraCheckboxTreeComponent', 'selector': 'terra-checkbox-tree'},{'name': 'TerraCheckboxTreeComponentExample', 'selector': 'terra-checkbox-tree-example'},{'name': 'TerraCodeEditorComponent', 'selector': 'terra-code-editor'},{'name': 'TerraCodeEditorComponentExample', 'selector': 'terra-code-editor-example'},{'name': 'TerraColorPickerComponent', 'selector': 'terra-color-picker'},{'name': 'TerraColorPickerComponentExample', 'selector': 'terra-color-picker-example'},{'name': 'TerraComponentsComponent', 'selector': 'terra-app-root'},{'name': 'TerraDataTableComponent', 'selector': 'terra-data-table'},{'name': 'TerraDataTableComponentExample', 'selector': 'terra-data-table-example'},{'name': 'TerraDataTableContextMenuComponent', 'selector': 'context-menu'},{'name': 'TerraDataTableContextMenuComponentExample', 'selector': 'terra-data-table-context-menu-example'},{'name': 'TerraDatePickerComponent', 'selector': 'terra-date-picker'},{'name': 'TerraDatePickerComponentExample', 'selector': 'terra-date-picker-example'},{'name': 'TerraDoubleInputComponent', 'selector': 'terra-double-input'},{'name': 'TerraDoubleInputComponentExample', 'selector': 'terra-double-input-example'},{'name': 'TerraDynamicComponentLoaderComponent', 'selector': 'terra-dynamic-component-loader'},{'name': 'TerraDynamicFormComponent', 'selector': 'terra-dynamic-form'},{'name': 'TerraDynamicModuleLoaderComponent', 'selector': 'terra-dynamic-module-loader'},{'name': 'TerraDynamicSwitchComponent', 'selector': 'terra-dynamic-switch'},{'name': 'TerraFileBrowserComponent', 'selector': 'terra-file-browser'},{'name': 'TerraFileBrowserComponentExample', 'selector': 'terra-file-browser-example'},{'name': 'TerraFileChooserComponent', 'selector': 'terra-file-chooser'},{'name': 'TerraFileInputComponent', 'selector': 'terra-file-input'},{'name': 'TerraFileInputComponentExample', 'selector': 'terra-file-input-example'},{'name': 'TerraFileListComponent', 'selector': 'terra-file-list'},{'name': 'TerraFilterComponent', 'selector': 'terra-filter'},{'name': 'TerraFilterComponentExample', 'selector': 'terra-filter-example'},{'name': 'TerraFormComponent', 'selector': 'terra-form'},{'name': 'TerraFormContainerComponent', 'selector': 'terra-form-container'},{'name': 'TerraFormEntryComponent', 'selector': 'terra-form-entry'},{'name': 'TerraFormEntryListComponent', 'selector': 'terra-form-entry-list'},{'name': 'TerraImagePreviewComponent', 'selector': 'terra-image-preview'},{'name': 'TerraIndicatorComponent', 'selector': 'terra-indicator'},{'name': 'TerraInfoBoxComponent', 'selector': 'terra-info-box'},{'name': 'TerraInfoboxComponentExample', 'selector': 'terra-info-box-example'},{'name': 'TerraInputComponentExample', 'selector': 'terra-input-example'},{'name': 'TerraLoadingSpinnerComponent', 'selector': 'terra-loading-spinner'},{'name': 'TerraMultiCheckBoxComponent', 'selector': 'terra-multi-check-box'},{'name': 'TerraMultiCheckBoxComponentExample', 'selector': 'terra-multi-check-box-example'},{'name': 'TerraMultiSelectBoxComponent', 'selector': 'terra-multi-select-box'},{'name': 'TerraMultiSelectBoxComponentExample', 'selector': 'terra-multi-select-box-example'},{'name': 'TerraMultiSplitViewComponent', 'selector': 'terra-multi-split-view'},{'name': 'TerraNavigatorComponent', 'selector': 'terra-navigator'},{'name': 'TerraNavigatorComponentExample', 'selector': 'terra-navigator-example'},{'name': 'TerraNestedDataPickerComponent', 'selector': 'terra-nested-data-picker'},{'name': 'TerraNestedDataPickerComponentExample', 'selector': 'terra-nested-data-picker-example'},{'name': 'TerraNoResultNoticeComponent', 'selector': 'terra-no-result-notice'},{'name': 'TerraNoResultNoticeComponentExample', 'selector': 'terra-no-result-notice-example'},{'name': 'TerraNodeComponent', 'selector': 'terra-node'},{'name': 'TerraNodeTreeComponent', 'selector': 'terra-node-tree'},{'name': 'TerraNodeTreeComponentExample', 'selector': 'terra-node-tree-example'},{'name': 'TerraNoteComponent', 'selector': 'terra-note'},{'name': 'TerraNoteComponentExample', 'selector': 'terra-note-example'},{'name': 'TerraNoteEditorComponent', 'selector': 'terra-note-editor'},{'name': 'TerraNoteEditorComponentExample', 'selector': 'terra-note-editor-example'},{'name': 'TerraNumberInputComponent', 'selector': 'terra-number-input'},{'name': 'TerraNumberInputComponentExample', 'selector': 'terra-number-input-example'},{'name': 'TerraOverlayComponent', 'selector': 'terra-overlay'},{'name': 'TerraOverlayComponentExample', 'selector': 'terra-overlay-example'},{'name': 'TerraPagerComponent', 'selector': 'terra-pager'},{'name': 'TerraPagerComponentExample', 'selector': 'terra-pager-example'},{'name': 'TerraPortletComponent', 'selector': 'terra-portlet'},{'name': 'TerraPortletComponentExample', 'selector': 'terra-portlet-example'},{'name': 'TerraRadioButtonComponent', 'selector': 'terra-radio-button'},{'name': 'TerraRadioButtonComponentExample', 'selector': 'terra-radio-button-example'},{'name': 'TerraSelectBoxComponent', 'selector': 'terra-select-box'},{'name': 'TerraSelectBoxComponentExample', 'selector': 'terra-select-box-example'},{'name': 'TerraSimpleTableComponent', 'selector': 'terra-simple-table'},{'name': 'TerraSimpleTableComponentExample', 'selector': 'terra-simple-table-example'},{'name': 'TerraSliderComponent', 'selector': 'terra-slider'},{'name': 'TerraSliderComponentExample', 'selector': 'terra-slider-example'},{'name': 'TerraSplitViewComponent', 'selector': 'terra-split-view'},{'name': 'TerraSuggestionBoxComponent', 'selector': 'terra-suggestion-box'},{'name': 'TerraSuggestionBoxComponentExample', 'selector': 'terra-suggestion-box-example'},{'name': 'TerraSyntaxEditorComponent', 'selector': 'terra-syntax-editor'},{'name': 'TerraSyntaxEditorComponentExample', 'selector': 'terra-syntax-editor-example'},{'name': 'TerraTagComponent', 'selector': 'terra-tag'},{'name': 'TerraTagComponentExample', 'selector': 'terra-tag-example'},{'name': 'TerraTagSelectComponent', 'selector': 'terra-tag-select'},{'name': 'TerraTagSelectComponentExample', 'selector': 'terra-tag-select-example'},{'name': 'TerraTaglistComponent', 'selector': 'terra-taglist'},{'name': 'TerraTaglistComponentExample', 'selector': 'terra-taglist-example'},{'name': 'TerraTextAreaInputComponent', 'selector': 'terra-text-area-input'},{'name': 'TerraTextAreaInputComponentExample', 'selector': 'terra-text-area-input-example'},{'name': 'TerraTextInputComponent', 'selector': 'terra-text-input'},{'name': 'TerraTextInputComponentExample', 'selector': 'terra-text-input-example'},{'name': 'TerraTileBoxComponent', 'selector': 'terra-tile-box'},{'name': 'TerraTileBoxPanelComponent', 'selector': 'terra-tile-box-panel'},{'name': 'TerraTimePickerComponent', 'selector': 'terra-time-picker'},{'name': 'TerraTimePickerComponentExample', 'selector': 'terra-time-picker-example'},{'name': 'TerraToggleComponent', 'selector': 'terra-toggle'},{'name': 'TerraToggleComponentExample', 'selector': 'terra-toggle-example'},{'name': 'TerraTreeComponent', 'selector': 'terra-tree'},{'name': 'TerraTreeComponentExample', 'selector': 'terra-tree-example'},{'name': 'TerraTwoColumnsContainerComponent', 'selector': 'terra-2-col'}];
+    var DIRECTIVES = [{'name': 'FixedHeaderDirective', 'selector': 'terra-simple-table[fixedHeader]'},{'name': 'TerraDataTableContextMenuDirective', 'selector': '[contextMenu]'},{'name': 'TerraDraggableDirective', 'selector': '[terraDraggable]'},{'name': 'TerraDropzoneDirective', 'selector': '[terraDropzone]'},{'name': 'TerraResizableDirective', 'selector': '[terraResizable]'},{'name': 'TerraTwoColumnsContainerDirective', 'selector': 'terra-2-col[mobileRouting]'}];
+    var ACTUAL_COMPONENT = {'name': 'TerraNavigatorComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraNavigatorComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

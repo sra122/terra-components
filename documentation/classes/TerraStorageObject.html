@@ -1,0 +1,1451 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>TerraStorageObject</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/file-browser/model/terra-storage-object.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_children">_children</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_parent">_parent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#s3Object">s3Object</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addChild">addChild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#find">find</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getChild">getChild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hasChild">hasChild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeChild">removeChild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#splitKeyIntoPaths">splitKeyIntoPaths</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#eTag">eTag</a>
+                                </li>
+                                <li>
+                                    <a href="#key">key</a>
+                                </li>
+                                <li>
+                                    <a href="#publicUrl">publicUrl</a>
+                                </li>
+                                <li>
+                                    <a href="#previewUrl">previewUrl</a>
+                                </li>
+                                <li>
+                                    <a href="#lastModified">lastModified</a>
+                                </li>
+                                <li>
+                                    <a href="#size">size</a>
+                                </li>
+                                <li>
+                                    <a href="#sizeString">sizeString</a>
+                                </li>
+                                <li>
+                                    <a href="#name">name</a>
+                                </li>
+                                <li>
+                                    <a href="#icon">icon</a>
+                                </li>
+                                <li>
+                                    <a href="#isDirectory">isDirectory</a>
+                                </li>
+                                <li>
+                                    <a href="#isFile">isFile</a>
+                                </li>
+                                <li>
+                                    <a href="#hasChildren">hasChildren</a>
+                                </li>
+                                <li>
+                                    <a href="#children">children</a>
+                                </li>
+                                <li>
+                                    <a href="#fileCount">fileCount</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(s3Object: <a href="../interfaces/S3StorageObjectInterface.html">S3StorageObjectInterface</a>, parent?: <a href="../classes/TerraStorageObject.html">TerraStorageObject</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:128</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>s3Object</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../interfaces/S3StorageObjectInterface.html" target="_self" >S3StorageObjectInterface</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>parent</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_children"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _children
+                            </b>
+                            <a href="#_children"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_children:     <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >Array&lt;TerraStorageObject&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_parent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _parent
+                            </b>
+                            <a href="#_parent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_parent:     <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="s3Object"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            s3Object
+                            </b>
+                            <a href="#s3Object"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>s3Object:     <code><a href="../interfaces/S3StorageObjectInterface.html" target="_self" >S3StorageObjectInterface</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/S3StorageObjectInterface.html" target="_self" >S3StorageObjectInterface</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addChild"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addChild
+                            </b>
+                            <a href="#addChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addChild(s3object: <a href="../interfaces/S3StorageObjectInterface.html">S3StorageObjectInterface</a>, paths?: Array<string>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:136</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>s3object</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/S3StorageObjectInterface.html" target="_self" >S3StorageObjectInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>paths</td>
+                                                        <td>
+                                                                    <code>Array&lt;string&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="find"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            find
+                            </b>
+                            <a href="#find"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>find(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:225</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getChild"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getChild
+                            </b>
+                            <a href="#getChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getChild(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:209</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>name</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TerraStorageObject.html" target="_self" >TerraStorageObject</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasChild"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            hasChild
+                            </b>
+                            <a href="#hasChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>hasChild(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="217" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:217</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>name</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeChild"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeChild
+                            </b>
+                            <a href="#removeChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeChild(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:190</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="splitKeyIntoPaths"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            splitKeyIntoPaths
+                            </b>
+                            <a href="#splitKeyIntoPaths"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>splitKeyIntoPaths(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="248" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:248</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Array&lt;string&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eTag"></a>
+                        <span class="name"><b>eTag</b><a href="#eTag"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>eTag()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:15</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="key"></a>
+                        <span class="name"><b>key</b><a href="#key"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>key()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:20</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="publicUrl"></a>
+                        <span class="name"><b>publicUrl</b><a href="#publicUrl"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>publicUrl()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:25</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewUrl"></a>
+                        <span class="name"><b>previewUrl</b><a href="#previewUrl"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>previewUrl()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:30</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastModified"></a>
+                        <span class="name"><b>lastModified</b><a href="#lastModified"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>lastModified()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:35</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="size"></a>
+                        <span class="name"><b>size</b><a href="#size"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>size()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:40</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sizeString"></a>
+                        <span class="name"><b>sizeString</b><a href="#sizeString"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>sizeString()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:45</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>name()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:54</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="icon"></a>
+                        <span class="name"><b>icon</b><a href="#icon"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>icon()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:59</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDirectory"></a>
+                        <span class="name"><b>isDirectory</b><a href="#isDirectory"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isDirectory()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:69</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isFile"></a>
+                        <span class="name"><b>isFile</b><a href="#isFile"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isFile()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:74</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasChildren"></a>
+                        <span class="name"><b>hasChildren</b><a href="#hasChildren"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>hasChildren()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:84</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="children"></a>
+                        <span class="name"><b>children</b><a href="#children"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>children()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:89</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileCount"></a>
+                        <span class="name"><b>fileCount</b><a href="#fileCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fileCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/components/file-browser/model/terra-storage-object.ts:110</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    createS3StorageObject,
+    S3StorageObjectInterface
+} from &#x27;./s3-storage-object.interface&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import { PathHelper } from &#x27;../../../helpers/path.helper&#x27;;
+import { FileTypeHelper } from &#x27;../../../helpers/fileType.helper&#x27;;
+
+export class TerraStorageObject
+{
+    private s3Object:S3StorageObjectInterface;
+    private _children:Array&lt;TerraStorageObject&gt; &#x3D; [];
+    private _parent:TerraStorageObject;
+
+    public get eTag():string
+    {
+        return this.s3Object.eTag;
+    }
+
+    public get key():string
+    {
+        return this.s3Object.key;
+    }
+
+    public get publicUrl():string
+    {
+        return this.s3Object.publicUrl;
+    }
+
+    public get previewUrl():string
+    {
+        return this.s3Object.previewUrl || this.s3Object.publicUrl;
+    }
+
+    public get lastModified():Date
+    {
+        return new Date(this.s3Object.lastModified);
+    }
+
+    public get size():number
+    {
+        return parseInt( this.s3Object.size + &#x27;&#x27;, 10 );
+    }
+
+    public get sizeString():string
+    {
+        if( isNaN(this.size) )
+        {
+            return &#x27;0B&#x27;;
+        }
+        return PathHelper.sizeString(this.size);
+    }
+
+    public get name():string
+    {
+        return PathHelper.basename(this.s3Object.key);
+    }
+
+    public get icon():string
+    {
+        if(this.isDirectory)
+        {
+            return &#x27;icon-folder&#x27;;
+        }
+
+        return FileTypeHelper.mapIconClass(this.name);
+    }
+
+    public get isDirectory():boolean
+    {
+        return PathHelper.isDirectory(this.s3Object.key);
+    }
+
+    public get isFile():boolean
+    {
+        return PathHelper.isFile(this.s3Object.key);
+    }
+
+    public get parent():TerraStorageObject
+    {
+        return this._parent;
+    }
+
+    public get hasChildren():boolean
+    {
+        return this.isFile ? false : this._children.length &gt; 0;
+    }
+
+    public get children():Array&lt;TerraStorageObject&gt;
+    {
+        if(this.isFile)
+        {
+            return [];
+        }
+
+        return this._children.sort((childA:TerraStorageObject, childB:TerraStorageObject) &#x3D;&gt;
+        {
+            if(childA.name &gt; childB.name)
+            {
+                return -1;
+            }
+            if(childA.name &lt; childB.name)
+            {
+                return 1;
+            }
+            return 0;
+        });
+    }
+
+    public get fileCount():number
+    {
+        if(this.isFile)
+        {
+            return 1;
+        }
+        else
+        {
+            return this.children
+                       .map((child:TerraStorageObject) &#x3D;&gt;
+                       {
+                           return child.fileCount;
+                       })
+                       .reduce((sum:number, current:number) &#x3D;&gt;
+                       {
+                           return sum + current;
+                       }, 0);
+        }
+    }
+
+    constructor(s3Object:S3StorageObjectInterface, parent?:TerraStorageObject)
+    {
+        this.s3Object &#x3D; s3Object;
+        this._parent &#x3D; parent;
+    }
+
+    public addChild(s3object:S3StorageObjectInterface, paths?:Array&lt;string&gt;):void
+    {
+        if(this.isFile)
+        {
+            console.error(&#x27;Cannot add child object to file-like object.&#x27;);
+            return;
+        }
+
+        paths &#x3D; paths || s3object.key.split(PathHelper.DELIMITER);
+        while(paths.length &gt; 0 &amp;&amp; paths[0].length &lt;&#x3D; 0)
+        {
+            paths.shift();
+        }
+
+        let lastIdx:number &#x3D; paths.length - 1;
+        while(lastIdx &gt; 0 &amp;&amp; paths[lastIdx].length &lt;&#x3D; 0)
+        {
+            paths.pop();
+            lastIdx--;
+        }
+
+        if(paths.length &#x3D;&#x3D;&#x3D; 1)
+        {
+            let object:TerraStorageObject &#x3D; new TerraStorageObject(s3object, this);
+            if(this.hasChild(object.name))
+            {
+                let idx:number &#x3D; this._children.findIndex((child:TerraStorageObject) &#x3D;&gt;
+                {
+                    return child.name &#x3D;&#x3D;&#x3D; object.name;
+                });
+                this._children[idx] &#x3D; object;
+            }
+            else
+            {
+                this._children.push(object);
+            }
+        }
+        else
+        {
+            let nextPath:string &#x3D; paths.shift();
+            let child:TerraStorageObject &#x3D; this.getChild(nextPath);
+            if(!child)
+            {
+                let s3Object:S3StorageObjectInterface &#x3D; createS3StorageObject(
+                    PathHelper.join(this.key, nextPath) + &#x27;/&#x27;
+                );
+                child &#x3D; new TerraStorageObject(s3Object, this);
+                this.children.push(child);
+            }
+
+            child.addChild(s3object, paths);
+        }
+    }
+
+    public removeChild(key:string):void
+    {
+        let paths:Array&lt;string&gt; &#x3D; this.splitKeyIntoPaths(key);
+        let nextPath:string &#x3D; paths.shift();
+        let child:TerraStorageObject &#x3D; this.getChild(nextPath);
+        if(child)
+        {
+            if(paths.length &gt; 0)
+            {
+                child.removeChild(paths.join(&#x27;/&#x27;));
+            }
+            else
+            {
+                let idx:number &#x3D; this._children.indexOf(child);
+                this._children.splice(idx, 1);
+            }
+        }
+    }
+
+    public getChild(name:string):TerraStorageObject
+    {
+        return this._children.find((child:TerraStorageObject) &#x3D;&gt;
+        {
+            return child.name &#x3D;&#x3D;&#x3D; name;
+        });
+    }
+
+    public hasChild(name:string):boolean
+    {
+        return this._children.some((child:TerraStorageObject) &#x3D;&gt;
+        {
+            return child.name &#x3D;&#x3D;&#x3D; name;
+        });
+    }
+
+    public find(key:string):TerraStorageObject
+    {
+        if(isNullOrUndefined(key))
+        {
+            return null;
+        }
+
+        let paths:Array&lt;string&gt; &#x3D; this.splitKeyIntoPaths(key);
+        let nextPath:string &#x3D; paths.shift();
+        let child:TerraStorageObject &#x3D; this.getChild(nextPath);
+        if(!isNullOrUndefined(child))
+        {
+            if(paths.length &gt; 0)
+            {
+                return child.find(paths.join(&#x27;/&#x27;));
+            }
+
+            return child;
+        }
+
+        return null;
+    }
+
+    private splitKeyIntoPaths(key:string):Array&lt;string&gt;
+    {
+        return key.split(&#x27;/&#x27;).filter((part:string):boolean &#x3D;&gt; part.length &gt; 0);
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraStorageObject.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

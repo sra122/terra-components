@@ -1,0 +1,2478 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TerraMultiSplitViewConfig</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_splitViewComponent">_splitViewComponent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#activatedRouteSnapshot">activatedRouteSnapshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentSelectedView">currentSelectedView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deleteViewEventEmitter">deleteViewEventEmitter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#routerStateSnapshot">routerStateSnapshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#routingConfig">routingConfig</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectBreadcrumbEventEmitter">selectBreadcrumbEventEmitter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#views">views</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addOrSelectViewsByUrl">addOrSelectViewsByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addView">addView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createNewViewByUrlPart">createNewViewByUrlPart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getResolveDataForUrl">getResolveDataForUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getResolversForUrl">getResolversForUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isMatchingRoute">isMatchingRoute</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navigateToViewByUrl">navigateToViewByUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeView">removeView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeViewAndChildren">removeViewAndChildren</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#reset">reset</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resizeView">resizeView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resolveInSequence">resolveInSequence</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setSelectedView">setSelectedView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#urlIsRedirected">urlIsRedirected</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#viewForRoutePartExists">viewForRoutePartExists</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#splitViewComponent">splitViewComponent</a>
+                                </li>
+                                <li>
+                                    <a href="#baseRoute">baseRoute</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router?: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, injector?: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>, translation?: TranslationService, activatedRoute?: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addOrSelectViewsByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            addOrSelectViewsByUrl
+                            </b>
+                            <a href="#addOrSelectViewsByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addOrSelectViewsByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, resolveData: <a href="../interfaces/ResolvedDataInterface.html">Array<ResolvedDataInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:225</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>resolveData</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ResolvedDataInterface.html" target="_self" >Array&lt;ResolvedDataInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addView"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addView
+                            </b>
+                            <a href="#addView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>addView(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>, parent?: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>parent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createNewViewByUrlPart"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            createNewViewByUrlPart
+                            </b>
+                            <a href="#createNewViewByUrlPart"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>createNewViewByUrlPart(route: <a href="https://angular.io/api/router/Route" target="_blank">Route</a>, urlPart: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, partialUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, resolveData: <a href="../interfaces/ResolvedDataInterface.html">Array<ResolvedDataInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:296</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>urlPart</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>partialUrl</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>resolveData</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ResolvedDataInterface.html" target="_self" >Array&lt;ResolvedDataInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getResolveDataForUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getResolveDataForUrl
+                            </b>
+                            <a href="#getResolveDataForUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getResolveDataForUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, routeConfig: <a href="https://angular.io/api/router/Routes" target="_blank">Routes</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="400" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:400</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>routeConfig</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Routes" target="_blank" >Routes</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getResolversForUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getResolversForUrl
+                            </b>
+                            <a href="#getResolversForUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getResolversForUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, routeConfig: <a href="https://angular.io/api/router/Routes" target="_blank">Routes</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="408" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:408</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>routeConfig</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Routes" target="_blank" >Routes</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/ResolverListItemInterface.html" target="_self" >Array&lt;ResolverListItemInterface&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isMatchingRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isMatchingRoute
+                            </b>
+                            <a href="#isMatchingRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>isMatchingRoute(route: <a href="https://angular.io/api/router/Route" target="_blank">Route</a>, routePath: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="507" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:507</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>routePath</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navigateToViewByUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navigateToViewByUrl
+                            </b>
+                            <a href="#navigateToViewByUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>navigateToViewByUrl(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeView"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            removeView
+                            </b>
+                            <a href="#removeView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeView(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:111</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeViewAndChildren"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            removeViewAndChildren
+                            </b>
+                            <a href="#removeViewAndChildren"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>removeViewAndChildren(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:131</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reset"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            reset
+                            </b>
+                            <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reset()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:164</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resizeView"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            resizeView
+                            </b>
+                            <a href="#resizeView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>resizeView(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>, width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:152</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>width</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resolveInSequence"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            resolveInSequence
+                            </b>
+                            <a href="#resolveInSequence"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>resolveInSequence(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, resolverList: <a href="../interfaces/ResolverListItemInterface.html">Array<ResolverListItemInterface></a>, data: <a href="../interfaces/ResolvedDataInterface.html">Array<ResolvedDataInterface></a>, resolvedResolvers?: <a href="../interfaces/ResolverListItemInterface.html">Array<ResolverListItemInterface></a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="452" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:452</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>resolverList</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ResolverListItemInterface.html" target="_self" >Array&lt;ResolverListItemInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ResolvedDataInterface.html" target="_self" >Array&lt;ResolvedDataInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>resolvedResolvers</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/ResolverListItemInterface.html" target="_self" >Array&lt;ResolverListItemInterface&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setSelectedView"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            setSelectedView
+                            </b>
+                            <a href="#setSelectedView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setSelectedView(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:159</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="urlIsRedirected"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            urlIsRedirected
+                            </b>
+                            <a href="#urlIsRedirected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>urlIsRedirected(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="338" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:338</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>url</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewForRoutePartExists"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            viewForRoutePartExists
+                            </b>
+                            <a href="#viewForRoutePartExists"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>viewForRoutePartExists(view: <a href="../interfaces/TerraMultiSplitViewInterface.html">TerraMultiSplitViewInterface</a>, route: <a href="https://angular.io/api/router/Route" target="_blank">Route</a>, viewId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="290" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:290</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>view</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Route" target="_blank" >Route</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>viewId</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_splitViewComponent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _splitViewComponent
+                            </b>
+                            <a href="#_splitViewComponent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_splitViewComponent:     <code><a href="../components/TerraMultiSplitViewComponent.html" target="_self" >TerraMultiSplitViewComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../components/TerraMultiSplitViewComponent.html" target="_self" >TerraMultiSplitViewComponent</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activatedRouteSnapshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            activatedRouteSnapshot
+                            </b>
+                            <a href="#activatedRouteSnapshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>activatedRouteSnapshot:     <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentSelectedView"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentSelectedView
+                            </b>
+                            <a href="#currentSelectedView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>currentSelectedView:     <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >TerraMultiSplitViewInterface</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteViewEventEmitter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            deleteViewEventEmitter
+                            </b>
+                            <a href="#deleteViewEventEmitter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>deleteViewEventEmitter:     <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >EventEmitter&lt;TerraMultiSplitViewInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >EventEmitter&lt;TerraMultiSplitViewInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new EventEmitter&lt;TerraMultiSplitViewInterface&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="routerStateSnapshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            routerStateSnapshot
+                            </b>
+                            <a href="#routerStateSnapshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>routerStateSnapshot:     <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="routingConfig"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            routingConfig
+                            </b>
+                            <a href="#routingConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>routingConfig:     <code><a href="https://angular.io/api/router/Routes" target="_blank" >Routes</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/router/Routes" target="_blank" >Routes</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectBreadcrumbEventEmitter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            selectBreadcrumbEventEmitter
+                            </b>
+                            <a href="#selectBreadcrumbEventEmitter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>selectBreadcrumbEventEmitter:     <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >EventEmitter&lt;TerraMultiSplitViewInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >EventEmitter&lt;TerraMultiSplitViewInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new EventEmitter&lt;TerraMultiSplitViewInterface&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="views"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            views
+                            </b>
+                            <a href="#views"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>views:     <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >Array&lt;TerraMultiSplitViewInterface&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/TerraMultiSplitViewInterface.html" target="_self" >Array&lt;TerraMultiSplitViewInterface&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="splitViewComponent"></a>
+                        <span class="name"><b>splitViewComponent</b><a href="#splitViewComponent"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>splitViewComponent(value: )</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="502" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:502</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="baseRoute"></a>
+                        <span class="name"><b>baseRoute</b><a href="#baseRoute"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>baseRoute()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="514" class="link-to-prism">src/app/components/split-view/multi/injectables/terra-multi-split-view.config.ts:514</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    EventEmitter,
+    Injectable,
+    Injector
+} from &#x27;@angular/core&#x27;;
+import { TerraMultiSplitViewInterface } from &#x27;../interfaces/terra-multi-split-view.interface&#x27;;
+import { isNullOrUndefined } from &#x27;util&#x27;;
+import {
+    ActivatedRoute,
+    ActivatedRouteSnapshot,
+    ResolveData,
+    Route,
+    Router,
+    RouterStateSnapshot,
+    Routes
+} from &#x27;@angular/router&#x27;;
+import { TerraDynamicLoadedComponentInputInterface } from &#x27;../../../dynamic-module-loader/data/terra-dynamic-loaded-component-input.interface&#x27;;
+import { TranslationService } from &#x27;angular-l10n&#x27;;
+import { TerraMultiSplitViewComponent } from &#x27;../terra-multi-split-view.component&#x27;;
+import { ResolvedDataInterface } from &#x27;../interfaces/resolved-data.interface&#x27;;
+import { ResolverListItemInterface } from &#x27;../interfaces/resolve-list-item.interface&#x27;;
+import { TerraResolvedDataHelper } from &#x27;../helpers/terra-resolved-data.helper&#x27;;
+import { TerraMultiSplitViewHelper } from &#x27;../helpers/terra-multi-split-view.helper&#x27;;
+
+@Injectable()
+export class TerraMultiSplitViewConfig
+{
+    public currentSelectedView:TerraMultiSplitViewInterface;
+    public routingConfig:Routes &#x3D; [];
+
+    public deleteViewEventEmitter:EventEmitter&lt;TerraMultiSplitViewInterface&gt; &#x3D; new EventEmitter&lt;TerraMultiSplitViewInterface&gt;();
+    public selectBreadcrumbEventEmitter:EventEmitter&lt;TerraMultiSplitViewInterface&gt; &#x3D; new EventEmitter&lt;TerraMultiSplitViewInterface&gt;();
+
+    private views:Array&lt;TerraMultiSplitViewInterface&gt; &#x3D; [];
+    private routerStateSnapshot:RouterStateSnapshot;
+    private activatedRouteSnapshot:ActivatedRouteSnapshot;
+
+    private _splitViewComponent:TerraMultiSplitViewComponent;
+
+    constructor(private router?:Router,
+                private injector?:Injector,
+                private translation?:TranslationService,
+                private activatedRoute?:ActivatedRoute)
+    {
+
+    }
+
+    public addView(view:TerraMultiSplitViewInterface, parent?:TerraMultiSplitViewInterface):void
+    {
+        if(view.parameter)
+        {
+            console.warn(
+                &#x27;Property \&#x27;parameter\&#x27; is deprecated. It will be removed in one of the upcoming releases. Please use \&#x27;inputs\&#x27; instead.&#x27;);
+        }
+
+        // TODO: setTimeout can be removed, if it is guaranteed that change detection is fired when adding a new view
+        setTimeout(() &#x3D;&gt;
+            {
+                if(isNullOrUndefined(parent))
+                {
+                    if(isNullOrUndefined(this.currentSelectedView))
+                    {
+                        this.currentSelectedView &#x3D; view;
+                        this.views.push(view);
+                    }
+                    else
+                    {
+                        parent &#x3D; this.currentSelectedView;
+                    }
+                }
+
+                if(parent)
+                {
+                    view.parent &#x3D; parent;
+
+                    if(isNullOrUndefined(parent.children))
+                    {
+                        parent.children &#x3D; [view];
+                    }
+                    else
+                    {
+                        let viewExist:boolean &#x3D; false;
+
+                        for(let child of parent.children)
+                        {
+                            // TODO very ugly way, maybe add an option to use an id?
+                            if(TerraMultiSplitViewHelper.isSameView(view, child))
+                            {
+                                view &#x3D; child;
+                                viewExist &#x3D; true;
+                                break;
+                            }
+                        }
+
+                        if(!viewExist)
+                        {
+                            parent.children.push(view);
+                        }
+                    }
+                }
+
+                // synchronize modules array with input config
+                this._splitViewComponent.addToModulesIfNotExist(view);
+
+                // set the selected view
+                this._splitViewComponent.setSelectedView(view);
+            }
+        );
+    }
+
+    public removeView(view:TerraMultiSplitViewInterface):void
+    {
+        if(isNullOrUndefined(view))
+        {
+            return;
+        }
+
+        // update modules array
+        let viewToSelect:TerraMultiSplitViewInterface &#x3D; this._splitViewComponent.removeFromModules(view);
+
+        // select the parent view
+        this._splitViewComponent.handleBreadCrumbClick(viewToSelect);
+
+        if(this.removeViewAndChildren(view))
+        {
+            // notify user
+            this.deleteViewEventEmitter.next(view);
+        }
+    }
+
+    private removeViewAndChildren(view:TerraMultiSplitViewInterface):boolean
+    {
+        if(view.children &amp;&amp; view.children.length &gt; 0)
+        {
+            view.children.forEach((child:TerraMultiSplitViewInterface) &#x3D;&gt;
+            {
+                this.removeViewAndChildren(child);
+            });
+        }
+
+        let parent:TerraMultiSplitViewInterface &#x3D; view.parent;
+        let viewIndex:number &#x3D; parent.children.findIndex((elem:TerraMultiSplitViewInterface) &#x3D;&gt; elem &#x3D;&#x3D;&#x3D; view);
+
+        if(viewIndex &gt;&#x3D; 0)
+        {
+            parent.children.splice(viewIndex, 1);
+            return true;
+        }
+        return false;
+    }
+
+    public resizeView(view:TerraMultiSplitViewInterface, width:string):void
+    {
+        view.defaultWidth &#x3D; width;
+
+        this._splitViewComponent.resizeViewAndModule(view);
+    }
+
+    public setSelectedView(view:TerraMultiSplitViewInterface):void
+    {
+        this._splitViewComponent.setSelectedView(view);
+    }
+
+    public reset():void
+    {
+        this.views &#x3D; [];
+        this.currentSelectedView &#x3D; null;
+        this.selectBreadcrumbEventEmitter.unsubscribe();
+        this.selectBreadcrumbEventEmitter &#x3D; new EventEmitter&lt;TerraMultiSplitViewInterface&gt;();
+    }
+
+    public navigateToViewByUrl(url:string):void
+    {
+        if(!this._splitViewComponent.inputHasRouting)
+        {
+            console.warn(&#x27;Routing is deactivated. If you want to use routing for the split-view set the components input &quot;inputHasRouting&quot;&#x27;);
+            return;
+        }
+
+        // check if the needed dependencies are injected
+        if(isNullOrUndefined(this.router))
+        {
+            console.error(
+                &#x27;_router is not defined.. Please inject the Router in your config-instance to make routing functionality available&#x27;);
+            return;
+        }
+        if(isNullOrUndefined(this.injector))
+        {
+            console.error(
+                &#x27;_injector is not defined. Please inject the Injector in your config-instance to make routing functionality available&#x27;);
+            return;
+        }
+        if(isNullOrUndefined(this.translation))
+        {
+            console.error(
+                &#x27;_translation is not defined. Please inject the TranslationService in your config-instance to make routing functionality available&#x27;);
+            return;
+        }
+
+        this.routerStateSnapshot &#x3D; this.router.routerState.snapshot;
+        this.activatedRouteSnapshot &#x3D; this.activatedRoute.snapshot;
+        let remainingUrl:string &#x3D; url.replace(this._splitViewComponent.componentRoute, &#x27;&#x27;);
+        let redirectUrl:string &#x3D; this.urlIsRedirected(remainingUrl);
+
+        if(redirectUrl)
+        {
+            if(redirectUrl &#x3D;&#x3D;&#x3D; &#x27;invalidRoute&#x27;)
+            {
+                this.router.navigate([&#x27;/error-page&#x27;],
+                    {
+                        queryParams: {
+                            errorCode: &#x27;invalidRoute&#x27;,
+                            errorUrl:  url
+                        }
+                    });
+                return;
+            }
+            this.router.navigateByUrl(url + redirectUrl);
+            return;
+        }
+
+        this.getResolveDataForUrl(remainingUrl, this.routingConfig);
+    }
+
+    private addOrSelectViewsByUrl(url:string, resolveData:Array&lt;ResolvedDataInterface&gt;):void
+    {
+        let views:Array&lt;TerraMultiSplitViewInterface&gt; &#x3D; this.views;
+        let routeConfig:Routes &#x3D; this.routingConfig;
+
+        let urlParts:Array&lt;string&gt; &#x3D; url.split(&#x27;/&#x27;);
+
+        let viewToSelect:TerraMultiSplitViewInterface;
+        let partialRoute:string &#x3D; &#x27;&#x27;;
+
+        urlParts.forEach((urlPart:string) &#x3D;&gt;
+        {
+            if(urlPart.length &gt; 0)
+            {
+                partialRoute +&#x3D; &#x27;/&#x27; + urlPart;
+            }
+            let route:Route &#x3D; routeConfig.find((r:Route) &#x3D;&gt; this.isMatchingRoute(r, urlPart));
+            if(route)
+            {
+                if(route.data &amp;&amp; route.data.mainComponentName)
+                {
+                    let view:TerraMultiSplitViewInterface &#x3D; views.find(
+                        (v:TerraMultiSplitViewInterface) &#x3D;&gt; this.viewForRoutePartExists(v, route, urlPart)
+                    );
+
+                    if(isNullOrUndefined(view))
+                    {
+                        this.addView(this.createNewViewByUrlPart(route, urlPart, partialRoute, resolveData), viewToSelect);
+                        viewToSelect &#x3D; null;
+                    }
+                    else
+                    {
+                        viewToSelect &#x3D; view;
+                        if(view.children &amp;&amp; view.children.length &gt; 0)
+                        {
+                            views &#x3D; view.children;
+                        }
+                        else
+                        {
+                            views &#x3D; [];
+                        }
+                        // TODO: reset inputs with new resolve data??
+                    }
+                }
+                if(route.children &amp;&amp; route.children.length &gt; 0)
+                {
+                    routeConfig &#x3D; route.children;
+                }
+                else
+                {
+                    routeConfig &#x3D; [];
+                }
+            }
+            else
+            {
+                console.error(&#x27;Route not found&#x27;);
+            }
+        });
+
+        if(viewToSelect)
+        {
+            this.setSelectedView(viewToSelect);
+        }
+    }
+
+    private viewForRoutePartExists(view:TerraMultiSplitViewInterface, route:Route, viewId:string):boolean
+    {
+        return view.mainComponentName &#x3D;&#x3D;&#x3D; route.data.mainComponentName &amp;&amp; isNullOrUndefined(view.id)
+               || view.mainComponentName &#x3D;&#x3D;&#x3D; route.data.mainComponentName &amp;&amp; route.path.startsWith(&#x27;:&#x27;) &amp;&amp; view.id &amp;&amp; view.id &#x3D;&#x3D;&#x3D; viewId;
+    }
+
+    private createNewViewByUrlPart(route:Route, urlPart:string, partialUrl:string,
+                                   resolveData:Array&lt;ResolvedDataInterface&gt;):TerraMultiSplitViewInterface
+    {
+        let viewName:string;
+        if(typeof route.data.name &#x3D;&#x3D;&#x3D; &#x27;function&#x27;)
+        {
+            let res:ResolvedDataInterface &#x3D; resolveData.find((data:ResolvedDataInterface) &#x3D;&gt; data.urlPart &#x3D;&#x3D;&#x3D; urlPart);
+            if(!isNullOrUndefined(res))
+            {
+                let obj:ResolveData &#x3D; {};
+                res.resolves.forEach((resolve:TerraDynamicLoadedComponentInputInterface) &#x3D;&gt;
+                {
+                    obj[resolve.name] &#x3D; resolve.value;
+                });
+                viewName &#x3D; this.translation.translate(route.data.name(obj), {id: urlPart});
+            }
+        }
+        else
+        {
+            viewName &#x3D; this.translation.translate(route.data.name, {id: urlPart});
+        }
+        let newView:TerraMultiSplitViewInterface &#x3D;
+            {
+                module:            route.data.module,
+                name:              viewName,
+                defaultWidth:      route.data.defaultWidth,
+                focusedWidth:      route.data.focusedWidth ? route.data.focusedWidth : undefined,
+                mainComponentName: route.data.mainComponentName,
+                id:                route.path &amp;&amp; route.path.startsWith(&#x27;:&#x27;) ? urlPart : undefined,
+                url:               partialUrl
+            };
+        if(route.resolve)
+        {
+            let res:ResolvedDataInterface &#x3D; resolveData.find((data:ResolvedDataInterface) &#x3D;&gt; data.urlPart &#x3D;&#x3D;&#x3D; urlPart);
+            if(res)
+            {
+                newView.inputs &#x3D; res.resolves;
+            }
+        }
+        return newView;
+    }
+
+    private urlIsRedirected(url:string):string
+    {
+        let routeConfig:Routes &#x3D; this.routingConfig;
+        let views:Array&lt;TerraMultiSplitViewInterface&gt; &#x3D; this.views;
+        let urlParts:Array&lt;string&gt; &#x3D; url.split(&#x27;/&#x27;);
+        let route:Route;
+        let isInvalidRoute:boolean &#x3D; false;
+        let view:TerraMultiSplitViewInterface;
+        urlParts.forEach((urlPart:string) &#x3D;&gt;
+        {
+            route &#x3D; routeConfig.find((r:Route) &#x3D;&gt; this.isMatchingRoute(r, urlPart));
+            if(route)
+            {
+                if(route.data &amp;&amp; route.data.mainComponentName)
+                {
+                    view &#x3D; views.find(
+                        (v:TerraMultiSplitViewInterface) &#x3D;&gt; this.viewForRoutePartExists(v, route, urlPart)
+                    );
+
+                    if(view)
+                    {
+                        if(view.children &amp;&amp; view.children.length &gt; 0)
+                        {
+                            views &#x3D; view.children;
+                        }
+                        else
+                        {
+                            views &#x3D; [];
+                        }
+                    }
+                }
+
+                if(route.children &amp;&amp; route.children.length &gt; 0)
+                {
+                    routeConfig &#x3D; route.children;
+                }
+                else
+                {
+                    routeConfig &#x3D; [];
+                }
+            }
+            else
+            {
+                isInvalidRoute &#x3D; true;
+                return;
+            }
+        });
+        if(isInvalidRoute)
+        {
+            return &#x27;invalidRoute&#x27;;
+        }
+        if(!view) // do not redirect if the view is already added
+        {
+            let rou:Route &#x3D; routeConfig.find((r:Route) &#x3D;&gt; r.path &#x3D;&#x3D;&#x3D; &#x27;&#x27; &amp;&amp; !isNullOrUndefined(r.redirectTo));
+            if(rou)
+            {
+                return &#x27;/&#x27; + rou.redirectTo;
+            }
+        }
+        return null;
+    }
+
+    private getResolveDataForUrl(url:string, routeConfig:Routes):void
+    {
+        let resolverList:Array&lt;ResolverListItemInterface&gt; &#x3D; this.getResolversForUrl(url, routeConfig);
+        let data:Array&lt;ResolvedDataInterface&gt; &#x3D; [];
+        this.activatedRouteSnapshot.params &#x3D; {};
+        this.resolveInSequence(url, resolverList, data);
+    }
+
+    private getResolversForUrl(url:string, routeConfig:Routes):Array&lt;ResolverListItemInterface&gt;
+    {
+        let urlParts:Array&lt;string&gt; &#x3D; url.split(&#x27;/&#x27;);
+
+        let resolverList:Array&lt;ResolverListItemInterface&gt; &#x3D; [];
+        urlParts.forEach((urlPart:string) &#x3D;&gt;
+        {
+            let route:Route &#x3D; routeConfig.find((r:Route) &#x3D;&gt; this.isMatchingRoute(r, urlPart));
+            if(route)
+            {
+                if(route.resolve)
+                {
+                    Object.keys(route.resolve).forEach((elem:string) &#x3D;&gt;
+                    {
+                        let resolver:ResolverListItemInterface &#x3D; {
+                            urlPart:   urlPart,
+                            routePath: route.path,
+                            resolver:  {
+                                key:     elem,
+                                service: this.injector.get(route.resolve[elem])
+                            }
+                        };
+
+                        if(isNullOrUndefined(resolverList))
+                        {
+                            resolverList &#x3D; [resolver];
+                        }
+                        else
+                        {
+                            resolverList.push(resolver);
+                        }
+                    });
+                }
+
+                if(route.children &amp;&amp; route.children.length &gt; 0)
+                {
+                    routeConfig &#x3D; route.children;
+                }
+            }
+        });
+
+        return resolverList;
+    }
+
+    private resolveInSequence(url:string,
+                              resolverList:Array&lt;ResolverListItemInterface&gt;,
+                              data:Array&lt;ResolvedDataInterface&gt;,
+                              resolvedResolvers?:Array&lt;ResolverListItemInterface&gt;):void
+    {
+        if(isNullOrUndefined(resolvedResolvers))
+        {
+            resolvedResolvers &#x3D; [];
+        }
+
+        if(isNullOrUndefined(resolverList) || resolverList.length &#x3D;&#x3D;&#x3D; 0)
+        {
+            // all data resolved go to view addition/selection
+            this.addOrSelectViewsByUrl(url, data);
+            return;
+        }
+
+        let resolverListItem:ResolverListItemInterface &#x3D; resolverList.shift();
+        if(!isNullOrUndefined(resolverListItem.routePath) &amp;&amp; resolverListItem.routePath.startsWith(&#x27;:&#x27;))
+        {
+            this.activatedRouteSnapshot.params[resolverListItem.routePath.substring(1)] &#x3D; resolverListItem.urlPart; // pass route params
+        }
+
+        let resolvedResolver:ResolverListItemInterface &#x3D; resolvedResolvers.find((res:ResolverListItemInterface) &#x3D;&gt;
+            Object.getPrototypeOf(res.resolver.service) &#x3D;&#x3D;&#x3D; Object.getPrototypeOf(resolverListItem.resolver.service)
+        );
+        if(!isNullOrUndefined(resolvedResolver)) // resolve resolvers only once for a route
+        {
+            let inputData:TerraDynamicLoadedComponentInputInterface &#x3D;
+                TerraResolvedDataHelper.findInputDataByResolveKey(resolvedResolver.urlPart, resolvedResolver.resolver.key, data);
+            data &#x3D; TerraResolvedDataHelper.addResolvedData(resolverListItem, inputData.value, data);
+
+            // go to the next resolver
+            this.resolveInSequence(url, resolverList, data, resolvedResolvers);
+        }
+        else
+        {
+            resolverListItem.resolver.service.resolve(this.activatedRouteSnapshot, this.routerStateSnapshot).subscribe((res:any) &#x3D;&gt;
+            {
+                resolvedResolvers.push(resolverListItem);
+
+                data &#x3D; TerraResolvedDataHelper.addResolvedData(resolverListItem, res, data);
+
+                // go to the next resolver
+                this.resolveInSequence(url, resolverList, data, resolvedResolvers);
+            });
+        }
+
+    }
+
+    public set splitViewComponent(value:TerraMultiSplitViewComponent)
+    {
+        this._splitViewComponent &#x3D; value;
+    }
+
+    private isMatchingRoute(route:Route, routePath:string):boolean
+    {
+        return !isNullOrUndefined(route) &amp;&amp;
+               (!isNullOrUndefined(route.path) &amp;&amp; (route.path &#x3D;&#x3D;&#x3D; routePath || route.path.startsWith(&#x27;:&#x27;)) ||
+                (route &#x3D;&#x3D;&#x3D; this.routingConfig[0] &amp;&amp; isNullOrUndefined(route.path)));
+    }
+
+    public get baseRoute():string
+    {
+        return this._splitViewComponent.componentRoute;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraMultiSplitViewConfig.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

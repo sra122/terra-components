@@ -1,0 +1,1030 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>TerraDraggableDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/interactables/draggable.directive.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[terraDraggable]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#interactable">interactable</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleSnap">handleSnap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#init">init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prepareImmutableInput">prepareImmutableInput</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#tera-draggable-inertia">tera-draggable-inertia</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-data">terra-draggable-data</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-disabled">terra-draggable-disabled</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-grid">terra-draggable-grid</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-restrict">terra-draggable-restrict</a>
+                            </li>
+                            <li>
+                                <a href="#terraDraggable">terraDraggable</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#terra-draggable-onEnd">terra-draggable-onEnd</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-onMove">terra-draggable-onMove</a>
+                            </li>
+                            <li>
+                                <a href="#terra-draggable-onStart">terra-draggable-onStart</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>el</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="tera-draggable-inertia"></a>
+                        <code>tera-draggable-inertia</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/InertiaOptions.html" target="_self" >boolean | InertiaOptions</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-data"></a>
+                        <code>terra-draggable-data</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-disabled"></a>
+                        <code>terra-draggable-disabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:29</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-grid"></a>
+                        <code>terra-draggable-grid</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/GridOptions.html" target="_self" >GridOptions</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>null</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:32</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-restrict"></a>
+                        <code>terra-draggable-restrict</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/RestrictOptions.html" target="_self" >RestrictOptions</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>null</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terraDraggable"></a>
+                        <code>terraDraggable</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/DraggableOptions.html" target="_self" >DraggableOptions</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>null</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:26</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-onEnd"></a>
+                        <code>terra-draggable-onEnd</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;InteractEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:50</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-onMove"></a>
+                        <code>terra-draggable-onMove</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;InteractEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:47</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-draggable-onStart"></a>
+                        <code>terra-draggable-onStart</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;InteractEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleSnap"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            handleSnap
+                            </b>
+                            <a href="#handleSnap"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleSnap(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, y: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>x</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>y</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="init"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            init
+                            </b>
+                            <a href="#init"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>init()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:115</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="prepareImmutableInput"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            prepareImmutableInput
+                            </b>
+                            <a href="#prepareImmutableInput"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>prepareImmutableInput(input: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>input</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="interactable"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            interactable
+                            </b>
+                            <a href="#interactable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>interactable:     <code>Interactable</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Interactable</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/interactables/draggable.directive.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Directive,
+    ElementRef,
+    EventEmitter,
+    Input,
+    OnChanges,
+    Output,
+    SimpleChanges
+} from &#x27;@angular/core&#x27;;
+import { GridOptions } from &#x27;./gridOptions.interface&#x27;;
+import { DraggableOptions } from &#x27;./draggableOptions.interface&#x27;;
+import { RestrictOptions } from &#x27;./restrictOptions.interface&#x27;;
+import { InertiaOptions } from &#x27;./inertiaOptions.interface&#x27;;
+import {
+    Interactable,
+    InteractEvent
+} from &#x27;interactjs&#x27;;
+import interact &#x3D; require(&#x27;interactjs&#x27;);
+
+@Directive({
+    selector: &#x27;[terraDraggable]&#x27;
+})
+export class TerraDraggableDirective implements OnChanges
+{
+    @Input(&#x27;terraDraggable&#x27;)
+    public options?:DraggableOptions &#x3D; null;
+
+    @Input(&#x27;terra-draggable-disabled&#x27;)
+    public disabled:boolean &#x3D; false;
+
+    @Input(&#x27;terra-draggable-grid&#x27;)
+    public grid:GridOptions &#x3D; null;
+
+    @Input(&#x27;terra-draggable-restrict&#x27;)
+    public restrict:RestrictOptions &#x3D; null;
+
+    @Input(&#x27;tera-draggable-inertia&#x27;)
+    public inertia:boolean | InertiaOptions &#x3D; false;
+
+    @Input(&#x27;terra-draggable-data&#x27;)
+    public dragData:any;
+
+    @Output(&#x27;terra-draggable-onStart&#x27;)
+    public onStart:EventEmitter&lt;InteractEvent&gt; &#x3D; new EventEmitter&lt;InteractEvent&gt;();
+
+    @Output(&#x27;terra-draggable-onMove&#x27;)
+    public onMove:EventEmitter&lt;InteractEvent&gt; &#x3D; new EventEmitter&lt;InteractEvent&gt;();
+
+    @Output(&#x27;terra-draggable-onEnd&#x27;)
+    public onEnd:EventEmitter&lt;InteractEvent&gt; &#x3D; new EventEmitter&lt;InteractEvent&gt;();
+
+    private interactable:Interactable;
+
+    constructor(private el:ElementRef)
+    {
+        this.init();
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        Object.keys(changes).forEach((changedProperty:string) &#x3D;&gt;
+        {
+            if(typeof changes[changedProperty].currentValue &#x3D;&#x3D;&#x3D; &#x27;object&#x27;)
+            {
+                this.prepareImmutableInput(changedProperty);
+            }
+        });
+
+        this.init();
+    }
+
+    private prepareImmutableInput(input:string):void
+    {
+        if(this[input] &amp;&amp; typeof this[input] &#x3D;&#x3D;&#x3D; &#x27;object&#x27;)
+        {
+            Object.keys(this[input])
+                  .filter((property:string) &#x3D;&gt;
+                  {
+                      return this[input].propertyIsEnumerable(property);
+                  })
+                  .forEach((property:string) &#x3D;&gt;
+                  {
+                      // this[input][&quot;_&quot; + property] &#x3D; this[input][property];
+                      Object.defineProperty(
+                          this[input],
+                          &#x27;_&#x27; + property,
+                          {
+                              configurable: false,
+                              enumerable:   false,
+                              writable:     true,
+                              value:        this[input][property]
+                          }
+                      );
+
+                      Object.defineProperty(this[input], property,
+                          {
+                              configurable: true,
+                              enumerable:   true,
+                              get:          ():any &#x3D;&gt;
+                                            {
+                                                return this[input][&#x27;_&#x27; + property];
+                                            },
+                              set:          (value:any):void &#x3D;&gt;
+                                            {
+                                                this[input][&#x27;_&#x27; + property] &#x3D; value;
+                                                this.init();
+                                            }
+                          }
+                      );
+
+                  });
+        }
+    }
+
+    private init():void
+    {
+        let draggableConfig:any &#x3D; {
+            max:          (this.options || {}).max || 1,
+            maxPerElemet: (this.options || {}).maxPerElement || Infinity,
+            autoScroll:   (this.options || {}).autoScroll || false,
+            axis:         (this.options || {}).axis || &#x27;xy&#x27;,
+            manualStart:  (this.options || {}).manualStart || false,
+            inertia:      this.inertia,
+            enabled:      !this.disabled,
+            allowFrom:    (this.options || {}).allowFrom || null,
+            ignoreFrom:   (this.options || {}).ignoreFrom || null,
+            styleCursor:  false,
+            onstart:      (event:InteractEvent):void &#x3D;&gt;
+                          {
+                              this.onStart.emit(event);
+                              event.target.IA_DRAG_DATA &#x3D; this.dragData;
+                          },
+            onmove:       (event:InteractEvent):void &#x3D;&gt;
+                          {
+                              this.onMove.emit(event);
+                              event.target.IA_DRAG_DATA &#x3D; this.dragData;
+                          },
+            onend:        (event:InteractEvent):void &#x3D;&gt;
+                          {
+                              this.onEnd.emit(event);
+                              event.target.IA_DRAG_DATA &#x3D; null;
+                          },
+        };
+
+        if(this.grid)
+        {
+            draggableConfig.snap &#x3D; {
+                targets:        [
+                    (x:number, y:number):{ x:number, y:number, range:number } &#x3D;&gt;
+                    {
+                        return this.handleSnap(x, y);
+                    }
+                ],
+                endOnly:        this.grid &amp;&amp; this.grid.endOnly,
+                relativePoints: this.grid.relativePoints
+            };
+        }
+
+        if(this.restrict)
+        {
+            draggableConfig.restrict &#x3D; this.restrict;
+        }
+
+        if(!this.interactable)
+        {
+            this.interactable &#x3D; interact(this.el.nativeElement);
+        }
+
+        this.interactable.draggable(draggableConfig);
+    }
+
+    private handleSnap(x:number, y:number):{ x:number, y:number, range:number }
+    {
+        if(this.grid)
+        {
+            let offset:{ x:number, y:number } &#x3D; {
+                x: 0,
+                y: 0
+            };
+
+            if(this.grid.offset)
+            {
+                offset &#x3D; this.grid.offset;
+            }
+
+            return {
+                x:     Math.round((x - offset.x) / this.grid.x) * this.grid.x,
+                y:     Math.round((y - offset.y) / this.grid.y) * this.grid.y,
+                range: (this.grid.range || Infinity)
+            };
+        }
+        else
+        {
+            // Snap is disabled
+            return {
+                x:     x,
+                y:     y,
+                range: 0
+            };
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraDraggableDirective.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

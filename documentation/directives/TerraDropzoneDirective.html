@@ -1,0 +1,825 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@plentymarkets/terra-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@plentymarkets/terra-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>TerraDropzoneDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/components/interactables/dropzone.directive.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[terraDropzone]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#interactable">interactable</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#init">init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#terra-dropzone-accept">terra-dropzone-accept</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-disabled">terra-dropzone-disabled</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-overlap">terra-dropzone-overlap</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#terra-dropzone-onDragEnter">terra-dropzone-onDragEnter</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-onDragLeave">terra-dropzone-onDragLeave</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-onDrop">terra-dropzone-onDrop</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-onDropActivate">terra-dropzone-onDropActivate</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-onDropDeactivate">terra-dropzone-onDropDeactivate</a>
+                            </li>
+                            <li>
+                                <a href="#terra-dropzone-onDropMove">terra-dropzone-onDropMove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>el</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-accept"></a>
+                        <code>terra-dropzone-accept</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/typealiases.html#AcceptFn" target="_self" >AcceptFn | string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&#x27;&#x27;</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-disabled"></a>
+                        <code>terra-dropzone-disabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-overlap"></a>
+                        <code>terra-dropzone-overlap</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>&quot;pointer&quot; | &quot;center&quot; | number</code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&#x27;pointer&#x27;</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDragEnter"></a>
+                        <code>terra-dropzone-onDragEnter</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDragLeave"></a>
+                        <code>terra-dropzone-onDragLeave</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:48</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDrop"></a>
+                        <code>terra-dropzone-onDrop</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:54</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDropActivate"></a>
+                        <code>terra-dropzone-onDropActivate</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:39</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDropDeactivate"></a>
+                        <code>terra-dropzone-onDropDeactivate</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:42</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="terra-dropzone-onDropMove"></a>
+                        <code>terra-dropzone-onDropMove</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/DropEvent.html" target="_self" >EventEmitter&lt;DropEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:51</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="init"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            init
+                            </b>
+                            <a href="#init"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>init()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:68</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnChanges"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnChanges
+                            </b>
+                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changes</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="interactable"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            interactable
+                            </b>
+                            <a href="#interactable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>interactable:     <code>Interact.Interactable</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Interact.Interactable</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/interactables/dropzone.directive.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Directive,
+    ElementRef,
+    EventEmitter,
+    Input,
+    OnChanges,
+    Output,
+    SimpleChanges
+} from &#x27;@angular/core&#x27;;
+import * as Interact from &#x27;interactjs&#x27;;
+import { DropEvent } from &#x27;./dropEvent.interface&#x27;;
+
+export type AcceptFn &#x3D; (args:{
+    interactEvent:Interact.InteractEvent,
+    event:MouseEvent,
+    isDropable:boolean,
+    dropzone:Interact.Interactable,
+    dropzoneElement:HTMLElement,
+    draggable:Interact.Interactable,
+    draggableElement:HTMLElement,
+    dragData:any
+}) &#x3D;&gt; boolean;
+
+@Directive({
+    selector: &#x27;[terraDropzone]&#x27;
+})
+export class TerraDropzoneDirective implements OnChanges
+{
+    @Input(&#x27;terra-dropzone-accept&#x27;)
+    public accept:AcceptFn | string &#x3D; &#x27;&#x27;;
+
+    @Input(&#x27;terra-dropzone-overlap&#x27;)
+    public overlap:&#x27;pointer&#x27; | &#x27;center&#x27; | number &#x3D; &#x27;pointer&#x27;;
+
+    @Input(&#x27;terra-dropzone-disabled&#x27;)
+    public disabled:boolean &#x3D; false;
+
+    @Output(&#x27;terra-dropzone-onDropActivate&#x27;)
+    public onDropActivate:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    @Output(&#x27;terra-dropzone-onDropDeactivate&#x27;)
+    public onDropDeactivate:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    @Output(&#x27;terra-dropzone-onDragEnter&#x27;)
+    public onDragEnter:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    @Output(&#x27;terra-dropzone-onDragLeave&#x27;)
+    public onDragLeave:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    @Output(&#x27;terra-dropzone-onDropMove&#x27;)
+    public onDropMove:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    @Output(&#x27;terra-dropzone-onDrop&#x27;)
+    public onDrop:EventEmitter&lt;DropEvent&gt; &#x3D; new EventEmitter&lt;DropEvent&gt;();
+
+    private interactable:Interact.Interactable &#x3D; null;
+
+    constructor(private el:ElementRef)
+    {
+        this.init();
+    }
+
+    public ngOnChanges(changes:SimpleChanges):void
+    {
+        this.init();
+    }
+
+    private init():void
+    {
+        let createDropEvent:any &#x3D; (event:DropEvent):DropEvent &#x3D;&gt;
+        {
+            event.dropData &#x3D; (&lt;any&gt; event.relatedTarget).IA_DRAG_DATA;
+            return event;
+        };
+
+        let config:any &#x3D; {
+            enabled:          !this.disabled,
+            ondropactivate:   (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDropActivate.emit(
+                                      createDropEvent(event)
+                                  );
+                              },
+            ondropdeactivate: (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDropDeactivate.emit(
+                                      createDropEvent(event)
+                                  );
+                              },
+            ondragenter:      (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDragEnter.emit(
+                                      createDropEvent(event)
+                                  );
+                              },
+            ondragleave:      (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDragLeave.emit(
+                                      createDropEvent(event)
+                                  );
+                              },
+            ondropmove:       (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDropMove.emit(
+                                      createDropEvent(event)
+                                  );
+                              },
+            ondrop:           (event:DropEvent):void &#x3D;&gt;
+                              {
+                                  this.onDrop.emit(
+                                      createDropEvent(event)
+                                  );
+                              }
+
+        };
+
+        if(typeof this.overlap &#x3D;&#x3D;&#x3D; &#x27;string&#x27;
+           &amp;&amp; parseFloat(this.overlap) &gt;&#x3D; 0
+           &amp;&amp; parseFloat(this.overlap) &lt;&#x3D; 1)
+        {
+            config.overlap &#x3D; parseFloat(this.overlap);
+        }
+        else
+        {
+            config.overlap &#x3D; this.overlap;
+        }
+
+        if(typeof this.accept &#x3D;&#x3D;&#x3D; &#x27;string&#x27; &amp;&amp; this.accept.length &gt; 0)
+        {
+            config.accept &#x3D; this.accept;
+        }
+        else if(this.accept instanceof Function)
+        {
+            config.checker &#x3D; (interactEvent:Interact.InteractEvent,
+                              event:MouseEvent,
+                              isDropable:boolean,
+                              dropzone:Interact.Interactable,
+                              dropElement:HTMLElement,
+                              draggable:Interact.Interactable,
+                              dragElement:HTMLElement):boolean|AcceptFn &#x3D;&gt;
+            {
+                if(isDropable)
+                {
+                    return (this.accept as AcceptFn)({
+                        interactEvent:    interactEvent,
+                        event:            event,
+                        isDropable:       isDropable,
+                        dropzone:         dropzone,
+                        dropzoneElement:  dropElement,
+                        draggable:        draggable,
+                        draggableElement: dragElement,
+                        dragData:         interactEvent.target.IA_DRAG_DATA
+                    });
+                }
+
+                return false;
+            };
+        }
+
+        if(!this.interactable)
+        {
+            this.interactable &#x3D; Interact(this.el.nativeElement);
+        }
+        this.interactable.dropzone(config);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'TerraDropzoneDirective.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
