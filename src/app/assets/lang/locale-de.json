@@ -109,5 +109,10 @@
 	"terraDynamicForm": {
 		"addListEntry": "Neuen Eintrag hinzufügen",
 		"removeListEntry": "Eintrag entfernen"
+	},
+	"terraStopwatch": {
+		"startControl": "Start",
+		"pauseControl": "Pause",
+		"resetControl": "Zurücksetzen"
 	}
 }
