@@ -1,7 +1,10 @@
 <a name="3.0.0-beta.6"></a>
 # 3.0.0-beta.6 (xx.xx.2018)
 
+### Feature
+
 ### Bug Fixes
+* **function-groups** removed custom group for add-icon
 * **function-groups** added missing styles for .btn-major
 
 
