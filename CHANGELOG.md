@@ -1,15 +1,73 @@
-# Unreleased
+# Unreleased beta
+
+### Bug Fixes
+* **terra-data-table** 
+	- fix issue where numbers were formatted using the default locale
+	- fix issue with data of type `TerraDataTableTextInterface` where the icon was not shown, if the text was empty
+
+<a name="3.0.0-beta.7"></a>
+# 3.0.0-beta.7 (15.10.2018)
+
+The following components/classes have been marked deprecated:
+
+* **terra-multi-split-view**
+* **terra-multi-split-view.interface**
+* **terra-multi-split-view.config**
+* **terra-multi-split-view.helper**
+* **terra-multi-split-view-breadcrumbs.service**
+* **terra-multi-split-view-module.interface**
+* **terra-multi-split-view-route.interface**
+* **terra-multi-split-view-route-data.interface**
+* **terra-multi-split-view-routes.interface**
+
+* **resolve-list-item.interface**
+* **resolved-data.interface**
+* **terra-resolved-data.helper**
+
+For further information on how to replace it see the [SplitView Migration Guide](https://developers.plentymarkets.com/dev-doc/split-view-migration-guide).
+
+The following deprecated variables have been deleted:
+
+* **terra-button-with-options** `inputIsPrimary`, `inputIsSecondary`, `inputIsTertiary`
+* **terra-button.interface** `isPrimary`, `isSecondary`, `isTertiary`,
+* **terra-button** `inputIsPrimary`, `inputIsSecondary`, `inputIsTertiary`
+* **terra-file-chooser** `inputIsPrimary`, `inputIsSecondary`, `inputIsTertiary`
+* **terra-dynamic-module-loader** `inputParameter` (use `inputInputs` instead)
+* **terra-filter** `inputInputList` (use `ng-content` instead)
+* **terra-checkbox** `inputId`
+* **terra-double-input** `inputValue` (use `ngModel` instead)
+* **terra-number-input** `inputValue` (use `ngModel` instead)
+* **terra-input** `inputPlaceholder` (use `inputName` instead)
+* **terra-text-area-input** `inputType`, `inputValue` (use `ngModel` instead), `inputMaxCols`
+* **terra-text-input** `inputType`, `inputValue` (use `ngModel` instead)
+* **terra-select-box** `outputValueChanged` (use `ngModelChange` instead), `inputSelectedValue` (use `ngModel` instead)
+* **terra-suggestion-box** `outputValueChanged` (use `ngModelChange` instead), `resetComponentValue()` (use `ngModel` instead)
+* **terra-tag.interface** `caption` (use `name` or `names` instead), `badge` (use `name` or `names` instead)
+* **terra-multi-split-view** `inputComponentRoute`
+* **terra-data-table-cell.interface** `caption` (use `data` or `data.caption` instead), `icon` (use `data.icon` instead), `color` (use `data.color` instead), `buttonList` (use `data` instead), `href` (use `data` instead) -> `data` can be a type of `string`, `number`, `TerraDataTableTextInterface`, `TerraRefTypeInterface`, `Array<TerraButtonInterface>`or `Array<TerraTagInterface>`
+* **terra-data-table-header-cell.interface** `textAlign:string` (use `textAlign:TerraTextAlignEnum` instead)
+* **terra-data-table** `hasCheckboxes` (use `inputHasCheckboxes` instead)
+* **terra-simple-table** setter and getter of `headerList` (use `inputHeaderList`), getter and setter of `rowList` (use `inputRowList` instead)
+
+The following deprecated components have been deleted:
+
+* **terra-multi-select-box** use `terra-multi-check-box` instead
+* **terra-button-group**
+* **terra-navigator**
+* **terra-split-view** use `terra-multi-split-view` instead
+* **terra-tile-box** use `terra-card` instead
+* **terra-tree** use `terra-node-tree` instead
+* **terra-url-params-decorator** use `terra-base-service::createUrlSearchParams` instead
+
+<a name="3.0.0-beta.6"></a>
+# 3.0.0-beta.6 (12.10.2018)
+Adapted Changes from v2.4.0
 
 ### Feature
 * **terra-stopwatch** added new terra component terra-stopwatch. 
 
 <a name="3.0.0-beta.6"></a>
 # 3.0.0-beta.6 (xx.xx.2018)
-
-### Feature
-
-### Bug Fixes
-* **function-groups** removed custom group for add-icon
 * **function-groups** added missing styles for .btn-major
 
 <a name="3.0.0-beta.5"></a>
@@ -41,12 +99,12 @@ Adapted Changes from v2.3.21 and v2.3.22
 * **terra-pager.interface** added type generic to make it reusable for different types of entries. To migrate your interface which previously extended the `TerraPagerInterface`, please replace its occurrences with the new interface. Make sure to pass the type of a single entry of your interface as generic to the new interface.
 
 # Unreleased
+
 ### Bug Fixes
 * **terra-double-input** fixed issue with the decimal separator. It now accepts decimal inputs in the localized format.
 
 <a name="2.4.0"></a>
 # 2.4.0 (12.10.2018)
-
 * **TerraButtonInterface** `isPrimary`, `isSecondary` and `isTertiary` are now deprecated. Each icon has its own fixed color.
 * **terra-button-with-options** `inputIsPrimary`, `inputIsSecondary` and `inputIsTertiary` are now deprecated. Each icon has its own fixed color.
 * **terra-dynamic-module-loader** input `inputParameter` is now deprecated. Use input `inputInputs` instead.
