@@ -17,11 +17,12 @@ import { TerraNodeInterface } from './../tree/node-tree/data/terra-node.interfac
 import { TerraStorageObjectList } from './model/terra-storage-object-list';
 import { TerraFileListComponent } from './file-list/file-list.component';
 import { StringHelper } from '../../helpers/string.helper';
+import { TerraLoadingSpinnerService } from '../../..';
 
 @Component({
     selector:  'terra-file-browser',
     template:  require('./terra-file-browser.component.html'),
-    providers: [TerraNodeTreeConfig],
+    providers: [TerraNodeTreeConfig, TerraFrontendStorageService, TerraLoadingSpinnerService],
     styles:    [
         require('./terra-file-browser.component.scss'),
         require('./terra-file-browser.component.glob.scss').toString()

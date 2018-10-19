@@ -37,6 +37,9 @@ import { components } from './components/component-collection';
 import { examples } from './components/example-collection';
 import { services } from './service/service-collection';
 import { directives } from './components/directive-collection';
+import { TerraFileBrowserComponentExample } from './components/file-browser/example/terra-file-browser.component.example';
+import { TerraFileBrowserComponent } from './components/file-browser/terra-file-browser.component';
+import { TerraLoadingSpinnerService } from './components/loading-spinner/service/terra-loading-spinner.service';
 
 function createCompiler(compilerFactory:CompilerFactory):Compiler
 {
@@ -44,7 +47,7 @@ function createCompiler(compilerFactory:CompilerFactory):Compiler
 }
 
 @NgModule({
-    declarations:    [TerraComponentsComponent, ...components, ...directives, ...examples],
+    declarations:    [TerraComponentsComponent, ...components, ...directives, ...examples, TerraFileBrowserComponentExample, TerraFileBrowserComponent],
     entryComponents: components,
     exports:         [...components, ...directives, ...examples],
     imports:         [
