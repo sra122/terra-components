@@ -3,7 +3,7 @@
         <div *ngFor="let column of displayColumns; index as index"
              class="overflow-auto"
              [ngClass]="getStylesForColumn(column)" [hidden]="!column">
-            <ng-content select="[index]"></ng-content>
+            <ng-content select="div"></ng-content>
         </div>
     </div>
 </div>
