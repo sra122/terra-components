@@ -130,6 +130,7 @@ export * from './app/components/split-view/multi/injectables/terra-multi-split-v
 export * from './app/helpers/query-param.helper';
 export * from './app/helpers/number.helper';
 export * from './app/helpers/object.helper';
+export * from './app/helpers/string.helper';
 export * from './app/validators/decimal/terra-decimal-validator';
 export * from './app/components/forms/form/terra-form.component';
 export * from './app/components/forms/form/form-container/terra-form-container.component';

@@ -58,9 +58,6 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     @Input()
     public inputListBoxValues:Array<TerraSelectBoxValueInterface>;
 
-    @Output()
-    public inputSelectedValueChange:EventEmitter<TerraSelectBoxValueInterface> = new EventEmitter<TerraSelectBoxValueInterface>();
-
     public isValid:boolean;
 
     protected selectedValue:TerraSelectBoxValueInterface;
@@ -71,6 +68,9 @@ export class TerraSelectBoxComponent implements OnInit, OnChanges
     private isInit:boolean;
     private clickListener:(event:Event) => void;
 
+    /**
+     * @deprecated
+     */
     public get inputSelectedValue():number | string
     {
         return this.selectedValue.value;

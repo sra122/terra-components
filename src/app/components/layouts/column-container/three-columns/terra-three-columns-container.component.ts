@@ -28,41 +28,34 @@ export class TerraThreeColumnsContainerComponent implements OnChanges
      * @description size of the left column
      */
     @Input()
-    public leftColumnWidth:number = 4;
+    public columnWidths:Array<number> = [4, 4, 4];
 
-    /**
-     * @description size of the center column
-     */
-    @Input()
-    public centerColumnWidth:number = 4;
+    protected displayColumns:Array<number>;
 
-    /**
-     * @description size of the right column. Default 4
-     */
-    @Input()
-    public rightColumnWidth:number = 4;
+    constructor()
+    {
+        this.displayColumns = this.columnWidths;
+    }
 
     public ngOnChanges(changes:SimpleChanges):void
     {
-        if(this.leftColumnWidth + this.centerColumnWidth + this.rightColumnWidth > 12)
+        let sumOfColumnWidths:number = this.columnWidths.reduce((acc:number, curr:number) => acc + curr);
+        if(sumOfColumnWidths > 12)
         {
             console.error('You have exceeded the maximum amount of columns. The columns are now sized automatically.');
         }
 
         let columnsLeft:number = TwoColumnHelper.maxColumnWidth;
-
-        this.leftColumnWidth = Math.min(columnsLeft, Math.max(TwoColumnHelper.minColumnWidth, this.leftColumnWidth));
-        columnsLeft -= this.leftColumnWidth;
-
-        this.centerColumnWidth = Math.min(columnsLeft, Math.max(TwoColumnHelper.minColumnWidth, this.centerColumnWidth));
-        columnsLeft -= this.centerColumnWidth;
-
-        this.rightColumnWidth = Math.min(columnsLeft, Math.max(TwoColumnHelper.minColumnWidth, this.rightColumnWidth));
-        columnsLeft -= this.rightColumnWidth;
+        this.displayColumns = this.columnWidths.map((columnWidth:number) =>
+        {
+            let limitedColumnWidth:number = Math.min(columnsLeft, Math.max(TwoColumnHelper.minColumnWidth, columnWidth));
+            columnsLeft -= limitedColumnWidth;
+            return limitedColumnWidth;
+        });
 
         if(columnsLeft > 0)
         {
-            this.rightColumnWidth += columnsLeft;
+            this.displayColumns[this.displayColumns.length - 1] += columnsLeft;
         }
     }
 
