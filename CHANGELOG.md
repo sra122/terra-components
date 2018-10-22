@@ -1,5 +1,14 @@
 # Unreleased beta
 
+### Feature
+* **terra-3-col** new component that displays given views next to each other in up to three columns
+
+### Changes
+* The definition of custom font faces have been separated into multiple files.
+
+<a name="3.0.0-beta.8"></a>
+# 3.0.0-beta.8 (17.10.2018)
+
 ### Bug Fixes
 * **terra-data-table** 
 	- fix issue where numbers were formatted using the default locale
@@ -98,7 +107,8 @@ Adapted Changes from v2.3.21 and v2.3.22
 ### Breaking Changes
 * **terra-pager.interface** added type generic to make it reusable for different types of entries. To migrate your interface which previously extended the `TerraPagerInterface`, please replace its occurrences with the new interface. Make sure to pass the type of a single entry of your interface as generic to the new interface.
 
-# Unreleased
+<a name="2.4.1"></a>
+# 2.4.1 (17.10.2018)
 
 ### Bug Fixes
 * **terra-double-input** fixed issue with the decimal separator. It now accepts decimal inputs in the localized format.
