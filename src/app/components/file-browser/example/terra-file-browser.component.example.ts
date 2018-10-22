@@ -8,7 +8,7 @@ import { TerraLoadingSpinnerService } from '../../../..';
 @Component({
     selector: 'terra-file-browser-example',
     styles:   [require('./terra-file-browser.component.example.scss')],
-    providers: [TerraFileBrowserServiceExample, TerraLoadingSpinnerService],
+    providers: [TerraFileBrowserServiceExample],
     template: require('./terra-file-browser.component.example.html'),
 })
 export class TerraFileBrowserComponentExample

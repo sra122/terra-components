@@ -1,6 +1,5 @@
 import {
-    Injectable,
-    NgZone
+    Injectable
 } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { isNullOrUndefined } from 'util';
@@ -225,15 +224,6 @@ export class TerraFileBrowserServiceExample extends TerraBaseMetadataStorageServ
 
         let request:Subject<any> = new Subject();
 
-        // let request:Observable<any> = this.mapRequest(
-        //     this.http.delete(
-        //         '/rest/storage/frontend/files?' + keyList.map((key:string):string => 'keyList[]=' + key).join('&'),
-        //         {
-        //             headers: this.headers
-        //         }
-        //     )
-        // );
-
         let source:Observable<void> = new Observable(observer => {
             observer.next();
 
@@ -251,18 +241,6 @@ export class TerraFileBrowserServiceExample extends TerraBaseMetadataStorageServ
 
         keyList.forEach((key:string):void => this._storageList.root.removeChild(key));
         this.storageListSubject.next(this._storageList);
-
-        // request.subscribe(():void =>
-        //     {
-        //         keyList.forEach((key:string):void => this._storageList.root.removeChild(key));
-        //         this.storageListSubject.next(this._storageList);
-        //     },
-        //     ():void =>
-        //     {
-        //         this.storageInitialized = false;
-        //         this.storageListSubject.next(null);
-        //     }
-        // );
 
         request.next();
 
@@ -300,26 +278,5 @@ export class TerraFileBrowserServiceExample extends TerraBaseMetadataStorageServ
                 storageClass: "STANDARD"
             }]);
         this.storageListSubject.next(storageList);
-
-        // this.mapRequest(this.http.get(url, {headers: this.headers})).subscribe((results:any):void =>
-        //     {
-        //         let storageList:TerraStorageObjectList = this.storageListSubject.getValue() || new TerraStorageObjectList();
-        //         storageList.insertObjects(results.objects);
-        //         this.storageListSubject.next(storageList);
-        //
-        //         if(results.isTruncated && results.nextContinuationToken.length > 0)
-        //         {
-        //             this.initStorageList(results.nextContinuationToken);
-        //         }
-        //     },
-        //     (err:any):void =>
-        //     {
-        //         console.error(err);
-        //         this.storageInitialized = false;
-        //         this.storageListSubject.next(null);
-        //     }
-        // );
-
-
     }
 }

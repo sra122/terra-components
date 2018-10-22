@@ -8,9 +8,11 @@ import { TerraBreadcrumbsService } from '../components/breadcrumbs/service/terra
 import { TerraJsonToFormFieldService } from '../components/forms/dynamic-form/service/terra-json-to-form-field.service';
 import { TerraMultiSplitViewBreadcrumbsService } from '../components/split-view/multi/injectables/terra-multi-split-view-breadcrumbs.service';
 import { TerraFormFieldControlService } from '../components/forms/dynamic-form/service/terra-form-field-control.service';
+import { TerraLoadingSpinnerService } from '../..';
 
 
 export const services:Array<Provider> = [
+    TerraLoadingSpinnerService,
     TerraDataTableContextMenuService,
     TerraBaseService,
     TerraFrontendStorageService,

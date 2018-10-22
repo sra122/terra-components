@@ -22,7 +22,7 @@ import { TerraLoadingSpinnerService } from '../../..';
 @Component({
     selector:  'terra-file-browser',
     template:  require('./terra-file-browser.component.html'),
-    providers: [TerraNodeTreeConfig, TerraFrontendStorageService, TerraLoadingSpinnerService],
+    providers: [TerraNodeTreeConfig],
     styles:    [
         require('./terra-file-browser.component.scss'),
         require('./terra-file-browser.component.glob.scss').toString()
